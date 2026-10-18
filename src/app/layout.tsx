@@ -16,42 +16,42 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Epsilon Study - Fast CDN Platform",
+  title: "Epsilon Study — Discover All Batches",
   description:
-    "Epsilon Study — high-speed CDN platform for content delivery. Open Server 1, Server 2, or Server 3 to access the Epsilon Study network with fast streaming and reliable uptime.",
+    "Epsilon Study — discover and enroll in exam-prep batches for JEE, NEET, IOQM, CLAT, IPMAT, KCET, CAPF, GPAT and more. Direct access, no key wall, no waiting.",
   keywords: [
     "epsilon study",
     "epsilonstudy",
     "epsilon",
-    "study platform",
-    "fast cdn",
-    "content delivery",
-    "streaming",
-    "epsilon cdn",
-    "epsilon network",
-    "epsilon study hub",
-    "epsilon study server",
-    "epsilon study hosting",
-    "epsilon study stream",
-    "high speed cdn",
-    "education cdn",
-    "streaming platform",
+    "study dashboard",
+    "exam prep",
+    "JEE 2027",
+    "NEET 2027",
+    "IOQM",
+    "CLAT",
+    "IPMAT",
+    "KCET",
+    "CAPF",
+    "GPAT",
+    "batches",
+    "online coaching",
+    "test series",
   ],
   authors: [{ name: "Epsilon Study" }],
   metadataBase: new URL("https://epsilon-study.app"),
   openGraph: {
-    title: "Epsilon Study - Fast CDN Platform",
+    title: "Epsilon Study — Discover All Batches",
     description:
-      "Fast CDN platform for content delivery — Epsilon Study. Open Server 1, 2, or 3 for high-speed streaming.",
+      "Discover and enroll in exam-prep batches for JEE, NEET, IOQM, CLAT, IPMAT, KCET, CAPF and more. Direct access, no key wall.",
     url: "https://epsilon-study.app",
     siteName: "Epsilon Study",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Epsilon Study - Fast CDN Platform",
+    title: "Epsilon Study — Discover All Batches",
     description:
-      "Fast CDN platform for content delivery — Epsilon Study.",
+      "Discover and enroll in exam-prep batches. Direct access, no key wall.",
   },
   robots: {
     index: true,
@@ -61,19 +61,12 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  name: "Epsilon Study - Fast CDN Platform",
+  "@type": "WebSite",
+  name: "Epsilon Study",
   description:
-    "Fast CDN platform for content delivery — Epsilon Study.",
+    "Discover and enroll in exam-prep batches for JEE, NEET, IOQM, CLAT, IPMAT, KCET, CAPF and more. Direct access, no key wall.",
   url: "https://epsilon-study.app/",
-  keywords:
-    "epsilon study, epsilonstudy, epsilon, fast cdn, content delivery",
   inLanguage: "en",
-  isPartOf: {
-    "@type": "WebSite",
-    name: "Epsilon Study",
-    url: "https://epsilon-study.app",
-  },
 };
 
 export default function RootLayout({

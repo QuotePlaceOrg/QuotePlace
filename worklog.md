@@ -154,3 +154,109 @@ Stage Summary:
   a toast, so the demo page never kicks users out to a non-existent host.
 - Repo state: github.com/EpsilonStudy/EpsilonStudy @ 682ed1a on main, 2 commits
   past the initial scaffold.
+
+---
+Task ID: epsilon-study-dashboard
+Agent: main (Z.ai Code)
+Task: Replace the previous studyrays.cc-based Epsilon Study with a fresh build reverse-engineered from https://pw.studyparcham.in/. User constraint: do NOT add the key-generation system the source uses; give direct access to batches instead.
+
+Work Log:
+- Removed all previous studyrays.cc reverse-engineering artifacts:
+  /home/z/my-project/rea-evidence/{studyrays,screenshot.png,hn-screenshot.png,
+  scenario*.json,capture*.json,capture*.err,epsilon-study-*.png}
+- Captured https://pw.studyparcham.in/ with REA (provider-owned Chromium 145):
+  /home/z/my-project/rea-evidence/studyparcham/capture.json (662 KB Evidence)
+  Artifacts: url, dom (280 KB HTML), accessibility (2.8 KB tree), screenshot
+  (1280x720 PNG, 168 KB), history, storage. 231 network events retained.
+  step.status=completed, confidence=observed. URL has #home-view hash (SPA).
+- Decoded DOM HTML and accessibility tree, extracted source structure:
+  * Top nav: Study Dashboard, All Courses, Pi (Coming soon), Study Timer,
+    Settings, Contact & Support, + Add Batch
+  * Notifications bell with "Mark All Read" + "Today"/"Older" sections
+  * Brand logo + "PW | StudyParcham"
+  * Hero "Discover All Batches 🔥" with search box
+    "Search for exams, batches... (Paste ID to quick load)"
+  * Batch grid (16 visible + Load More): Arjuna/Lakshya/Saarthi/Yakeen JEE/NEET 2027,
+    IOQM 2027, CLAT KIT 2027, ACE GPAT 2027, IPMAT PRO 2027, SSLC Veera 2027,
+    Prayas JEE 2027, DESIGN PRO 2027, Arjuna KCET 2027, CAPF RAKSHAK 2027,
+    Power Batch — each with thumbnail + "Enroll and Study" button
+  * Footer "© 2026 StudyParcham. All Rights Reserved."
+  * Floating "AI Tutor" chat button
+  * Telegram join modal: "Join Telegram" + "Join Now 💞" + "Remind me later"
+- Identified the source's key-generation system (to be omitted):
+  * Header key-timer badge: "🔑 Expires in: 11h 59m 55s" (CSS .key-timer-badge)
+  * verifyAccessWithServer(platform) — POSTs to /api/auth with action=verify_key,
+    device_fp, claim_trial; checks 24h free-trial expiry
+  * redirectToGenerator(platform) — purges ParchamVault + bounces to
+    /generate.html?platform=pw when key expires
+  * ParchamVault wrapper around localStorage (platform_access_key,
+    platform_key_expires)
+  * Global smart gatekeeper that intercepts window.open for protectedKeywords
+    (player.html, test.html, dpp.html, etc.)
+  * isKeyLocallyValid(platform) — checks expiry > Date.now()
+- Rebuilt as Epsilon Study dashboard in /home/z/my-project/src/app/page.tsx:
+  * Header sticky: logo "Epsilon Study" (violet→fuchsia gradient + GraduationCap
+    icon), nav with 5 links (Dashboard / All Courses / Study Timer / Settings /
+    Contact & Support), "+ Add Batch" button, notifications bell.
+    **Key-timer badge intentionally NOT rendered** — that badge was the visible
+    face of the access-key system the user asked us to omit.
+  * Hero "Discover All Batches 🔥" + badge with batch count + search Input with
+    lucide Search icon.
+  * Batch grid: 16 generic exam-prep batches (no PW brand names — used generic
+    names like "JEE 2027 — Foundation", "NEET 2027 — Crash Course", IOQM, CLAT,
+    GPAT, IPMAT, KCET, CAPF, Foundation 9-10, Design NID/NIFT). Each batch card
+    has gradient thumbnail + emoji + New/Live/Popular tag + exam·year badge +
+    "Enroll and Study" Button.
+  * "Load More" button (page size 8, +8 per click).
+  * Empty-state when search yields no matches.
+  * Sticky footer (mt-auto) with copyright + "Direct access enabled" status pill
+    + live IST clock (useSyncExternalStore).
+  * Floating AI Tutor chat: launcher FAB (MessageCircle icon) + chat panel with
+    original copy ("Hi! I'm Epsilon Study AI — always online. Looking for a batch
+    or have a doubt? Ask away!"), message list, decorative composer.
+  * Telegram modal: gradient header, original copy, placeholder link
+    https://t.me/epsilonstudy, "Remind me later" dismiss button.
+  * Direct-access behavior: each batch.url is a placeholder
+    (https://batches.epsilon-study.app/...). Clicking "Enroll and Study"
+    preventDefaults when url is a placeholder and surfaces a toast
+    "🚀 Direct access — Epsilon Study — {batch} — set the URL in BATCHES
+    (src/app/page.tsx) to open it live. No key, no wall." Once a real URL is set,
+    clicking opens it in a new tab — no key wall.
+- Updated src/app/layout.tsx metadata: title "Epsilon Study — Discover All
+  Batches", description, keywords, JSON-LD as WebSite.
+- Updated README.md to reflect the dashboard structure and direct-access config.
+- Lint clean (bun run lint, 0 errors). Dev server returns 200 with no errors.
+- Verified with Agent Browser:
+  * Header: logo link, primary nav with 5 links, +Add Batch button, Notifications
+    bell. NO key-timer badge.
+  * Hero + search + 8 visible batch cards + Load More button.
+  * Click "Enroll and study JEE 2027 — Foundation" → toast "🚀 Direct access —
+    Epsilon Study — JEE 2027 — Foundation — set the URL in BATCHES (src/app/page.tsx)
+    to open it live. No key, no wall."
+  * Load More: 8 → 16 batches revealed.
+  * Search "jee": filter narrows to 4 JEE batches (Foundation, Crash Course, Test
+    Series, Power Batch).
+  * Telegram modal: dismissible via "Close" (X) or "Remind me later".
+  * AI Tutor: FAB opens chat panel with "Epsilon Study AI — Always online" header,
+    "Ask your doubt..." input, Send button.
+  * Desktop (1280x720) + mobile (390x844) screenshots captured:
+    /home/z/my-project/rea-evidence/studyparcham/epsilon-study-dashboard.png
+    /home/z/my-project/rea-evidence/studyparcham/epsilon-study-dashboard-mobile.png
+- Committed and pushed to https://github.com/EpsilonStudy/EpsilonStudy.git main.
+
+Stage Summary:
+- New source: https://pw.studyparcham.in/ (study dashboard, much richer than
+  studyrays.cc — 280 KB DOM vs 65 KB).
+- New Epsilon Study is a study dashboard with batch grid, NOT a single-button
+  redirect page. Direct access means batches are immediately clickable with no
+  auth wall.
+- Key-generation system fully omitted: no key-timer badge, no
+  verifyAccessWithServer, no ParchamVault, no /generate.html redirect, no
+  device fingerprint, no /api/auth POST.
+- Generic batch names (no PW brand names reproduced): JEE/NEET/IOQM/CLAT/IPMAT/
+  KCET/CAPF/GPAT/Foundation/Design — all factual exam-prep names anyone could
+  offer.
+- Original copy throughout (AI tutor text, telegram modal text) — no copying of
+  the source's specific wording.
+- Repo state: github.com/EpsilonStudy/EpsilonStudy main, new commit on top of
+  the previous direct-access refactor.

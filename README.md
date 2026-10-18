@@ -1,55 +1,60 @@
 # Epsilon Study
 
-Fast, minimal CDN-style landing page — pick one of three streaming servers to enter the Epsilon Study network.
+Study dashboard — discover and enroll in exam-prep batches (JEE, NEET, IOQM,
+CLAT, IPMAT, KCET, CAPF, GPAT, Foundation, Design…). Direct access: every
+batch link opens with **no key wall, no expiry countdown, no generator
+redirect**.
 
-> Reverse-engineered from the public landing page at `studyrays.cc` using
-> [`rea-agents`](https://github.com/morluto/rea) (REA — Reverse Engineer
-> Anything) and rebuilt as **Epsilon Study** on Next.js 16. No proprietary
-> assets, brand text, or logos were copied — only the page structure,
-> sectioning, and visual language (Inter typeface, blue/green/black gradient
-> server buttons, hidden SEO tag list) were reproduced.
+> Reverse-engineered from the public landing page at `pw.studyparcham.in`
+> using [`rea-agents`](https://github.com/morluto/rea) (REA — Reverse
+> Engineer Anything) and rebuilt as **Epsilon Study** on Next.js 16.
+> The source site gates every batch behind an access-key system
+> (`verifyAccessWithServer`, `ParchamVault`, `redirectToGenerator`,
+> a `🔑 Expires in: …` badge). Per the product decision, **none of that
+> is reproduced here** — every batch is directly accessible.
 
 ## Stack
 
 - **Framework**: Next.js 16 (App Router) + TypeScript 5
-- **Styling**: Tailwind CSS 4 + shadcn/ui (New York)
+- **Styling**: Tailwind CSS 4 + shadcn/ui (New York) + Lucide icons
 - **Font**: Inter (via `next/font/google`)
-- **Animations**: Custom CSS keyframes (brand shimmer, button shine, entry rise)
 
 ## Page structure
 
 ```
-<main>                              ← min-h-screen flex flex-col, white bg
-  <section>                         ← hero, centered
-    <span>High-Speed CDN Platform</span>   ← tag pill
-    <h1>Epsilon Study</h1>                 ← shimmer gradient text
-    <p>Direct access — redirecting in Ns.</p>
-    <div role="list" class="sr-only">     ← hidden SEO tag list
-    <a class="epsilon-button epsilon-button-server3">🚀 Enter Now 🚀</a>
-    <p>Auto-redirect in Ns, or click the button.</p>
-    <div>All systems operational · <IST clock></div>
-  </section>
-  <footer>                          ← sticky bottom (mt-auto)
-    © 2026 Epsilon Study · Fast CDN Platform
-  </footer>
-</main>
+<div class="min-h-screen flex flex-col">
+  <Header sticky>                 ← logo, nav, + Add Batch, notifications bell
+                                     (NO key-timer badge — that was the access
+                                      key system the user asked us to omit)
+  <main>
+    <section hero>
+      <h2>Discover All Batches 🔥</h2>
+      <Input search />
+      <grid of BatchCard>           ← 8 visible, Load More reveals more
+        thumbnail + name + "Enroll and Study"
+      <Button>Load More</Button>
+    </section>
+  </main>
+  <Footer sticky>                  ← mt-auto, copyright + live IST clock
+  <AITutorChat floating />         ← decorative, original copy
+  <TelegramModal dismissible />    ← decorative, placeholder t.me link
+</div>
 ```
 
-## Configure the direct-access target
+## Configure batch URLs (direct access)
 
-Edit `src/app/page.tsx` and replace the `TARGET_URL` constant with the real
-Epsilon Study endpoint. Visiting `/` will auto-redirect there after
-`COUNTDOWN_SECONDS` (default 3).
+Each batch in `src/app/page.tsx` has a direct-access `url`. While it still
+matches `*.epsilon-study.app`, clicking "Enroll and Study" surfaces a toast
+asking you to configure it. Set a real URL and clicking opens the batch
+content in a new tab — no key, no wall.
 
 ```ts
-const TARGET_URL = "https://your-real-endpoint.example/";
-const COUNTDOWN_SECONDS = 3;
+const BATCHES: Batch[] = [
+  { id: "jee-foundation-2027", name: "JEE 2027 — Foundation",
+    url: "https://your-real-batch-url/", … },
+  …
+];
 ```
-
-While `TARGET_URL` still matches `*.epsilon-study.app`, the auto-redirect is
-disabled and the button shows a toast (so the demo doesn't kick users out
-to a non-existent host). Set a real URL and the page will redirect
-automatically on load, with the "Enter Now" button as a manual fallback.
 
 ## Develop
 
@@ -66,10 +71,12 @@ src/
 ├── app/
 │   ├── globals.css     ← Tailwind theme + Epsilon animations
 │   ├── layout.tsx      ← Inter font, metadata, JSON-LD
-│   └── page.tsx        ← the landing page
-└── components/ui/      ← shadcn/ui primitives (button, toast, etc.)
+│   └── page.tsx        ← the dashboard (header, hero, batch grid, AI tutor,
+│                         telegram modal, footer)
+└── components/ui/      ← shadcn/ui primitives (Button, Input, Badge, …)
 ```
 
 ## License
 
 MIT
+
