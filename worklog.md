@@ -381,3 +381,63 @@ Stage Summary:
   X, Epistulae Morales Letter XIII, Enchiridion §5, etc.).
 - Repo state: github.com/EpsilonStudy/EpsilonStudy main, clean StoicBare
   site on top of the placeholder-only reset commit.
+
+---
+Task ID: stoicbare-firebase
+Agent: main (Z.ai Code)
+Task: Integrate Firebase (App + Analytics) into StoicBare using the user-provided web config.
+
+Work Log:
+- User provided the standard Firebase console web-app snippet (initializeApp +
+  getAnalytics) with the stoicbare-86bfa project config:
+  apiKey AIzaSyD5…skEHI, projectId stoicbare-86bfa, appId 1:283688843634:
+  web:830af8f511ed9ebabec5eb, measurementId G-6W2P37RQJ6.
+- Installed the firebase package: `bun add firebase` -> firebase@13.0.0.
+- Created src/lib/firebase.ts:
+  * Exported firebaseConfig (apiKey/authDomain/projectId/storageBucket/
+    messagingSenderId/appId/measurementId — same values the user provided,
+    hardcoded because Firebase web config is designed to be public;
+    security is enforced by Firebase Security Rules, not config secrecy).
+  * firebaseApp singleton: getApps() check before initializeApp() to survive
+    HMR + React Strict Mode without the "Firebase App named '[DEFAULT]'
+    already exists" error.
+  * getFirebaseAnalytics(): async, lazy, idempotent. Returns null on server
+    (typeof window === 'undefined'), then awaits isSupported() (catches
+    private-browsing / cookie-disabled environments), then getAnalytics(app).
+    Cached in a module-level variable so subsequent calls don't re-init.
+  * logEvent(name, params): no-op wrapper that awaits getFirebaseAnalytics
+    and dynamic-imports the logEvent function from firebase/analytics. Safe
+    to call from any client code without awaiting init first.
+- Created src/components/firebase-analytics.tsx:
+  * 'use client' component (Firebase web SDK is browser-only).
+  * useEffect(() => { void getFirebaseAnalytics(); }, []) — runs after
+    hydration so no SSR runs analytics, no hydration mismatch.
+  * Renders null — pure side-effect mount component.
+- Wired <FirebaseAnalytics /> into src/app/layout.tsx body, after <Toaster />.
+- Lint clean (bun run lint, 0 errors). Dev server returns 200 with no errors.
+- Verified with Agent Browser:
+  * Page title still "StoicBare — Wisdom from the Stoics".
+  * gtag script loaded from https://www.googletagmanager.com/gtag/js?l=
+    dataLayer&id=G-6W2P37RQJ6 (200 OK).
+  * GA4 page_view event POSTed to https://www.google-analytics.com/g/collect?
+    v=2&tid=G-6W2P37RQJ6&...&en=page_view&ep.origin=firebase — returns 204
+    (success). The ep.origin=firebase param confirms the event came from
+    Firebase Analytics (not a raw gtag implementation).
+  * No console errors, no hydration mismatch. The page still renders all
+    sections (header, hero, quote of the day, browse by author, featured
+    quotes, footer). Search/filter/copy interactions unaffected.
+- Updated README.md to document the Firebase integration: stack bullet,
+  project layout (lib/firebase.ts, components/firebase-analytics.tsx), a new
+  "Firebase" section explaining the lazy client-only init pattern and how to
+  extend to Firestore / Auth / Storage.
+
+Stage Summary:
+- Firebase v13 integrated: src/lib/firebase.ts (config + lazy app + lazy
+  analytics + logEvent helper) + src/components/firebase-analytics.tsx
+  (client mount that inits analytics after hydration) + layout.tsx mounts
+  <FirebaseAnalytics /> in the body.
+- Analytics confirmed firing real page_view events to the user's GA4
+  measurement ID G-6W2P37RQJ6 (visible in their Firebase / GA4 console
+  under the stoicbare-86bfa project).
+- Repo state: github.com/EpsilonStudy/EpsilonStudy main, new commit on top
+  of the StoicBare build.
