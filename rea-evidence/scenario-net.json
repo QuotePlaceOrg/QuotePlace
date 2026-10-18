@@ -1,0 +1,15 @@
+{
+  "browser": {
+    "mode": "launch",
+    "executable_path": "/home/z/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome",
+    "headless": true
+  },
+  "start_url": { "url": "https://news.ycombinator.com" },
+  "actions": [
+    { "step_id": "settle", "action": "wait_for_timeout", "duration_ms": 1500 }
+  ],
+  "capture": {
+    "at_end": ["url", "dom", "accessibility", "screenshot"],
+    "events": ["network", "console"]
+  }
+}
