@@ -23,13 +23,10 @@ Fast, minimal CDN-style landing page — pick one of three streaming servers to 
   <section>                         ← hero, centered
     <span>High-Speed CDN Platform</span>   ← tag pill
     <h1>Epsilon Study</h1>                 ← shimmer gradient text
-    <p>Fast, reliable content delivery…</p>
+    <p>Direct access — redirecting in Ns.</p>
     <div role="list" class="sr-only">     ← hidden SEO tag list
-    <nav aria-label="Server selection">
-      <a class="epsilon-button epsilon-button-server1">🔥 Open Server 1 🔥</a>
-      <a class="epsilon-button epsilon-button-server2">⚡ Open Server 2 ⚡</a>
-      <a class="epsilon-button epsilon-button-server3">🚀 Open Server 3 🚀</a>
-    </nav>
+    <a class="epsilon-button epsilon-button-server3">🚀 Enter Now 🚀</a>
+    <p>Auto-redirect in Ns, or click the button.</p>
     <div>All systems operational · <IST clock></div>
   </section>
   <footer>                          ← sticky bottom (mt-auto)
@@ -38,22 +35,21 @@ Fast, minimal CDN-style landing page — pick one of three streaming servers to 
 </main>
 ```
 
-## Configure the server URLs
+## Configure the direct-access target
 
-Edit `src/app/page.tsx` and replace the placeholder URLs in the `SERVERS`
-array with the real Epsilon Study endpoints:
+Edit `src/app/page.tsx` and replace the `TARGET_URL` constant with the real
+Epsilon Study endpoint. Visiting `/` will auto-redirect there after
+`COUNTDOWN_SECONDS` (default 3).
 
 ```ts
-const SERVERS: Server[] = [
-  { id: 1, label: "Open Server 1", url: "https://your-real-server-1/", … },
-  { id: 2, label: "Open Server 2", url: "https://your-real-server-2/", … },
-  { id: 3, label: "Open Server 3", url: "https://your-real-server-3/", … },
-];
+const TARGET_URL = "https://your-real-endpoint.example/";
+const COUNTDOWN_SECONDS = 3;
 ```
 
-While the URLs still match `*.epsilon-study.app`, clicking a button shows
-a toast and prevents navigation (so the demo doesn't open broken tabs).
-Once you set real URLs, clicking opens them in a new tab as expected.
+While `TARGET_URL` still matches `*.epsilon-study.app`, the auto-redirect is
+disabled and the button shows a toast (so the demo doesn't kick users out
+to a non-existent host). Set a real URL and the page will redirect
+automatically on load, with the "Enter Now" button as a manual fallback.
 
 ## Develop
 

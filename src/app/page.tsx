@@ -1,62 +1,36 @@
 /**
- * Epsilon Study — landing page.
+ * Epsilon Study — direct-access landing page.
  *
- * Reverse-engineered from https://studyrays.cc/ using REA (morluto/rea v6.7.0).
+ * Reverse-engineered from https://studyrays.cc/ using REA (morluto/rea v6.7.0),
+ * then simplified per the product decision: the source page's three "Open Server"
+ * buttons (which all linked to the same URL anyway) have been collapsed into a
+ * single direct-access entry. Visiting `/` auto-redirects to TARGET_URL after
+ * COUNTDOWN_SECONDS; a manual "Enter Now" button is provided as a fallback for
+ * browsers that block auto-redirect.
+ *
+ * To enable live redirect: set TARGET_URL below to the real Epsilon Study
+ * endpoint. While it still matches the *.epsilon-study.app placeholder,
+ * auto-redirect is disabled and the button surfaces a toast instead of
+ * opening a broken URL.
+ *
  * Captured Evidence: /home/z/my-project/rea-evidence/studyrays/capture.json
- *
- * Structure preserved from the source:
- *   <h1> brand
- *   <a class="epsilon-button epsilon-button-serverN"> 🔥/⚡/🚀 Open Server N 🔥/⚡/🚀 </a>
- *   (the source page's commented-out uptime monitor is intentionally omitted here)
- *
- * Replace the values in `SERVERS` below with the real Epsilon Study endpoints.
  */
 
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { useToast } from "@/hooks/use-toast";
 
-type Server = {
-  id: 1 | 2 | 3;
-  label: string;
-  emojiLeft: string;
-  emojiRight: string;
-  /** Replace with the real Epsilon Study endpoint for this server. */
-  url: string;
-  className: "epsilon-button-server1" | "epsilon-button-server2" | "epsilon-button-server3";
-  description: string;
-};
+// ┌──────────────────────────────────────────────────────────────────────┐
+// │ Direct-access target. Visiting / redirects here after COUNTDOWN_SECONDS. │
+// │ Replace with the real Epsilon Study endpoint.                       │
+// └──────────────────────────────────────────────────────────────────────┘
+const TARGET_URL = "https://app.epsilon-study.app/";
+const COUNTDOWN_SECONDS = 3;
 
-const SERVERS: Server[] = [
-  {
-    id: 1,
-    label: "Open Server 1",
-    emojiLeft: "🔥",
-    emojiRight: "🔥",
-    url: "https://server1.epsilon-study.app/",
-    className: "epsilon-button-server1",
-    description: "Primary high-speed streaming endpoint",
-  },
-  {
-    id: 2,
-    label: "Open Server 2",
-    emojiLeft: "⚡",
-    emojiRight: "⚡",
-    url: "https://server2.epsilon-study.app/",
-    className: "epsilon-button-server2",
-    description: "Low-latency fallback CDN",
-  },
-  {
-    id: 3,
-    label: "Open Server 3",
-    emojiLeft: "🚀",
-    emojiRight: "🚀",
-    url: "https://server3.epsilon-study.app/",
-    className: "epsilon-button-server3",
-    description: "Premium tier with global edge cache",
-  },
-];
+// A URL whose host ends with epsilon-study.app is treated as a placeholder.
+const isPlaceholderUrl = (url: string) =>
+  /\.epsilon-study\.app(\/|$)/.test(url);
 
 // Hidden SEO tag list (mirrors the source page's hidden `.tags` block).
 const SEO_TAGS = [
@@ -108,20 +82,40 @@ function CurrentTime() {
 
 export default function Home() {
   const { toast } = useToast();
+  const isPlaceholder = isPlaceholderUrl(TARGET_URL);
+  const [secondsLeft, setSecondsLeft] = useState(COUNTDOWN_SECONDS);
+  // Guard against React StrictMode double-fire of the effect causing two
+  // redirects, and against the user clicking the button while a redirect
+  // is already in flight.
+  const redirectedRef = useRef(false);
 
-  const handleClick = (server: Server) => (event: React.MouseEvent) => {
-    // The source page calls `window.open(url, "_blank")`. We keep the same
-    // behaviour but also surface a toast so the action is observable. When
-    // the URL is still a placeholder, we cancel the navigation so the demo
-    // doesn't open a broken new tab. Replace the SERVERS urls above with
-    // the real Epsilon Study endpoints to enable normal navigation.
-    toast({
-      title: `${server.emojiLeft} Opening ${server.label}`,
-      description: `${server.description} — ${server.url}`,
-    });
-    const isPlaceholder = /\.epsilon-study\.app(\/|$)/.test(server.url);
+  // Countdown + auto-redirect. Skipped while the target URL is still the
+  // placeholder so the demo doesn't kick users out to a non-existent host.
+  useEffect(() => {
+    if (isPlaceholder) return;
+    if (secondsLeft <= 0) {
+      if (!redirectedRef.current) {
+        redirectedRef.current = true;
+        window.location.href = TARGET_URL;
+      }
+      return;
+    }
+    const t = setTimeout(() => setSecondsLeft((s) => s - 1), 1000);
+    return () => clearTimeout(t);
+  }, [secondsLeft, isPlaceholder]);
+
+  const handleEnterClick = (event: React.MouseEvent) => {
+    event.preventDefault();
     if (isPlaceholder) {
-      event.preventDefault();
+      toast({
+        title: "🔗 Direct access target not configured",
+        description: `Set TARGET_URL in src/app/page.tsx — current placeholder is ${TARGET_URL}`,
+      });
+      return;
+    }
+    if (!redirectedRef.current) {
+      redirectedRef.current = true;
+      window.location.href = TARGET_URL;
     }
   };
 
@@ -139,8 +133,9 @@ export default function Home() {
             Epsilon Study
           </h1>
           <p className="max-w-md text-center text-sm text-gray-600 sm:text-base">
-            Fast, reliable content delivery. Pick a server below to enter the
-            Epsilon Study network.
+            {isPlaceholder
+              ? "Direct access — set TARGET_URL in src/app/page.tsx to enable redirect."
+              : `Direct access — you'll be redirected to the Epsilon Study network in ${secondsLeft}s.`}
           </p>
         </div>
 
@@ -153,29 +148,29 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Server buttons */}
-        <nav
-          aria-label="Server selection"
-          className="flex w-full max-w-md flex-col items-center gap-4"
-        >
-          {SERVERS.map((server, index) => (
-            <a
-              key={server.id}
-              href={server.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={handleClick(server)}
-              className={`epsilon-button ${server.className}`}
-              style={{ animationDelay: `${0.15 * index + 0.2}s` }}
-              aria-label={server.label}
-              data-server-id={server.id}
-            >
-              <span aria-hidden="true">{server.emojiLeft}</span>
-              <span>{server.label}</span>
-              <span aria-hidden="true">{server.emojiRight}</span>
-            </a>
-          ))}
-        </nav>
+        {/* Single direct-access button (replaces the source's 3 server buttons) */}
+        <div className="flex w-full max-w-md flex-col items-center gap-4">
+          <a
+            href={isPlaceholder ? "#" : TARGET_URL}
+            onClick={handleEnterClick}
+            className="epsilon-button epsilon-button-server3"
+            style={{ animationDelay: "0.35s" }}
+            aria-label="Enter Epsilon Study"
+            data-target-url={TARGET_URL}
+          >
+            <span aria-hidden="true">🚀</span>
+            <span>{isPlaceholder ? "Configure Target" : "Enter Now"}</span>
+            <span aria-hidden="true">🚀</span>
+          </a>
+
+          {!isPlaceholder && (
+            <p className="text-xs text-gray-500" aria-live="polite">
+              Auto-redirect in{" "}
+              <span className="font-bold text-gray-800">{secondsLeft}</span>{" "}
+              second{secondsLeft === 1 ? "" : "s"}, or click the button.
+            </p>
+          )}
+        </div>
 
         {/* Live IST clock — confirms the page is interactive & hydrated */}
         <div className="mt-6 text-center text-xs text-gray-500">
@@ -192,15 +187,11 @@ export default function Home() {
       {/* Sticky footer — stays at the bottom on short and long pages */}
       <footer className="mt-auto border-t border-gray-100 bg-white/80 backdrop-blur">
         <div className="mx-auto flex max-w-3xl flex-col items-center justify-between gap-2 px-4 py-4 text-xs text-gray-500 sm:flex-row sm:py-3">
-          <p>
-            © {new Date().getFullYear()} Epsilon Study · Fast CDN Platform
-          </p>
+          <p>© {new Date().getFullYear()} Epsilon Study · Fast CDN Platform</p>
           <p className="flex items-center gap-3">
-            <span aria-hidden="true">🔥</span>
-            <span aria-hidden="true">⚡</span>
             <span aria-hidden="true">🚀</span>
             <span className="ml-1">
-              Reverse-engineered with REA · Rebuilt as Epsilon Study
+              Direct access enabled · Reverse-engineered with REA
             </span>
           </p>
         </div>
