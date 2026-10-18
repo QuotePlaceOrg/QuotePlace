@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
@@ -14,24 +16,63 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
-  icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
-  },
+  title: "Epsilon Study - Fast CDN Platform",
+  description:
+    "Epsilon Study — high-speed CDN platform for content delivery. Open Server 1, Server 2, or Server 3 to access the Epsilon Study network with fast streaming and reliable uptime.",
+  keywords: [
+    "epsilon study",
+    "epsilonstudy",
+    "epsilon",
+    "study platform",
+    "fast cdn",
+    "content delivery",
+    "streaming",
+    "epsilon cdn",
+    "epsilon network",
+    "epsilon study hub",
+    "epsilon study server",
+    "epsilon study hosting",
+    "epsilon study stream",
+    "high speed cdn",
+    "education cdn",
+    "streaming platform",
+  ],
+  authors: [{ name: "Epsilon Study" }],
+  metadataBase: new URL("https://epsilon-study.app"),
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "Epsilon Study - Fast CDN Platform",
+    description:
+      "Fast CDN platform for content delivery — Epsilon Study. Open Server 1, 2, or 3 for high-speed streaming.",
+    url: "https://epsilon-study.app",
+    siteName: "Epsilon Study",
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    card: "summary",
+    title: "Epsilon Study - Fast CDN Platform",
+    description:
+      "Fast CDN platform for content delivery — Epsilon Study.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Epsilon Study - Fast CDN Platform",
+  description:
+    "Fast CDN platform for content delivery — Epsilon Study.",
+  url: "https://epsilon-study.app/",
+  keywords:
+    "epsilon study, epsilonstudy, epsilon, fast cdn, content delivery",
+  inLanguage: "en",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Epsilon Study",
+    url: "https://epsilon-study.app",
   },
 };
 
@@ -42,8 +83,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`${inter.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground`}
       >
         {children}
         <Toaster />
