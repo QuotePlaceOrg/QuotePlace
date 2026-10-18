@@ -109,3 +109,48 @@ Stage Summary:
   labels (role=list, aria-label on nav and buttons), JSON-LD structured data, toast feedback
   on click, fully TypeScript-typed, lint-clean.
 - Git remote configured with PAT via credential helper. Next: git add/commit/push.
+
+---
+Task ID: epsilon-study-direct-access
+Agent: main (Z.ai Code)
+Task: Remove the 3 server buttons from the Epsilon Study landing page and give direct access instead.
+
+Work Log:
+- Re-read src/app/page.tsx — confirmed the 3-button SERVERS array structure (open
+  server 1/2/3, all linking to placeholder URLs on *.epsilon-study.app).
+- Rewrote src/app/page.tsx:
+  * Removed: SERVERS array, Server type, <nav aria-label="Server selection">,
+    3 <a class="epsilon-button epsilon-button-serverN"> links, handleClick(server)
+    higher-order function.
+  * Added: TARGET_URL constant + COUNTDOWN_SECONDS (default 3) + isPlaceholderUrl()
+    helper. Single <a class="epsilon-button epsilon-button-server3"> button labeled
+    "Enter Now" (or "Configure Target" while the URL is still a placeholder).
+  * Added auto-redirect: useEffect countdown from COUNTDOWN_SECONDS to 0, then sets
+    window.location.href = TARGET_URL. Skipped while the URL is a placeholder so
+    the demo doesn't kick users out to a non-existent host. useRef guard prevents
+    double-redirect under React StrictMode.
+  * Manual fallback: handleEnterClick preventDefaults, then either shows a toast
+    (placeholder case) or sets window.location.href directly (real URL case).
+  * Status message below the button: "Auto-redirect in N second(s), or click the
+    button." with aria-live="polite" for screen readers.
+- Updated README.md to reflect the direct-access flow and TARGET_URL configuration
+  (replaced the 3-server config block with the single TARGET_URL config block).
+- Lint clean (bun run lint, 0 errors).
+- Verified with Agent Browser:
+  * Snapshot shows: heading "Epsilon Study", single link "Enter Epsilon Study",
+    no more 3-button nav.
+  * Click on "Enter Epsilon Study" surfaces toast "🔗 Direct access target not
+    configured — Set TARGET_URL in src/app/page.tsx — current placeholder is
+    https://app.epsilon-study.app/". preventDefault kept the page on /.
+  * No console errors, no hydration mismatch, dev.log shows GET / 200 in ~30ms.
+- Committed as 682ed1a ("refactor: collapse 3 server buttons into single
+  direct-access entry") and pushed to origin/main.
+
+Stage Summary:
+- Page now provides direct access: visiting / auto-redirects to TARGET_URL after
+  3 seconds (or immediately if the user clicks "Enter Now").
+- Single config point: TARGET_URL constant at the top of src/app/page.tsx.
+- Placeholder detection (*.epsilon-study.app) disables auto-redirect and surfaces
+  a toast, so the demo page never kicks users out to a non-existent host.
+- Repo state: github.com/EpsilonStudy/EpsilonStudy @ 682ed1a on main, 2 commits
+  past the initial scaffold.
