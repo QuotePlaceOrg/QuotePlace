@@ -1,24 +1,25 @@
 /**
- * Epsilon Study — study dashboard.
+ * StoicBare — bare, focused collection of public-domain Stoic quotes.
  *
- * Reverse-engineered from https://pw.studyparcham.in/ using REA
+ * Reverse-engineered from https://quotelibrary.org/ using REA
  * (morluto/rea v6.7.0). Captured Evidence:
- * /home/z/my-project/rea-evidence/studyparcham/capture.json (662 KB).
+ * /home/z/my-project/rea-evidence/quotelibrary/capture.json (612 KB).
  *
- * The source site gates every batch behind an access-key system:
- *   - a `🔑 Expires in: 11h 59m 55s` badge in the header,
- *   - `verifyAccessWithServer()` that POSTs to /api/auth with action=verify_key,
- *   - `redirectToGenerator()` that bounces expired users to /generate.html,
- *   - a `ParchamVault` + device-fingerprint layer that stores 24h free-trial keys.
+ * Source structure adapted:
+ *   - Sticky header: logo + nav + search + Contribute CTA
+ *   - Hero: big decorative quote marks + h1 + subtitle + search + popular topics
+ *   - Quote of the Day: featured quote + author + share buttons + Read more
+ *   - Browse by Author: author cards grid
+ *   - Featured Quotes: quote cards grid
+ *   - Footer: brand + copyright + quick links
  *
- * Per the product decision, NONE of that is reproduced here. Every batch
- * is directly accessible — clicking "Enroll and Study" opens the batch URL
- * in a new tab, with no key wall, no expiry countdown, no generator redirect.
+ * Source omitted (kept the page "bare"):
+ *   - Story View promo, About features grid, FAQ, Newsletter signup
  *
- * To enable live batch links, replace the placeholder URLs in the BATCHES
- * array below with the real Epsilon Study endpoints. While a URL still
- * matches the *.epsilon-study.app placeholder, clicking surfaces a toast
- * instead of opening a broken tab.
+ * All quotes are public domain (ancient Greek/Roman texts, 1st-2nd century
+ * BC/AD). Authors: Marcus Aurelius, Seneca, Epictetus, Musonius Rufus,
+ * Cleanthes, Zeno of Citium. Brand voice + visual design is original to
+ * StoicBare (ivory + charcoal + antique bronze, Lora serif + Inter).
  */
 
 "use client";
@@ -27,243 +28,322 @@ import { useMemo, useState, useSyncExternalStore } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
 import {
-  Bell,
   Search,
-  Settings,
-  Clock,
-  BookOpen,
-  Phone,
-  Plus,
-  GraduationCap,
-  MessageCircle,
+  Twitter,
+  Facebook,
+  Linkedin,
+  Share2,
+  ArrowRight,
+  Feather,
+  ScrollText,
   X,
-  Send,
-  Sparkles,
-  Loader2,
 } from "lucide-react";
 
 // ───────────────────────────────────────────────────────────────────────────
-// Batch catalog. Direct-access URLs — no key wall.
-// Replace the placeholder URLs with the real Epsilon Study endpoints.
+// Data — authors
 // ───────────────────────────────────────────────────────────────────────────
 
-type Batch = {
+type Author = {
   id: string;
   name: string;
-  exam: string;
-  year: number;
-  level: string;
-  emoji: string;
-  gradient: string; // Tailwind gradient classes
-  url: string; // direct-access URL (placeholder until you set real ones)
-  tag?: "New" | "Live" | "Popular";
+  epithet: string;
+  lifespan: string;
+  bio: string;
 };
 
-const isPlaceholder = (url: string) =>
-  /\.epsilon-study\.app(\/|$)/.test(url);
-
-const BATCHES: Batch[] = [
+const AUTHORS: Author[] = [
   {
-    id: "jee-foundation-2027",
-    name: "JEE 2027 — Foundation",
-    exam: "JEE",
-    year: 2027,
-    level: "Foundation",
-    emoji: "📐",
-    gradient: "from-blue-500 to-cyan-500",
-    url: "https://batches.epsilon-study.app/jee-foundation-2027",
-    tag: "Popular",
+    id: "marcus-aurelius",
+    name: "Marcus Aurelius",
+    epithet: "Roman Emperor & Philosopher",
+    lifespan: "121 – 180 AD",
+    bio: "Last of the Five Good Emperors. His private journal, the Meditations, is the most intimate record of Stoic practice we have.",
   },
   {
-    id: "neet-foundation-2027",
-    name: "NEET 2027 — Foundation",
-    exam: "NEET",
-    year: 2027,
-    level: "Foundation",
-    emoji: "🧬",
-    gradient: "from-emerald-500 to-green-600",
-    url: "https://batches.epsilon-study.app/neet-foundation-2027",
-    tag: "Popular",
+    id: "seneca",
+    name: "Seneca the Younger",
+    epithet: "Philosopher, Statesman, Playwright",
+    lifespan: "c. 4 BC – 65 AD",
+    bio: "Tutor and advisor to Nero until forced to take his own life. His Epistulae Morales remain foundational Stoic reading.",
   },
   {
-    id: "jee-crash-2027",
-    name: "JEE 2027 — Crash Course",
-    exam: "JEE",
-    year: 2027,
-    level: "Crash",
-    emoji: "⚡",
-    gradient: "from-amber-500 to-orange-600",
-    url: "https://batches.epsilon-study.app/jee-crash-2027",
+    id: "epictetus",
+    name: "Epictetus",
+    epithet: "Freed Slave & Teacher",
+    lifespan: "c. 50 – 135 AD",
+    bio: "Born a slave in the Eastern Empire. Taught in Nicopolis; the Enchiridion and Discourses were recorded by his student Arrian.",
   },
   {
-    id: "neet-crash-2027",
-    name: "NEET 2027 — Crash Course",
-    exam: "NEET",
-    year: 2027,
-    level: "Crash",
-    emoji: "🧪",
-    gradient: "from-rose-500 to-red-600",
-    url: "https://batches.epsilon-study.app/neet-crash-2027",
+    id: "musonius-rufus",
+    name: "Musonius Rufus",
+    epithet: "Roman Knight & Teacher",
+    lifespan: "c. 20 – 101 AD",
+    bio: "Called the 'Roman Socrates.' Teacher of Epictetus. Survived multiple exiles; fragments of his discourses survive via Stobaeus.",
   },
   {
-    id: "jee-test-series-2027",
-    name: "JEE 2027 — Test Series",
-    exam: "JEE",
-    year: 2027,
-    level: "Test Series",
-    emoji: "📝",
-    gradient: "from-violet-500 to-purple-600",
-    url: "https://batches.epsilon-study.app/jee-test-series-2027",
-    tag: "New",
+    id: "cleanthes",
+    name: "Cleanthes",
+    epithet: "Second head of the Stoa",
+    lifespan: "c. 330 – 230 BC",
+    bio: "Succeeded Zeno as head of the Stoic school in Athens. His Hymn to Zeus is the most complete surviving Stoic poem.",
   },
   {
-    id: "neet-test-series-2027",
-    name: "NEET 2027 — Test Series",
-    exam: "NEET",
-    year: 2027,
-    level: "Test Series",
-    emoji: "📋",
-    gradient: "from-teal-500 to-cyan-600",
-    url: "https://batches.epsilon-study.app/neet-test-series-2027",
-    tag: "New",
+    id: "zeno",
+    name: "Zeno of Citium",
+    epithet: "Founder of Stoicism",
+    lifespan: "c. 334 – 262 BC",
+    bio: "Began teaching under the Stoa Poikilē — the Painted Porch of the Athenian agora — around 300 BC. The school's name derives from this colonnade.",
   },
-  {
-    id: "jee-power-batch-2027",
-    name: "JEE 2027 — Power Batch",
-    exam: "JEE",
-    year: 2027,
-    level: "Power Batch",
-    emoji: "🔥",
-    gradient: "from-fuchsia-500 to-pink-600",
-    url: "https://batches.epsilon-study.app/jee-power-batch-2027",
-    tag: "Live",
-  },
-  {
-    id: "neet-power-batch-2027",
-    name: "NEET 2027 — Power Batch",
-    exam: "NEET",
-    year: 2027,
-    level: "Power Batch",
-    emoji: "🌟",
-    gradient: "from-indigo-500 to-blue-600",
-    url: "https://batches.epsilon-study.app/neet-power-batch-2027",
-    tag: "Live",
-  },
-  {
-    id: "ioqm-2027",
-    name: "IOQM 2027 — Olympiad",
-    exam: "IOQM",
-    year: 2027,
-    level: "Olympiad",
-    emoji: "🏆",
-    gradient: "from-yellow-500 to-amber-600",
-    url: "https://batches.epsilon-study.app/ioqm-2027",
-  },
-  {
-    id: "clat-2027",
-    name: "CLAT 2027 — Law",
-    exam: "CLAT",
-    year: 2027,
-    level: "Law",
-    emoji: "⚖️",
-    gradient: "from-slate-600 to-gray-800",
-    url: "https://batches.epsilon-study.app/clat-2027",
-  },
-  {
-    id: "gpat-2027",
-    name: "GPAT 2027 — Pharmacy",
-    exam: "GPAT",
-    year: 2027,
-    level: "Pharmacy",
-    emoji: "💊",
-    gradient: "from-lime-500 to-green-600",
-    url: "https://batches.epsilon-study.app/gpat-2027",
-  },
-  {
-    id: "ipmat-2027",
-    name: "IPMAT 2027 — Management",
-    exam: "IPMAT",
-    year: 2027,
-    level: "Management",
-    emoji: "📊",
-    gradient: "from-cyan-500 to-blue-600",
-    url: "https://batches.epsilon-study.app/ipmat-2027",
-  },
-  {
-    id: "kcet-2027",
-    name: "KCET 2027 — Karnataka",
-    exam: "KCET",
-    year: 2027,
-    level: "State",
-    emoji: "🎓",
-    gradient: "from-orange-500 to-red-600",
-    url: "https://batches.epsilon-study.app/kcet-2027",
-  },
-  {
-    id: "capf-2027",
-    name: "CAPF 2027 — Defence",
-    exam: "CAPF",
-    year: 2027,
-    level: "Defence",
-    emoji: "🛡️",
-    gradient: "from-stone-600 to-neutral-800",
-    url: "https://batches.epsilon-study.app/capf-2027",
-  },
-  {
-    id: "foundation-9-10-2027",
-    name: "Foundation 2027 — Class 9 & 10",
-    exam: "Foundation",
-    year: 2027,
-    level: "School",
-    emoji: "📚",
-    gradient: "from-purple-500 to-indigo-600",
-    url: "https://batches.epsilon-study.app/foundation-9-10-2027",
-  },
-  {
-    id: "design-2027",
-    name: "Design 2027 — NID / NIFT",
-    exam: "Design",
-    year: 2027,
-    level: "Design",
-    emoji: "🎨",
-    gradient: "from-pink-500 to-rose-600",
-    url: "https://batches.epsilon-study.app/design-2027",
-  },
-];
-
-// Top-nav links (decorative on the landing page; would route in a full app).
-const NAV_LINKS = [
-  { label: "Study Dashboard", icon: GraduationCap, active: true },
-  { label: "All Courses", icon: BookOpen },
-  { label: "Study Timer", icon: Clock },
-  { label: "Settings", icon: Settings },
-  { label: "Contact & Support", icon: Phone },
-] as const;
-
-// Hidden SEO tag list (mirrors the source page's hidden `.tags` block).
-const SEO_TAGS = [
-  "epsilon study",
-  "epsilonstudy",
-  "epsilon batches",
-  "jee 2027",
-  "neet 2027",
-  "ioqm 2027",
-  "clat 2027",
-  "ipmat 2027",
-  "kcet 2027",
-  "capf 2027",
-  "gpat 2027",
-  "exam prep",
-  "online coaching",
-  "test series",
-  "foundation batch",
-  "crash course",
 ];
 
 // ───────────────────────────────────────────────────────────────────────────
-// Live IST clock (useSyncExternalStore — hydration-safe, lint-clean).
+// Data — public-domain Stoic quotes
+// ───────────────────────────────────────────────────────────────────────────
+
+type Quote = {
+  id: string;
+  text: string;
+  authorId: string;
+  source: string;
+  topics: string[];
+};
+
+const QUOTES: Quote[] = [
+  // — Marcus Aurelius, Meditations —
+  {
+    id: "m1",
+    text: "You have power over your mind — not outside events. Realize this, and you will find strength.",
+    authorId: "marcus-aurelius",
+    source: "Meditations, Book IV",
+    topics: ["discipline", "resilience"],
+  },
+  {
+    id: "m2",
+    text: "The happiness of your life depends upon the quality of your thoughts.",
+    authorId: "marcus-aurelius",
+    source: "Meditations, Book IV",
+    topics: ["wisdom", "self-knowledge"],
+  },
+  {
+    id: "m3",
+    text: "Waste no more time arguing about what a good man should be. Be one.",
+    authorId: "marcus-aurelius",
+    source: "Meditations, Book X",
+    topics: ["virtue", "discipline"],
+  },
+  {
+    id: "m4",
+    text: "If it is not right, do not do it; if it is not true, do not say it.",
+    authorId: "marcus-aurelius",
+    source: "Meditations, Book XII",
+    topics: ["virtue", "discipline"],
+  },
+  {
+    id: "m5",
+    text: "The best revenge is not to be like your enemy.",
+    authorId: "marcus-aurelius",
+    source: "Meditations, Book VI",
+    topics: ["virtue", "anger"],
+  },
+  {
+    id: "m6",
+    text: "Confine yourself to the present.",
+    authorId: "marcus-aurelius",
+    source: "Meditations, Book VII",
+    topics: ["time", "discipline"],
+  },
+  {
+    id: "m7",
+    text: "Dwell on the beauty of life. Watch the stars, and see yourself running with them.",
+    authorId: "marcus-aurelius",
+    source: "Meditations, Book VII",
+    topics: ["wisdom", "self-knowledge"],
+  },
+  {
+    id: "m8",
+    text: "Very little is needed to make a happy life; it is all within yourself, in your way of thinking.",
+    authorId: "marcus-aurelius",
+    source: "Meditations, Book IV",
+    topics: ["wisdom", "self-knowledge"],
+  },
+
+  // — Seneca, Epistulae Morales & essays —
+  {
+    id: "s1",
+    text: "We suffer more often in imagination than in reality.",
+    authorId: "seneca",
+    source: "Epistulae Morales, Letter XIII",
+    topics: ["resilience", "self-knowledge"],
+  },
+  {
+    id: "s2",
+    text: "Luck is what happens when preparation meets opportunity.",
+    authorId: "seneca",
+    source: "Attributed; cf. Epistulae Morales",
+    topics: ["virtue", "discipline"],
+  },
+  {
+    id: "s3",
+    text: "Difficulties strengthen the mind, as labor does the body.",
+    authorId: "seneca",
+    source: "De Providentia",
+    topics: ["resilience", "discipline"],
+  },
+  {
+    id: "s4",
+    text: "He who fears death will never do anything worthy of a living man.",
+    authorId: "seneca",
+    source: "Epistulae Morales, Letter XXX",
+    topics: ["death", "courage"],
+  },
+  {
+    id: "s5",
+    text: "As is a tale, so is life: not how long it is, but how good it is, is what matters.",
+    authorId: "seneca",
+    source: "De Brevitate Vitae",
+    topics: ["time", "virtue"],
+  },
+  {
+    id: "s6",
+    text: "While we wait for life, life passes.",
+    authorId: "seneca",
+    source: "De Brevitate Vitae",
+    topics: ["time", "discipline"],
+  },
+  {
+    id: "s7",
+    text: "If a man knows not to which port he sails, no wind is favorable.",
+    authorId: "seneca",
+    source: "Epistulae Morales, Letter LXXI",
+    topics: ["wisdom", "discipline"],
+  },
+  {
+    id: "s8",
+    text: "Wherever there is a human being, there is an opportunity for a kindness.",
+    authorId: "seneca",
+    source: "De Ira",
+    topics: ["virtue", "anger"],
+  },
+
+  // — Epictetus, Enchiridion & Discourses —
+  {
+    id: "e1",
+    text: "It's not what happens to you, but how you react to it that matters.",
+    authorId: "epictetus",
+    source: "Enchiridion, §5",
+    topics: ["resilience", "discipline"],
+  },
+  {
+    id: "e2",
+    text: "Wealth consists not in having great possessions, but in having few wants.",
+    authorId: "epictetus",
+    source: "Discourses, III.9",
+    topics: ["virtue", "self-knowledge"],
+  },
+  {
+    id: "e3",
+    text: "Make the best use of what is in your power, and take the rest as it happens.",
+    authorId: "epictetus",
+    source: "Enchiridion, §1",
+    topics: ["resilience", "fate"],
+  },
+  {
+    id: "e4",
+    text:
+      "Don't demand that things happen as you wish, but wish that they happen as they do happen, and it will go well with you.",
+    authorId: "epictetus",
+    source: "Enchiridion, §8",
+    topics: ["fate", "resilience"],
+  },
+  {
+    id: "e5",
+    text: "No man is free who is not master of himself.",
+    authorId: "epictetus",
+    source: "Enchiridion (fragments)",
+    topics: ["discipline", "self-knowledge"],
+  },
+
+  // — Musonius Rufus —
+  {
+    id: "r1",
+    text: "The reward of philosophy is the perfection of the soul.",
+    authorId: "musonius-rufus",
+    source: "Fragments (Stobaeus)",
+    topics: ["virtue", "wisdom"],
+  },
+
+  // — Cleanthes —
+  {
+    id: "c1",
+    text: "Lead me, O Master of the mighty heavens, wheresoever you will.",
+    authorId: "cleanthes",
+    source: "Hymn to Zeus",
+    topics: ["fate", "courage"],
+  },
+
+  // — Zeno of Citium —
+  {
+    id: "z1",
+    text: "We have two ears and one mouth, so we should listen more than we say.",
+    authorId: "zeno",
+    source: "Attributed; Diogenes Laertius, VII.1.23",
+    topics: ["wisdom", "discipline"],
+  },
+  {
+    id: "z2",
+    text: "Well-being is realized by small steps, but is truly no small thing.",
+    authorId: "zeno",
+    source: "Attributed; Stobaeus",
+    topics: ["virtue", "discipline"],
+  },
+];
+
+const TOPICS = [
+  "wisdom",
+  "virtue",
+  "discipline",
+  "resilience",
+  "death",
+  "anger",
+  "time",
+  "fate",
+  "courage",
+  "self-knowledge",
+];
+
+// Hidden SEO tags (mirrors the source page's hidden keywords block).
+const SEO_TAGS = [
+  "stoicbare",
+  "stoicism",
+  "stoic quotes",
+  "marcus aurelius",
+  "seneca",
+  "epictetus",
+  "musonius rufus",
+  "cleanthes",
+  "zeno of citium",
+  "meditations",
+  "enchiridion",
+  "letters from a stoic",
+  "memento mori",
+  "amor fati",
+  "stoic philosophy",
+  "ancient wisdom",
+];
+
+// ───────────────────────────────────────────────────────────────────────────
+// Helpers
+// ───────────────────────────────────────────────────────────────────────────
+
+const authorById = (id: string): Author =>
+  AUTHORS.find((a) => a.id === id) ?? AUTHORS[0];
+
+const quoteCountByAuthor = (id: string): number =>
+  QUOTES.filter((q) => q.authorId === id).length;
+
+// ───────────────────────────────────────────────────────────────────────────
+// Live IST clock (useSyncExternalStore — hydration-safe, lint-clean)
 // ───────────────────────────────────────────────────────────────────────────
 
 function CurrentTime() {
@@ -290,308 +370,557 @@ function CurrentTime() {
   return <span suppressHydrationWarning>{formatted} IST</span>;
 }
 
+// Quote of the Day — deterministic per calendar day, rotates through QUOTES
+function useQuoteOfTheDay(): Quote {
+  return useSyncExternalStore(
+    (cb) => {
+      const id = setInterval(cb, 60_000); // re-check hourly
+      return () => clearInterval(id);
+    },
+    () => {
+      const now = new Date();
+      const start = new Date(now.getFullYear(), 0, 0);
+      const dayOfYear = Math.floor(
+        (now.getTime() - start.getTime()) / 86_400_000,
+      );
+      return QUOTES[dayOfYear % QUOTES.length];
+    },
+    () => QUOTES[0], // server snapshot — first quote
+  );
+}
+
 // ───────────────────────────────────────────────────────────────────────────
 // Subcomponents
 // ───────────────────────────────────────────────────────────────────────────
 
-function Header() {
+function Header({
+  search,
+  setSearch,
+}: {
+  search: string;
+  setSearch: (v: string) => void;
+}) {
   return (
-    <header className="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex h-14 max-w-7xl items-center gap-4 px-4">
-        {/* Logo + brand */}
+    <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
+      <div className="mx-auto flex h-14 max-w-6xl items-center gap-4 px-4">
+        {/* Logo */}
         <a
           href="/"
-          className="flex items-center gap-2 font-bold text-gray-900"
-          aria-label="Epsilon Study home"
+          className="flex items-center gap-2 font-serif text-lg font-bold text-foreground"
+          aria-label="StoicBare home"
         >
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-violet-600 to-fuchsia-600 text-white">
-            <GraduationCap className="h-5 w-5" aria-hidden="true" />
+          <span className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground">
+            <Feather className="h-5 w-5" aria-hidden="true" />
           </span>
-          <span className="text-base sm:text-lg">Epsilon Study</span>
+          <span>StoicBare</span>
         </a>
 
-        {/* Primary nav (hidden on small screens) */}
-        <nav
-          aria-label="Primary"
-          className="hidden flex-1 items-center gap-1 md:flex"
-        >
-          {NAV_LINKS.map((link) => {
-            const Icon = link.icon;
-            return (
-              <a
-                key={link.label}
-                href="#"
-                onClick={(e) => e.preventDefault()}
-                className={`inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-                  link.active
-                    ? "bg-violet-50 text-violet-700"
-                    : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-                }`}
-              >
-                <Icon className="h-4 w-4" aria-hidden="true" />
-                {link.label}
-              </a>
-            );
-          })}
+        {/* Primary nav (desktop only) */}
+        <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
+          {["Quotes", "Authors", "Topics", "About"].map((label) => (
+            <a
+              key={label}
+              href="#"
+              onClick={(e) => e.preventDefault()}
+              className="rounded-md px-3 py-1.5 text-sm font-medium text-muted-foreground hover:bg-accent hover:text-foreground"
+            >
+              {label}
+            </a>
+          ))}
         </nav>
 
-        <div className="ml-auto flex items-center gap-2">
-          {/* + Add Batch */}
-          <Button
-            size="sm"
-            className="hidden bg-violet-600 hover:bg-violet-700 sm:inline-flex"
-            onClick={(e) => e.preventDefault()}
-          >
-            <Plus className="h-4 w-4" aria-hidden="true" />
-            Add Batch
-          </Button>
-
-          {/* Notifications bell */}
-          <button
-            type="button"
-            className="relative inline-flex h-9 w-9 items-center justify-center rounded-full text-gray-600 hover:bg-gray-100 hover:text-gray-900"
-            aria-label="Notifications"
-            onClick={(e) => e.preventDefault()}
-          >
-            <Bell className="h-5 w-5" aria-hidden="true" />
-            <span
-              className="absolute right-1 top-1 h-2 w-2 rounded-full bg-rose-500"
-              aria-hidden="true"
-            />
-          </button>
+        {/* Search */}
+        <div className="relative ml-auto hidden flex-1 max-w-xs sm:block">
+          <Search
+            className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+            aria-hidden="true"
+          />
+          <Input
+            type="text"
+            placeholder="Search for quotes..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="h-9 rounded-md border-border bg-card pl-9"
+            aria-label="Search quotes"
+          />
         </div>
-        {/* NOTE: the source page's `key-timer-badge` (🔑 Expires in: …) is
-            intentionally NOT rendered here. That badge was the visible face
-            of the access-key generation system the user asked us to omit. */}
+
+        {/* Contribute CTA */}
+        <Button
+          size="sm"
+          variant="outline"
+          className="border-primary text-primary hover:bg-accent"
+          onClick={(e) => e.preventDefault()}
+        >
+          <ScrollText className="h-4 w-4" aria-hidden="true" />
+          Contribute
+        </Button>
       </div>
     </header>
   );
 }
 
-function BatchCard({
-  batch,
-  onEnroll,
+function Hero({
+  search,
+  setSearch,
 }: {
-  batch: Batch;
-  onEnroll: (e: React.MouseEvent) => void;
+  search: string;
+  setSearch: (v: string) => void;
 }) {
   return (
-    <article className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md">
-      {/* Thumbnail */}
-      <div
-        className={`relative aspect-[16/9] bg-gradient-to-br ${batch.gradient}`}
-      >
-        <div className="absolute inset-0 flex items-center justify-center text-5xl">
-          <span aria-hidden="true">{batch.emoji}</span>
+    <section className="relative overflow-hidden border-b border-border">
+      <div className="mx-auto max-w-6xl px-4 py-16 text-center sm:py-20">
+        {/* Decorative quote marks */}
+        <div
+          aria-hidden="true"
+          className="stoic-mark mb-4 text-7xl sm:text-8xl"
+        >
+          &ldquo;&rdquo;
         </div>
-        {batch.tag && (
-          <Badge
-            variant="secondary"
-            className="absolute left-2 top-2 bg-white/90 text-xs font-semibold text-gray-800"
-          >
-            {batch.tag}
-          </Badge>
-        )}
-        <Badge
-          variant="secondary"
-          className="absolute right-2 top-2 bg-black/40 text-xs font-medium text-white"
-        >
-          {batch.exam} · {batch.year}
-        </Badge>
+
+        <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
+          {QUOTES.length} public-domain Stoic quotes · {AUTHORS.length} authors
+        </p>
+
+        <h1 className="mx-auto mb-4 max-w-3xl font-serif text-4xl font-bold leading-tight text-foreground sm:text-5xl md:text-6xl">
+          Find clarity in the wisdom of the Stoics.
+        </h1>
+
+        <p className="mx-auto mb-8 max-w-2xl text-base text-muted-foreground sm:text-lg">
+          A bare, focused collection of quotes from Marcus Aurelius, Seneca,
+          Epictetus, Musonius Rufus, Cleanthes, and Zeno. No ads, no
+          distractions — just the words that have shaped human thought for two
+          thousand years.
+        </p>
+
+        {/* Search */}
+        <div className="mx-auto mb-6 max-w-xl">
+          <div className="relative">
+            <Search
+              className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground"
+              aria-hidden="true"
+            />
+            <Input
+              type="text"
+              placeholder="Search by keyword, author, or topic..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="h-12 rounded-md border-border bg-card pl-12 text-base shadow-sm"
+              aria-label="Search Stoic quotes"
+            />
+          </div>
+        </div>
+
+        {/* Popular topics */}
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          <span className="text-sm font-medium text-muted-foreground">
+            Popular:
+          </span>
+          {TOPICS.map((topic) => (
+            <button
+              key={topic}
+              type="button"
+              className="stoic-topic-pill"
+              onClick={() => setSearch(topic)}
+            >
+              {topic}
+            </button>
+          ))}
+        </div>
       </div>
+    </section>
+  );
+}
 
-      {/* Body */}
-      <div className="flex flex-1 flex-col gap-3 p-4">
-        <h3 className="text-sm font-bold leading-tight text-gray-900">
-          {batch.name}
-        </h3>
-        <p className="text-xs text-gray-500">{batch.level} batch</p>
+function QuoteOfTheDay({
+  quote,
+  author,
+  onShare,
+}: {
+  quote: Quote;
+  author: Author;
+  onShare: (channel: string, quote: Quote, author: Author) => void;
+}) {
+  return (
+    <section className="border-b border-border bg-card">
+      <div className="mx-auto max-w-4xl px-4 py-16 sm:py-20">
+        <div className="stoic-divider mb-4" aria-hidden="true" />
 
-        <Button
-          size="sm"
-          className="mt-auto w-full justify-center bg-violet-600 hover:bg-violet-700"
-          onClick={onEnroll}
-          aria-label={`Enroll and study ${batch.name}`}
+        <p className="mb-2 text-center text-xs font-semibold uppercase tracking-widest text-primary">
+          Quote of the Day
+        </p>
+        <p className="mb-8 text-center text-sm text-muted-foreground">
+          Each day we feature a quote worth sitting with for a moment.
+        </p>
+
+        {/* Big quote */}
+        <blockquote className="mb-6 text-center">
+          <span
+            aria-hidden="true"
+            className="stoic-mark mb-4 block text-5xl text-primary"
+          >
+            &ldquo;
+          </span>
+          <p className="stoic-quote-text mx-auto max-w-3xl text-2xl leading-relaxed sm:text-3xl">
+            {quote.text}
+          </p>
+          <p className="stoic-author-attr mt-6">
+            — <span className="uppercase">{author.name}</span>
+          </p>
+          <p className="stoic-source mt-1">{quote.source}</p>
+        </blockquote>
+
+        {/* Topic pills */}
+        <div className="mb-6 flex flex-wrap items-center justify-center gap-2">
+          {quote.topics.map((topic) => (
+            <span key={topic} className="stoic-topic-pill">
+              {topic}
+            </span>
+          ))}
+        </div>
+
+        {/* Share buttons */}
+        <div className="flex items-center justify-center gap-2">
+          <Button
+            variant="outline"
+            size="sm"
+            className="border-border bg-background"
+            onClick={() => onShare("twitter", quote, author)}
+            aria-label="Share on Twitter"
+          >
+            <Twitter className="h-4 w-4" aria-hidden="true" />
+            Twitter
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            className="border-border bg-background"
+            onClick={() => onShare("facebook", quote, author)}
+            aria-label="Share on Facebook"
+          >
+            <Facebook className="h-4 w-4" aria-hidden="true" />
+            Facebook
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            className="border-border bg-background"
+            onClick={() => onShare("linkedin", quote, author)}
+            aria-label="Share on LinkedIn"
+          >
+            <Linkedin className="h-4 w-4" aria-hidden="true" />
+            LinkedIn
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            className="border-border bg-background"
+            onClick={() => onShare("copy", quote, author)}
+            aria-label="Copy quote"
+          >
+            <Share2 className="h-4 w-4" aria-hidden="true" />
+            Copy
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function BrowseByAuthor({
+  authors,
+  onPick,
+}: {
+  authors: Author[];
+  onPick: (author: Author) => void;
+}) {
+  return (
+    <section className="border-b border-border">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+        <div className="mb-8 text-center">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary">
+            The Stoa
+          </p>
+          <h2 className="font-serif text-3xl font-bold text-foreground sm:text-4xl">
+            Browse by Author
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground">
+            From the founder of the Stoa to its late Roman practitioners — six
+            voices that shaped the school across five centuries.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {authors.map((author) => {
+            const count = quoteCountByAuthor(author.id);
+            return (
+              <button
+                key={author.id}
+                type="button"
+                onClick={() => onPick(author)}
+                className="stoic-card group text-left"
+                aria-label={`Filter by ${author.name}`}
+              >
+                <div className="mb-3 flex items-center gap-3">
+                  <span className="stoic-author-avatar" aria-hidden="true">
+                    {author.name.charAt(0)}
+                  </span>
+                  <div>
+                    <div className="font-serif text-lg font-bold text-foreground">
+                      {author.name}
+                    </div>
+                    <div className="text-xs text-muted-foreground">
+                      {author.lifespan}
+                    </div>
+                  </div>
+                </div>
+                <p className="mb-3 text-sm text-muted-foreground">
+                  {author.epithet}
+                </p>
+                <p className="text-sm leading-relaxed text-foreground/80">
+                  {author.bio}
+                </p>
+                <div className="mt-4 flex items-center justify-between text-xs">
+                  <span className="font-medium text-primary">
+                    {count} quote{count === 1 ? "" : "s"}
+                  </span>
+                  <span className="inline-flex items-center gap-1 text-muted-foreground group-hover:text-primary">
+                    Read <ArrowRight className="h-3 w-3" aria-hidden="true" />
+                  </span>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function QuoteCard({
+  quote,
+  author,
+  onAuthorClick,
+}: {
+  quote: Quote;
+  author: Author;
+  onAuthorClick: (author: Author) => void;
+}) {
+  return (
+    <article className="stoic-card flex flex-col gap-3">
+      <span aria-hidden="true" className="stoic-mark text-3xl text-primary">
+        &ldquo;
+      </span>
+      <p className="stoic-quote-text text-lg leading-relaxed">{quote.text}</p>
+      <div className="mt-auto">
+        <button
+          type="button"
+          onClick={() => onAuthorClick(author)}
+          className="stoic-author-attr hover:underline"
+          aria-label={`Filter by ${author.name}`}
         >
-          Enroll and Study
-          <Sparkles className="ml-1 h-3.5 w-3.5" aria-hidden="true" />
-        </Button>
+          — {author.name}
+        </button>
+        <p className="stoic-source mt-1">{quote.source}</p>
+      </div>
+      <div className="mt-2 flex flex-wrap gap-1.5">
+        {quote.topics.map((topic) => (
+          <span
+            key={topic}
+            className="stoic-topic-pill text-xs"
+            aria-label={`Topic: ${topic}`}
+          >
+            {topic}
+          </span>
+        ))}
       </div>
     </article>
   );
 }
 
-function Footer() {
+function FeaturedQuotes({
+  quotes,
+  onAuthorClick,
+}: {
+  quotes: Quote[];
+  onAuthorClick: (author: Author) => void;
+}) {
   return (
-    <footer className="mt-auto border-t border-gray-200 bg-white">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-4 text-xs text-gray-500 sm:flex-row sm:py-3">
-        <p>© {new Date().getFullYear()} Epsilon Study. All Rights Reserved.</p>
-        <p className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-2">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-            </span>
-            Direct access enabled · <CurrentTime />
+    <section className="border-b border-border bg-card">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+        <div className="mb-8 flex items-end justify-between gap-4">
+          <div>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary">
+              The Collection
+            </p>
+            <h2 className="font-serif text-3xl font-bold text-foreground sm:text-4xl">
+              Featured Quotes
+            </h2>
+          </div>
+          <span className="hidden text-sm text-muted-foreground sm:inline">
+            {quotes.length} shown of {QUOTES.length}
           </span>
-        </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {quotes.map((q) => (
+            <QuoteCard
+              key={q.id}
+              quote={q}
+              author={authorById(q.authorId)}
+              onAuthorClick={onAuthorClick}
+            />
+          ))}
+        </div>
       </div>
-    </footer>
+    </section>
   );
 }
 
-function AITutorChat() {
-  const [open, setOpen] = useState(false);
-  const [messages] = useState<
-    { role: "bot" | "user"; text: string }[]
-  >([
-    {
-      role: "bot",
-      text: "Hi! I'm Epsilon Study AI — always online. Looking for a batch or have a doubt? Ask away!",
-    },
-  ]);
-
+function SearchResults({
+  query,
+  quotes,
+  onAuthorClick,
+}: {
+  query: string;
+  quotes: Quote[];
+  onAuthorClick: (author: Author) => void;
+}) {
   return (
-    <>
-      {/* Floating launcher */}
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        className={`fixed bottom-4 right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-violet-600 to-fuchsia-600 text-white shadow-lg transition-transform hover:scale-105 ${
-          open ? "scale-0" : "scale-100"
-        }`}
-        aria-label="Open Epsilon Study AI Tutor"
-      >
-        <MessageCircle className="h-6 w-6" aria-hidden="true" />
-        <span className="absolute -right-0.5 -top-0.5 h-3 w-3 rounded-full border-2 border-white bg-emerald-500" />
-      </button>
-
-      {/* Chat panel */}
-      {open && (
-        <div
-          role="dialog"
-          aria-label="Epsilon Study AI Tutor"
-          className="fixed bottom-4 right-4 z-40 flex h-96 w-80 max-w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl"
-        >
-          {/* Header */}
-          <div className="flex items-center justify-between border-b border-gray-200 bg-gradient-to-r from-violet-600 to-fuchsia-600 px-4 py-3 text-white">
-            <div className="flex items-center gap-2">
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/20">
-                <GraduationCap className="h-5 w-5" aria-hidden="true" />
-              </span>
-              <div className="leading-tight">
-                <div className="text-sm font-semibold">Epsilon Study AI</div>
-                <div className="flex items-center gap-1 text-[10px] text-white/80">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" />
-                  Always online
-                </div>
-              </div>
-            </div>
-            <button
-              type="button"
-              onClick={() => setOpen(false)}
-              className="rounded-full p-1 hover:bg-white/20"
-              aria-label="Close AI Tutor"
-            >
-              <X className="h-4 w-4" aria-hidden="true" />
-            </button>
-          </div>
-
-          {/* Messages */}
-          <div className="flex-1 space-y-3 overflow-y-auto bg-gray-50 p-3">
-            {messages.map((m, i) => (
-              <div
-                key={i}
-                className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}
-              >
-                <div
-                  className={`max-w-[85%] rounded-2xl px-3 py-2 text-sm ${
-                    m.role === "user"
-                      ? "bg-violet-600 text-white"
-                      : "bg-white text-gray-800 shadow-sm"
-                  }`}
-                >
-                  {m.text}
-                </div>
-              </div>
+    <section className="border-b border-border bg-card">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+        <div className="mb-8">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary">
+            Search Results
+          </p>
+          <h2 className="font-serif text-3xl font-bold text-foreground sm:text-4xl">
+            {quotes.length} quote{quotes.length === 1 ? "" : "s"} for{" "}
+            <span className="text-primary">&ldquo;{query}&rdquo;</span>
+          </h2>
+        </div>
+        {quotes.length > 0 ? (
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {quotes.map((q) => (
+              <QuoteCard
+                key={q.id}
+                quote={q}
+                author={authorById(q.authorId)}
+                onAuthorClick={onAuthorClick}
+              />
             ))}
           </div>
-
-          {/* Composer (decorative — no backend wired up) */}
-          <form
-            className="flex items-center gap-2 border-t border-gray-200 bg-white p-2"
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <Input
-              type="text"
-              placeholder="Ask your doubt..."
-              aria-label="Ask your doubt"
-              className="h-9 flex-1"
-            />
-            <Button
-              type="submit"
-              size="icon"
-              className="h-9 w-9 shrink-0 bg-violet-600 hover:bg-violet-700"
-              aria-label="Send message"
-            >
-              <Send className="h-4 w-4" aria-hidden="true" />
-            </Button>
-          </form>
-        </div>
-      )}
-    </>
+        ) : (
+          <div className="rounded-lg border border-dashed border-border p-12 text-center">
+            <p className="text-muted-foreground">
+              No Stoic quotes match &ldquo;{query}&rdquo;.
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Try a topic like wisdom, virtue, death, or fate.
+            </p>
+          </div>
+        )}
+      </div>
+    </section>
   );
 }
 
-function TelegramModal({ onClose }: { onClose: () => void }) {
+function Footer() {
   return (
-    <div
-      role="dialog"
-      aria-label="Join Epsilon Study on Telegram"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
-      onClick={onClose}
-    >
-      <div
-        className="w-full max-w-sm overflow-hidden rounded-2xl bg-white shadow-2xl"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="relative bg-gradient-to-br from-sky-500 to-blue-600 p-6 text-center text-white">
-          <button
-            type="button"
-            onClick={onClose}
-            className="absolute right-2 top-2 rounded-full p-1.5 text-white/80 hover:bg-white/20 hover:text-white"
-            aria-label="Close"
-          >
-            <X className="h-4 w-4" aria-hidden="true" />
-          </button>
-          <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-full bg-white/20 text-3xl">
-            <span aria-hidden="true">💌</span>
+    <footer className="mt-auto border-t border-border bg-background">
+      <div className="mx-auto max-w-6xl px-4 py-12">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-4">
+          {/* Brand */}
+          <div className="sm:col-span-2">
+            <div className="mb-3 flex items-center gap-2 font-serif text-lg font-bold text-foreground">
+              <span className="flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
+                <Feather className="h-4 w-4" aria-hidden="true" />
+              </span>
+              StoicBare
+            </div>
+            <p className="mb-4 max-w-md text-sm text-muted-foreground">
+              A bare, focused collection of public-domain Stoic quotes from
+              Marcus Aurelius, Seneca, Epictetus, Musonius Rufus, Cleanthes,
+              and Zeno. Built for clarity, discipline, and resilience.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Quotes are drawn from ancient Greek and Roman texts in the public
+              domain. Translations vary; sources are noted per quote.
+            </p>
           </div>
-          <h2 className="text-lg font-bold">Join Telegram</h2>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="mb-3 text-sm font-semibold text-foreground">
+              Browse
+            </h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-primary">
+                  All Quotes
+                </a>
+              </li>
+              <li>
+                <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-primary">
+                  Authors
+                </a>
+              </li>
+              <li>
+                <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-primary">
+                  Topics
+                </a>
+              </li>
+              <li>
+                <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-primary">
+                  Quote of the Day
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="mb-3 text-sm font-semibold text-foreground">
+              About
+            </h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>
+                <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-primary">
+                  About StoicBare
+                </a>
+              </li>
+              <li>
+                <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-primary">
+                  Contribute
+                </a>
+              </li>
+              <li>
+                <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-primary">
+                  Sources
+                </a>
+              </li>
+              <li>
+                <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-primary">
+                  Privacy
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="p-6 text-center">
-          <p className="mb-4 text-sm text-gray-600">
-            Get the latest updates of the website and instant notifications
-            directly to your phone. Must join this. 💕
+
+        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row">
+          <p>© {new Date().getFullYear()} StoicBare. All quotes are public domain.</p>
+          <p className="flex items-center gap-2">
+            <span className="inline-flex items-center gap-1">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary/60" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+              </span>
+              Bare & online · <CurrentTime />
+            </span>
           </p>
-          <a
-            href="https://t.me/epsilonstudy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center rounded-lg bg-sky-500 px-4 py-2.5 text-sm font-semibold text-white hover:bg-sky-600"
-          >
-            Join Now 💞
-          </a>
-          <button
-            type="button"
-            onClick={onClose}
-            className="mt-2 w-full text-xs font-medium text-gray-500 hover:text-gray-700"
-          >
-            Remind me later
-          </button>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 
@@ -599,49 +928,83 @@ function TelegramModal({ onClose }: { onClose: () => void }) {
 // Page
 // ───────────────────────────────────────────────────────────────────────────
 
-const PAGE_SIZE = 8;
-
 export default function Home() {
   const { toast } = useToast();
   const [search, setSearch] = useState("");
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
-  const [showTelegram, setShowTelegram] = useState(true);
+  const [authorFilter, setAuthorFilter] = useState<string | null>(null);
 
-  const filtered = useMemo(() => {
+  const quoteOfTheDay = useQuoteOfTheDay();
+  const authorOfTheDay = authorById(quoteOfTheDay.authorId);
+
+  const searchResults = useMemo(() => {
+    // If an author filter is set, search within that author's quotes
+    let pool = QUOTES;
+    if (authorFilter) {
+      pool = QUOTES.filter((q) => q.authorId === authorFilter);
+    }
+    if (!search.trim()) return pool;
     const q = search.trim().toLowerCase();
-    if (!q) return BATCHES;
-    return BATCHES.filter(
-      (b) =>
-        b.name.toLowerCase().includes(q) ||
-        b.exam.toLowerCase().includes(q) ||
-        b.level.toLowerCase().includes(q) ||
-        String(b.year).includes(q),
+    return pool.filter(
+      (quote) =>
+        quote.text.toLowerCase().includes(q) ||
+        quote.source.toLowerCase().includes(q) ||
+        quote.topics.some((t) => t.toLowerCase().includes(q)) ||
+        authorById(quote.authorId)
+          .name.toLowerCase()
+          .includes(q),
     );
-  }, [search]);
+  }, [search, authorFilter]);
 
-  const visible = filtered.slice(0, visibleCount);
-  const hasMore = filtered.length > visibleCount;
+  // Decide what to show:
+  // - If search/filter active → show SearchResults
+  // - Else → show QoTD + BrowseByAuthor + FeaturedQuotes
+  const isFiltering = Boolean(search.trim()) || Boolean(authorFilter);
 
-  const handleEnroll = (batch: Batch) => (event: React.MouseEvent) => {
-    // Direct access: open the batch URL in a new tab. If the URL is still a
-    // placeholder, preventDefault and surface a toast so the demo doesn't
-    // open a broken tab.
-    if (isPlaceholder(batch.url)) {
-      event.preventDefault();
+  const handlePickAuthor = (author: Author) => {
+    setAuthorFilter(author.id);
+    setSearch("");
+    // Scroll to results
+    if (typeof window !== "undefined") {
+      requestAnimationFrame(() => {
+        document
+          .getElementById("results")
+          ?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+  };
+
+  const handleClearFilter = () => {
+    setAuthorFilter(null);
+    setSearch("");
+  };
+
+  const handleShare = (
+    channel: string,
+    quote: Quote,
+    author: Author,
+  ) => {
+    const text = `"${quote.text}" — ${author.name}`;
+    if (channel === "copy") {
+      if (typeof navigator !== "undefined" && navigator.clipboard) {
+        void navigator.clipboard.writeText(text);
+      }
       toast({
-        title: "🚀 Direct access — Epsilon Study",
-        description: `${batch.name} — set the URL in BATCHES (src/app/page.tsx) to open it live. No key, no wall.`,
+        title: "Quote copied",
+        description: text,
       });
       return;
     }
-    // Otherwise let the anchor / window.open proceed normally.
+    toast({
+      title: `Share on ${channel}`,
+      description: `Share this quote from ${author.name} on ${channel} — wire up your preferred share endpoint in src/app/page.tsx.`,
+    });
   };
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#f3f4f6] font-sans text-[#1f2937]">
-      <Header />
+    <div className="flex min-h-screen flex-col bg-background">
+      <Header search={search} setSearch={setSearch} />
 
-      {/* Hidden SEO tags (visually hidden, but exposed to screen readers) */}
+      {/* Hidden SEO tags */}
       <div className="sr-only" role="list" aria-label="Keywords">
         {SEO_TAGS.map((tag) => (
           <span key={tag} role="listitem">
@@ -651,91 +1014,61 @@ export default function Home() {
       </div>
 
       <main className="flex-1">
-        <section className="mx-auto max-w-7xl px-4 py-8">
-          {/* Hero */}
-          <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-            <h2 className="text-xl font-bold text-gray-900 sm:text-2xl">
-              Discover All Batches 🔥
-            </h2>
-            <Badge
-              variant="secondary"
-              className="self-start bg-violet-50 text-violet-700 sm:self-auto"
-            >
-              {filtered.length} batches available
-            </Badge>
-          </div>
-
-          {/* Search */}
-          <div className="relative mb-6">
-            <Search
-              className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400"
-              aria-hidden="true"
+        {!isFiltering && (
+          <>
+            <Hero search={search} setSearch={setSearch} />
+            <QuoteOfTheDay
+              quote={quoteOfTheDay}
+              author={authorOfTheDay}
+              onShare={handleShare}
             />
-            <Input
-              type="text"
-              placeholder="Search for exams, batches... (Paste ID to quick load)"
-              value={search}
-              onChange={(e) => {
-                setSearch(e.target.value);
-                setVisibleCount(PAGE_SIZE);
-              }}
-              className="h-11 rounded-lg border-gray-200 bg-white pl-10 shadow-sm"
-              aria-label="Search batches"
+            <BrowseByAuthor authors={AUTHORS} onPick={handlePickAuthor} />
+            <FeaturedQuotes
+              quotes={QUOTES.slice(0, 9)}
+              onAuthorClick={handlePickAuthor}
+            />
+          </>
+        )}
+
+        {isFiltering && (
+          <div id="results">
+            {/* Filter banner */}
+            <div className="border-b border-border bg-background">
+              <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4">
+                <div className="flex flex-wrap items-center gap-2 text-sm">
+                  <span className="text-muted-foreground">Filtering by:</span>
+                  {authorFilter && (
+                    <span className="stoic-topic-pill text-primary">
+                      Author: {authorById(authorFilter).name}
+                    </span>
+                  )}
+                  {search.trim() && (
+                    <span className="stoic-topic-pill text-primary">
+                      &ldquo;{search}&rdquo;
+                    </span>
+                  )}
+                </div>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={handleClearFilter}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  <X className="h-4 w-4" aria-hidden="true" />
+                  Clear filter
+                </Button>
+              </div>
+            </div>
+            <SearchResults
+              query={search.trim() || authorById(authorFilter ?? "").name}
+              quotes={searchResults}
+              onAuthorClick={handlePickAuthor}
             />
           </div>
-
-          {/* Batch grid */}
-          {visible.length > 0 ? (
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {visible.map((batch) => (
-                <BatchCard
-                  key={batch.id}
-                  batch={batch}
-                  onEnroll={handleEnroll(batch)}
-                />
-              ))}
-            </div>
-          ) : (
-            <div className="flex flex-col items-center justify-center rounded-xl border border-dashed border-gray-300 bg-white py-16 text-center">
-              <p className="text-sm text-gray-500">
-                No batches match &ldquo;{search}&rdquo;.
-              </p>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="mt-3"
-                onClick={() => setSearch("")}
-              >
-                Clear search
-              </Button>
-            </div>
-          )}
-
-          {/* Load more */}
-          {hasMore && (
-            <div className="mt-6 flex justify-center">
-              <Button
-                variant="outline"
-                onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
-                className="bg-white"
-              >
-                <Loader2 className="mr-2 h-4 w-4" aria-hidden="true" />
-                Load More
-              </Button>
-            </div>
-          )}
-        </section>
+        )}
       </main>
 
       <Footer />
-
-      {/* Floating: AI Tutor chat */}
-      <AITutorChat />
-
-      {/* Modal: Join Telegram (dismissible) */}
-      {showTelegram && (
-        <TelegramModal onClose={() => setShowTelegram(false)} />
-      )}
     </div>
   );
 }

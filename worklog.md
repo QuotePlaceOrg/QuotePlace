@@ -260,3 +260,124 @@ Stage Summary:
   the source's specific wording.
 - Repo state: github.com/EpsilonStudy/EpsilonStudy main, new commit on top of
   the previous direct-access refactor.
+
+---
+Task ID: stoicbare-build
+Agent: main (Z.ai Code)
+Task: Replace Epsilon Study (cleaned repo) with StoicBare — a Stoic-themed quote site reverse-engineered from https://quotelibrary.org/. Only public-domain content; original StoicBare branding.
+
+Work Log:
+- Captured https://quotelibrary.org/ with REA (provider-owned Chromium 145):
+  /home/z/my-project/rea-evidence/quotelibrary/capture.json (612 KB Evidence)
+  Artifacts: url, dom (116 KB HTML), accessibility (10 KB tree),
+  screenshot (1280x720 PNG, 301 KB), history, storage. 116 network events.
+  step.status=completed, confidence=observed.
+- Decoded DOM HTML + accessibility tree, extracted source structure:
+  * Sticky header: logo + nav (Quotes / Authors / Contributors / Blog / About)
+    + search + Contribute CTA
+  * Hero: big decorative quote marks + "World's Largest Collection with
+    1,201,142 Quotes" + h1 "Discover Wisdom That Inspires" + subtitle +
+    search + popular topics (Motivation/Success/Leadership/Life/Happiness/
+    Love/Wisdom/Philosophy/Science/Art/Business/Education) + Explore/Learn More
+  * Story View promo (h2 "Experience Quotes in Story View" + Try Story View CTA)
+  * Quote of the Day: image + blockquote + author link + share buttons
+    (Twitter/Facebook/LinkedIn) + Read more
+  * About Quote Library: 3 feature cards (Curated Collection / Community
+    Driven / Daily Inspiration)
+  * FAQ section: 4 Q&A + View All FAQs
+  * Newsletter signup: "Get Weekly Wisdom Delivered" + email input + 3 benefit
+    cards (Curated Quality / Deep Analysis / Themed Collections)
+  * Trending Quotes: grid of 5 quote cards (Steve Jobs / Robert Frost /
+    Eleanor Roosevelt / Gandhi / Robert Frost) with author link + source +
+    view count + Read more
+  * Footer: brand + social (Twitter/GitHub/Instagram/LinkedIn) + contact +
+    business info + Quick Links + Resources + copyright
+  * Color scheme: sage green (#4A5D32 primary, #8A9A5B accent) + parchment
+    (#F0F4EA bg) + serif headings + Inter body
+- Built StoicBare in /home/z/my-project:
+  * src/app/layout.tsx — switched to Lora serif (Google Font) + Inter body,
+    updated metadata (title "StoicBare — Wisdom from the Stoics", description,
+    keywords, OpenGraph, Twitter, JSON-LD as WebSite).
+  * src/app/globals.css — full StoicBare theme: warm ivory parchment
+    background (oklch 0.97 0.02 80) + deep charcoal foreground (oklch 0.2 0.01
+    50) + antique bronze primary (oklch 0.5 0.07 65) + warm stone secondary.
+    Lora serif for all headings, Inter for body. Custom classes: .stoic-mark
+    (big quote marks), .stoic-quote-text (serif italic), .stoic-author-attr
+    (uppercase bronze), .stoic-source (muted italic), .stoic-topic-pill
+    (outline pill), .stoic-card (lift on hover), .stoic-author-avatar (bronze
+    gradient circle with serif initial), .stoic-divider (4rem bronze rule).
+    Removed all old epsilon-* classes from the previous StudyParcham build.
+  * src/app/page.tsx — single-page site with all sections:
+    - Header (sticky): StoicBare logo (Feather icon + bronze square) +
+      nav (Quotes/Authors/Topics/About, desktop-only) + search Input +
+      Contribute outline Button.
+    - Hero: big decorative "“”" quote marks (Lora 7xl/8xl) +
+      "{QUOTES.length} public-domain Stoic quotes · {AUTHORS.length} authors"
+      eyebrow + h1 "Find clarity in the wisdom of the Stoics." + subtitle
+      + search Input (larger) + 10 topic pills (wisdom/virtue/discipline/
+      resilience/death/anger/time/fate/courage/self-knowledge).
+    - QuoteOfTheDay: stoic-divider + eyebrow "Quote of the Day" + subtitle +
+      big quote with "“" mark + serif italic text + uppercase bronze author +
+      italic source + topic pills + 4 share buttons (Twitter/Facebook/LinkedIn
+      / Copy). Uses useSyncExternalStore with day-of-year % QUOTES.length for
+      deterministic daily rotation. getServerSnapshot returns QUOTES[0] (no
+      hydration mismatch).
+    - BrowseByAuthor: 6 author cards in responsive grid (1/2/3 cols). Each
+      card: bronze-gradient circular avatar with serif initial + serif name +
+      lifespan + epithet + bio + quote count + Read CTA. Click filters
+      quotes by that author.
+    - FeaturedQuotes: 9 quote cards in grid. Each card: "“" mark + serif
+      italic quote text + uppercase author (clickable to filter) + italic
+      source + topic pills.
+    - SearchResults: shown when filtering. Banner with active filters
+      (author + search) + Clear filter button + grid of matching quote cards
+      OR empty-state with hint to try a topic.
+    - Footer (sticky, mt-auto): brand + description + "All quotes public
+      domain" disclaimer + Browse column (All Quotes/Authors/Topics/Quote of
+      the Day) + About column (About StoicBare/Contribute/Sources/Privacy) +
+      copyright + "Bare & online" live IST clock.
+  * Content: 25 public-domain Stoic quotes from 6 authors:
+    - Marcus Aurelius (Meditations, c. 161-180 AD) — 8 quotes
+    - Seneca the Younger (Epistulae Morales + essays, c. 60-65 AD) — 8 quotes
+    - Epictetus (Enchiridion + Discourses, c. 125 AD) — 5 quotes
+    - Musonius Rufus (fragments via Stobaeus, c. 60-90 AD) — 1 quote
+    - Cleanthes (Hymn to Zeus + fragments, c. 280 BC) — 1 quote
+    - Zeno of Citium (founder, fragments via Diogenes Laertius, c. 300 BC)
+      — 2 quotes
+    All sources are ancient (1st-2nd century BC/AD), fully public domain.
+- Lint clean (bun run lint, 0 errors). Dev server returns 200 with no errors.
+- Verified with Agent Browser:
+  * Header sticky with logo + nav (Quotes/Authors/Topics/About, desktop) +
+    Contribute CTA. Hero renders with quote marks + h1 + subtitle + search +
+    10 topic pills.
+  * Quote of the Day: "It's not what happens to you, but how you react to it
+    that matters." — Epictetus, Enchiridion §5. (Today's selection,
+    deterministic by day-of-year % 25 = 16 → QUOTES[16] = e1.)
+  * Click "wisdom" topic → 6 quote cards shown (m2/m7/m8/s7/r1/z1).
+  * Click "Clear filter" → back to 15 quote cards (6 author + 9 featured).
+  * Search "time" → 4 quote cards (m6/s5/s6 + 1 source match).
+  * Click "Filter by Seneca the Younger" → 8 quote cards (s1-s8).
+  * Click "Copy quote" → toast "Quote copied "It's not what happens to you,
+    but how you react to it that matters." — Epictetus".
+  * Desktop (1280x720) + mobile (390x844) screenshots captured:
+    /home/z/my-project/rea-evidence/quotelibrary/stoicbare-desktop.png
+    /home/z/my-project/rea-evidence/quotelibrary/stoicbare-mobile.png
+- Updated README.md with StoicBare overview, structure, interactions, dev
+  workflow, license note about public-domain quotes.
+- Committed and pushed to https://github.com/EpsilonStudy/EpsilonStudy.git main.
+
+Stage Summary:
+- New source: https://quotelibrary.org/ (quote aggregator, sage-green
+  parchment aesthetic). Source *structure* reproduced faithfully (sticky
+  header / hero / quote of the day / browse by author / featured quotes /
+  footer). Source *content* NOT copied — StoicBare only carries public-domain
+  Stoic texts (ancient Greek/Roman, 1st-2nd century BC/AD).
+- StoicBare visual identity is original: warm ivory parchment + deep charcoal
+  + antique bronze accent + Lora serif headings. No sage green, no indigo,
+  no blue. "Bare" aesthetic — minimal borders, generous whitespace, focus on
+  typography.
+- 25 quotes from 6 Stoic authors (Marcus Aurelius, Seneca, Epictetus, Musonius
+  Rufus, Cleanthes, Zeno) with proper source attributions (Meditations Book
+  X, Epistulae Morales Letter XIII, Enchiridion §5, etc.).
+- Repo state: github.com/EpsilonStudy/EpsilonStudy main, clean StoicBare
+  site on top of the placeholder-only reset commit.
