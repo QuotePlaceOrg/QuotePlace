@@ -280,7 +280,7 @@ export function ContributionPortal() {
         status: "pending",
         schemaVersion: 1,
         submittedBy: user.uid,
-        submittedByName: user.displayName || "StoicBare community member",
+        submittedByName: (user.displayName || "StoicBare community member").slice(0, 80),
         createdAt: serverTimestamp(),
       });
       setText("");
@@ -562,6 +562,23 @@ export function LiveQuoteLibrary() {
       if (requestId === requestRef.current) setLoading(false);
     }
   }, [selectedTopic, selectedAuthor, searchTerm]);
+
+  useEffect(() => {
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const onLandingSearch = (event: Event) => {
+      const value = String((event as CustomEvent<string>).detail || "");
+      setSearchInput(value);
+      setSelectedTopic("");
+      setSelectedAuthor("");
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => setSearchTerm(value.trim()), 450);
+    };
+    window.addEventListener("stoicbare:search", onLandingSearch);
+    return () => {
+      if (timer) clearTimeout(timer);
+      window.removeEventListener("stoicbare:search", onLandingSearch);
+    };
+  }, []);
 
   useEffect(() => {
     void loadPage(true);
