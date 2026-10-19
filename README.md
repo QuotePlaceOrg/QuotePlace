@@ -1,25 +1,25 @@
-# StoicBare
+# Quote Place
 
-A bare, focused collection of public-domain quotes from across the ages —
-**Stoic sages, Greek philosophers, Eastern masters, Enlightenment thinkers,
-Transcendentalists, and modern wits.** No ads, no distractions — just the
-words that have shaped human thought across millennia.
+A collection of public-domain quotes of every genre — **wisdom, life, love,
+success, poetry, grief, courage** — set as images you can send, post, or
+keep. No ads, no distractions, no watermarks — just the best lines ever
+written, with real attribution.
 
-> The name is **StoicBare**, but the content is broader than just Stoicism:
-> 16 authors spanning 6th c. BC (Lao Tzu, Confucius, Zeno) through early 20th
-> c. All quotes are public domain. No data extracted from quotelibrary.org —
-> the site's structure (nav, sections, profile layout) inspired StoicBare's
-> layout; all copy, quotes, and branding are original StoicBare work.
-> The visual identity is original: warm ivory parchment + charcoal text +
-> antique-bronze accent + Lora serif headings.
+> The name is **Quote Place**. The content spans all genres: 16 authors from
+> 6th c. BC (Lao Tzu, Confucius, Zeno) through early 20th c. All quotes are
+> public domain. No data extracted from quotelibrary.org — the site's
+> structure (nav, sections, profile layout) inspired Quote Place's layout;
+> all copy, quotes, and branding are original Quote Place work.
+> The visual identity is original: paper + ink + oxblood accent +
+> Fraunces / Newsreader / IBM Plex Mono type.
 
 ## Stack
 
 - **Framework**: Next.js 16 (App Router) + TypeScript 5
 - **Styling**: Tailwind CSS 4 + shadcn/ui (New York) + Lucide icons
-- **Fonts**: Inter (body) + Lora (serif headings/quotes), loaded at runtime via
-  Google Fonts `<link>` in `layout.tsx` (not `next/font/google`, which broke
-  the Turbopack/OpenNext deploy)
+- **Fonts**: Fraunces (display) + Newsreader (body) + IBM Plex Mono (labels),
+  loaded at runtime via Google Fonts `<link>` in `layout.tsx` (not
+  `next/font/google`, which broke the Turbopack/OpenNext deploy)
 - **Content**: 60 public-domain quotes from 16 authors, 12 topics
 - **Backend**: Firebase (`firebase@13`) — Firestore + Auth + Analytics.
   Every count (likes, favourites, views) comes from real Firestore data or is
@@ -86,8 +86,8 @@ GOOGLE_APPLICATION_CREDENTIALS=./service-account.json bun run seed:firestore
 
 ## Design tokens
 
-- Background: oklch(0.97 0.02 80), Text: oklch(0.2 0.01 50), Primary: oklch(0.5 0.07 65)
-- Lora for headings/quotes, Inter for body. No indigo/blue.
+- Background: #FAF7F0 (Paper), Text: #1A1815 (Ink), Primary: #8C3226 (Oxblood), Hairline: #E4DCCB, Faded: #6B6459
+- Fraunces for display, Newsreader for body, IBM Plex Mono for labels. Flat colors only — no gradients, no shadows, no glow.
 
 ## License
 
