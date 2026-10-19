@@ -118,6 +118,19 @@ footer{padding:30px 5vw 40px;color:var(--mute);border-top:1px solid var(--line);
 #flinks{display:flex;flex-wrap:wrap;gap:6px 22px;margin-bottom:14px}
 #flinks a{color:var(--ink);text-decoration:none;font-weight:600}
 #flinks a:hover{text-decoration:underline}
+#detail{position:fixed;inset:0;background:rgba(10,14,20,.72);z-index:30;display:none;overflow:auto;padding:4vh 4vw}
+#detail.open{display:block}
+.detailBox{max-width:900px;margin:0 auto;background:var(--card);border-radius:10px;padding:22px;position:relative}
+#detailX{position:absolute;right:14px;top:10px;border:0;background:none;font-size:28px;line-height:1;z-index:2}
+#detailMain .q{margin:0}
+#detailMain .face{min-height:340px}
+#detailMain blockquote{font-size:clamp(28px,4vw,44px)!important}
+.detailAuthor{padding:18px 4px 6px;border-bottom:1px solid var(--line);margin-bottom:16px}
+.detailAuthor h3{margin:0 0 4px;font:400 26px "DM Serif Display"}
+.detailAuthor .role{color:var(--mute);font-size:14px;margin:0 0 10px}
+.detailAuthor p{margin:0 0 12px;max-width:65ch}
+.recGrid{columns:3 200px;column-gap:14px}
+.recGrid .q{margin:0 0 14px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -168,6 +181,15 @@ footer{padding:30px 5vw 40px;color:var(--mute);border-top:1px solid var(--line);
   <div class="shr" id="shBtns"></div>
   <button class="btn" id="shX" style="margin-top:14px;border-color:var(--line)">Close</button>
 </dialog>
+<div id="detail" role="dialog" aria-modal="true" aria-label="Quote detail">
+  <div class="detailBox">
+    <button id="detailX" aria-label="Close">×</button>
+    <div id="detailMain"></div>
+    <div class="detailAuthor" id="detailAuthor"></div>
+    <h3 style="font:400 24px 'DM Serif Display';margin:18px 0 12px">More like this</h3>
+    <div class="recGrid" id="detailRec"></div>
+  </div>
+</div>
 <div class="toast" id="toast" role="status"></div>
 
 <script>
@@ -241,6 +263,46 @@ function render(){
   $("#who").textContent=me?users[me].name:"";
 }
 
+/* ---------- BATCHES + AUTHORS (daily content) ---------- */
+let AUTHORS={};
+async function loadData(){
+  try{
+    const m=await (await fetch("data/manifest.json")).json();
+    for(const f of (m.batches||[])){
+      const b=await (await fetch("data/"+f)).json();
+      (b.quotes||[]).forEach(q=>{ if(!QUOTES.some(x=>x.id===q.id)) QUOTES.push({id:q.id,t:q.t,a:q.a,c:q.c,img:q.img}); });
+      Object.assign(AUTHORS, b.authors||{});
+    }
+  }catch(e){}
+  try{
+    const list=await (await fetch("https://cdn.jsdelivr.net/gh/QuotePlaceOrg/quoteplace-authors@main/authors.json")).json();
+    list.forEach(a=>{ AUTHORS[a.name]={born:a.born,died:a.died,role:a.role,bio:a.bio}; });
+  }catch(e){}
+  render();
+}
+
+/* ---------- QUOTE DETAIL (Pinterest-style) ----------
+   Click a quote on the home page -> this quote's own view:
+   the quote big, the author with full bio, and recommended
+   quotes. Clicking a recommended quote opens ITS detail. */
+function recommendations(q){
+  const sameCat=QUOTES.filter(x=>x.id!==q.id&&x.c===q.c);
+  const sameAuthor=QUOTES.filter(x=>x.id!==q.id&&x.a===q.a&&x.c!==q.c);
+  const rest=QUOTES.filter(x=>x.id!==q.id&&x.c!==q.c&&x.a!==q.a);
+  return [...sameCat,...sameAuthor,...rest].slice(0,12);
+}
+function openDetail(id){
+  const q=QUOTES.find(x=>x.id===id); if(!q) return;
+  $("#detailMain").innerHTML=cardHTML(q);
+  const au=AUTHORS[q.a];
+  $("#detailAuthor").innerHTML = au
+    ? `<h3>${esc(q.a)}</h3><p class="role">${esc([au.role,[au.born,au.died].filter(Boolean).join(" – ")].filter(Boolean).join(" · "))}</p><p>${esc(au.bio)}</p><button class="btn" data-author-more="${esc(q.a)}">More quotes by ${esc(q.a)}</button>`
+    : `<h3>${esc(q.a)}</h3><button class="btn" data-author-more="${esc(q.a)}">More quotes by ${esc(q.a)}</button>`;
+  $("#detailRec").innerHTML=recommendations(q).map(cardHTML).join("");
+  $("#detail").classList.add("open"); document.body.style.overflow="hidden";
+}
+function closeDetail(){ $("#detail").classList.remove("open"); document.body.style.overflow=""; }
+
 /* ---------- AUTH (browser-only demo; swap for a real backend) ---------- */
 async function hash(s){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}
 function openAuth(m){mode=m;$("#authT").textContent=m==="login"?"Log in":"Create account";$("#authGo").textContent=m==="login"?"Log in":"Create account";
@@ -307,7 +369,21 @@ $("#shBtns").onclick=async e=>{
 $("#shX").onclick=()=>$("#shareD").close();
 
 /* ---------- EVENTS ---------- */
-$("#grid").onclick=e=>{const b=e.target.closest("[data-a]");if(!b)return;const id=b.closest(".q").dataset.id;b.dataset.a==="save"?toggleSave(id):openShare(id)};
+$("#grid").onclick=e=>{
+  const b=e.target.closest("[data-a]");
+  if(b){const id=b.closest(".q").dataset.id;b.dataset.a==="save"?toggleSave(id):openShare(id);return;}
+  const f=e.target.closest(".q"); if(f) openDetail(f.dataset.id);
+};
+$("#detail").onclick=e=>{
+  if(e.target.id==="detail")return closeDetail();
+  const more=e.target.closest("[data-author-more]");
+  if(more){const name=more.dataset.authorMore; closeDetail(); view="all"; cat="All"; term=name.toLowerCase(); $("#search").value=name; render(); scrollTo(0,0); return;}
+  const b=e.target.closest("[data-a]");
+  if(b){const id=b.closest(".q").dataset.id; if(b.dataset.a==="save"){toggleSave(id);openDetail(id);}else openShare(id); return;}
+  const f=e.target.closest(".q"); if(f&&!f.closest("#detailMain")) openDetail(f.dataset.id);
+};
+$("#detailX").onclick=closeDetail;
+addEventListener("keydown",e=>{if(e.key==="Escape"&&$("#detail").classList.contains("open"))closeDetail()});
 $("#chips").onclick=e=>{const c=e.target.dataset.c;if(c){cat=c;render()}};
 $("#search").oninput=e=>{term=e.target.value.toLowerCase();render()};
 $("#navAll").onclick=()=>{leaveLegal();view="all";render()};
@@ -346,6 +422,7 @@ function route(){
 addEventListener("hashchange",route);
 render();
 route();
+loadData();
 if(location.hash&&QUOTES.some(q=>q.id===location.hash.slice(1)))openShare(location.hash.slice(1));
 </script>
 </body>

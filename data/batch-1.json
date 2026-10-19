@@ -1,0 +1,1256 @@
+{
+ "quotes": [
+  {
+   "id": "b1",
+   "t": "Everything has beauty, but not everyone sees it.",
+   "a": "Confucius",
+   "c": "Wisdom",
+   "img": "images/batch-1/b1.jpg",
+   "style": "editorial"
+  },
+  {
+   "id": "b2",
+   "t": "It does not matter how slowly you go as long as you do not stop.",
+   "a": "Confucius",
+   "c": "Action",
+   "img": "images/batch-1/b2.jpg",
+   "style": "dark"
+  },
+  {
+   "id": "b3",
+   "t": "Our greatest glory is not in never falling, but in rising every time we fall.",
+   "a": "Confucius",
+   "c": "Courage",
+   "img": "images/batch-1/b3.jpg",
+   "style": "highlight"
+  },
+  {
+   "id": "b4",
+   "t": "Wherever you stand, be the soul of that place.",
+   "a": "Rumi",
+   "c": "Life",
+   "img": "images/batch-1/b4.jpg",
+   "style": "duotone"
+  },
+  {
+   "id": "b5",
+   "t": "You are not a drop in the ocean. You are the entire ocean in a drop.",
+   "a": "Rumi",
+   "c": "Wisdom",
+   "img": "images/batch-1/b5.jpg",
+   "style": "split"
+  },
+  {
+   "id": "b6",
+   "t": "The wound is the place where the Light enters you.",
+   "a": "Rumi",
+   "c": "Life",
+   "img": "images/batch-1/b6.jpg",
+   "style": "bigword"
+  },
+  {
+   "id": "b7",
+   "t": "We suffer more often in imagination than in reality.",
+   "a": "Seneca",
+   "c": "Calm",
+   "img": "images/batch-1/b7.jpg",
+   "style": "editorial"
+  },
+  {
+   "id": "b8",
+   "t": "Luck is what happens when preparation meets opportunity.",
+   "a": "Seneca",
+   "c": "Success",
+   "img": "images/batch-1/b8.jpg",
+   "style": "dark"
+  },
+  {
+   "id": "b9",
+   "t": "No man is free who is not master of himself.",
+   "a": "Seneca",
+   "c": "Wisdom",
+   "img": "images/batch-1/b9.jpg",
+   "style": "highlight"
+  },
+  {
+   "id": "b10",
+   "t": "You have power over your mind — not outside events.",
+   "a": "Marcus Aurelius",
+   "c": "Calm",
+   "img": "images/batch-1/b10.jpg",
+   "style": "duotone"
+  },
+  {
+   "id": "b11",
+   "t": "The happiness of your life depends upon the quality of your thoughts.",
+   "a": "Marcus Aurelius",
+   "c": "Happiness",
+   "img": "images/batch-1/b11.jpg",
+   "style": "split"
+  },
+  {
+   "id": "b12",
+   "t": "Waste no more time arguing what a good man should be. Be one.",
+   "a": "Marcus Aurelius",
+   "c": "Action",
+   "img": "images/batch-1/b12.jpg",
+   "style": "bigword"
+  },
+  {
+   "id": "b13",
+   "t": "The mind is everything. What you think, you become.",
+   "a": "Buddha",
+   "c": "Wisdom",
+   "img": "images/batch-1/b13.jpg",
+   "style": "face"
+  },
+  {
+   "id": "b14",
+   "t": "Peace comes from within. Do not seek it without.",
+   "a": "Buddha",
+   "c": "Calm",
+   "img": "images/batch-1/b14.jpg",
+   "style": "dark"
+  },
+  {
+   "id": "b15",
+   "t": "Do the best you can until you know better. Then when you know better, do better.",
+   "a": "Maya Angelou",
+   "c": "Wisdom",
+   "img": "images/batch-1/b15.jpg",
+   "style": "highlight"
+  },
+  {
+   "id": "b16",
+   "t": "If you don't like something, change it. If you can't change it, change your attitude.",
+   "a": "Maya Angelou",
+   "c": "Action",
+   "img": "images/batch-1/b16.jpg",
+   "style": "duotone"
+  },
+  {
+   "id": "b17",
+   "t": "Life is like riding a bicycle. To keep your balance, you must keep moving.",
+   "a": "Albert Einstein",
+   "c": "Life",
+   "img": "images/batch-1/b17.jpg",
+   "style": "face"
+  },
+  {
+   "id": "b18",
+   "t": "Imagination is more important than knowledge.",
+   "a": "Albert Einstein",
+   "c": "Wisdom",
+   "img": "images/batch-1/b18.jpg",
+   "style": "bigword"
+  },
+  {
+   "id": "b19",
+   "t": "In the middle of difficulty lies opportunity.",
+   "a": "Albert Einstein",
+   "c": "Courage",
+   "img": "images/batch-1/b19.jpg",
+   "style": "editorial"
+  },
+  {
+   "id": "b20",
+   "t": "The future depends on what you do today.",
+   "a": "Mahatma Gandhi",
+   "c": "Action",
+   "img": "images/batch-1/b20.jpg",
+   "style": "face"
+  },
+  {
+   "id": "b21",
+   "t": "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+   "a": "Mahatma Gandhi",
+   "c": "Life",
+   "img": "images/batch-1/b21.jpg",
+   "style": "highlight"
+  },
+  {
+   "id": "b22",
+   "t": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+   "a": "Winston Churchill",
+   "c": "Success",
+   "img": "images/batch-1/b22.jpg",
+   "style": "duotone"
+  },
+  {
+   "id": "b23",
+   "t": "If you're going through hell, keep going.",
+   "a": "Winston Churchill",
+   "c": "Courage",
+   "img": "images/batch-1/b23.jpg",
+   "style": "split"
+  },
+  {
+   "id": "b24",
+   "t": "This above all: to thine own self be true.",
+   "a": "William Shakespeare",
+   "c": "Wisdom",
+   "img": "images/batch-1/b24.jpg",
+   "style": "bigword"
+  },
+  {
+   "id": "b25",
+   "t": "We know what we are, but know not what we may be.",
+   "a": "William Shakespeare",
+   "c": "Life",
+   "img": "images/batch-1/b25.jpg",
+   "style": "editorial"
+  },
+  {
+   "id": "b26",
+   "t": "I declare after all there is no enjoyment like reading!",
+   "a": "Jane Austen",
+   "c": "Happiness",
+   "img": "images/batch-1/b26.jpg",
+   "style": "dark"
+  },
+  {
+   "id": "b27",
+   "t": "Beauty will save the world.",
+   "a": "Fyodor Dostoevsky",
+   "c": "Wisdom",
+   "img": "images/batch-1/b27.jpg",
+   "style": "highlight"
+  },
+  {
+   "id": "b28",
+   "t": "Man is a creature who can get used to anything.",
+   "a": "Fyodor Dostoevsky",
+   "c": "Life",
+   "img": "images/batch-1/b28.jpg",
+   "style": "duotone"
+  },
+  {
+   "id": "b29",
+   "t": "You can't cross the sea merely by standing and staring at the water.",
+   "a": "Rabindranath Tagore",
+   "c": "Action",
+   "img": "images/batch-1/b29.jpg",
+   "style": "split"
+  },
+  {
+   "id": "b30",
+   "t": "The butterfly counts not months but moments, and has time enough.",
+   "a": "Rabindranath Tagore",
+   "c": "Life",
+   "img": "images/batch-1/b30.jpg",
+   "style": "bigword"
+  },
+  {
+   "id": "b31",
+   "t": "Work is love made visible.",
+   "a": "Khalil Gibran",
+   "c": "Action",
+   "img": "images/batch-1/b31.jpg",
+   "style": "editorial"
+  },
+  {
+   "id": "b32",
+   "t": "Tenderness and kindness are not signs of weakness and despair, but manifestations of strength and resolution.",
+   "a": "Khalil Gibran",
+   "c": "Wisdom",
+   "img": "images/batch-1/b32.jpg",
+   "style": "dark"
+  },
+  {
+   "id": "b33",
+   "t": "When you want something, all the universe conspires in helping you to achieve it.",
+   "a": "Paulo Coelho",
+   "c": "Success",
+   "img": "images/batch-1/b33.jpg",
+   "style": "highlight"
+  },
+  {
+   "id": "b34",
+   "t": "One day you will wake up and there won't be any more time to do the things you've always wanted. Do it now.",
+   "a": "Paulo Coelho",
+   "c": "Action",
+   "img": "images/batch-1/b34.jpg",
+   "style": "duotone"
+  },
+  {
+   "id": "b35",
+   "t": "The biggest adventure you can take is to live the life of your dreams.",
+   "a": "Oprah Winfrey",
+   "c": "Life",
+   "img": "images/batch-1/b35.jpg",
+   "style": "split"
+  },
+  {
+   "id": "b36",
+   "t": "Stay hungry, stay foolish.",
+   "a": "Steve Jobs",
+   "c": "Life",
+   "img": "images/batch-1/b36.jpg",
+   "style": "bigword"
+  },
+  {
+   "id": "b37",
+   "t": "Your time is limited, so don't waste it living someone else's life.",
+   "a": "Steve Jobs",
+   "c": "Life",
+   "img": "images/batch-1/b37.jpg",
+   "style": "editorial"
+  },
+  {
+   "id": "b38",
+   "t": "Be water, my friend.",
+   "a": "Bruce Lee",
+   "c": "Calm",
+   "img": "images/batch-1/b38.jpg",
+   "style": "dark"
+  },
+  {
+   "id": "b39",
+   "t": "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times.",
+   "a": "Bruce Lee",
+   "c": "Habits",
+   "img": "images/batch-1/b39.jpg",
+   "style": "highlight"
+  },
+  {
+   "id": "b40",
+   "t": "Happiness is not something ready made. It comes from your own actions.",
+   "a": "Dalai Lama",
+   "c": "Happiness",
+   "img": "images/batch-1/b40.jpg",
+   "style": "duotone"
+  },
+  {
+   "id": "b41",
+   "t": "Be kind whenever possible. It is always possible.",
+   "a": "Dalai Lama",
+   "c": "Life",
+   "img": "images/batch-1/b41.jpg",
+   "style": "split"
+  },
+  {
+   "id": "b42",
+   "t": "Not all of us can do great things. But we can do small things with great love.",
+   "a": "Mother Teresa",
+   "c": "Love",
+   "img": "images/batch-1/b42.jpg",
+   "style": "face"
+  },
+  {
+   "id": "b43",
+   "t": "Be yourself; everyone else is already taken.",
+   "a": "Oscar Wilde",
+   "c": "Life",
+   "img": "images/batch-1/b43.jpg",
+   "style": "face"
+  },
+  {
+   "id": "b44",
+   "t": "We are all in the gutter, but some of us are looking at the stars.",
+   "a": "Oscar Wilde",
+   "c": "Courage",
+   "img": "images/batch-1/b44.jpg",
+   "style": "dark"
+  },
+  {
+   "id": "b45",
+   "t": "That which does not kill us makes us stronger.",
+   "a": "Friedrich Nietzsche",
+   "c": "Courage",
+   "img": "images/batch-1/b45.jpg",
+   "style": "highlight"
+  },
+  {
+   "id": "b46",
+   "t": "I was taught that the way of progress was neither swift nor easy.",
+   "a": "Marie Curie",
+   "c": "Success",
+   "img": "images/batch-1/b46.jpg",
+   "style": "face"
+  },
+  {
+   "id": "b47",
+   "t": "Pleasure in the job puts perfection in the work.",
+   "a": "Aristotle",
+   "c": "Success",
+   "img": "images/batch-1/b47.jpg",
+   "style": "split"
+  },
+  {
+   "id": "b48",
+   "t": "I know that I know nothing.",
+   "a": "Socrates",
+   "c": "Wisdom",
+   "img": "images/batch-1/b48.jpg",
+   "style": "bigword"
+  },
+  {
+   "id": "b49",
+   "t": "Simplicity is the ultimate sophistication.",
+   "a": "Leonardo da Vinci",
+   "c": "Wisdom",
+   "img": "images/batch-1/b49.jpg",
+   "style": "face"
+  },
+  {
+   "id": "b50",
+   "t": "Learning never exhausts the mind.",
+   "a": "Leonardo da Vinci",
+   "c": "Wisdom",
+   "img": "images/batch-1/b50.jpg",
+   "style": "dark"
+  },
+  {
+   "id": "b51",
+   "t": "I dream my painting and I paint my dream.",
+   "a": "Vincent van Gogh",
+   "c": "Action",
+   "img": "images/batch-1/b51.jpg",
+   "style": "face"
+  },
+  {
+   "id": "b52",
+   "t": "Feet, what do I need you for when I have wings to fly?",
+   "a": "Frida Kahlo",
+   "c": "Courage",
+   "img": "images/batch-1/b52.jpg",
+   "style": "duotone"
+  },
+  {
+   "id": "b53",
+   "t": "In spite of everything, I still believe that people are really good at heart.",
+   "a": "Anne Frank",
+   "c": "Love",
+   "img": "images/batch-1/b53.jpg",
+   "style": "split"
+  },
+  {
+   "id": "b54",
+   "t": "The best and most beautiful things in the world cannot be seen or even touched — they must be felt with the heart.",
+   "a": "Helen Keller",
+   "c": "Love",
+   "img": "images/batch-1/b54.jpg",
+   "style": "bigword"
+  },
+  {
+   "id": "b55",
+   "t": "You are never too old to set another goal or to dream a new dream.",
+   "a": "C.S. Lewis",
+   "c": "Courage",
+   "img": "images/batch-1/b55.jpg",
+   "style": "editorial"
+  },
+  {
+   "id": "b56",
+   "t": "Hardships often prepare ordinary people for an extraordinary destiny.",
+   "a": "C.S. Lewis",
+   "c": "Courage",
+   "img": "images/batch-1/b56.jpg",
+   "style": "dark"
+  },
+  {
+   "id": "b57",
+   "t": "It is impossible to live without failing at something, unless you live so cautiously that you might as well not have lived at all.",
+   "a": "J.K. Rowling",
+   "c": "Courage",
+   "img": "images/batch-1/b57.jpg",
+   "style": "highlight"
+  },
+  {
+   "id": "b58",
+   "t": "One child, one teacher, one book, one pen can change the world.",
+   "a": "Malala Yousafzai",
+   "c": "Action",
+   "img": "images/batch-1/b58.jpg",
+   "style": "face"
+  },
+  {
+   "id": "b59",
+   "t": "There is no passion to be found playing small.",
+   "a": "Nelson Mandela",
+   "c": "Courage",
+   "img": "images/batch-1/b59.jpg",
+   "style": "split"
+  },
+  {
+   "id": "b60",
+   "t": "The time is always right to do what is right.",
+   "a": "Martin Luther King Jr.",
+   "c": "Action",
+   "img": "images/batch-1/b60.jpg",
+   "style": "bigword"
+  },
+  {
+   "id": "b61",
+   "t": "When they go low, we go high.",
+   "a": "Michelle Obama",
+   "c": "Courage",
+   "img": "images/batch-1/b61.jpg",
+   "style": "editorial"
+  },
+  {
+   "id": "b62",
+   "t": "The best way to not feel hopeless is to get up and do something.",
+   "a": "Barack Obama",
+   "c": "Action",
+   "img": "images/batch-1/b62.jpg",
+   "style": "dark"
+  },
+  {
+   "id": "b63",
+   "t": "The most important investment you can make is in yourself.",
+   "a": "Warren Buffett",
+   "c": "Success",
+   "img": "images/batch-1/b63.jpg",
+   "style": "highlight"
+  },
+  {
+   "id": "b64",
+   "t": "All our dreams can come true, if we have the courage to pursue them.",
+   "a": "Walt Disney",
+   "c": "Courage",
+   "img": "images/batch-1/b64.jpg",
+   "style": "duotone"
+  },
+  {
+   "id": "b65",
+   "t": "Nothing is impossible. The word itself says 'I'm possible'!",
+   "a": "Audrey Hepburn",
+   "c": "Courage",
+   "img": "images/batch-1/b65.jpg",
+   "style": "split"
+  },
+  {
+   "id": "b66",
+   "t": "A day without laughter is a day wasted.",
+   "a": "Charlie Chaplin",
+   "c": "Happiness",
+   "img": "images/batch-1/b66.jpg",
+   "style": "bigword"
+  },
+  {
+   "id": "b67",
+   "t": "Life is what happens to you while you're busy making other plans.",
+   "a": "John Lennon",
+   "c": "Life",
+   "img": "images/batch-1/b67.jpg",
+   "style": "editorial"
+  },
+  {
+   "id": "b68",
+   "t": "Love the life you live. Live the life you love.",
+   "a": "Bob Marley",
+   "c": "Love",
+   "img": "images/batch-1/b68.jpg",
+   "style": "dark"
+  },
+  {
+   "id": "b69",
+   "t": "Don't count the days, make the days count.",
+   "a": "Muhammad Ali",
+   "c": "Action",
+   "img": "images/batch-1/b69.jpg",
+   "style": "face"
+  },
+  {
+   "id": "b70",
+   "t": "I've failed over and over and over again in my life. And that is why I succeed.",
+   "a": "Michael Jordan",
+   "c": "Success",
+   "img": "images/batch-1/b70.jpg",
+   "style": "duotone"
+  },
+  {
+   "id": "b71",
+   "t": "I am lucky that whatever fear I have inside me, my desire to win is always stronger.",
+   "a": "Serena Williams",
+   "c": "Courage",
+   "img": "images/batch-1/b71.jpg",
+   "style": "split"
+  },
+  {
+   "id": "b72",
+   "t": "Dream, dream, dream. Dreams transform into thoughts and thoughts result in action.",
+   "a": "A.P.J. Abdul Kalam",
+   "c": "Success",
+   "img": "images/batch-1/b72.jpg",
+   "style": "face"
+  },
+  {
+   "id": "b73",
+   "t": "Arise, awake, and stop not till the goal is reached.",
+   "a": "Swami Vivekananda",
+   "c": "Action",
+   "img": "images/batch-1/b73.jpg",
+   "style": "face"
+  },
+  {
+   "id": "b74",
+   "t": "A person should not be too honest. Straight trees are cut first.",
+   "a": "Chanakya",
+   "c": "Wisdom",
+   "img": "images/batch-1/b74.jpg",
+   "style": "dark"
+  },
+  {
+   "id": "b75",
+   "t": "Pain is inevitable. Suffering is optional.",
+   "a": "Haruki Murakami",
+   "c": "Calm",
+   "img": "images/batch-1/b75.jpg",
+   "style": "highlight"
+  },
+  {
+   "id": "b76",
+   "t": "The journey of a thousand miles begins with one step.",
+   "a": "Lao Tzu",
+   "c": "Action",
+   "img": "images/batch-1/b76.jpg",
+   "style": "duotone"
+  },
+  {
+   "id": "b77",
+   "t": "In the midst of chaos, there is also opportunity.",
+   "a": "Sun Tzu",
+   "c": "Wisdom",
+   "img": "images/batch-1/b77.jpg",
+   "style": "split"
+  },
+  {
+   "id": "b78",
+   "t": "Do nothing that is of no use.",
+   "a": "Miyamoto Musashi",
+   "c": "Habits",
+   "img": "images/batch-1/b78.jpg",
+   "style": "bigword"
+  },
+  {
+   "id": "b79",
+   "t": "Even the darkest night will end and the sun will rise.",
+   "a": "Victor Hugo",
+   "c": "Courage",
+   "img": "images/batch-1/b79.jpg",
+   "style": "face"
+  },
+  {
+   "id": "b80",
+   "t": "It is only with the heart that one can see rightly.",
+   "a": "Antoine de Saint-Exupéry",
+   "c": "Love",
+   "img": "images/batch-1/b80.jpg",
+   "style": "dark"
+  },
+  {
+   "id": "b81",
+   "t": "In the depth of winter, I finally learned that within me there lay an invincible summer.",
+   "a": "Albert Camus",
+   "c": "Courage",
+   "img": "images/batch-1/b81.jpg",
+   "style": "highlight"
+  },
+  {
+   "id": "b82",
+   "t": "A book must be the axe for the frozen sea within us.",
+   "a": "Franz Kafka",
+   "c": "Wisdom",
+   "img": "images/batch-1/b82.jpg",
+   "style": "face"
+  },
+  {
+   "id": "b83",
+   "t": "Everyone thinks of changing the world, but no one thinks of changing himself.",
+   "a": "Leo Tolstoy",
+   "c": "Wisdom",
+   "img": "images/batch-1/b83.jpg",
+   "style": "split"
+  },
+  {
+   "id": "b84",
+   "t": "Knowledge is of no value unless you put it into practice.",
+   "a": "Anton Chekhov",
+   "c": "Action",
+   "img": "images/batch-1/b84.jpg",
+   "style": "bigword"
+  },
+  {
+   "id": "b85",
+   "t": "You can cut all the flowers but you cannot keep Spring from coming.",
+   "a": "Pablo Neruda",
+   "c": "Courage",
+   "img": "images/batch-1/b85.jpg",
+   "style": "editorial"
+  },
+  {
+   "id": "b86",
+   "t": "The world was so recent that many things lacked names.",
+   "a": "Gabriel García Márquez",
+   "c": "Wisdom",
+   "img": "images/batch-1/b86.jpg",
+   "style": "dark"
+  },
+  {
+   "id": "b87",
+   "t": "I have always imagined that Paradise will be a kind of library.",
+   "a": "Jorge Luis Borges",
+   "c": "Wisdom",
+   "img": "images/batch-1/b87.jpg",
+   "style": "highlight"
+  },
+  {
+   "id": "b88",
+   "t": "If you don't like someone's story, write your own.",
+   "a": "Chinua Achebe",
+   "c": "Courage",
+   "img": "images/batch-1/b88.jpg",
+   "style": "duotone"
+  },
+  {
+   "id": "b89",
+   "t": "Do your little bit of good where you are; it's those little bits of good put together that overwhelm the world.",
+   "a": "Desmond Tutu",
+   "c": "Action",
+   "img": "images/batch-1/b89.jpg",
+   "style": "split"
+  },
+  {
+   "id": "b90",
+   "t": "To live is to choose. But to choose well, you must know who you are and what you stand for.",
+   "a": "Kofi Annan",
+   "c": "Wisdom",
+   "img": "images/batch-1/b90.jpg",
+   "style": "bigword"
+  },
+  {
+   "id": "b91",
+   "t": "It's the little things citizens do. That's what will make the difference.",
+   "a": "Wangari Maathai",
+   "c": "Action",
+   "img": "images/batch-1/b91.jpg",
+   "style": "editorial"
+  },
+  {
+   "id": "b92",
+   "t": "I don't believe in taking right decisions. I take decisions and then make them right.",
+   "a": "Ratan Tata",
+   "c": "Success",
+   "img": "images/batch-1/b92.jpg",
+   "style": "dark"
+  },
+  {
+   "id": "b93",
+   "t": "People throw stones at you and you convert them into milestones.",
+   "a": "Sachin Tendulkar",
+   "c": "Success",
+   "img": "images/batch-1/b93.jpg",
+   "style": "highlight"
+  },
+  {
+   "id": "b94",
+   "t": "All we have to decide is what to do with the time that is given us.",
+   "a": "J.R.R. Tolkien",
+   "c": "Life",
+   "img": "images/batch-1/b94.jpg",
+   "style": "duotone"
+  },
+  {
+   "id": "b95",
+   "t": "A person who has good thoughts cannot ever be ugly.",
+   "a": "Roald Dahl",
+   "c": "Wisdom",
+   "img": "images/batch-1/b95.jpg",
+   "style": "split"
+  },
+  {
+   "id": "b96",
+   "t": "You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.",
+   "a": "Dr. Seuss",
+   "c": "Courage",
+   "img": "images/batch-1/b96.jpg",
+   "style": "bigword"
+  },
+  {
+   "id": "b97",
+   "t": "Listen to the mustn'ts, child. Listen to the don'ts.",
+   "a": "Shel Silverstein",
+   "c": "Courage",
+   "img": "images/batch-1/b97.jpg",
+   "style": "editorial"
+  },
+  {
+   "id": "b98",
+   "t": "If there's a book that you want to read, but it hasn't been written yet, then you must write it.",
+   "a": "Toni Morrison",
+   "c": "Action",
+   "img": "images/batch-1/b98.jpg",
+   "style": "dark"
+  },
+  {
+   "id": "b99",
+   "t": "Not everything that is faced can be changed, but nothing can be changed until it is faced.",
+   "a": "James Baldwin",
+   "c": "Courage",
+   "img": "images/batch-1/b99.jpg",
+   "style": "highlight"
+  },
+  {
+   "id": "b100",
+   "t": "Hold fast to dreams, for if dreams die, life is a broken-winged bird that cannot fly.",
+   "a": "Langston Hughes",
+   "c": "Courage",
+   "img": "images/batch-1/b100.jpg",
+   "style": "face"
+  }
+ ],
+ "authors": {
+  "Confucius": {
+   "born": "551 BCE",
+   "died": "479 BCE",
+   "role": "Chinese philosopher",
+   "bio": "Confucius was a Chinese philosopher and teacher whose ideas about respect, learning, and right conduct shaped Chinese thought for over two thousand years."
+  },
+  "Rumi": {
+   "born": "1207",
+   "died": "1273",
+   "role": "Persian poet",
+   "bio": "Rumi was a Persian poet and Sufi mystic. His poems on love, longing, and the soul are among the most read poetry in the world."
+  },
+  "Seneca": {
+   "born": "4 BCE",
+   "died": "65 CE",
+   "role": "Roman philosopher",
+   "bio": "Seneca was a Roman Stoic philosopher, statesman, and playwright. His letters on anger, grief, and the shortness of life remain widely read."
+  },
+  "Marcus Aurelius": {
+   "born": "121",
+   "died": "180",
+   "role": "Roman emperor",
+   "bio": "Marcus Aurelius was a Roman emperor and Stoic philosopher. His private notebook, the Meditations, is a classic of practical philosophy."
+  },
+  "Buddha": {
+   "born": "c. 563 BCE",
+   "died": "c. 483 BCE",
+   "role": "Indian teacher",
+   "bio": "The Buddha was an Indian teacher whose teachings on suffering, mindfulness, and compassion became Buddhism, followed by hundreds of millions."
+  },
+  "Maya Angelou": {
+   "born": "1928",
+   "died": "2014",
+   "role": "American poet",
+   "bio": "Maya Angelou was an American poet, memoirist, and civil rights activist. Her memoir I Know Why the Caged Bird Sings made her one of the most celebrated voices of her generation."
+  },
+  "Albert Einstein": {
+   "born": "1879",
+   "died": "1955",
+   "role": "Physicist",
+   "bio": "Albert Einstein was a German-born physicist who developed the theory of relativity. He won the Nobel Prize in Physics in 1921 and became the most famous scientist of the 20th century."
+  },
+  "Mahatma Gandhi": {
+   "born": "1869",
+   "died": "1948",
+   "role": "Indian leader",
+   "bio": "Mahatma Gandhi was an Indian lawyer and leader who led India's independence movement through nonviolent resistance. His methods influenced civil rights movements worldwide."
+  },
+  "Winston Churchill": {
+   "born": "1874",
+   "died": "1965",
+   "role": "British statesman",
+   "bio": "Winston Churchill was a British statesman who led the United Kingdom as prime minister through the Second World War. He won the Nobel Prize in Literature in 1953."
+  },
+  "William Shakespeare": {
+   "born": "1564",
+   "died": "1616",
+   "role": "English playwright",
+   "bio": "William Shakespeare was an English playwright and poet, author of Hamlet, Macbeth, and Romeo and Juliet. His plays are performed more than those of any other playwright."
+  },
+  "Jane Austen": {
+   "born": "1775",
+   "died": "1817",
+   "role": "English novelist",
+   "bio": "Jane Austen was an English novelist known for Pride and Prejudice, Sense and Sensibility, and Emma. Her novels of manners are among the most loved in English literature."
+  },
+  "Fyodor Dostoevsky": {
+   "born": "1821",
+   "died": "1881",
+   "role": "Russian novelist",
+   "bio": "Fyodor Dostoevsky was a Russian novelist, author of Crime and Punishment and The Brothers Karamazov. His novels explore guilt, faith, and free will."
+  },
+  "Rabindranath Tagore": {
+   "born": "1861",
+   "died": "1941",
+   "role": "Indian poet",
+   "bio": "Rabindranath Tagore was an Indian poet, writer, and composer. He won the Nobel Prize in Literature in 1913, the first non-European to do so."
+  },
+  "Khalil Gibran": {
+   "born": "1883",
+   "died": "1931",
+   "role": "Lebanese-American writer",
+   "bio": "Khalil Gibran was a Lebanese-American writer and artist, best known for The Prophet, a book of poetic essays on life, love, and work."
+  },
+  "Paulo Coelho": {
+   "born": "1947",
+   "died": "",
+   "role": "Brazilian author",
+   "bio": "Paulo Coelho is a Brazilian author best known for The Alchemist, one of the best-selling books of all time."
+  },
+  "Oprah Winfrey": {
+   "born": "1954",
+   "died": "",
+   "role": "American media figure",
+   "bio": "Oprah Winfrey is an American talk-show host, producer, and philanthropist. The Oprah Winfrey Show ran for 25 years and made her one of the most influential figures in media."
+  },
+  "Steve Jobs": {
+   "born": "1955",
+   "died": "2011",
+   "role": "American entrepreneur",
+   "bio": "Steve Jobs was the co-founder of Apple and a driving force behind the Macintosh, iPhone, and iPad. He was known for demanding simplicity and design excellence."
+  },
+  "Bruce Lee": {
+   "born": "1940",
+   "died": "1973",
+   "role": "Martial artist",
+   "bio": "Bruce Lee was a Hong Kong-American martial artist and actor who brought martial arts films to the world. He developed the philosophy of Jeet Kune Do."
+  },
+  "Dalai Lama": {
+   "born": "1935",
+   "died": "",
+   "role": "Tibetan spiritual leader",
+   "bio": "The Dalai Lama is the spiritual leader of Tibetan Buddhism. He won the Nobel Peace Prize in 1989 for his nonviolent campaign for Tibet."
+  },
+  "Mother Teresa": {
+   "born": "1910",
+   "died": "1997",
+   "role": "Catholic nun",
+   "bio": "Mother Teresa was a Catholic nun who founded the Missionaries of Charity in Kolkata, caring for the poorest of the poor. She won the Nobel Peace Prize in 1979."
+  },
+  "Oscar Wilde": {
+   "born": "1854",
+   "died": "1900",
+   "role": "Irish writer",
+   "bio": "Oscar Wilde was an Irish playwright and novelist, author of The Picture of Dorian Gray and The Importance of Being Earnest. He was famous for his wit."
+  },
+  "Leonardo da Vinci": {
+   "born": "1452",
+   "died": "1519",
+   "role": "Italian artist",
+   "bio": "Leonardo da Vinci was an Italian artist, scientist, and inventor of the Renaissance. He painted the Mona Lisa and The Last Supper and filled notebooks with studies of anatomy, flight, and machines."
+  },
+  "Vincent van Gogh": {
+   "born": "1853",
+   "died": "1890",
+   "role": "Dutch painter",
+   "bio": "Vincent van Gogh was a Dutch painter who made more than 2,000 artworks in a decade. Little appreciated in his life, he is now one of the most famous painters in history."
+  },
+  "Frida Kahlo": {
+   "born": "1907",
+   "died": "1954",
+   "role": "Mexican painter",
+   "bio": "Frida Kahlo was a Mexican painter known for self-portraits that explored pain, identity, and Mexican culture. Her work became a symbol of strength and self-expression."
+  },
+  "Anne Frank": {
+   "born": "1929",
+   "died": "1945",
+   "role": "Diarist",
+   "bio": "Anne Frank was a Jewish girl who hid with her family from the Nazis in Amsterdam. Her diary, found after her death in a concentration camp, is one of the most read books in the world."
+  },
+  "Helen Keller": {
+   "born": "1880",
+   "died": "1968",
+   "role": "American author",
+   "bio": "Helen Keller was an American author and activist who became deaf and blind as a child. With the help of her teacher Anne Sullivan she learned to read, write, and speak, and campaigned for people with disabilities."
+  },
+  "C.S. Lewis": {
+   "born": "1898",
+   "died": "1963",
+   "role": "British writer",
+   "bio": "C.S. Lewis was a British writer and scholar, author of The Chronicles of Narnia and Mere Christianity. He taught at Oxford and Cambridge."
+  },
+  "J.K. Rowling": {
+   "born": "1965",
+   "died": "",
+   "role": "British author",
+   "bio": "J.K. Rowling is a British author best known for the Harry Potter series, which became a global publishing phenomenon."
+  },
+  "Malala Yousafzai": {
+   "born": "1997",
+   "died": "",
+   "role": "Pakistani activist",
+   "bio": "Malala Yousafzai is a Pakistani activist for girls' education. After surviving an assassination attempt by the Taliban, she won the Nobel Peace Prize in 2014 at age 17."
+  },
+  "Martin Luther King Jr.": {
+   "born": "1929",
+   "died": "1968",
+   "role": "American minister",
+   "bio": "Martin Luther King Jr. was an American minister who led the civil rights movement through nonviolent protest. His 'I Have a Dream' speech is one of the most famous in history. He won the Nobel Peace Prize in 1964."
+  },
+  "Michelle Obama": {
+   "born": "1964",
+   "died": "",
+   "role": "American lawyer",
+   "bio": "Michelle Obama is an American lawyer and writer who served as First Lady of the United States from 2009 to 2017. Her memoir Becoming is one of the best-selling memoirs ever."
+  },
+  "Barack Obama": {
+   "born": "1961",
+   "died": "",
+   "role": "American statesman",
+   "bio": "Barack Obama was the 44th President of the United States (2009-2017) and the first Black president. He won the Nobel Peace Prize in 2009."
+  },
+  "Warren Buffett": {
+   "born": "1930",
+   "died": "",
+   "role": "American investor",
+   "bio": "Warren Buffett is an American investor and the chairman of Berkshire Hathaway. He is known as one of the most successful investors of all time."
+  },
+  "Walt Disney": {
+   "born": "1901",
+   "died": "1966",
+   "role": "American animator",
+   "bio": "Walt Disney was an American animator and entrepreneur who created Mickey Mouse and founded the Disney company. His films and theme parks changed popular entertainment."
+  },
+  "Audrey Hepburn": {
+   "born": "1929",
+   "died": "1993",
+   "role": "British actress",
+   "bio": "Audrey Hepburn was a British actress and humanitarian, star of Breakfast at Tiffany's and Roman Holiday. She spent her later years working for UNICEF."
+  },
+  "Charlie Chaplin": {
+   "born": "1889",
+   "died": "1977",
+   "role": "English actor",
+   "bio": "Charlie Chaplin was an English comic actor and filmmaker. His character the Tramp became one of the most recognized figures in film history."
+  },
+  "John Lennon": {
+   "born": "1940",
+   "died": "1980",
+   "role": "English musician",
+   "bio": "John Lennon was an English musician and a founding member of the Beatles. After the band split, he continued as a solo artist and peace activist."
+  },
+  "Bob Marley": {
+   "born": "1945",
+   "died": "1981",
+   "role": "Jamaican musician",
+   "bio": "Bob Marley was a Jamaican singer and songwriter who brought reggae to the world. His songs of love, faith, and resistance remain widely played."
+  },
+  "Muhammad Ali": {
+   "born": "1942",
+   "died": "2016",
+   "role": "American boxer",
+   "bio": "Muhammad Ali was an American boxer, three-time world heavyweight champion. He was known as much for his words and his stand on principle as for his skill in the ring."
+  },
+  "Michael Jordan": {
+   "born": "1963",
+   "died": "",
+   "role": "American athlete",
+   "bio": "Michael Jordan is an American former basketball player, widely considered the greatest in the sport. He won six NBA championships with the Chicago Bulls."
+  },
+  "Serena Williams": {
+   "born": "1981",
+   "died": "",
+   "role": "American athlete",
+   "bio": "Serena Williams is an American tennis player who won 23 Grand Slam singles titles, the most in the Open Era."
+  },
+  "A.P.J. Abdul Kalam": {
+   "born": "1931",
+   "died": "2015",
+   "role": "Indian scientist",
+   "bio": "A.P.J. Abdul Kalam was an Indian aerospace scientist and the 11th President of India. He was known as the 'Missile Man' for his work on India's space and missile programs."
+  },
+  "Swami Vivekananda": {
+   "born": "1863",
+   "died": "1902",
+   "role": "Indian monk",
+   "bio": "Swami Vivekananda was an Indian monk who brought Hindu philosophy to the West, notably at the 1893 Parliament of the World's Religions in Chicago."
+  },
+  "Chanakya": {
+   "born": "c. 375 BCE",
+   "died": "c. 283 BCE",
+   "role": "Indian teacher",
+   "bio": "Chanakya was an Indian teacher, philosopher, and royal adviser. His Arthashastra is a classic work on statecraft, economics, and strategy."
+  },
+  "Haruki Murakami": {
+   "born": "1949",
+   "died": "",
+   "role": "Japanese author",
+   "bio": "Haruki Murakami is a Japanese author known for Norwegian Wood and Kafka on the Shore. His novels blend the everyday with the surreal."
+  },
+  "Sun Tzu": {
+   "born": "c. 544 BCE",
+   "died": "c. 496 BCE",
+   "role": "Chinese general",
+   "bio": "Sun Tzu was a Chinese military general and strategist, traditionally credited with The Art of War, a short book on strategy read far beyond the battlefield."
+  },
+  "Miyamoto Musashi": {
+   "born": "1584",
+   "died": "1645",
+   "role": "Japanese swordsman",
+   "bio": "Miyamoto Musashi was a Japanese swordsman and author of The Book of Five Rings, a classic on strategy and discipline."
+  },
+  "Victor Hugo": {
+   "born": "1802",
+   "died": "1885",
+   "role": "French writer",
+   "bio": "Victor Hugo was a French writer, author of Les Misérables and The Hunchback of Notre-Dame. He was a leading voice of French Romanticism."
+  },
+  "Antoine de Saint-Exupéry": {
+   "born": "1900",
+   "died": "1944",
+   "role": "French writer",
+   "bio": "Antoine de Saint-Exupéry was a French writer and pilot, author of The Little Prince, one of the most translated books in the world."
+  },
+  "Albert Camus": {
+   "born": "1913",
+   "died": "1960",
+   "role": "French philosopher",
+   "bio": "Albert Camus was a French philosopher and author of The Stranger and The Plague. He won the Nobel Prize in Literature in 1957."
+  },
+  "Franz Kafka": {
+   "born": "1883",
+   "died": "1924",
+   "role": "Czech writer",
+   "bio": "Franz Kafka was a Czech writer whose stories of absurd bureaucracy and guilt, including The Metamorphosis and The Trial, gave the world the word 'Kafkaesque'."
+  },
+  "Leo Tolstoy": {
+   "born": "1828",
+   "died": "1910",
+   "role": "Russian novelist",
+   "bio": "Leo Tolstoy was a Russian novelist, author of War and Peace and Anna Karenina. His later years were devoted to nonviolence and simple living."
+  },
+  "Anton Chekhov": {
+   "born": "1860",
+   "died": "1904",
+   "role": "Russian writer",
+   "bio": "Anton Chekhov was a Russian playwright and short-story writer, author of The Cherry Orchard and Uncle Vanya. He is considered a master of the short story."
+  },
+  "Pablo Neruda": {
+   "born": "1904",
+   "died": "1973",
+   "role": "Chilean poet",
+   "bio": "Pablo Neruda was a Chilean poet and diplomat. He won the Nobel Prize in Literature in 1971."
+  },
+  "Gabriel García Márquez": {
+   "born": "1927",
+   "died": "2014",
+   "role": "Colombian novelist",
+   "bio": "Gabriel García Márquez was a Colombian novelist, author of One Hundred Years of Solitude. He won the Nobel Prize in Literature in 1982 and is the face of magical realism."
+  },
+  "Jorge Luis Borges": {
+   "born": "1899",
+   "died": "1986",
+   "role": "Argentine writer",
+   "bio": "Jorge Luis Borges was an Argentine writer of short stories and essays, known for labyrinths, mirrors, and infinite libraries. He is one of the most influential writers of the 20th century."
+  },
+  "Chinua Achebe": {
+   "born": "1930",
+   "died": "2013",
+   "role": "Nigerian novelist",
+   "bio": "Chinua Achebe was a Nigerian novelist, author of Things Fall Apart. He is regarded as the father of modern African literature."
+  },
+  "Desmond Tutu": {
+   "born": "1931",
+   "died": "2021",
+   "role": "South African archbishop",
+   "bio": "Desmond Tutu was a South African Anglican archbishop and a leading voice against apartheid. He won the Nobel Peace Prize in 1984 and chaired the Truth and Reconciliation Commission."
+  },
+  "Kofi Annan": {
+   "born": "1938",
+   "died": "2018",
+   "role": "Ghanaian diplomat",
+   "bio": "Kofi Annan was a Ghanaian diplomat who served as Secretary-General of the United Nations from 1997 to 2006. He won the Nobel Peace Prize in 2001."
+  },
+  "Wangari Maathai": {
+   "born": "1940",
+   "died": "2011",
+   "role": "Kenyan activist",
+   "bio": "Wangari Maathai was a Kenyan environmental and political activist who founded the Green Belt Movement. She won the Nobel Peace Prize in 2004."
+  },
+  "Ratan Tata": {
+   "born": "1937",
+   "died": "2024",
+   "role": "Indian industrialist",
+   "bio": "Ratan Tata was an Indian industrialist who led the Tata group for over two decades. He was known for humility, philanthropy, and building Indian companies into global names."
+  },
+  "Sachin Tendulkar": {
+   "born": "1973",
+   "died": "",
+   "role": "Indian cricketer",
+   "bio": "Sachin Tendulkar is an Indian former cricketer, the highest run-scorer in international cricket. He is widely called the 'God of Cricket' in India."
+  },
+  "Roald Dahl": {
+   "born": "1916",
+   "died": "1990",
+   "role": "British author",
+   "bio": "Roald Dahl was a British author of children's books including Charlie and the Chocolate Factory and Matilda. His stories mix mischief and dark humor."
+  },
+  "Dr. Seuss": {
+   "born": "1904",
+   "died": "1991",
+   "role": "American author",
+   "bio": "Dr. Seuss, pen name of Theodor Seuss Geisel, was an American author of beloved children's books including The Cat in the Hat and Green Eggs and Ham."
+  },
+  "Shel Silverstein": {
+   "born": "1930",
+   "died": "1999",
+   "role": "American poet",
+   "bio": "Shel Silverstein was an American poet, songwriter, and cartoonist, author of Where the Sidewalk Ends and The Giving Tree."
+  },
+  "Toni Morrison": {
+   "born": "1931",
+   "died": "2019",
+   "role": "American novelist",
+   "bio": "Toni Morrison was an American novelist, author of Beloved and Song of Solomon. She won the Nobel Prize in Literature in 1993, the first Black woman to do so."
+  },
+  "James Baldwin": {
+   "born": "1924",
+   "died": "1987",
+   "role": "American writer",
+   "bio": "James Baldwin was an American writer and civil rights voice, author of Go Tell It on the Mountain and The Fire Next Time. His essays on race and identity remain influential."
+  },
+  "Langston Hughes": {
+   "born": "1902",
+   "died": "1967",
+   "role": "American poet",
+   "bio": "Langston Hughes was an American poet and a leading figure of the Harlem Renaissance. His jazz-influenced poems gave voice to Black life in America."
+  },
+  "Aristotle": {
+   "born": "384 BCE",
+   "died": "322 BCE",
+   "role": "Greek philosopher",
+   "bio": "Aristotle was a Greek philosopher, student of Plato and teacher of Alexander the Great. His works on logic, ethics, and politics shaped Western thought for over two thousand years."
+  },
+  "Nelson Mandela": {
+   "born": "1918",
+   "died": "2013",
+   "role": "South African statesman",
+   "bio": "Nelson Mandela was a South African anti-apartheid leader who spent 27 years in prison, then became the country's first Black president and won the Nobel Peace Prize."
+  },
+  "Marie Curie": {
+   "born": "1867",
+   "died": "1934",
+   "role": "Physicist and chemist",
+   "bio": "Marie Curie was a Polish-born physicist and chemist, the only person to win Nobel Prizes in two different sciences."
+  },
+  "Friedrich Nietzsche": {
+   "born": "1844",
+   "died": "1900",
+   "role": "German philosopher",
+   "bio": "Friedrich Nietzsche was a German philosopher whose ideas on power, morality, and the 'death of God' shaped modern thought."
+  },
+  "Socrates": {
+   "born": "c. 470 BCE",
+   "died": "399 BCE",
+   "role": "Greek philosopher",
+   "bio": "Socrates was a Greek philosopher and founder of Western philosophy, known for questioning assumptions through dialogue."
+  },
+  "Lao Tzu": {
+   "born": "6th century BCE",
+   "died": "",
+   "role": "Chinese philosopher",
+   "bio": "Lao Tzu is the Chinese philosopher traditionally credited with the Tao Te Ching and the founding of Taoism."
+  },
+  "J.R.R. Tolkien": {
+   "born": "1892",
+   "died": "1973",
+   "role": "English writer",
+   "bio": "J.R.R. Tolkien was an English writer and Oxford scholar, author of The Hobbit and The Lord of the Rings."
+  }
+ }
+}
