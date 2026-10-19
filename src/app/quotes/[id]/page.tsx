@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getAuthor } from "@/lib/data";
 import QuoteCard from "@/components/QuoteCard";
-import QuoteDetailActions from "@/components/QuoteDetailActions";
+import ShareQuoteButton, { SaveQuoteButton, ReportQuoteForm } from "@/components/ShareQuoteButton";
 import { getQuote as getQuoteDoc, getAuthorDoc, listQuotes } from "@/lib/db";
 
 export default async function QuoteDetail({ params }: { params: Promise<{ id: string }> }) {
@@ -11,11 +11,7 @@ export default async function QuoteDetail({ params }: { params: Promise<{ id: st
   if (!quote) notFound();
   const authorDoc = await getAuthorDoc(quote.authorId);
   const author = authorDoc ?? getAuthor(quote.authorId) ?? { id: quote.authorId, name: quote.authorName, epithet: "", lifespan: "", bio: "" };
-  // Real Firestore like count (0 when the doc has none yet). Never invented.
-  const realLikeCount = quote.likeCount;
   const all = (await listQuotes({ pageSize: 500 })).quotes;
-  const counts = new Map<string, number>();
-  for (const q of all) counts.set(q.id, q.likeCount);
   const related = all.filter((q) => q.authorId === quote.authorId && q.id !== quote.id).slice(0, 3);
   const more = all.filter((q) => q.id !== quote.id && q.topics.some((t) => quote.topics.includes(t))).slice(0, 3);
   return (
@@ -26,18 +22,22 @@ export default async function QuoteDetail({ params }: { params: Promise<{ id: st
         <blockquote className="font-serif text-3xl leading-snug">{quote.text}</blockquote>
         <p className="mt-4 text-[var(--muted-foreground)]">— {author?.name} · {quote.source}</p>
         <div className="mt-3 flex flex-wrap gap-1">{quote.topics.map((t) => <Link key={t} href={`/topics/${t}`} className="rounded-full bg-[var(--muted)] px-2 py-0.5 text-xs capitalize hover:underline">{t}</Link>)}</div>
-        <QuoteDetailActions quoteId={quote.id} text={quote.text} authorName={author?.name ?? ""} likeCount={realLikeCount} />
+        <div className="mt-6 flex flex-wrap gap-2">
+          <ShareQuoteButton quoteId={quote.id} text={quote.text} authorName={author?.name ?? ""} source={quote.source} />
+          <SaveQuoteButton quoteId={quote.id} />
+          <ReportQuoteForm quoteId={quote.id} text={quote.text} />
+        </div>
       </article>
       <section className="mt-10">
         <h2 className="text-xl font-bold">More from {author?.name}</h2>
         {related.length === 0 ? <p className="mt-3 text-sm text-[var(--muted-foreground)]">No other quotes from this author yet.</p> : (
-          <div className="mt-4 grid gap-4 md:grid-cols-3">{related.map((q) => <QuoteCard key={q.id} quote={q} likeCount={counts.get(q.id) ?? 0} />)}</div>
+          <div className="mt-4 grid gap-4 md:grid-cols-3">{related.map((q) => <QuoteCard key={q.id} quote={q} />)}</div>
         )}
       </section>
       <section className="mt-10">
         <h2 className="text-xl font-bold">Related quotes</h2>
         {more.length === 0 ? <p className="mt-3 text-sm text-[var(--muted-foreground)]">No related quotes yet.</p> : (
-          <div className="mt-4 grid gap-4 md:grid-cols-3">{more.map((q) => <QuoteCard key={q.id} quote={q} likeCount={counts.get(q.id) ?? 0} />)}</div>
+          <div className="mt-4 grid gap-4 md:grid-cols-3">{more.map((q) => <QuoteCard key={q.id} quote={q} />)}</div>
         )}
       </section>
     </div>
