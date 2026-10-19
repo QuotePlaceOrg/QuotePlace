@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Quote Place favicon">
+  <title>Quote Place</title>
+  <!-- Solid ink field, single solid bronze diamond. No gradients, no shadows, no outlines. -->
+  <rect width="64" height="64" fill="#1A1A18"/>
+  <polygon points="32,10 54,32 32,54 10,32" fill="#A67C52"/>
+</svg>
