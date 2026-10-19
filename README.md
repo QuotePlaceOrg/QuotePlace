@@ -101,23 +101,14 @@ The Firebase web config is **designed to be public** — security for your
 project is enforced by Firebase Security Rules, not by hiding this config.
 You can see it shipping on https://stoicbare.app once deployed.
 
-To extend to other Firebase products, add the SDKs in `src/lib/firebase.ts`:
+The client singleton already exports `auth` and `db` for Firebase Authentication and Firestore. To add Firebase Storage later, export a Storage instance from `src/lib/firebase.ts`:
 
 ```ts
-// Firestore
-import { getFirestore } from "firebase/firestore";
-export const db = getFirestore(firebaseApp);
-
-// Auth
-import { getAuth } from "firebase/auth";
-export const auth = getAuth(firebaseApp);
-
-// Storage
 import { getStorage } from "firebase/storage";
 export const storage = getStorage(firebaseApp);
 ```
 
-Then call them from client components (these modules are also browser-only).
+Use Firebase Auth and Firestore from client components, and keep Admin SDK operations in trusted scripts or server-only code.
 
 
 ## Firebase quote archive and contributions
