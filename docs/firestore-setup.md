@@ -112,7 +112,9 @@ The contribution button prompts a signed-out visitor to sign in or create an
 account. Email/password is required for the default route; Google login is
 available only if you enabled that provider. Authenticated users can submit a
 quote, author, optional source, and up to five topics. Submissions are not public
-until approved.
+until approved. The review queue at `/admin` also includes bulk-imported `quotes`
+whose status is `pending_review`, so imported records can be reviewed and published
+without exposing them publicly first.
 
 To grant your own account reviewer access:
 
