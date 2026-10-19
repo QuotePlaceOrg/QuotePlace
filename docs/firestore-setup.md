@@ -8,7 +8,7 @@ the whole collection into the browser.
 ## 1. Enable Firebase products
 
 The web app is configured for the existing Firebase project
-\`stoicbare-86bfa\` in \`src/lib/firebase.ts\`.
+`stoicbare-86bfa` in `src/lib/firebase.ts`.
 
 In the Firebase console:
 
@@ -20,7 +20,7 @@ In the Firebase console:
 4. Confirm your deployment account has permission to deploy Firestore rules and
    indexes to this project.
 
-The web Firebase config (including \`apiKey\`) identifies the project; it is not
+The web Firebase config (including `apiKey`) identifies the project; it is not
 an admin credential. Access is enforced by Authentication and the Firestore
 rules. Do not put service-account JSON, private keys, or admin SDK credentials
 in the repository or client bundle.
@@ -29,33 +29,33 @@ in the repository or client bundle.
 
 From the repository root:
 
-\`\`\`bash
+```bash
 bun install
 npx firebase-tools login
 npx firebase-tools use stoicbare-86bfa
 npx firebase-tools deploy --only firestore:rules,firestore:indexes
-\`\`\`
+```
 
-The project alias is in \`.firebaserc\`. If the Firebase CLI asks for project
-confirmation, verify that \`stoicbare-86bfa\` is the intended project before
+The project alias is in `.firebaserc`. If the Firebase CLI asks for project
+confirmation, verify that `stoicbare-86bfa` is the intended project before
 deploying. These rule and index files live in the repository; they do not affect
 the live database until deployment succeeds.
 
 ## 3. Collections and document model
 
-- \`quotes/{sha256}\`: canonical quote content. A stable ID is derived from the
+- `quotes/{sha256}`: canonical quote content. A stable ID is derived from the
   normalized author and text to reduce duplicate imports. Fields include
-  \`text\`, \`authorName\`, \`authorSlug\`, \`source\`, \`sourceUrl\`, \`topics\`,
-  \`language\`, \`license\`, \`attributionStatus\`, \`status\`, \`searchTokens\`,
-  \`normalizedText\`, \`contentHash\`, \`createdAt\`, \`updatedAt\`, and
-  \`publishedAt\`. Only \`status: "published"\` is public.
-- \`quoteSubmissions/{autoId}\`: submissions from authenticated contributors.
+  `text`, `authorName`, `authorSlug`, `source`, `sourceUrl`, `topics`,
+  `language`, `license`, `attributionStatus`, `status`, `searchTokens`,
+  `normalizedText`, `contentHash`, `createdAt`, `updatedAt`, and
+  `publishedAt`. Only `status: "published"` is public.
+- `quoteSubmissions/{autoId}`: submissions from authenticated contributors.
   Each record is private to its author and admins and starts with
-  \`status: "pending"\`. Contributors cannot publish or edit canonical quotes.
-- \`users/{uid}\`: optional public profile fields. A client cannot assign itself
+  `status: "pending"`. Contributors cannot publish or edit canonical quotes.
+- `users/{uid}`: optional public profile fields. A client cannot assign itself
   an admin role.
-- \`users/{uid}/favorites/{quoteId}\`: a per-user place to store saved quotes.
-- \`authors/{authorSlug}\` and \`topics/{topicSlug}\`: optional curated metadata.
+- `users/{uid}/favorites/{quoteId}`: a per-user place to store saved quotes.
+- `authors/{authorSlug}` and `topics/{topicSlug}`: optional curated metadata.
 
 The browser requests 12 published quotes per page with Firestore cursor
 pagination. Filtering by author/topic and token search uses the supplied
@@ -72,36 +72,36 @@ dataset is imported.
 Use a JSONL file (one JSON object per line) prepared from a dataset that you are
 entitled to store and publish. Each record can include:
 
-\`\`\`json
+```json
 {"text":"The quote text.","author":"Author Name","source":"Book or collection","sourceUrl":"https://example.org/source","topics":["wisdom","courage"],"language":"en","license":"CC0-1.0"}
-\`\`\`
+```
 
 Do not load an undocumented scrape or a dataset whose licensing and attribution
-requirements are unclear. The importer defaults to \`pending_review\`, which
+requirements are unclear. The importer defaults to `pending_review`, which
 keeps new records out of the public archive:
 
-\`\`\`bash
+```bash
 node scripts/import-quotes.mjs ./data/quotes.jsonl
-\`\`\`
+```
 
 For a dataset you have already checked for attribution and publication rights,
 set a fallback license label and explicitly confirm review:
 
-\`\`\`bash
+```bash
 node scripts/import-quotes.mjs ./data/quotes.jsonl --publish-reviewed --license CC0-1.0
-\`\`\`
+```
 
-If the input provides a \`license\` on every record, the fallback \`--license\`
+If the input provides a `license` on every record, the fallback `--license`
 argument can still be used as a dataset-wide default. The importer uses stable
 hash IDs, checks for existing documents, skips duplicates, and writes in batches
 below Firestore's 500-write limit. It can be re-run to resume after an interrupted
 import without duplicating prior records.
 
 Authenticate the Admin SDK using a trusted service account. Either set
-\`GOOGLE_APPLICATION_CREDENTIALS\` to a local, untracked credential file, or set
-\`FIREBASE_SERVICE_ACCOUNT_JSON\` to the service-account JSON in your local
-environment. Never place either credential in a committed \`.env\` file. You can
-also set \`FIREBASE_PROJECT_ID\`; it defaults to \`stoicbare-86bfa\`.
+`GOOGLE_APPLICATION_CREDENTIALS` to a local, untracked credential file, or set
+`FIREBASE_SERVICE_ACCOUNT_JSON` to the service-account JSON in your local
+environment. Never place either credential in a committed `.env` file. You can
+also set `FIREBASE_PROJECT_ID`; it defaults to `stoicbare-86bfa`.
 
 For 100,000 documents, the import performs document-existence reads plus writes.
 Check Firebase billing and quotas before importing at scale.
@@ -120,31 +120,31 @@ To grant your own account reviewer access:
 2. Authenticate the Admin SDK locally as described above.
 3. Grant the custom claim:
 
-   \`\`\`bash
+   ```bash
    node scripts/set-admin-claim.mjs <firebase-auth-uid>
-   \`\`\`
+   ```
 
-4. Sign out and back in (or refresh the ID token), then open \`/admin\`.
+4. Sign out and back in (or refresh the ID token), then open `/admin`.
 
 To revoke the claim, run:
 
-\`\`\`bash
+```bash
 node scripts/set-admin-claim.mjs <firebase-auth-uid> --revoke
-\`\`\`
+```
 
 The script preserves any other custom claims. Never grant this claim to a user
 based solely on a self-reported email address. Approving a submission requires
 a reviewer to enter a rights basis/license and confirm that the quotation,
 attribution, source, and publication rights were checked. Approval writes a
-canonical \`quotes\` record and marks the submission as approved in one batch.
+canonical `quotes` record and marks the submission as approved in one batch.
 
 ## 6. Security notes
 
 - The committed rules allow public reads only for published quotes; clients
-  cannot write to \`quotes\`.
+  cannot write to `quotes`.
 - Users can create pending submissions only under their own UID and can read
   only their own submissions. Reviewers are authorized by a Firebase Auth
-  \`admin: true\` custom claim.
+  `admin: true` custom claim.
 - Rules are defense-in-depth, but they do not implement sophisticated abuse
   rate limits. Before opening contributions widely, enable Firebase App Check
   and consider server-side rate limiting or moderation signals.
