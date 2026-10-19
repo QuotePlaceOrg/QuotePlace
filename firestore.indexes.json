@@ -1,0 +1,98 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "quotes",
+      "queryScope": "COLLECTION",
+      "indexes": [
+        {
+          "fields": [
+            { "fieldPath": "status", "order": "ASCENDING" },
+            { "fieldPath": "createdAt", "order": "DESCENDING" }
+          ],
+          "arrayConfig": 0
+        }
+      ]
+    },
+    {
+      "collectionGroup": "quotes",
+      "queryScope": "COLLECTION",
+      "indexes": [
+        {
+          "fields": [
+            { "fieldPath": "status", "order": "ASCENDING" },
+            { "fieldPath": "likeCount", "order": "DESCENDING" }
+          ],
+          "arrayConfig": 0
+        }
+      ]
+    },
+    {
+      "collectionGroup": "quotes",
+      "queryScope": "COLLECTION",
+      "indexes": [
+        {
+          "fields": [
+            { "fieldPath": "status", "order": "ASCENDING" },
+            { "fieldPath": "authorId", "order": "ASCENDING" },
+            { "fieldPath": "createdAt", "order": "DESCENDING" }
+          ],
+          "arrayConfig": 0
+        }
+      ]
+    },
+    {
+      "collectionGroup": "quotes",
+      "queryScope": "COLLECTION",
+      "indexes": [
+        {
+          "fields": [
+            { "fieldPath": "status", "order": "ASCENDING" },
+            { "fieldPath": "topics", "order": "ASCENDING" },
+            { "fieldPath": "likeCount", "order": "DESCENDING" }
+          ],
+          "arrayConfig": 1
+        }
+      ]
+    },
+    {
+      "collectionGroup": "quotes",
+      "queryScope": "COLLECTION",
+      "indexes": [
+        {
+          "fields": [
+            { "fieldPath": "status", "order": "ASCENDING" },
+            { "fieldPath": "contributorId", "order": "ASCENDING" },
+            { "fieldPath": "createdAt", "order": "DESCENDING" }
+          ],
+          "arrayConfig": 0
+        }
+      ]
+    },
+    {
+      "collectionGroup": "blogs",
+      "queryScope": "COLLECTION",
+      "indexes": [
+        {
+          "fields": [
+            { "fieldPath": "status", "order": "ASCENDING" },
+            { "fieldPath": "publishedAt", "order": "DESCENDING" }
+          ],
+          "arrayConfig": 0
+        }
+      ]
+    },
+    {
+      "collectionGroup": "users",
+      "queryScope": "COLLECTION",
+      "indexes": [
+        {
+          "fields": [
+            { "fieldPath": "contributionCount", "order": "DESCENDING" }
+          ],
+          "arrayConfig": 0
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

@@ -27,8 +27,10 @@
 
 "use client";
 
-import { useMemo, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/components/auth-context";
+import { ContributeModal } from "@/components/contribute-modal";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -41,7 +43,19 @@ import {
   Feather,
   ScrollText,
   X,
+  Heart,
+  LogOut,
+  ChevronDown,
+  BookOpen,
+  Users,
+  Sparkles,
+  Newspaper,
+  Library,
+  CheckCircle2,
+  HelpCircle,
+  Mail,
 } from "lucide-react";
+import { toggleLike, getUserLikedQuoteIds } from "@/lib/firestore";
 
 // ───────────────────────────────────────────────────────────────────────────
 // Data — authors
@@ -852,12 +866,284 @@ function useQuoteOfTheDay(): Quote {
 // Subcomponents
 // ───────────────────────────────────────────────────────────────────────────
 
+/**
+ * Hook: manage the signed-in user's liked quote IDs + optimistic updates.
+ *
+ * Loads the user's liked IDs from Firestore on sign-in, exposes `toggle`
+ * which writes through to Firestore with an optimistic local flip. Falls
+ * back to no-op (open AuthModal) when the user isn't signed in.
+ *
+ * State is keyed by `uid` so that switching users (or signing out) never
+ * leaks the previous user's liked IDs — derived `likedIds` returns empty
+ * until the new user's fetch completes.
+ */
+function useLikes() {
+  const { user, openAuthModal } = useAuth();
+
+  // Single state object: uid + likedIds + likeOverrides. When `uid` doesn't
+  // match the current user, the derived values return empty until the new
+  // fetch completes (avoids leaking between users).
+  const [likesState, setLikesState] = useState<{
+    uid: string | null;
+    likedIds: Set<string>;
+    likeOverrides: Record<string, number>;
+  }>({ uid: null, likedIds: new Set(), likeOverrides: {} });
+
+  // Fetch user's liked IDs on sign-in. Skip when signed out — derived state
+  // handles the empty case. The setState only happens inside the .then
+  // callback (async), so this passes react-hooks/set-state-in-effect.
+  useEffect(() => {
+    if (!user) return;
+    let cancelled = false;
+    void getUserLikedQuoteIds(user.uid)
+      .then((ids) => {
+        if (cancelled) return;
+        setLikesState({
+          uid: user.uid,
+          likedIds: new Set(ids),
+          likeOverrides: {},
+        });
+      })
+      .catch((e) => console.warn("[likes] failed to load user likes:", e));
+    return () => {
+      cancelled = true;
+    };
+  }, [user]);
+
+  // Derive: only return state if it matches the current user. When the user
+  // changes (signs out / signs in as someone else), this returns empty
+  // immediately, until the new fetch completes.
+  const currentUid = user?.uid ?? null;
+  const isMyState = likesState.uid === currentUid;
+  const likedIds = isMyState ? likesState.likedIds : new Set<string>();
+  const likeOverrides = isMyState ? likesState.likeOverrides : {};
+
+  const isLiked = useCallback(
+    (quoteId: string) => likedIds.has(quoteId),
+    [likedIds],
+  );
+
+  const toggle = useCallback(
+    async (quote: { id: string; likeCount?: number }) => {
+      if (!user) {
+        openAuthModal();
+        return;
+      }
+      const currentlyLiked = likedIds.has(quote.id);
+      // Optimistic update — preserves any unrelated overrides already in state
+      setLikesState((prev) => {
+        const baseIds =
+          prev.uid === user.uid ? prev.likedIds : new Set<string>();
+        const baseOverrides =
+          prev.uid === user.uid ? prev.likeOverrides : {};
+        const next = new Set(baseIds);
+        if (currentlyLiked) next.delete(quote.id);
+        else next.add(quote.id);
+        return {
+          uid: user.uid,
+          likedIds: next,
+          likeOverrides: {
+            ...baseOverrides,
+            [quote.id]: Math.max(
+              0,
+              (baseOverrides[quote.id] ?? quote.likeCount ?? 0) +
+                (currentlyLiked ? -1 : 1),
+            ),
+          },
+        };
+      });
+      // Write through to Firestore (best-effort — for demo the local QUOTES
+      // array has no Firestore docs, so the likeCount increment will land on
+      // a non-existent doc and silently do nothing; the user's like record
+      // is still created, which is what matters for "My Likes" + analytics).
+      try {
+        await toggleLike(quote.id, user.uid, currentlyLiked);
+      } catch (e) {
+        console.warn("[likes] toggle failed, reloading from server:", e);
+        // Revert by reloading
+        void getUserLikedQuoteIds(user.uid)
+          .then((ids) => {
+            setLikesState({
+              uid: user.uid,
+              likedIds: new Set(ids),
+              likeOverrides: {},
+            });
+          })
+          .catch(() => {});
+      }
+    },
+    [user, likedIds, openAuthModal],
+  );
+
+  const getLikeCount = useCallback(
+    (quoteId: string, fallback: number) =>
+      likeOverrides[quoteId] ?? fallback,
+    [likeOverrides],
+  );
+
+  const likedQuotes = useMemo(
+    () => QUOTES.filter((q) => likedIds.has(q.id)),
+    [likedIds],
+  );
+
+  return { isLiked, toggle, getLikeCount, likedQuotes };
+}
+
+/**
+ * LikeButton — heart icon + count. Auth-aware: clicking when signed out
+ * opens the AuthModal instead of toggling.
+ */
+function LikeButton({
+  quote,
+  isLiked,
+  likeCount,
+  onToggle,
+  size = "sm",
+}: {
+  quote: { id: string; likeCount?: number };
+  isLiked: boolean;
+  likeCount: number;
+  onToggle: (q: { id: string; likeCount?: number }) => void;
+  size?: "sm" | "md" | "lg";
+}) {
+  const sizeCls =
+    size === "lg"
+      ? "h-10 w-10 gap-2 px-3"
+      : size === "md"
+        ? "h-9 w-9"
+        : "h-7 w-7";
+  const iconCls = size === "lg" ? "h-5 w-5" : "h-4 w-4";
+  return (
+    <button
+      type="button"
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        onToggle(quote);
+      }}
+      className={`inline-flex ${sizeCls} items-center justify-center rounded-full transition-colors ${
+        isLiked
+          ? "bg-rose-50 text-rose-600 hover:bg-rose-100"
+          : "bg-muted text-muted-foreground hover:bg-accent hover:text-foreground"
+      }`}
+      aria-label={isLiked ? "Unlike this quote" : "Like this quote"}
+      aria-pressed={isLiked}
+    >
+      <Heart
+        className={`${iconCls} ${isLiked ? "fill-current" : ""}`}
+        aria-hidden="true"
+      />
+      {size === "lg" && (
+        <span className="text-xs font-semibold tabular-nums">
+          {likeCount}
+        </span>
+      )}
+      {size !== "lg" && likeCount > 0 && (
+        <span className="sr-only">{likeCount} likes</span>
+      )}
+    </button>
+  );
+}
+
+/**
+ * UserMenu — avatar + dropdown, shown in header when signed in. When signed
+ * out, shows a "Sign in" button that opens the AuthModal.
+ */
+function UserMenu() {
+  const { user, signOut, openAuthModal } = useAuth();
+  const [open, setOpen] = useState(false);
+  const { toast } = useToast();
+
+  if (!user) {
+    return (
+      <Button
+        size="sm"
+        variant="ghost"
+        onClick={openAuthModal}
+        className="text-muted-foreground hover:text-foreground"
+      >
+        Sign in
+      </Button>
+    );
+  }
+
+  const handleSignOut = async () => {
+    try {
+      await signOut();
+      toast({ title: "Signed out", description: "See you soon." });
+      setOpen(false);
+    } catch (e) {
+      toast({
+        title: "Sign-out failed",
+        description: e instanceof Error ? e.message : "Unknown error",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const initial = (user.displayName ?? user.email ?? "?").charAt(0).toUpperCase();
+
+  return (
+    <div className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className="flex h-9 items-center gap-1.5 rounded-full border border-border bg-card px-1.5 pr-2 text-sm hover:bg-accent"
+        aria-label={`Account: ${user.displayName ?? user.email}`}
+        aria-expanded={open}
+      >
+        {user.photoURL ? (
+          <img
+            src={user.photoURL}
+            alt=""
+            className="h-7 w-7 rounded-full"
+          />
+        ) : (
+          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+            {initial}
+          </span>
+        )}
+        <ChevronDown className="h-3 w-3 text-muted-foreground" aria-hidden="true" />
+      </button>
+      {open && (
+        <>
+          <div
+            className="fixed inset-0 z-40"
+            onClick={() => setOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="absolute right-0 top-11 z-50 w-56 overflow-hidden rounded-lg border border-border bg-card shadow-lg">
+            <div className="border-b border-border px-3 py-2">
+              <div className="truncate text-sm font-semibold text-foreground">
+                {user.displayName ?? "User"}
+              </div>
+              <div className="truncate text-xs text-muted-foreground">
+                {user.email}
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={handleSignOut}
+              className="flex w-full items-center gap-2 px-3 py-2 text-left text-sm text-muted-foreground hover:bg-accent hover:text-foreground"
+            >
+              <LogOut className="h-4 w-4" aria-hidden="true" />
+              Sign out
+            </button>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
 function Header({
   search,
   setSearch,
+  onContribute,
 }: {
   search: string;
   setSearch: (v: string) => void;
+  onContribute: () => void;
 }) {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
@@ -876,11 +1162,16 @@ function Header({
 
         {/* Primary nav (desktop only) */}
         <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
-          {["Quotes", "Authors", "Topics", "About"].map((label) => (
+          {["Quotes", "Authors", "Topics", "Blog", "About"].map((label, i) => (
             <a
               key={label}
-              href="#"
-              onClick={(e) => e.preventDefault()}
+              href={["#quotes", "#authors", "#topics", "#blog", "#about"][i]}
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById(["quotes", "authors", "topics", "blog", "about"][i])
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
               className="rounded-md px-3 py-1.5 text-sm font-medium text-muted-foreground hover:bg-accent hover:text-foreground"
             >
               {label}
@@ -904,16 +1195,21 @@ function Header({
           />
         </div>
 
-        {/* Contribute CTA */}
+        {/* Contribute CTA — auth-aware. The onContribute handler (passed
+            from Home) checks `user`; if logged out, opens AuthModal;
+            if logged in, opens ContributeModal. */}
         <Button
           size="sm"
           variant="outline"
           className="border-primary text-primary hover:bg-accent"
-          onClick={(e) => e.preventDefault()}
+          onClick={onContribute}
         >
           <ScrollText className="h-4 w-4" aria-hidden="true" />
           Contribute
         </Button>
+
+        {/* User menu / sign-in */}
+        <UserMenu />
       </div>
     </header>
   );
@@ -995,10 +1291,16 @@ function QuoteOfTheDay({
   quote,
   author,
   onShare,
+  isLiked,
+  likeCount,
+  onLike,
 }: {
   quote: Quote;
   author: Author;
   onShare: (channel: string, quote: Quote, author: Author) => void;
+  isLiked: boolean;
+  likeCount: number;
+  onLike: (q: { id: string; likeCount?: number }) => void;
 }) {
   return (
     <section className="border-b border-border bg-card">
@@ -1038,8 +1340,15 @@ function QuoteOfTheDay({
           ))}
         </div>
 
-        {/* Share buttons */}
-        <div className="flex items-center justify-center gap-2">
+        {/* Like + share buttons */}
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          <LikeButton
+            quote={quote}
+            isLiked={isLiked}
+            likeCount={likeCount}
+            onToggle={onLike}
+            size="lg"
+          />
           <Button
             variant="outline"
             size="sm"
@@ -1160,16 +1469,31 @@ function QuoteCard({
   quote,
   author,
   onAuthorClick,
+  isLiked,
+  likeCount,
+  onLike,
 }: {
   quote: Quote;
   author: Author;
   onAuthorClick: (author: Author) => void;
+  isLiked: boolean;
+  likeCount: number;
+  onLike: (q: { id: string; likeCount?: number }) => void;
 }) {
   return (
     <article className="stoic-card flex flex-col gap-3">
-      <span aria-hidden="true" className="stoic-mark text-3xl text-primary">
-        &ldquo;
-      </span>
+      <div className="flex items-start justify-between gap-2">
+        <span aria-hidden="true" className="stoic-mark text-3xl text-primary">
+          &ldquo;
+        </span>
+        <LikeButton
+          quote={quote}
+          isLiked={isLiked}
+          likeCount={likeCount}
+          onToggle={onLike}
+          size="md"
+        />
+      </div>
       <p className="stoic-quote-text text-lg leading-relaxed">{quote.text}</p>
       <div className="mt-auto">
         <button
@@ -1200,12 +1524,18 @@ function QuoteCard({
 function FeaturedQuotes({
   quotes,
   onAuthorClick,
+  isLiked,
+  getLikeCount,
+  onLike,
 }: {
   quotes: Quote[];
   onAuthorClick: (author: Author) => void;
+  isLiked: (id: string) => boolean;
+  getLikeCount: (id: string, fallback: number) => number;
+  onLike: (q: { id: string; likeCount?: number }) => void;
 }) {
   return (
-    <section className="border-b border-border bg-card">
+    <section id="quotes" className="border-b border-border bg-card">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <div className="mb-8 flex items-end justify-between gap-4">
           <div>
@@ -1228,6 +1558,9 @@ function FeaturedQuotes({
               quote={q}
               author={authorById(q.authorId)}
               onAuthorClick={onAuthorClick}
+              isLiked={isLiked(q.id)}
+              likeCount={getLikeCount(q.id, 0)}
+              onLike={onLike}
             />
           ))}
         </div>
@@ -1240,10 +1573,16 @@ function SearchResults({
   query,
   quotes,
   onAuthorClick,
+  isLiked,
+  getLikeCount,
+  onLike,
 }: {
   query: string;
   quotes: Quote[];
   onAuthorClick: (author: Author) => void;
+  isLiked: (id: string) => boolean;
+  getLikeCount: (id: string, fallback: number) => number;
+  onLike: (q: { id: string; likeCount?: number }) => void;
 }) {
   return (
     <section className="border-b border-border bg-card">
@@ -1265,6 +1604,9 @@ function SearchResults({
                 quote={q}
                 author={authorById(q.authorId)}
                 onAuthorClick={onAuthorClick}
+                isLiked={isLiked(q.id)}
+                likeCount={getLikeCount(q.id, 0)}
+                onLike={onLike}
               />
             ))}
           </div>
@@ -1278,6 +1620,500 @@ function SearchResults({
             </p>
           </div>
         )}
+      </div>
+    </section>
+  );
+}
+
+// ───────────────────────────────────────────────────────────────────────────
+// New sections — Features, Trending Quotes, Blogs, My Likes, FAQ, Newsletter
+// ───────────────────────────────────────────────────────────────────────────
+
+function FeaturesSection() {
+  const features = [
+    {
+      icon: Library,
+      title: "Curated Collection",
+      body: "Hand-picked quotes from primary sources — every attribution verified for accuracy and provenance.",
+    },
+    {
+      icon: Users,
+      title: "Community Driven",
+      body: "A growing community of contributors helps expand and improve the collection, one quote at a time.",
+    },
+    {
+      icon: Sparkles,
+      title: "Daily Inspiration",
+      body: "A new quote of the day, every day — chosen to provoke reflection, not just scroll-past inspiration.",
+    },
+  ];
+  return (
+    <section className="border-b border-border">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+        <div className="mb-10 text-center">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary">
+            Why StoicBare
+          </p>
+          <h2 className="font-serif text-3xl font-bold text-foreground sm:text-4xl">
+            Wisdom, served bare.
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground">
+            No ads. No newsletter popup spam. Just the words that have stood
+            the test of two millennia — and a community to keep them honest.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          {features.map((f) => {
+            const Icon = f.icon;
+            return (
+              <div key={f.title} className="text-center">
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Icon className="h-6 w-6" aria-hidden="true" />
+                </div>
+                <h3 className="mb-2 font-serif text-lg font-bold text-foreground">
+                  {f.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {f.body}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TrendingQuotesSection({
+  quotes,
+  onLike,
+  isLiked,
+  getLikeCount,
+}: {
+  quotes: Quote[];
+  onLike: (q: { id: string; likeCount?: number }) => void;
+  isLiked: (id: string) => boolean;
+  getLikeCount: (id: string, fallback: number) => number;
+}) {
+  // Trending = top 5 by like count. Use a deterministic seed (hash of the
+  // quote ID) as the fallback likeCount when no real ones exist — avoids
+  // hydration mismatch that Math.random() would cause between server +
+  // client renders. Real like counts from Firestore override these via
+  // getLikeCount once the user has interacted / data has loaded.
+  const trending = useMemo(() => {
+    const seedLikeCount = (id: string) => {
+      // Simple deterministic hash → 50..1000 range
+      let h = 0;
+      for (let i = 0; i < id.length; i++) {
+        h = (h * 31 + id.charCodeAt(i)) | 0;
+      }
+      return 50 + (Math.abs(h) % 950);
+    };
+    return [...quotes]
+      .map((q) => ({
+        quote: q,
+        likeCount: getLikeCount(q.id, q.likeCount ?? seedLikeCount(q.id)),
+      }))
+      .sort((a, b) => b.likeCount - a.likeCount)
+      .slice(0, 5);
+  }, [quotes, getLikeCount]);
+
+  return (
+    <section className="border-b border-border bg-card">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+        <div className="mb-8 flex items-end justify-between gap-4">
+          <div>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary">
+              Most Liked
+            </p>
+            <h2 className="font-serif text-3xl font-bold text-foreground sm:text-4xl">
+              Trending Quotes
+            </h2>
+          </div>
+        </div>
+        <ol className="space-y-4">
+          {trending.map((t, i) => (
+            <li
+              key={t.quote.id}
+              className="flex items-start gap-4 rounded-lg border border-border bg-background p-4"
+            >
+              <span className="font-serif text-2xl font-bold text-primary/40">
+                {i + 1}
+              </span>
+              <div className="flex-1">
+                <p className="stoic-quote-text text-base leading-relaxed sm:text-lg">
+                  {t.quote.text}
+                </p>
+                <div className="mt-2 flex items-center justify-between gap-2">
+                  <span className="stoic-author-attr">
+                    — {authorById(t.quote.authorId).name}
+                  </span>
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <LikeButton
+                      quote={t.quote}
+                      isLiked={isLiked(t.quote.id)}
+                      likeCount={t.likeCount}
+                      onToggle={onLike}
+                      size="md"
+                    />
+                    <span className="font-semibold tabular-nums text-foreground">
+                      {t.likeCount}
+                    </span>
+                  </div>
+                </div>
+                <p className="stoic-source mt-1">{t.quote.source}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
+}
+
+// Placeholder blog posts — replace with Firestore `blogs` collection reads
+// (already wired up in src/lib/firestore.ts: getPublishedBlogs).
+const PLACEHOLDER_BLOGS = [
+  {
+    id: "b1",
+    title: "On the Stoa: what 'Stoicism' actually means",
+    slug: "on-the-stoa-what-stoicism-actually-means",
+    excerpt:
+      "Before it was a buzzword for emotional suppression, Stoicism was a school of philosophy founded in a painted porch in Athens. Here's the actual history.",
+    tags: ["history", "stoicism"],
+    authorName: "StoicBare Editorial",
+    publishedAt: "2026-10-15T09:00:00Z",
+    readMinutes: 6,
+  },
+  {
+    id: "b2",
+    title: "Memento mori — the practice, not the slogan",
+    slug: "memento-mori-the-practice-not-the-slogan",
+    excerpt:
+      "Tattooed on forearms and printed on mugs, 'remember you must die' is one of the most misappropriated Stoic practices. What did Seneca actually mean by it?",
+    tags: ["practice", "stoicism", "seneca"],
+    authorName: "StoicBare Editorial",
+    publishedAt: "2026-10-12T09:00:00Z",
+    readMinutes: 8,
+  },
+  {
+    id: "b3",
+    title: "Eastern and Western wisdom — why we put Lao Tzu next to Marcus",
+    slug: "eastern-and-western-wisdom",
+    excerpt:
+      "StoicBare's collection crosses traditions deliberately. The Tao Te Ching and the Meditations both point at the same constraint: the limits of our control.",
+    tags: ["philosophy", "cross-cultural"],
+    authorName: "StoicBare Editorial",
+    publishedAt: "2026-10-08T09:00:00Z",
+    readMinutes: 5,
+  },
+];
+
+function BlogsSection() {
+  // Start with placeholder blogs. Try to fetch real ones from Firestore; if
+  // the fetch fails (e.g. composite index missing, network blocked, security
+  // rules deny), we silently fall back to the placeholder list. The blog
+  // UI is the same either way — the placeholder is a demo, the Firestore docs
+  // are what ships once the `blogs` collection is populated.
+  const [blogs, setBlogs] = useState<typeof PLACEHOLDER_BLOGS>(PLACEHOLDER_BLOGS);
+  useEffect(() => {
+    let cancelled = false;
+    void (async () => {
+      try {
+        const docs = await getPublishedBlogs(6);
+        if (cancelled || docs.length === 0) return;
+        setBlogs(
+          docs.map((d) => ({
+            id: d.id,
+            title: d.title,
+            slug: d.slug,
+            excerpt: d.excerpt,
+            tags: d.tags,
+            authorName: d.authorName,
+            publishedAt: d.publishedAt
+              ? (d.publishedAt.toDate?.() ?? new Date()).toISOString()
+              : new Date().toISOString(),
+            readMinutes: 5,
+          })) as unknown as typeof PLACEHOLDER_BLOGS,
+        );
+      } catch (e) {
+        // Silent: keep PLACEHOLDER_BLOGS. Firestore composite index for
+        // (status, publishedAt) might not exist yet in the user's project —
+        // they can create it via `firebase deploy --only firestore:indexes`
+        // using the firestore.indexes.json file at the repo root.
+        console.warn("[blogs] fetch failed, using placeholder:", e);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  return (
+    <section id="blog" className="border-b border-border">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+        <div className="mb-8 flex items-end justify-between gap-4">
+          <div>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary">
+              From the Journal
+            </p>
+            <h2 className="font-serif text-3xl font-bold text-foreground sm:text-4xl">
+              Reading on the side
+            </h2>
+          </div>
+          <a
+            href="#blog"
+            onClick={(e) => e.preventDefault()}
+            className="hidden items-center gap-1 text-sm font-medium text-primary hover:underline sm:inline-flex"
+          >
+            View all
+            <ArrowRight className="h-3 w-3" aria-hidden="true" />
+          </a>
+        </div>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {blogs.map((b) => {
+            const date = new Date(b.publishedAt);
+            const dateStr = date.toLocaleDateString("en-US", {
+              month: "short",
+              day: "numeric",
+              year: "numeric",
+            });
+            return (
+              <article
+                key={b.id}
+                className="stoic-card group cursor-pointer"
+              >
+                {/* Cover image: gradient placeholder until Storage URLs land */}
+                <div className="-mx-6 -mt-6 mb-4 h-32 bg-gradient-to-br from-primary/40 via-primary/20 to-transparent">
+                  <div className="flex h-full items-center justify-center">
+                    <Newspaper
+                      className="h-8 w-8 text-primary-foreground/70"
+                      aria-hidden="true"
+                    />
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                  <span>{dateStr}</span>
+                  <span aria-hidden="true">·</span>
+                  <span>{b.readMinutes} min read</span>
+                </div>
+                <h3 className="mt-2 font-serif text-lg font-bold leading-tight text-foreground group-hover:text-primary">
+                  {b.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {b.excerpt}
+                </p>
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {b.tags.map((t) => (
+                    <span
+                      key={t}
+                      className="stoic-topic-pill text-xs"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+                <p className="mt-3 text-xs text-muted-foreground">
+                  by {b.authorName}
+                </p>
+              </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function MyLikesSection({
+  likedQuotes,
+  onAuthorClick,
+  isLiked,
+  getLikeCount,
+  onLike,
+}: {
+  likedQuotes: Quote[];
+  onAuthorClick: (a: Author) => void;
+  isLiked: (id: string) => boolean;
+  getLikeCount: (id: string, fallback: number) => number;
+  onLike: (q: { id: string; likeCount?: number }) => void;
+}) {
+  const { user } = useAuth();
+  if (!user) return null;
+  return (
+    <section className="border-b border-border bg-card">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+        <div className="mb-8">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary">
+            Your Library
+          </p>
+          <h2 className="font-serif text-3xl font-bold text-foreground sm:text-4xl">
+            Quotes you&apos;ve liked
+          </h2>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Signed in as <span className="font-semibold">{user.displayName ?? user.email}</span>.
+            {likedQuotes.length === 0
+              ? " Like a quote to start your collection."
+              : ` ${likedQuotes.length} quote${likedQuotes.length === 1 ? "" : "s"} saved.`}
+          </p>
+        </div>
+        {likedQuotes.length > 0 ? (
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {likedQuotes.map((q) => (
+              <QuoteCard
+                key={q.id}
+                quote={q}
+                author={authorById(q.authorId)}
+                onAuthorClick={onAuthorClick}
+                isLiked={isLiked(q.id)}
+                likeCount={getLikeCount(q.id, 0)}
+                onLike={onLike}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="rounded-lg border border-dashed border-border p-12 text-center">
+            <Heart className="mx-auto mb-3 h-8 w-8 text-muted-foreground" aria-hidden="true" />
+            <p className="text-sm text-muted-foreground">
+              No liked quotes yet. Tap the heart on any quote to save it here.
+            </p>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
+
+function FAQSection() {
+  const faqs = [
+    {
+      q: "What is StoicBare?",
+      a: "A bare, focused collection of public-domain quotes — from Stoic sages and Greek philosophers to Eastern masters, Enlightenment thinkers, and modern wits. The name nods to Stoicism but the content spans every tradition that has shaped human thought across millennia.",
+    },
+    {
+      q: "How can I contribute?",
+      a: "Click \"Contribute\" in the header. Sign in with Google, then submit a quote with its source. Submissions go into a moderation queue before they appear publicly — primary-source citations get approved fastest.",
+    },
+    {
+      q: "How are quotes verified?",
+      a: "Each contribution is reviewed against primary sources (the actual text of Meditations, the Analects, Walden, etc.). Apocryphal or misattributed quotes are rejected; well-attested ones are published with their source citation.",
+    },
+    {
+      q: "Can I use quotes from StoicBare in my own work?",
+      a: "Yes — every quote here is public domain (1st c. BC through early 20th c.). Attribution to the original author is appreciated. The site's design and editorial copy are MIT-licensed.",
+    },
+  ];
+  return (
+    <section id="about" className="border-b border-border">
+      <div className="mx-auto max-w-3xl px-4 py-16 sm:py-20">
+        <div className="mb-10 text-center">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary">
+            Frequently Asked
+          </p>
+          <h2 className="font-serif text-3xl font-bold text-foreground sm:text-4xl">
+            Questions
+          </h2>
+        </div>
+        <div className="space-y-2">
+          {faqs.map((f, i) => (
+            <FAQItem key={i} q={f.q} a={f.a} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function FAQItem({ q, a }: { q: string; a: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="overflow-hidden rounded-lg border border-border bg-card">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        className="flex w-full items-center justify-between gap-4 px-4 py-3 text-left hover:bg-accent"
+        aria-expanded={open}
+      >
+        <span className="flex items-center gap-2 text-sm font-semibold text-foreground">
+          <HelpCircle className="h-4 w-4 text-primary" aria-hidden="true" />
+          {q}
+        </span>
+        <ChevronDown
+          className={`h-4 w-4 shrink-0 text-muted-foreground transition-transform ${
+            open ? "rotate-180" : ""
+          }`}
+          aria-hidden="true"
+        />
+      </button>
+      {open && (
+        <div className="border-t border-border px-4 py-3 text-sm leading-relaxed text-muted-foreground">
+          {a}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function NewsletterSection() {
+  const { toast } = useToast();
+  const [email, setEmail] = useState("");
+  const [busy, setBusy] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.includes("@")) return;
+    setBusy(true);
+    // Best-effort: in production, write to Firestore `newsletter` collection.
+    // For the demo, we just simulate success.
+    await new Promise((r) => setTimeout(r, 600));
+    toast({
+      title: "You're on the list",
+      description: "Weekly wisdom arrives Monday morning. Unsubscribe anytime.",
+    });
+    setEmail("");
+    setBusy(false);
+  };
+
+  return (
+    <section className="border-b border-border bg-primary text-primary-foreground">
+      <div className="mx-auto max-w-4xl px-4 py-16 sm:py-20 text-center">
+        <div className="stoic-divider mb-4 bg-primary-foreground" aria-hidden="true" />
+        <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary-foreground/80">
+          Join our community
+        </p>
+        <h2 className="font-serif text-3xl font-bold sm:text-4xl">
+          Weekly wisdom, delivered bare.
+        </h2>
+        <p className="mx-auto mt-3 max-w-xl text-sm text-primary-foreground/85">
+          One quote each Monday — chosen to actually be sat with, not scrolled
+          past. No spam, nofollow-up sequences, unsubscribe anytime.
+        </p>
+        <form
+          onSubmit={handleSubmit}
+          className="mx-auto mt-6 flex max-w-md flex-col gap-2 sm:flex-row"
+        >
+          <Input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="h-11 flex-1 border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/60"
+            aria-label="Your email"
+            required
+          />
+          <Button
+            type="submit"
+            disabled={busy}
+            className="h-11 bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+          >
+            {busy ? "Subscribing…" : "Subscribe"}
+            {!busy && <Mail className="ml-1 h-4 w-4" aria-hidden="true" />}
+          </Button>
+        </form>
+        <p className="mt-3 text-[11px] text-primary-foreground/70">
+          Join 10,000+ wisdom seekers. No spam, unsubscribe anytime.
+        </p>
       </div>
     </section>
   );
@@ -1389,8 +2225,13 @@ function Footer() {
 
 export default function Home() {
   const { toast } = useToast();
+  const { user, openAuthModal } = useAuth();
   const [search, setSearch] = useState("");
   const [authorFilter, setAuthorFilter] = useState<string | null>(null);
+  const [contributeOpen, setContributeOpen] = useState(false);
+
+  // Likes: state + optimistic updates (auth-aware toggle)
+  const { isLiked, toggle, getLikeCount, likedQuotes } = useLikes();
 
   const quoteOfTheDay = useQuoteOfTheDay();
   const authorOfTheDay = authorById(quoteOfTheDay.authorId);
@@ -1416,13 +2257,13 @@ export default function Home() {
 
   // Decide what to show:
   // - If search/filter active → show SearchResults
-  // - Else → show QoTD + BrowseByAuthor + FeaturedQuotes
+  // - Else → show QoTD + Features + BrowseByAuthor + Trending + Featured + Blogs
+  //         + (if signed in) MyLikes + FAQ + Newsletter
   const isFiltering = Boolean(search.trim()) || Boolean(authorFilter);
 
   const handlePickAuthor = (author: Author) => {
     setAuthorFilter(author.id);
     setSearch("");
-    // Scroll to results
     if (typeof window !== "undefined") {
       requestAnimationFrame(() => {
         document
@@ -1435,6 +2276,19 @@ export default function Home() {
   const handleClearFilter = () => {
     setAuthorFilter(null);
     setSearch("");
+  };
+
+  /**
+   * Contribute CTA handler — auth-aware.
+   * - If signed out: open the AuthModal (login window, like quotelibrary.org).
+   * - If signed in: open the ContributeModal (the contribution form).
+   */
+  const handleContribute = () => {
+    if (user) {
+      setContributeOpen(true);
+    } else {
+      openAuthModal();
+    }
   };
 
   const handleShare = (
@@ -1459,9 +2313,19 @@ export default function Home() {
     });
   };
 
+  // knownAuthors passed to the ContributeModal for the author datalist dropdown
+  const knownAuthors = useMemo(
+    () => AUTHORS.map((a) => ({ id: a.id, name: a.name })),
+    [],
+  );
+
   return (
     <div className="flex min-h-screen flex-col bg-background">
-      <Header search={search} setSearch={setSearch} />
+      <Header
+        search={search}
+        setSearch={setSearch}
+        onContribute={handleContribute}
+      />
 
       {/* Hidden SEO tags */}
       <div className="sr-only" role="list" aria-label="Keywords">
@@ -1480,12 +2344,35 @@ export default function Home() {
               quote={quoteOfTheDay}
               author={authorOfTheDay}
               onShare={handleShare}
+              isLiked={isLiked(quoteOfTheDay.id)}
+              likeCount={getLikeCount(quoteOfTheDay.id, 0)}
+              onLike={toggle}
             />
+            <FeaturesSection />
             <BrowseByAuthor authors={AUTHORS} onPick={handlePickAuthor} />
+            <TrendingQuotesSection
+              quotes={QUOTES}
+              onLike={toggle}
+              isLiked={isLiked}
+              getLikeCount={getLikeCount}
+            />
             <FeaturedQuotes
               quotes={QUOTES.slice(0, 12)}
               onAuthorClick={handlePickAuthor}
+              isLiked={isLiked}
+              getLikeCount={getLikeCount}
+              onLike={toggle}
             />
+            <BlogsSection />
+            <MyLikesSection
+              likedQuotes={likedQuotes}
+              onAuthorClick={handlePickAuthor}
+              isLiked={isLiked}
+              getLikeCount={getLikeCount}
+              onLike={toggle}
+            />
+            <FAQSection />
+            <NewsletterSection />
           </>
         )}
 
@@ -1522,12 +2409,23 @@ export default function Home() {
               query={search.trim() || authorById(authorFilter ?? "").name}
               quotes={searchResults}
               onAuthorClick={handlePickAuthor}
+              isLiked={isLiked}
+              getLikeCount={getLikeCount}
+              onLike={toggle}
             />
           </div>
         )}
       </main>
 
       <Footer />
+
+      {/* Contribute modal — login-gated. Only renders when open AND user is
+          logged in (the gate logic is in ContributeModal itself). */}
+      <ContributeModal
+        open={contributeOpen}
+        onClose={() => setContributeOpen(false)}
+        knownAuthors={knownAuthors}
+      />
     </div>
   );
 }

@@ -19,6 +19,8 @@ import {
   isSupported,
   type Analytics,
 } from "firebase/analytics";
+import { getFirestore, type Firestore } from "firebase/firestore";
+import { getAuth, type Auth } from "firebase/auth";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyD5NrCTK71Rk4qVYsQyp_t-wrf55vskEHI",
@@ -37,6 +39,22 @@ export const firebaseConfig = {
  */
 export const firebaseApp: FirebaseApp =
   getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
+
+/**
+ * Firestore singleton. Firestore works on both server and client (it makes
+ * HTTP requests under the hood, no `window` access), so we can init eagerly.
+ * Designed for 100k+ quotes scale — see src/lib/firestore.ts for indexes.
+ */
+export const firestore: Firestore = getFirestore(firebaseApp);
+
+/**
+ * Auth singleton. Auth SDK accesses browser APIs (storage, popup) so it must
+ * not run during SSR; getAuth() returns a stub on the server. We initialise
+ * eagerly here — it only sets up internal state, doesn't open any sessions.
+ * Use `onAuthStateChanged` in client components to subscribe to the user.
+ */
+export const auth: Auth = getAuth(firebaseApp);
+
 
 /**
  * Cached Analytics instance (per browser session). `null` until

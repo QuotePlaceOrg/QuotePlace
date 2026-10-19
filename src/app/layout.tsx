@@ -3,6 +3,8 @@ import { Inter, Lora } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { FirebaseAnalytics } from "@/components/firebase-analytics";
+import { AuthProvider } from "@/components/auth-context";
+import { AuthModal } from "@/components/auth-modal";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -108,7 +110,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${lora.variable} font-sans antialiased bg-background text-foreground`}
       >
-        {children}
+        <AuthProvider>
+          {children}
+          <AuthModal />
+        </AuthProvider>
         <Toaster />
         <FirebaseAnalytics />
       </body>

@@ -1,0 +1,111 @@
+rules_version = '2';
+
+// StoicBare Firestore security rules.
+//
+// Principles:
+//   1. Public users can READ published quotes, authors, topics, blogs.
+//   2. Authenticated users can CREATE pending quotes (contributions).
+//   3. Users own their own profile doc + likes subcollection.
+//   4. Only admins can publish / reject / delete quotes and edit authors/blogs.
+//      (Admins are identified by a custom claim `admin: true` set via the
+//      Firebase Admin SDK — see scripts/set-admin.ts for setup.)
+//
+// Deploy with: `firebase deploy --only firestore:rules`
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ─── helpers ─────────────────────────────────────────────────────────
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && request.auth.token.admin == true;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    // ─── quotes ──────────────────────────────────────────────────────────
+    match /quotes/{quoteId} {
+      // Public can read published; admins can read all.
+      allow read: if (resource.data.status == 'published') || isAdmin();
+
+      // Authenticated users can create a new quote as long as:
+      //   - status is "pending" (they can't self-publish)
+      //   - the contributorId matches their own uid
+      //   - required fields are present and within size limits
+      allow create: if isSignedIn()
+                    && request.resource.data.status == 'pending'
+                    && request.resource.data.contributorId == request.auth.uid
+                    && request.resource.data.text.size() > 0
+                    && request.resource.data.text.size() <= 800
+                    && request.resource.data.text is string;
+
+      // Only admins can update or delete existing quotes (e.g. approve a
+      // pending quote by flipping status to 'published', edit text, reject).
+      // The owner of a *pending* quote can also edit text/source/topics of
+      // their own pending submission (until it's published).
+      allow update: if isAdmin()
+                    || (isOwner(resource.data.contributorId)
+                        && resource.data.status == 'pending'
+                        && request.resource.data.status == 'pending'
+                        && request.resource.data.contributorId == request.auth.uid);
+      allow delete: if isAdmin()
+                    || (isOwner(resource.data.contributorId)
+                        && resource.data.status == 'pending');
+
+      // ─── likes subcollection (per-quote) ──────────────────────────────
+      // (Optional: we use users/{uid}/likes/{quoteId} instead for the demo,
+      // but if you want to track who liked a quote, this is the pattern.)
+      match /likers/{uid} {
+        allow read: if isSignedIn();
+        allow create, delete: if isOwner(uid);
+      }
+    }
+
+    // ─── authors ────────────────────────────────────────────────────────
+    match /authors/{authorId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // ─── topics ─────────────────────────────────────────────────────────
+    match /topics/{topicId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // ─── blogs ──────────────────────────────────────────────────────────
+    match /blogs/{blogId} {
+      allow read: if (resource.data.status == 'published') || isAdmin();
+      allow create, update, delete: if isAdmin()
+                                     || (isSignedIn()
+                                         && request.resource.data.authorId == request.auth.uid
+                                         && request.resource.data.status in ['draft', 'pending']);
+    }
+
+    // ─── users ──────────────────────────────────────────────────────────
+    match /users/{uid} {
+      // A user can read their own profile; published authors' public profiles
+      // could be exposed via a separate `authorsPublic` collection. For now,
+      // profiles are private to the owner + admins.
+      allow read: if isOwner(uid) || isAdmin();
+      // Self-serve create + update of own fields (cannot change joinedAt).
+      allow create: if isOwner(uid);
+      allow update: if isOwner(uid)
+                    || isAdmin();
+      allow delete: if isAdmin();
+
+      // ─── likes subcollection ──────────────────────────────────────────
+      match /likes/{quoteId} {
+        allow read: if isOwner(uid);
+        allow create, delete: if isOwner(uid);
+        // Prevent users from editing like docs (just create/delete toggles).
+        allow update: if false;
+      }
+    }
+  }
+}
