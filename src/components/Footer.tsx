@@ -23,11 +23,6 @@ export default function Footer() {
             <li><Link href="/about" className="hover:underline">About</Link></li>
           </ul>
         </nav>
-        <div>
-          <p className="font-medium">Newsletter</p>
-          <p className="mt-2 text-sm text-[var(--muted-foreground)]">One thoughtful insight a week. No spam, unsubscribe anytime.</p>
-          <Link href="/#newsletter" className="mt-2 inline-block text-sm text-[var(--primary)] hover:underline">Subscribe →</Link>
-        </div>
       </div>
       <div className="border-t border-[var(--border)] py-4 text-center text-xs">© {new Date().getFullYear()} StoicBare. All quotes are public domain.</div>
     </footer>
