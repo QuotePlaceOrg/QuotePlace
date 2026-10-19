@@ -1,0 +1,58 @@
+name: Verify and repair Bun lockfile
+
+on:
+  push:
+    branches:
+      - feat/firestore-quotes-contributions
+
+permissions:
+  contents: write
+
+jobs:
+  verify-lockfile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/firestore-quotes-contributions
+          persist-credentials: true
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.3
+
+      - name: Regenerate lockfile
+        run: bun install --lockfile-only
+
+      - name: Normalize lockfile workspace name
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path("bun.lock")
+          text = path.read_text()
+          old = '"name": "nextjs_tailwind_shadcn_ts"'
+          new = '"name": "stoicbare"'
+          if old in text:
+              text = text.replace(old, new, 1)
+              path.write_text(text)
+          PY
+
+      - name: Verify frozen lockfile install
+        run: bun install --frozen-lockfile --dry-run
+
+      - name: Commit lockfile and remove temporary workflow
+        env:
+          BRANCH: feat/firestore-quotes-contributions
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bun.lock
+          git rm .github/workflows/verify-bun-lockfile.yml
+          if git diff --cached --quiet; then
+            echo "No lockfile updates were required."
+            exit 0
+          fi
+          git commit -m "fix: verify frozen Bun lockfile install"
+          git push origin "HEAD:$BRANCH"
