@@ -6,10 +6,7 @@ import { useAuth } from "@/lib/auth-context";
 
 const NAV = [
   { href: "/quotes", label: "Quotes" },
-  { href: "/authors", label: "Authors" },
   { href: "/topics", label: "Topics" },
-  { href: "/articles", label: "Articles" },
-  { href: "/story", label: "Story" },
   { href: "/about", label: "About" },
 ];
 
@@ -42,7 +39,6 @@ export default function Header() {
           <input id="header-search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search quotes…" className="rounded-l-md border border-[var(--border)] bg-white px-3 py-2 text-sm" />
           <button type="submit" className="rounded-r-md bg-[var(--primary)] px-3 py-2 text-sm text-white">Search</button>
         </form>
-        <Link href="/contribute" className="hidden rounded-md border border-[var(--primary)] px-3 py-2 text-sm font-medium text-[var(--primary)] sm:inline-block">Contribute</Link>
         {user ? (
           <>
             <Link href="/profile" className="flex items-center gap-2 rounded-md border border-[var(--border)] bg-white px-2 py-1.5 text-sm font-medium" aria-label="Open your profile">
@@ -67,7 +63,6 @@ export default function Header() {
         <nav className="border-t border-[var(--border)] px-4 py-3 md:hidden" aria-label="Mobile">
           <div className="flex flex-wrap gap-4 text-sm">
             {NAV.map((n) => <Link key={n.href} href={n.href} onClick={() => setOpen(false)}>{n.label}</Link>)}
-            <Link href="/contribute" onClick={() => setOpen(false)}>Contribute</Link>
           </div>
           <form className="mt-3 flex" onSubmit={(e) => { e.preventDefault(); setOpen(false); router.push(`/quotes?q=${encodeURIComponent(q)}`); }} role="search">
             <label htmlFor="header-search-mobile" className="sr-only">Search quotes</label>

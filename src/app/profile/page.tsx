@@ -208,7 +208,6 @@ function ProfileInner() {
         </div>
         <div className="ml-auto flex gap-2">
           {!user && <Link href="/login" className="rounded-md bg-[var(--primary)] px-4 py-2 text-sm text-white">Log in</Link>}
-          <Link href="/contribute" className="rounded-md border border-[var(--border)] bg-white px-4 py-2 text-sm">Contribute</Link>
         </div>
       </section>
 
@@ -331,7 +330,7 @@ function ProfileInner() {
         <section className="mt-6">
           <h2 className="text-xl font-bold">My Contributions ({submissions.length})</h2>
           {!user ? <p className="mt-3 rounded-xl border border-[var(--border)] bg-white p-5 text-sm">Sign in to see your submissions. <Link href="/login" className="text-[var(--primary)] hover:underline">Log in</Link></p> : submissions.length === 0 ? (
-            <p className="mt-3 rounded-xl border border-[var(--border)] bg-white p-5 text-sm">No contributions yet. <Link href="/contribute" className="text-[var(--primary)] hover:underline">Submit a quote</Link> — every suggestion is reviewed before publishing.</p>
+            <p className="mt-3 rounded-xl border border-[var(--border)] bg-white p-5 text-sm">No contributions yet. Every suggestion is reviewed before publishing.</p>
           ) : (
             <ul className="mt-4 space-y-3">
               {submissions.map((s) => (

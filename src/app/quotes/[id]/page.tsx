@@ -3,7 +3,6 @@ import Link from "next/link";
 import { getAuthor } from "@/lib/data";
 import QuoteCard from "@/components/QuoteCard";
 import QuoteDetailActions from "@/components/QuoteDetailActions";
-import AuthorCard from "@/components/AuthorCard";
 import { getQuote as getQuoteDoc, getAuthorDoc, listQuotes } from "@/lib/db";
 
 export default async function QuoteDetail({ params }: { params: Promise<{ id: string }> }) {
@@ -25,16 +24,10 @@ export default async function QuoteDetail({ params }: { params: Promise<{ id: st
       <article className="mt-4 rounded-xl border border-[var(--border)] bg-[var(--card)] p-6 md:p-10">
         <span className="font-serif text-5xl text-[var(--primary)]" aria-hidden="true">“</span>
         <blockquote className="font-serif text-3xl leading-snug">{quote.text}</blockquote>
-        <p className="mt-4 text-[var(--muted-foreground)]">— <Link href={`/authors/${quote.authorId}`} className="text-[var(--primary)] hover:underline">{author?.name}</Link> · {quote.source}</p>
+        <p className="mt-4 text-[var(--muted-foreground)]">— {author?.name} · {quote.source}</p>
         <div className="mt-3 flex flex-wrap gap-1">{quote.topics.map((t) => <Link key={t} href={`/topics/${t}`} className="rounded-full bg-[var(--muted)] px-2 py-0.5 text-xs capitalize hover:underline">{t}</Link>)}</div>
         <QuoteDetailActions quoteId={quote.id} text={quote.text} authorName={author?.name ?? ""} likeCount={realLikeCount} />
       </article>
-      {author && (
-        <section className="mt-8" aria-label="About the author">
-          <h2 className="text-xl font-bold">About the author</h2>
-          <div className="mt-3"><AuthorCard author={author} /></div>
-        </section>
-      )}
       <section className="mt-10">
         <h2 className="text-xl font-bold">More from {author?.name}</h2>
         {related.length === 0 ? <p className="mt-3 text-sm text-[var(--muted-foreground)]">No other quotes from this author yet.</p> : (

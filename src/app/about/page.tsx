@@ -11,7 +11,7 @@ export default function AboutPage() {
         <li>Everyone should be able to find wisdom fast — by author, by topic, or by search.</li>
       </ul>
       <h2 className="mt-8 text-xl font-bold">How it works</h2>
-      <p className="mt-3 text-[var(--muted-foreground)]">Browse quotes, save favourites, read a daily quote, or explore by author and topic. You can suggest a quote on the Contribute page. Every suggestion is reviewed before it is published.</p>
+      <p className="mt-3 text-[var(--muted-foreground)]">Browse quotes, save favourites, read a daily quote, or explore by topic. Every quote is checked against its public-domain source before it is published.</p>
     </div>
   );
 }

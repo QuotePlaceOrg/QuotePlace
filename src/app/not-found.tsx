@@ -8,7 +8,6 @@ export default function NotFound() {
       <div className="mt-6 flex flex-wrap justify-center gap-2">
         <Link href="/" className="rounded-md bg-[var(--primary)] px-4 py-2 text-sm text-white">Home</Link>
         <Link href="/quotes" className="rounded-md border border-[var(--border)] bg-white px-4 py-2 text-sm">All quotes</Link>
-        <Link href="/authors" className="rounded-md border border-[var(--border)] bg-white px-4 py-2 text-sm">Authors</Link>
       </div>
     </div>
   );

@@ -1,12 +1,9 @@
 import Link from "next/link";
-import { AUTHORS, QUOTES, TOPICS } from "@/lib/data";
+import { TOPICS } from "@/lib/data";
 import SearchBar from "@/components/SearchBar";
 import QuoteOfTheDay from "@/components/QuoteOfTheDay";
 import QuoteCard from "@/components/QuoteCard";
-import AuthorCard from "@/components/AuthorCard";
 import NewsletterForm from "@/components/NewsletterForm";
-import BlogCard from "@/components/BlogCard";
-import { BLOG_SEED } from "@/lib/blog-seed";
 import { listQuotes } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
@@ -37,14 +34,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Story View teaser */}
-      <section className="rounded-xl border border-[var(--border)] bg-[var(--card)] p-6 text-center">
-        <p className="text-xs font-semibold uppercase tracking-widest text-[var(--primary)]">Story View</p>
-        <h2 className="mt-2 text-2xl font-bold">One quote at a time, full screen</h2>
-        <p className="mx-auto mt-2 max-w-xl text-sm text-[var(--muted-foreground)]">Move through quotes one by one — no feed, no noise. Use the arrow keys or the Previous / Next buttons.</p>
-        <Link href="/story" className="mt-4 inline-block rounded-md bg-[var(--primary)] px-5 py-2.5 text-sm font-medium text-white">Open Story View</Link>
-      </section>
-
       <div className="mt-12"><QuoteOfTheDay /></div>
 
       {/* Trending quotes */}
@@ -73,31 +62,14 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Browse by Author */}
-      <section className="mt-12">
-        <div className="flex items-baseline justify-between"><h2 className="text-2xl font-bold">Browse by Author</h2><Link href="/authors" className="text-sm text-[var(--primary)] hover:underline">View all</Link></div>
-        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {AUTHORS.slice(0, 6).map((a) => <AuthorCard key={a.id} author={a} />)}
-        </div>
-      </section>
-
       {/* FAQ teaser */}
       <section className="mt-12 rounded-xl border border-[var(--border)] bg-[var(--card)] p-6">
         <h2 className="text-2xl font-bold">Frequently Asked Questions</h2>
         <div className="mt-4 space-y-3 text-sm">
           <details className="rounded-md border border-[var(--border)] p-3"><summary className="cursor-pointer font-medium">What is StoicBare?</summary><p className="mt-2 text-[var(--muted-foreground)]">StoicBare is a focused library of public-domain quotes from long-dead thinkers, organised by author and topic.</p></details>
-          <details className="rounded-md border border-[var(--border)] p-3"><summary className="cursor-pointer font-medium">Can I submit a quote?</summary><p className="mt-2 text-[var(--muted-foreground)]">Yes — use Contribute. Please include the author and original source so we can verify it.</p></details>
           <details className="rounded-md border border-[var(--border)] p-3"><summary className="cursor-pointer font-medium">Can I use quotes in my work?</summary><p className="mt-2 text-[var(--muted-foreground)]">These are short public-domain sayings. You may use them with attribution to the author.</p></details>
         </div>
         <Link href="/faq" className="mt-4 inline-block text-sm text-[var(--primary)] hover:underline">View all FAQs</Link>
-      </section>
-
-      {/* Articles */}
-      <section className="mt-12">
-        <div className="flex items-baseline justify-between"><h2 className="text-2xl font-bold">Articles</h2><Link href="/articles" className="text-sm text-[var(--primary)] hover:underline">All articles</Link></div>
-        <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {BLOG_SEED.filter((b) => b.featured).map((b) => <BlogCard key={b.id} post={b} />)}
-        </div>
       </section>
 
       <section className="mt-12" id="newsletter">
