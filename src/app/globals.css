@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=Playfair+Display:wght@700;900&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -53,105 +53,106 @@
 
 /* ────────────────────────────────────────────────────────────────────────
    Quote Place — literary-magazine design system.
-   Paper #FAF7F0 · Ink #1A1815 · Faded ink #6B6459 · Hairline #E4DCCB ·
-   Oxblood accent #8C3226. Fonts: Fraunces (display), Newsreader (body),
-   IBM Plex Mono (labels). Flat colors only — no gradients, no shadows,
-   no glow anywhere.
+   Parchment #F2EAD9 · Ink #1A1815 · Faded ink #6B6459 · Hairline #D8CBB0 ·
+   Deep teal #0F3D3E · Copper accent #B87333. Fonts: Playfair Display (logo),
+   Fraunces (display), Newsreader (body), IBM Plex Mono (labels).
+   Flat colors only — no gradients, no shadows, no glow anywhere.
    ──────────────────────────────────────────────────────────────────────── */
 :root {
   --radius: 0px;
 
   /* Runtime Google Fonts <link> (see layout.tsx). */
   --font-display: "Fraunces", Georgia, serif;
+  --font-logo: "Playfair Display", Georgia, serif;
   --font-body: "Newsreader", Georgia, serif;
   --font-mono: "IBM Plex Mono", "SFMono-Regular", monospace;
 
   /* Design tokens */
-  --paper: #faf7f0;
+  --paper: #f2ead9;
   --ink: #1a1815;
   --faded: #6b6459;
-  --hairline: #e4dccb;
-  --accent: #8c3226;
+  --hairline: #d8cbb0;
+  --accent: #b87333;
 
   /* Page */
-  --background: #faf7f0;
+  --background: #f2ead9;
   --foreground: #1a1815;
 
   /* Cards */
-  --card: #faf7f0;
+  --card: #fbf8f0;
   --card-foreground: #1a1815;
 
   /* Popover */
-  --popover: #faf7f0;
+  --popover: #fbf8f0;
   --popover-foreground: #1a1815;
 
-  /* Primary = oxblood */
-  --primary: #8c3226;
-  --primary-foreground: #faf7f0;
+  /* Primary = deep teal */
+  --primary: #0f3d3e;
+  --primary-foreground: #f2ead9;
 
   /* Secondary = hairline tint */
-  --secondary: #e4dccb;
+  --secondary: #d8cbb0;
   --secondary-foreground: #1a1815;
 
   /* Muted */
-  --muted: #e4dccb;
+  --muted: #d8cbb0;
   --muted-foreground: #6b6459;
 
   /* Accent */
   --accent-foreground: #1a1815;
 
-  --destructive: #8c3226;
-  --border: #e4dccb;
-  --input: #e4dccb;
-  --ring: #8c3226;
+  --destructive: #a63a2e;
+  --border: #d8cbb0;
+  --input: #d8cbb0;
+  --ring: #0f3d3e;
 
-  --chart-1: #8c3226;
+  --chart-1: #0f3d3e;
   --chart-2: #1a1815;
   --chart-3: #6b6459;
-  --chart-4: #e4dccb;
-  --chart-5: #a67c52;
+  --chart-4: #d8cbb0;
+  --chart-5: #b87333;
 
-  --sidebar: #faf7f0;
+  --sidebar: #f2ead9;
   --sidebar-foreground: #1a1815;
-  --sidebar-primary: #8c3226;
-  --sidebar-primary-foreground: #faf7f0;
-  --sidebar-accent: #e4dccb;
+  --sidebar-primary: #0f3d3e;
+  --sidebar-primary-foreground: #f2ead9;
+  --sidebar-accent: #d8cbb0;
   --sidebar-accent-foreground: #1a1815;
-  --sidebar-border: #e4dccb;
-  --sidebar-ring: #8c3226;
+  --sidebar-border: #d8cbb0;
+  --sidebar-ring: #0f3d3e;
 }
 
 .dark {
   --background: #1a1815;
-  --foreground: #faf7f0;
+  --foreground: #f2ead9;
   --card: #1a1815;
-  --card-foreground: #faf7f0;
+  --card-foreground: #f2ead9;
   --popover: #1a1815;
-  --popover-foreground: #faf7f0;
-  --primary: #a6402f;
-  --primary-foreground: #faf7f0;
+  --popover-foreground: #f2ead9;
+  --primary: #3d9a97;
+  --primary-foreground: #f2ead9;
   --secondary: #2a2724;
-  --secondary-foreground: #faf7f0;
+  --secondary-foreground: #f2ead9;
   --muted: #2a2724;
   --muted-foreground: #b0a99c;
-  --accent-foreground: #faf7f0;
-  --destructive: #a6402f;
+  --accent-foreground: #f2ead9;
+  --destructive: #c05a4a;
   --border: #3a362f;
   --input: #3a362f;
-  --ring: #a6402f;
-  --chart-1: #a6402f;
-  --chart-2: #faf7f0;
+  --ring: #3d9a97;
+  --chart-1: #3d9a97;
+  --chart-2: #f2ead9;
   --chart-3: #b0a99c;
   --chart-4: #3a362f;
-  --chart-5: #a67c52;
+  --chart-5: #b87333;
   --sidebar: #1a1815;
-  --sidebar-foreground: #faf7f0;
-  --sidebar-primary: #a6402f;
-  --sidebar-primary-foreground: #faf7f0;
+  --sidebar-foreground: #f2ead9;
+  --sidebar-primary: #3d9a97;
+  --sidebar-primary-foreground: #f2ead9;
   --sidebar-accent: #2a2724;
-  --sidebar-accent-foreground: #faf7f0;
+  --sidebar-accent-foreground: #f2ead9;
   --sidebar-border: #3a362f;
-  --sidebar-ring: #a6402f;
+  --sidebar-ring: #3d9a97;
 }
 
 @layer base {
@@ -352,5 +353,5 @@
   }
 }
 
-/* Focus: visible oxblood outline, never a glow */
+/* Focus: visible teal outline, never a glow */
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
