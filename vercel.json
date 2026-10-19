@@ -1,0 +1,1 @@
+{"$schema":"https://openapi.vercel.sh/vercel.json","buildCommand":"echo \"Static site — no build step\"","installCommand":"echo \"Static site — no dependencies\"","outputDirectory":".","rewrites":[{"destination":"/quoteplace.html","source":"/"}]}
