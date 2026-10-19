@@ -26,6 +26,7 @@
 
 import { useMemo, useState, useSyncExternalStore } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { ContributionPortal, LiveQuoteLibrary } from "@/components/community-quotes";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -450,7 +451,7 @@ function Header({
           size="sm"
           variant="outline"
           className="border-primary text-primary hover:bg-accent"
-          onClick={(e) => e.preventDefault()}
+          onClick={() => window.dispatchEvent(new Event("stoicbare:contribute"))}
         >
           <ScrollText className="h-4 w-4" aria-hidden="true" />
           Contribute
@@ -1003,6 +1004,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <Header search={search} setSearch={setSearch} />
+      <ContributionPortal />
 
       {/* Hidden SEO tags */}
       <div className="sr-only" role="list" aria-label="Keywords">
@@ -1027,6 +1029,7 @@ export default function Home() {
               quotes={QUOTES.slice(0, 9)}
               onAuthorClick={handlePickAuthor}
             />
+            <LiveQuoteLibrary />
           </>
         )}
 
