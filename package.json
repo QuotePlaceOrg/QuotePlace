@@ -7,6 +7,8 @@
     "build": "next build && cp -r .next/static .next/standalone/.next/ && cp -r public .next/standalone/",
     "start": "NODE_ENV=production node .next/standalone/server.js",
     "lint": "eslint .",
+    "seed": "bun scripts/generate-seed.ts",
+    "seed:firestore": "node scripts/seed-firestore.mjs",
     "db:push": "prisma db push --accept-data-loss",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
