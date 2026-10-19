@@ -1,0 +1,42 @@
+name: Sync Bun lockfile
+
+on:
+  push:
+    branches:
+      - feat/firestore-quotes-contributions
+
+permissions:
+  contents: write
+
+jobs:
+  sync-lockfile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: feat/firestore-quotes-contributions
+          persist-credentials: true
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.3
+
+      - name: Regenerate lockfile from package.json
+        run: bun install
+
+      - name: Commit lockfile and remove temporary workflow
+        env:
+          BRANCH: feat/firestore-quotes-contributions
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bun.lock
+          git rm .github/workflows/sync-bun-lockfile.yml
+          if git diff --cached --quiet; then
+            echo "No lockfile updates were required."
+            exit 0
+          fi
+          git commit -m "fix: synchronize Bun lockfile with package manifest"
+          git push origin "HEAD:$BRANCH"
