@@ -10,14 +10,14 @@ written, with real attribution.
 > public domain. No data extracted from quotelibrary.org — the site's
 > structure (nav, sections, profile layout) inspired Quote Place's layout;
 > all copy, quotes, and branding are original Quote Place work.
-> The visual identity is original: paper + ink + oxblood accent +
-> Fraunces / Newsreader / IBM Plex Mono type.
+> The visual identity is original: parchment + ink + deep teal + copper accent +
+> Playfair Display (logo) + Fraunces / Newsreader / IBM Plex Mono type.
 
 ## Stack
 
 - **Framework**: Next.js 16 (App Router) + TypeScript 5
 - **Styling**: Tailwind CSS 4 + shadcn/ui (New York) + Lucide icons
-- **Fonts**: Fraunces (display) + Newsreader (body) + IBM Plex Mono (labels),
+- **Fonts**: Playfair Display (logo) + Fraunces (display) + Newsreader (body) + IBM Plex Mono (labels),
   loaded at runtime via Google Fonts `<link>` in `layout.tsx` (not
   `next/font/google`, which broke the Turbopack/OpenNext deploy)
 - **Content**: 60 public-domain quotes from 16 authors, 12 topics
@@ -86,8 +86,8 @@ GOOGLE_APPLICATION_CREDENTIALS=./service-account.json bun run seed:firestore
 
 ## Design tokens
 
-- Background: #FAF7F0 (Paper), Text: #1A1815 (Ink), Primary: #8C3226 (Oxblood), Hairline: #E4DCCB, Faded: #6B6459
-- Fraunces for display, Newsreader for body, IBM Plex Mono for labels. Flat colors only — no gradients, no shadows, no glow.
+- Background: #F2EAD9 (Parchment), Text: #1A1815 (Ink), Primary: #0F3D3E (Deep teal), Accent: #B87333 (Copper), Hairline: #D8CBB0, Faded: #6B6459
+- Playfair Display for the logo, Fraunces for display, Newsreader for body, IBM Plex Mono for labels. Flat colors only — no gradients, no shadows, no glow.
 
 ## License
 
