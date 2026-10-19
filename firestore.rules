@@ -1,111 +1,96 @@
 rules_version = '2';
-
-// StoicBare Firestore security rules.
-//
-// Principles:
-//   1. Public users can READ published quotes, authors, topics, blogs.
-//   2. Authenticated users can CREATE pending quotes (contributions).
-//   3. Users own their own profile doc + likes subcollection.
-//   4. Only admins can publish / reject / delete quotes and edit authors/blogs.
-//      (Admins are identified by a custom claim `admin: true` set via the
-//      Firebase Admin SDK — see scripts/set-admin.ts for setup.)
-//
-// Deploy with: `firebase deploy --only firestore:rules`
-
 service cloud.firestore {
   match /databases/{database}/documents {
-
-    // ─── helpers ─────────────────────────────────────────────────────────
-    function isSignedIn() {
-      return request.auth != null;
-    }
-
+    function signedIn() { return request.auth != null; }
+    function isOwner(uid) { return signedIn() && request.auth.uid == uid; }
     function isAdmin() {
-      return isSignedIn() && request.auth.token.admin == true;
+      return signedIn() && (
+        request.auth.token.admin == true ||
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin'
+      );
+    }
+    function notBanned() {
+      return signedIn() &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isBanned != true;
+    }
+    function onlyCounterChanged(counterField) {
+      // Like/favourite toggles may only touch the counter field.
+      return request.resource.data.diff(resource.data).changedKeys().hasOnly([counterField]);
     }
 
-    function isOwner(uid) {
-      return isSignedIn() && request.auth.uid == uid;
-    }
-
-    // ─── quotes ──────────────────────────────────────────────────────────
-    match /quotes/{quoteId} {
-      // Public can read published; admins can read all.
-      allow read: if (resource.data.status == 'published') || isAdmin();
-
-      // Authenticated users can create a new quote as long as:
-      //   - status is "pending" (they can't self-publish)
-      //   - the contributorId matches their own uid
-      //   - required fields are present and within size limits
-      allow create: if isSignedIn()
-                    && request.resource.data.status == 'pending'
-                    && request.resource.data.contributorId == request.auth.uid
-                    && request.resource.data.text.size() > 0
-                    && request.resource.data.text.size() <= 800
-                    && request.resource.data.text is string;
-
-      // Only admins can update or delete existing quotes (e.g. approve a
-      // pending quote by flipping status to 'published', edit text, reject).
-      // The owner of a *pending* quote can also edit text/source/topics of
-      // their own pending submission (until it's published).
-      allow update: if isAdmin()
-                    || (isOwner(resource.data.contributorId)
-                        && resource.data.status == 'pending'
-                        && request.resource.data.status == 'pending'
-                        && request.resource.data.contributorId == request.auth.uid);
-      allow delete: if isAdmin()
-                    || (isOwner(resource.data.contributorId)
-                        && resource.data.status == 'pending');
-
-      // ─── likes subcollection (per-quote) ──────────────────────────────
-      // (Optional: we use users/{uid}/likes/{quoteId} instead for the demo,
-      // but if you want to track who liked a quote, this is the pattern.)
-      match /likers/{uid} {
-        allow read: if isSignedIn();
-        allow create, delete: if isOwner(uid);
-      }
-    }
-
-    // ─── authors ────────────────────────────────────────────────────────
     match /authors/{authorId} {
+      allow read: if resource.data.status == 'published' || isAdmin();
+      allow write: if isAdmin();
+    }
+    match /quotes/{quoteId} {
+      allow read: if resource.data.status == 'published' || isAdmin();
+      allow create, delete: if isAdmin();
+      // Counter-only updates from a like/favourite transaction.
+      allow update: if isAdmin() ||
+        (signedIn() && notBanned() && (
+          onlyCounterChanged('likeCount') || onlyCounterChanged('favoriteCount')
+        ));
+    }
+    match /topics/{topic} {
       allow read: if true;
       allow write: if isAdmin();
     }
-
-    // ─── topics ─────────────────────────────────────────────────────────
-    match /topics/{topicId} {
-      allow read: if true;
-      allow write: if isAdmin();
-    }
-
-    // ─── blogs ──────────────────────────────────────────────────────────
     match /blogs/{blogId} {
-      allow read: if (resource.data.status == 'published') || isAdmin();
-      allow create, update, delete: if isAdmin()
-                                     || (isSignedIn()
-                                         && request.resource.data.authorId == request.auth.uid
-                                         && request.resource.data.status in ['draft', 'pending']);
-    }
-
-    // ─── users ──────────────────────────────────────────────────────────
-    match /users/{uid} {
-      // A user can read their own profile; published authors' public profiles
-      // could be exposed via a separate `authorsPublic` collection. For now,
-      // profiles are private to the owner + admins.
-      allow read: if isOwner(uid) || isAdmin();
-      // Self-serve create + update of own fields (cannot change joinedAt).
-      allow create: if isOwner(uid);
-      allow update: if isOwner(uid)
-                    || isAdmin();
-      allow delete: if isAdmin();
-
-      // ─── likes subcollection ──────────────────────────────────────────
-      match /likes/{quoteId} {
-        allow read: if isOwner(uid);
-        allow create, delete: if isOwner(uid);
-        // Prevent users from editing like docs (just create/delete toggles).
-        allow update: if false;
+      allow read: if resource.data.status == 'published' || isAdmin();
+      allow create, update, delete: if isAdmin();
+      allow update: if signedIn() && notBanned() && onlyCounterChanged('likeCount');
+      match /comments/{commentId} {
+        allow read: if resource.data.status == 'published' || isAdmin();
+        allow create: if signedIn() && notBanned() &&
+          request.resource.data.userId == request.auth.uid &&
+          request.resource.data.status == 'published';
+        allow update, delete: if isAdmin() || isOwner(resource.data.userId);
       }
+    }
+    match /users/{uid} {
+      allow read: if isOwner(uid) || isAdmin();
+      allow create: if isOwner(uid) && request.resource.data.role == 'reader' &&
+        request.resource.data.isBanned == false;
+      allow update: if isOwner(uid) &&
+        request.resource.data.diff(resource.data).changedKeys()
+          .hasOnly(['displayName', 'photoURL', 'bio', 'preferences', 'lastLoginAt', 'stats']);
+      allow update: if isAdmin();
+    }
+    match /likes/{likeId} {
+      // Doc id must be "<uid>_<targetType>_<targetId>" and owned by the caller.
+      allow read: if signedIn() && likeId.matches('^' + request.auth.uid + '_.*');
+      allow create: if signedIn() && notBanned() &&
+        likeId.matches('^' + request.auth.uid + '_.*') &&
+        request.resource.data.userId == request.auth.uid;
+      allow delete: if signedIn() && resource.data.userId == request.auth.uid;
+    }
+    match /favorites/{favId} {
+      allow read: if signedIn() && favId.matches('^' + request.auth.uid + '_.*');
+      allow create: if signedIn() && notBanned() &&
+        favId.matches('^' + request.auth.uid + '_.*') &&
+        request.resource.data.userId == request.auth.uid;
+      allow delete: if signedIn() && resource.data.userId == request.auth.uid;
+    }
+    match /collections/{collectionId} {
+      allow read: if resource.data.isPublic == true || isOwner(resource.data.userId) || isAdmin();
+      allow create: if signedIn() && notBanned() &&
+        request.resource.data.userId == request.auth.uid;
+      allow update, delete: if isOwner(resource.data.userId) || isAdmin();
+    }
+    match /submissions/{submissionId} {
+      allow create: if signedIn() && notBanned() &&
+        request.resource.data.submittedBy == request.auth.uid &&
+        request.resource.data.status == 'pending';
+      allow read: if isOwner(resource.data.submittedBy) || isAdmin();
+      allow update, delete: if isAdmin();
+    }
+    match /newsletter_subscribers/{id} {
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
+    }
+    match /counters/{name} {
+      allow read: if true;
+      allow write: if isAdmin();
     }
   }
 }
