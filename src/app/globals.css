@@ -53,7 +53,7 @@
 
 /* ────────────────────────────────────────────────────────────────────────
    Quote Place — literary-magazine design system.
-   Parchment #F2EAD9 · Ink #1A1815 · Faded ink #6B6459 · Hairline #D8CBB0 ·
+   White #FFFFFF · Ink #1A1815 · Faded ink #6B6459 · Hairline #E5E5E0 ·
    Deep teal #0F3D3E · Copper accent #B87333. Fonts: Playfair Display (logo),
    Fraunces (display), Newsreader (body), IBM Plex Mono (labels).
    Flat colors only — no gradients, no shadows, no glow anywhere.
@@ -68,89 +68,89 @@
   --font-mono: "IBM Plex Mono", "SFMono-Regular", monospace;
 
   /* Design tokens */
-  --paper: #f2ead9;
+  --paper: #ffffff;
   --ink: #1a1815;
   --faded: #6b6459;
-  --hairline: #d8cbb0;
+  --hairline: #e5e5e0;
   --accent: #b87333;
 
   /* Page */
-  --background: #f2ead9;
+  --background: #ffffff;
   --foreground: #1a1815;
 
   /* Cards */
-  --card: #fbf8f0;
+  --card: #ffffff;
   --card-foreground: #1a1815;
 
   /* Popover */
-  --popover: #fbf8f0;
+  --popover: #ffffff;
   --popover-foreground: #1a1815;
 
   /* Primary = deep teal */
   --primary: #0f3d3e;
-  --primary-foreground: #f2ead9;
+  --primary-foreground: #ffffff;
 
   /* Secondary = hairline tint */
-  --secondary: #d8cbb0;
+  --secondary: #e5e5e0;
   --secondary-foreground: #1a1815;
 
   /* Muted */
-  --muted: #d8cbb0;
+  --muted: #e5e5e0;
   --muted-foreground: #6b6459;
 
   /* Accent */
   --accent-foreground: #1a1815;
 
   --destructive: #a63a2e;
-  --border: #d8cbb0;
-  --input: #d8cbb0;
+  --border: #e5e5e0;
+  --input: #e5e5e0;
   --ring: #0f3d3e;
 
   --chart-1: #0f3d3e;
   --chart-2: #1a1815;
   --chart-3: #6b6459;
-  --chart-4: #d8cbb0;
+  --chart-4: #e5e5e0;
   --chart-5: #b87333;
 
-  --sidebar: #f2ead9;
+  --sidebar: #ffffff;
   --sidebar-foreground: #1a1815;
   --sidebar-primary: #0f3d3e;
-  --sidebar-primary-foreground: #f2ead9;
-  --sidebar-accent: #d8cbb0;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e5e5e0;
   --sidebar-accent-foreground: #1a1815;
-  --sidebar-border: #d8cbb0;
+  --sidebar-border: #e5e5e0;
   --sidebar-ring: #0f3d3e;
 }
 
 .dark {
   --background: #1a1815;
-  --foreground: #f2ead9;
+  --foreground: #ffffff;
   --card: #1a1815;
-  --card-foreground: #f2ead9;
+  --card-foreground: #ffffff;
   --popover: #1a1815;
-  --popover-foreground: #f2ead9;
+  --popover-foreground: #ffffff;
   --primary: #3d9a97;
-  --primary-foreground: #f2ead9;
+  --primary-foreground: #ffffff;
   --secondary: #2a2724;
-  --secondary-foreground: #f2ead9;
+  --secondary-foreground: #ffffff;
   --muted: #2a2724;
   --muted-foreground: #b0a99c;
-  --accent-foreground: #f2ead9;
+  --accent-foreground: #ffffff;
   --destructive: #c05a4a;
   --border: #3a362f;
   --input: #3a362f;
   --ring: #3d9a97;
   --chart-1: #3d9a97;
-  --chart-2: #f2ead9;
+  --chart-2: #ffffff;
   --chart-3: #b0a99c;
   --chart-4: #3a362f;
   --chart-5: #b87333;
   --sidebar: #1a1815;
-  --sidebar-foreground: #f2ead9;
+  --sidebar-foreground: #ffffff;
   --sidebar-primary: #3d9a97;
-  --sidebar-primary-foreground: #f2ead9;
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #2a2724;
-  --sidebar-accent-foreground: #f2ead9;
+  --sidebar-accent-foreground: #ffffff;
   --sidebar-border: #3a362f;
   --sidebar-ring: #3d9a97;
 }
