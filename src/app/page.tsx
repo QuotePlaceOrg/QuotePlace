@@ -440,7 +440,10 @@ function Header({
             type="text"
             placeholder="Search for quotes..."
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => {
+              setSearch(e.target.value);
+              window.dispatchEvent(new CustomEvent("stoicbare:search", { detail: e.target.value }));
+            }}
             className="h-9 rounded-md border-border bg-card pl-9"
             aria-label="Search quotes"
           />
@@ -505,7 +508,10 @@ function Hero({
               type="text"
               placeholder="Search by keyword, author, or topic..."
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) => {
+              setSearch(e.target.value);
+              window.dispatchEvent(new CustomEvent("stoicbare:search", { detail: e.target.value }));
+            }}
               className="h-12 rounded-md border-border bg-card pl-12 text-base shadow-sm"
               aria-label="Search Stoic quotes"
             />
