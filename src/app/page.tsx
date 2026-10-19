@@ -5,18 +5,18 @@ import { listQuotes } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
 
-// Theme: Quote Place design system (paper / ink / oxblood, Fraunces + Newsreader
+// Theme: Quote Place design system (parchment / ink / teal / copper, Playfair Display logo + Fraunces + Newsreader
 // + IBM Plex Mono). The <link> tags for these fonts live in layout.tsx; the
 // Georgia fallbacks keep the editorial serif look if a font fails to load.
 const SERIF_DISPLAY = "'Fraunces', Georgia, 'Times New Roman', serif";
 const SERIF_BODY = "'Newsreader', Georgia, 'Times New Roman', serif";
 const MONO = "'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace";
 
-const PAPER = "#FAF7F0";
+const PAPER = "#F2EAD9";
 const INK = "#1A1815";
 const FADED = "#6B6459";
-const HAIRLINE = "#E4DCCB";
-const OXBLOOD = "#8C3226";
+const HAIRLINE = "#D8CBB0";
+const TEAL = "#0F3D3E";
 
 function toCardQuote(q: { id: string; text: string; authorId: string; topics: string[]; source: string }) {
   return { id: q.id, text: q.text, authorId: q.authorId, topics: q.topics, source: q.source, language: "en" as const };
@@ -68,12 +68,12 @@ export default async function Home() {
             type="search"
             placeholder="Search a feeling, a person, a subject…"
             style={{ borderColor: HAIRLINE }}
-            className="w-full border bg-white px-4 py-3 text-[17px] outline-none placeholder:text-[#6B6459] focus:border-[#8C3226]"
+            className="w-full border bg-white px-4 py-3 text-[17px] outline-none placeholder:text-[#6B6459] focus:border-[#0F3D3E]"
           />
           <button
             type="submit"
             style={{ backgroundColor: INK }}
-            className="shrink-0 px-5 py-3 text-[15px] text-white transition-colors hover:bg-[#8C3226]"
+            className="shrink-0 px-5 py-3 text-[15px] text-white transition-colors hover:bg-[#0F3D3E]"
           >
             Find a quote
           </button>
