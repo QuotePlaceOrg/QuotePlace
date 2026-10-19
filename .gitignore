@@ -61,3 +61,8 @@ server.log
 /.zscripts/
 /mini-services/
 /tests/
+# Local import datasets and Firebase Admin credentials
+service-account*.json
+*firebase-adminsdk*.json
+*.service-account.json
+/data/quotes*.jsonl
