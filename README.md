@@ -21,8 +21,9 @@ years.
 - **Styling**: Tailwind CSS 4 + shadcn/ui (New York) + Lucide icons
 - **Fonts**: Inter (body) + Lora (serif headings/quotes), both via `next/font/google`
 - **Content**: 25 public-domain Stoic quotes from 6 authors (ancient Greek/Roman texts)
-- **Backend**: Firebase (`firebase@13`) — Analytics wired up; ready to extend to
-  Firestore / Auth / Storage
+- **Backend**: Firebase Authentication + Firestore + Analytics
+- **Community**: Email/password and optional Google sign-in; submissions are private until editorial approval
+- **Scale**: Firestore-backed quote archive with cursor pagination, search tokens, and a bulk importer for 100,000+ records
 
 ## Page structure
 
@@ -117,6 +118,26 @@ export const storage = getStorage(firebaseApp);
 ```
 
 Then call them from client components (these modules are also browser-only).
+
+
+## Firebase quote archive and contributions
+
+The Contribute button opens sign-in/create-account first, then a quote submission
+form. Submissions are stored privately in `quoteSubmissions` with a pending
+status. Trusted editors can review the queue at `/admin`; a quote is added to
+the public `quotes` collection only after its attribution and rights basis are
+confirmed. Client-side rules prevent contributors from publishing or editing
+canonical quotes directly.
+
+The live quote archive uses cursor-based pagination and does not download the
+entire database. The bulk importer accepts JSONL files with deterministic hash
+IDs, duplicate skipping, per-document metadata, and Firestore batches.
+
+Read **[docs/firestore-setup.md](docs/firestore-setup.md)** for Firebase Console
+configuration, security rule deployment, admin access, and importing a large
+licensed dataset. The repository is configured for project `stoicbare-86bfa`,
+but rules/indexes must be deployed and the quote corpus must be imported before
+the live archive shows its database records.
 
 ## License
 
