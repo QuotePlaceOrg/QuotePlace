@@ -124,6 +124,10 @@ The live quote archive uses cursor-based pagination and does not download the
 entire database. The bulk importer accepts JSONL files with deterministic hash
 IDs, duplicate skipping, per-document metadata, and Firestore batches.
 
+The GitHub Actions Deploy check runs the Next.js and OpenNext Cloudflare builds on
+pull requests and pushes to `main` so deployment-compatibility regressions are caught
+before merge.
+
 Read **[docs/firestore-setup.md](docs/firestore-setup.md)** for Firebase Console
 configuration, security rule deployment, admin access, and importing a large
 licensed dataset. The repository is configured for project `stoicbare-86bfa`,
