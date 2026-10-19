@@ -5,6 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>QuotePlace</title>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<!-- Firebase: app + Analytics (config from Firebase Console) -->
+<script type="importmap">
+{"imports": {
+  "firebase/app": "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js",
+  "firebase/analytics": "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js"
+}}
+</script>
+<script type="module">
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+const firebaseConfig = {
+  apiKey: "AIzaSyD5NrCTK71Rk4qVYsQyp_t-wrf55vskEHI",
+  authDomain: "stoicbare-86bfa.firebaseapp.com",
+  projectId: "stoicbare-86bfa",
+  storageBucket: "stoicbare-86bfa.firebasestorage.app",
+  messagingSenderId: "283688843634",
+  appId: "1:283688843634:web:830af8f511ed9ebabec5eb",
+  measurementId: "G-6W2P37RQJ6"
+};
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+</script>
 <style>
 :root{color-scheme:light;--bg:#fff;--ink:#17202e;--mute:#5d6878;--card:#fff;--line:#e2e6ea;--blue:#2740d6;--onblue:#fff;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
