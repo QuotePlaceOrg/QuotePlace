@@ -1,0 +1,122 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return signedIn() && request.auth.uid == uid;
+    }
+
+    // Set this custom claim only on trusted administrator accounts.
+    function isAdmin() {
+      return signedIn() && request.auth.token.admin == true;
+    }
+
+    match /quotes/{quoteId} {
+      // Public queries must include status == "published".
+      allow read: if isAdmin() || resource.data.status == "published";
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /quoteSubmissions/{submissionId} {
+      // A contributor can submit only on their own behalf. Submissions remain
+      // private to their author and reviewers until an admin publishes a quote.
+      allow create: if signedIn()
+        && request.resource.data.keys().hasOnly([
+          "text",
+          "authorName",
+          "authorSlug",
+          "source",
+          "topics",
+          "normalizedText",
+          "status",
+          "schemaVersion",
+          "submittedBy",
+          "submittedByName",
+          "createdAt"
+        ])
+        && request.resource.data.keys().hasAll([
+          "text",
+          "authorName",
+          "authorSlug",
+          "source",
+          "topics",
+          "normalizedText",
+          "status",
+          "schemaVersion",
+          "submittedBy",
+          "submittedByName",
+          "createdAt"
+        ])
+        && request.resource.data.submittedBy == request.auth.uid
+        && request.resource.data.status == "pending"
+        && request.resource.data.schemaVersion == 1
+        && request.resource.data.text is string
+        && request.resource.data.text.size() >= 12
+        && request.resource.data.text.size() <= 1200
+        && request.resource.data.authorName is string
+        && request.resource.data.authorName.size() >= 1
+        && request.resource.data.authorName.size() <= 120
+        && request.resource.data.authorSlug is string
+        && request.resource.data.source is string
+        && request.resource.data.source.size() <= 240
+        && request.resource.data.normalizedText is string
+        && request.resource.data.topics is list
+        && request.resource.data.topics.size() <= 5
+        && request.resource.data.submittedByName is string
+        && request.resource.data.submittedByName.size() <= 80;
+
+      allow read: if isAdmin()
+        || (signedIn() && resource.data.submittedBy == request.auth.uid);
+      allow update, delete: if isAdmin();
+    }
+
+    match /users/{uid} {
+      allow read: if isOwner(uid) || isAdmin();
+
+      // Users cannot assign themselves roles or elevated permissions.
+      allow create: if isOwner(uid)
+        && request.resource.data.keys().hasOnly([
+          "displayName",
+          "photoURL",
+          "createdAt",
+          "updatedAt"
+        ]);
+
+      allow update: if isOwner(uid)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          "displayName",
+          "photoURL",
+          "updatedAt"
+        ]);
+
+      allow delete: if isAdmin();
+
+      match /favorites/{quoteId} {
+        allow read: if isOwner(uid) || isAdmin();
+        allow create, update: if isOwner(uid)
+          && exists(/databases/$(database)/documents/quotes/$(quoteId))
+          && get(/databases/$(database)/documents/quotes/$(quoteId)).data.status == "published";
+        allow delete: if isOwner(uid) || isAdmin();
+      }
+    }
+
+    match /authors/{authorId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /topics/{topicId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Everything else is private by default.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
