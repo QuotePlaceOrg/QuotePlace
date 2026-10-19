@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { onAuthStateChanged, type User } from "firebase/auth";
 import {
   collection,
-  DocumentData,
+  type DocumentData,
   getDocs,
   limit,
   orderBy,
