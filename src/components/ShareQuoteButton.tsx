@@ -7,16 +7,16 @@ import { createSubmission, incrementQuoteCounter } from "@/lib/db";
 
 // ---------------------------------------------------------------------------
 // Canvas quote-image renderer (Quote Place brand theme).
-// 1080x1080 PNG, paper/ink/oxblood, serif type. Text is drawn with code —
+// 1080x1080 PNG, parchment/ink/teal/copper, serif type. Text is drawn with code —
 // never AI-generated — so the quote is pixel-perfect.
 // ---------------------------------------------------------------------------
 
 type Variant = "light" | "dark" | "parchment";
 
 const PALETTES: Record<Variant, { bg: string; text: string; muted: string; rule: string; frame: string }> = {
-  light: { bg: "#FAF7F0", text: "#1A1815", muted: "#6B6459", rule: "#8C3226", frame: "#E4DCCB" },
-  dark: { bg: "#1A1815", text: "#FAF7F0", muted: "#C9C2B4", rule: "#C05A4A", frame: "#3A352E" },
-  parchment: { bg: "#F2EAD9", text: "#2A2118", muted: "#6B6459", rule: "#8C3226", frame: "#D8CBA8" },
+  light: { bg: "#F2EAD9", text: "#1A1815", muted: "#6B6459", rule: "#B87333", frame: "#D8CBB0" },
+  dark: { bg: "#0F3D3E", text: "#F2EAD9", muted: "#C9C2B4", rule: "#B87333", frame: "#1D5A58" },
+  parchment: { bg: "#EFE3CB", text: "#2A2118", muted: "#6B6459", rule: "#B87333", frame: "#D8CBA8" },
 };
 
 const BRAND_MARK = "QUOTE PLACE";
@@ -69,7 +69,7 @@ async function drawQuoteImage(
   ctx.textAlign = "center";
   ctx.textBaseline = "alphabetic";
   ctx.letterSpacing = "6px";
-  ctx.font = "500 24px Georgia, 'Times New Roman', serif";
+  ctx.font = "500 24px 'Playfair Display', Georgia, serif";
   ctx.fillText(BRAND_MARK, W / 2, 112);
   ctx.letterSpacing = "0px";
 
@@ -83,7 +83,7 @@ async function drawQuoteImage(
   let lines: string[] = [];
   let lineHeight = 0;
   while (size >= 30) {
-    ctx.font = `600 ${size}px Georgia, 'Times New Roman', serif`;
+    ctx.font = `600 ${size}px 'Playfair Display', Georgia, serif`;
     lineHeight = size * 1.3;
     lines = wrapText(ctx, input.text, maxWidth);
     if (lines.length * lineHeight <= availHeight) break;
@@ -105,7 +105,7 @@ async function drawQuoteImage(
     ctx.fillText(line, W / 2, startY + i * lineHeight);
   });
 
-  // Oxblood rule + author line.
+  // Copper rule + author line.
   ctx.strokeStyle = p.rule;
   ctx.lineWidth = 3;
   ctx.beginPath();
@@ -114,7 +114,7 @@ async function drawQuoteImage(
   ctx.stroke();
   const attribution = input.source ? `— ${input.authorName} · ${input.source}` : `— ${input.authorName}`;
   ctx.fillStyle = p.muted;
-  ctx.font = "500 30px Georgia, 'Times New Roman', serif";
+  ctx.font = "500 30px 'Playfair Display', Georgia, serif";
   ctx.fillText(attribution, W / 2, 950);
 
   const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, "image/png"));
