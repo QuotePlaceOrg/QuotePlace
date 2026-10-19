@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="mt-16 border-t-[3px] border-t-[var(--primary)] bg-[var(--foreground)] text-[var(--background)]">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:grid-cols-2 md:grid-cols-3">
         <div>
-          <p style={{ fontFamily: '"Playfair Display", Georgia, serif' }} className="flex items-center gap-2 text-lg font-black tracking-[0.08em]">
+          <p style={{ fontFamily: '"Playfair Display", Georgia, serif' }} className="flex items-center gap-2 text-lg font-medium leading-none tracking-normal">
             <span aria-hidden="true" className="inline-block h-3 w-3 rotate-45 bg-[#B87333]" />
             Quote Place
           </p>
