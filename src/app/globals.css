@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -6,8 +7,16 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-lora);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-display);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-faded: var(--faded);
+  --color-hairline: var(--hairline);
+  --color-accent: var(--accent);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -26,7 +35,6 @@
   --color-border: var(--border);
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -37,105 +45,113 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
 }
 
 /* ────────────────────────────────────────────────────────────────────────
-   StoicBare — warm ivory parchment + charcoal text + antique bronze accent.
-   No indigo/blue. Fonts: Lora (serif headings + quotes), Inter (body).
+   Quote Place — literary-magazine design system.
+   Paper #FAF7F0 · Ink #1A1815 · Faded ink #6B6459 · Hairline #E4DCCB ·
+   Oxblood accent #8C3226. Fonts: Fraunces (display), Newsreader (body),
+   IBM Plex Mono (labels). Flat colors only — no gradients, no shadows,
+   no glow anywhere.
    ──────────────────────────────────────────────────────────────────────── */
 :root {
-  --radius: 0.5rem;
+  --radius: 0px;
 
-  /* Runtime Google Fonts <link> (see layout.tsx) — these vars were previously
-     injected by next/font/google. Required by @theme inline below. */
-  --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-lora: "Lora", Georgia, serif;
+  /* Runtime Google Fonts <link> (see layout.tsx). */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Newsreader", Georgia, serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", monospace;
+
+  /* Design tokens */
+  --paper: #faf7f0;
+  --ink: #1a1815;
+  --faded: #6b6459;
+  --hairline: #e4dccb;
+  --accent: #8c3226;
 
   /* Page */
-  --background: oklch(0.97 0.02 80);   /* warm ivory parchment */
-  --foreground: oklch(0.2 0.01 50);    /* deep charcoal */
+  --background: #faf7f0;
+  --foreground: #1a1815;
 
   /* Cards */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0.01 50);
+  --card: #faf7f0;
+  --card-foreground: #1a1815;
 
   /* Popover */
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0.01 50);
+  --popover: #faf7f0;
+  --popover-foreground: #1a1815;
 
-  /* Primary = antique bronze */
-  --primary: oklch(0.5 0.07 65);       /* #8b6f3a-ish */
-  --primary-foreground: oklch(0.98 0.01 80);
+  /* Primary = oxblood */
+  --primary: #8c3226;
+  --primary-foreground: #faf7f0;
 
-  /* Secondary = warm stone */
-  --secondary: oklch(0.92 0.02 75);
-  --secondary-foreground: oklch(0.3 0.01 50);
+  /* Secondary = hairline tint */
+  --secondary: #e4dccb;
+  --secondary-foreground: #1a1815;
 
   /* Muted */
-  --muted: oklch(0.93 0.01 75);
-  --muted-foreground: oklch(0.45 0.01 50);
+  --muted: #e4dccb;
+  --muted-foreground: #6b6459;
 
-  /* Accent = bronze tint */
-  --accent: oklch(0.95 0.03 75);
-  --accent-foreground: oklch(0.3 0.01 50);
+  /* Accent */
+  --accent-foreground: #1a1815;
 
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.88 0.02 70);
-  --input: oklch(0.88 0.02 70);
-  --ring: oklch(0.5 0.07 65);
+  --destructive: #8c3226;
+  --border: #e4dccb;
+  --input: #e4dccb;
+  --ring: #8c3226;
 
-  --chart-1: oklch(0.5 0.07 65);
-  --chart-2: oklch(0.6 0.1 50);
-  --chart-3: oklch(0.55 0.05 80);
-  --chart-4: oklch(0.45 0.08 40);
-  --chart-5: oklch(0.65 0.06 70);
+  --chart-1: #8c3226;
+  --chart-2: #1a1815;
+  --chart-3: #6b6459;
+  --chart-4: #e4dccb;
+  --chart-5: #a67c52;
 
-  --sidebar: oklch(0.97 0.02 80);
-  --sidebar-foreground: oklch(0.2 0.01 50);
-  --sidebar-primary: oklch(0.5 0.07 65);
-  --sidebar-primary-foreground: oklch(0.98 0.01 80);
-  --sidebar-accent: oklch(0.95 0.03 75);
-  --sidebar-accent-foreground: oklch(0.3 0.01 50);
-  --sidebar-border: oklch(0.88 0.02 70);
-  --sidebar-ring: oklch(0.5 0.07 65);
+  --sidebar: #faf7f0;
+  --sidebar-foreground: #1a1815;
+  --sidebar-primary: #8c3226;
+  --sidebar-primary-foreground: #faf7f0;
+  --sidebar-accent: #e4dccb;
+  --sidebar-accent-foreground: #1a1815;
+  --sidebar-border: #e4dccb;
+  --sidebar-ring: #8c3226;
 }
 
 .dark {
-  --background: oklch(0.2 0.01 50);
-  --foreground: oklch(0.97 0.02 80);
-  --card: oklch(0.25 0.01 50);
-  --card-foreground: oklch(0.97 0.02 80);
-  --popover: oklch(0.25 0.01 50);
-  --popover-foreground: oklch(0.97 0.02 80);
-  --primary: oklch(0.7 0.1 75);
-  --primary-foreground: oklch(0.2 0.01 50);
-  --secondary: oklch(0.3 0.01 50);
-  --secondary-foreground: oklch(0.97 0.02 80);
-  --muted: oklch(0.3 0.01 50);
-  --muted-foreground: oklch(0.7 0.01 50);
-  --accent: oklch(0.35 0.02 70);
-  --accent-foreground: oklch(0.97 0.02 80);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.7 0.1 75);
-  --chart-1: oklch(0.7 0.1 75);
-  --chart-2: oklch(0.65 0.12 50);
-  --chart-3: oklch(0.6 0.05 80);
-  --chart-4: oklch(0.55 0.08 40);
-  --chart-5: oklch(0.75 0.06 70);
-  --sidebar: oklch(0.25 0.01 50);
-  --sidebar-foreground: oklch(0.97 0.02 80);
-  --sidebar-primary: oklch(0.7 0.1 75);
-  --sidebar-primary-foreground: oklch(0.2 0.01 50);
-  --sidebar-accent: oklch(0.35 0.02 70);
-  --sidebar-accent-foreground: oklch(0.97 0.02 80);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.7 0.1 75);
+  --background: #1a1815;
+  --foreground: #faf7f0;
+  --card: #1a1815;
+  --card-foreground: #faf7f0;
+  --popover: #1a1815;
+  --popover-foreground: #faf7f0;
+  --primary: #a6402f;
+  --primary-foreground: #faf7f0;
+  --secondary: #2a2724;
+  --secondary-foreground: #faf7f0;
+  --muted: #2a2724;
+  --muted-foreground: #b0a99c;
+  --accent-foreground: #faf7f0;
+  --destructive: #a6402f;
+  --border: #3a362f;
+  --input: #3a362f;
+  --ring: #a6402f;
+  --chart-1: #a6402f;
+  --chart-2: #faf7f0;
+  --chart-3: #b0a99c;
+  --chart-4: #3a362f;
+  --chart-5: #a67c52;
+  --sidebar: #1a1815;
+  --sidebar-foreground: #faf7f0;
+  --sidebar-primary: #a6402f;
+  --sidebar-primary-foreground: #faf7f0;
+  --sidebar-accent: #2a2724;
+  --sidebar-accent-foreground: #faf7f0;
+  --sidebar-border: #3a362f;
+  --sidebar-ring: #a6402f;
 }
 
 @layer base {
@@ -144,21 +160,113 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI",
-      sans-serif;
+    font-family: var(--font-body), Georgia, serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
   }
-  /* Serif headings via Lora */
+  /* Serif display headings via Fraunces */
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-lora), Georgia, "Times New Roman", serif;
+    font-family: var(--font-display), Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  h1 {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    line-height: 1.05;
+  }
+  h2 {
+    font-size: clamp(1.6rem, 3vw, 2rem);
   }
 }
 
 /* ────────────────────────────────────────────────────────────────────────
-   StoicBare component classes
+   Quote Place component classes
    ──────────────────────────────────────────────────────────────────────── */
 
+/* Eyebrow / folio labels */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--muted-foreground);
+}
+
+/* Hairline section divider — the only divider */
+.rule {
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+/* Buttons: rectangular, no radius, no shadow, no gradient */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0;
+  border: 1px solid var(--border);
+  padding: 0.6rem 1.1rem;
+  font-family: var(--font-body);
+  font-size: 15px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--foreground);
+}
+.btn:hover {
+  border-color: var(--foreground);
+}
+.btn-primary {
+  background: var(--foreground);
+  border-color: var(--foreground);
+  color: var(--background);
+}
+.btn-primary:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.btn-text {
+  border: 0;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.btn-text:hover {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Filter chips: rectangular, hairline, no pills */
+.chip {
+  border-radius: 0;
+  border: 1px solid var(--border);
+  background: var(--background);
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.chip[aria-pressed="true"] {
+  background: var(--foreground);
+  color: var(--background);
+  border-color: var(--foreground);
+}
+
+/* Quote card: flat, hairline, sharp corners, no shadow */
+.quote-card {
+  border: 1px solid var(--border);
+  background: var(--background);
+  padding: 28px;
+  border-radius: 0;
+}
+
+/* Legacy component classes (kept so existing components keep styling) */
 .stoic-mark {
-  font-family: var(--font-lora), Georgia, serif;
+  font-family: var(--font-display), Georgia, serif;
   font-weight: 700;
   line-height: 0.8;
   color: var(--primary);
@@ -166,7 +274,7 @@
 }
 
 .stoic-quote-text {
-  font-family: var(--font-lora), Georgia, serif;
+  font-family: var(--font-display), Georgia, serif;
   font-style: italic;
   font-weight: 400;
   line-height: 1.4;
@@ -174,7 +282,7 @@
 }
 
 .stoic-author-attr {
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-body), serif;
   font-weight: 600;
   font-size: 0.875rem;
   color: var(--primary);
@@ -182,7 +290,7 @@
 }
 
 .stoic-source {
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-body), serif;
   font-style: italic;
   font-size: 0.8rem;
   color: var(--muted-foreground);
@@ -191,34 +299,29 @@
 .stoic-topic-pill {
   display: inline-flex;
   align-items: center;
-  padding: 4px 12px;
-  border-radius: 999px;
+  padding: 8px 14px;
+  border-radius: 0;
   border: 1px solid var(--border);
   background: transparent;
   color: var(--muted-foreground);
   font-size: 0.8rem;
   font-weight: 500;
   text-decoration: none;
-  transition: all 0.2s ease;
   cursor: pointer;
 }
 .stoic-topic-pill:hover {
   border-color: var(--primary);
   color: var(--primary);
-  background: var(--accent);
 }
 
 .stoic-card {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: 0;
   padding: 1.5rem;
-  transition: all 0.3s ease;
 }
 .stoic-card:hover {
   border-color: var(--primary);
-  box-shadow: 0 4px 24px oklch(0.5 0.07 65 / 0.1);
-  transform: translateY(-2px);
 }
 
 .stoic-author-avatar {
@@ -228,9 +331,9 @@
   width: 3rem;
   height: 3rem;
   border-radius: 9999px;
-  background: linear-gradient(135deg, var(--primary) 0%, oklch(0.4 0.05 50) 100%);
+  background: var(--primary);
   color: var(--primary-foreground);
-  font-family: var(--font-lora), serif;
+  font-family: var(--font-display), serif;
   font-weight: 600;
   font-size: 1.25rem;
 }
@@ -249,4 +352,5 @@
   }
 }
 
+/* Focus: visible oxblood outline, never a glow */
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
