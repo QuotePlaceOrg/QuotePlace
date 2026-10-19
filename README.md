@@ -10,7 +10,7 @@ written, with real attribution.
 > public domain. No data extracted from quotelibrary.org — the site's
 > structure (nav, sections, profile layout) inspired Quote Place's layout;
 > all copy, quotes, and branding are original Quote Place work.
-> The visual identity is original: parchment + ink + deep teal + copper accent +
+> The visual identity is original: white + ink + deep teal + copper accent +
 > Playfair Display (logo) + Fraunces / Newsreader / IBM Plex Mono type.
 
 ## Stack
@@ -86,7 +86,7 @@ GOOGLE_APPLICATION_CREDENTIALS=./service-account.json bun run seed:firestore
 
 ## Design tokens
 
-- Background: #F2EAD9 (Parchment), Text: #1A1815 (Ink), Primary: #0F3D3E (Deep teal), Accent: #B87333 (Copper), Hairline: #D8CBB0, Faded: #6B6459
+- Background: #FFFFFF (White), Text: #1A1815 (Ink), Primary: #0F3D3E (Deep teal), Accent: #B87333 (Copper), Hairline: #E5E5E0, Faded: #6B6459
 - Playfair Display for the logo, Fraunces for display, Newsreader for body, IBM Plex Mono for labels. Flat colors only — no gradients, no shadows, no glow.
 
 ## License
