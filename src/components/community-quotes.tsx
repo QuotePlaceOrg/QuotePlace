@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
@@ -122,7 +122,7 @@ function ModalShell({
   title: string;
   subtitle: string;
   onClose: () => void;
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
@@ -208,7 +208,7 @@ export function ContributionPortal() {
     setSuccess("");
   }, []);
 
-  const handleAuth = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleAuth = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setError("");
     setSuccess("");
