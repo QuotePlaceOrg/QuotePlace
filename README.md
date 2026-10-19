@@ -21,6 +21,10 @@ Each quote is a document in the `quotes` collection:
 | img | string (optional) | https://your-cdn/quote-123.jpg |
 | createdAt | timestamp | (required, used for ordering) |
 
+### Categories & authors
+- `category` must be exactly one of: Action, Calm, Courage, Friendship, Habits, Happiness, Life, Love, Success, Wisdom. No free-typing — if a quote fits two, pick the strongest.
+- `author` is one plain name per quote (e.g. `Marcus Aurelius`, `Anonymous`, `Japanese proverb`). Use one canonical spelling per person, trimmed, consistently capitalised.
+
 Images: store the files on any image host or CDN (Cloudflare R2, Cloudinary, Bunny, or Firebase Storage) and put the URL in `img`. Without `img`, the site draws a colour card from the text.
 
 Bulk upload thousands of quotes with the Admin SDK (Node):
