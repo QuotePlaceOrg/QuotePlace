@@ -27,7 +27,7 @@
 
 "use client";
 
-import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/components/auth-context";
 import { ContributeModal } from "@/components/contribute-modal";
@@ -55,7 +55,7 @@ import {
   HelpCircle,
   Mail,
 } from "lucide-react";
-import { toggleLike, getUserLikedQuoteIds } from "@/lib/firestore";
+import { toggleLike, getUserLikedQuoteIds, getPublishedBlogs } from "@/lib/firestore";
 
 // ───────────────────────────────────────────────────────────────────────────
 // Data — authors
@@ -843,21 +843,39 @@ function CurrentTime() {
   return <span suppressHydrationWarning>{formatted} IST</span>;
 }
 
-// Quote of the Day — deterministic per calendar day, rotates through QUOTES
+// Quote of the Day — deterministic per calendar day, rotates through QUOTES.
+// Uses useSyncExternalStore with a cached snapshot: the getSnapshot function
+// computes the QoTD once per minute (subscription re-fires every 60s) and
+// caches the result so React doesn't see a "new" value on every render
+// (which would cause an infinite loop warning).
 function useQuoteOfTheDay(): Quote {
+  // Cache the snapshot in a ref so the same Quote reference is returned
+  // across renders until the subscription fires (every minute).
+  const cacheRef = useRef<{ dayKey: string; quote: Quote } | null>(null);
+
+  const subscribe = useCallback((cb: () => void) => {
+    const id = setInterval(cb, 60_000);
+    return () => clearInterval(id);
+  }, []);
+
+  const getSnapshot = useCallback(() => {
+    const now = new Date();
+    const start = new Date(now.getFullYear(), 0, 0);
+    const dayOfYear = Math.floor(
+      (now.getTime() - start.getTime()) / 86_400_000,
+    );
+    const dayKey = `${now.getFullYear()}-${dayOfYear}`;
+    if (cacheRef.current?.dayKey === dayKey) {
+      return cacheRef.current.quote;
+    }
+    const quote = QUOTES[dayOfYear % QUOTES.length];
+    cacheRef.current = { dayKey, quote };
+    return quote;
+  }, []);
+
   return useSyncExternalStore(
-    (cb) => {
-      const id = setInterval(cb, 60_000); // re-check hourly
-      return () => clearInterval(id);
-    },
-    () => {
-      const now = new Date();
-      const start = new Date(now.getFullYear(), 0, 0);
-      const dayOfYear = Math.floor(
-        (now.getTime() - start.getTime()) / 86_400_000,
-      );
-      return QUOTES[dayOfYear % QUOTES.length];
-    },
+    subscribe,
+    getSnapshot,
     () => QUOTES[0], // server snapshot — first quote
   );
 }
