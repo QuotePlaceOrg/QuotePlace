@@ -20,7 +20,7 @@ words that have shaped human thought across millennia.
 - **Fonts**: Inter (body) + Lora (serif headings/quotes), loaded at runtime via
   Google Fonts `<link>` in `layout.tsx` (not `next/font/google`, which broke
   the Turbopack/OpenNext deploy)
-- **Content**: 60 public-domain quotes from 16 authors, 12 topics, 6 articles
+- **Content**: 60 public-domain quotes from 16 authors, 12 topics
 - **Backend**: Firebase (`firebase@13`) — Firestore + Auth + Analytics.
   Every count (likes, favourites, views) comes from real Firestore data or is
   0 / hidden. No fake numbers anywhere.
@@ -63,13 +63,10 @@ GOOGLE_APPLICATION_CREDENTIALS=./service-account.json bun run seed:firestore
 
 ## Pages
 
-- `/` Home — hero, Quote of the Day, Browse by Author, Featured Quotes, Blog teaser, FAQ teaser, newsletter
+- `/` Home — hero, Quote of the Day, Featured Quotes, FAQ teaser, newsletter
 - `/quotes` + `/quotes/[id]` — search, filters, pagination, detail, like + save
-- `/authors` + `/authors/[id]` — author cards + detail
 - `/topics` + `/topics/[slug]` — topic list + detail
-- `/blog` + `/blog/[slug]` — original StoicBare essays, like + comments (Firestore when configured)
-- `/story` — full-screen quote viewer
-- `/about`, `/faq`, `/contribute` — contribute saves to Firestore `submissions` when signed in
+- `/about`, `/faq`
 - `/login`, `/signup` — Firebase Auth (Google + email), creates `users/{uid}` doc
 - `/profile` — real profile, stats (likes / favourites / contributions / comments), favourites, collections, account settings. `/dashboard` redirects to `/profile`.
 - `/profile/[uid]` — public profile + public collections
