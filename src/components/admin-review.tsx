@@ -29,6 +29,7 @@ import { auth, db } from "@/lib/firebase";
 
 type Submission = {
   id: string;
+  kind: "community" | "imported";
   text: string;
   authorName: string;
   authorSlug: string;
@@ -36,8 +37,9 @@ type Submission = {
   topics: string[];
   submittedByName: string;
   submittedBy: string;
+  license: string;
   status: string;
-  createdAt?: { toDate?: () => Date };
+  createdAt?: { toDate?: () => Date; toMillis?: () => number };
 };
 
 function normalizeSearch(value: string): string {
@@ -121,17 +123,27 @@ export function AdminReview() {
     setLoading(true);
     setError("");
     try {
-      const pendingQuery = query(
+      const communityQuery = query(
         collection(db, "quoteSubmissions"),
         where("status", "==", "pending"),
         orderBy("createdAt", "desc"),
         limit(50),
       );
-      const snapshot = await getDocs(pendingQuery);
-      setSubmissions(snapshot.docs.map((item) => {
+      const importedQuery = query(
+        collection(db, "quotes"),
+        where("status", "==", "pending_review"),
+        orderBy("createdAt", "desc"),
+        limit(50),
+      );
+      const [communitySnapshot, importedSnapshot] = await Promise.all([
+        getDocs(communityQuery),
+        getDocs(importedQuery),
+      ]);
+      const communityItems: Submission[] = communitySnapshot.docs.map((item) => {
         const value: DocumentData = item.data();
         return {
           id: item.id,
+          kind: "community",
           text: typeof value.text === "string" ? value.text : "",
           authorName: typeof value.authorName === "string" ? value.authorName : "Unknown",
           authorSlug: typeof value.authorSlug === "string" ? value.authorSlug : "",
@@ -139,10 +151,34 @@ export function AdminReview() {
           topics: Array.isArray(value.topics) ? value.topics.filter((x: unknown) => typeof x === "string") : [],
           submittedByName: typeof value.submittedByName === "string" ? value.submittedByName : "Community member",
           submittedBy: typeof value.submittedBy === "string" ? value.submittedBy : "",
+          license: typeof value.license === "string" ? value.license : "",
           status: typeof value.status === "string" ? value.status : "pending",
           createdAt: value.createdAt,
         };
-      }));
+      });
+      const importedItems: Submission[] = importedSnapshot.docs.map((item) => {
+        const value: DocumentData = item.data();
+        return {
+          id: item.id,
+          kind: "imported",
+          text: typeof value.text === "string" ? value.text : "",
+          authorName: typeof value.authorName === "string" ? value.authorName : "Unknown",
+          authorSlug: typeof value.authorSlug === "string" ? value.authorSlug : "",
+          source: typeof value.source === "string" ? value.source : "",
+          topics: Array.isArray(value.topics) ? value.topics.filter((x: unknown) => typeof x === "string") : [],
+          submittedByName: "Bulk-imported dataset",
+          submittedBy: "",
+          license: typeof value.license === "string" ? value.license : "",
+          status: typeof value.status === "string" ? value.status : "pending_review",
+          createdAt: value.createdAt,
+        };
+      });
+      const timestamp = (item: Submission) => item.createdAt?.toMillis?.() ?? 0;
+      setSubmissions(
+        [...communityItems, ...importedItems]
+          .sort((left, right) => timestamp(right) - timestamp(left))
+          .slice(0, 50),
+      );
     } catch (loadError) {
       setError((loadError as { message?: string })?.message || "Could not load submissions. Check Firestore rules and indexes.");
     } finally {
@@ -171,37 +207,55 @@ export function AdminReview() {
     setNotice("");
     try {
       const authorSlug = slugify(submission.authorName);
-      const quoteId = await quoteDocumentId(authorSlug, submission.text);
+      const quoteId = submission.kind === "imported"
+        ? submission.id
+        : await quoteDocumentId(authorSlug, submission.text);
       const quoteRef = doc(db, "quotes", quoteId);
-      const submissionRef = doc(db, "quoteSubmissions", submission.id);
       const batch = writeBatch(db);
       const topics = submission.topics.slice(0, 8);
-      batch.set(quoteRef, {
-        text: submission.text,
-        authorName: submission.authorName,
-        authorSlug,
-        source: submission.source,
-        sourceUrl: "",
-        topics,
-        language: "en",
-        license,
-        attributionStatus: "reviewed",
-        status: "published",
-        contentHash: quoteId,
-        normalizedText: normalizeSearch(submission.text),
-        searchTokens: searchTokens([submission.text, submission.authorName, submission.source, ...topics]),
-        schemaVersion: 1,
-        createdAt: submission.createdAt || serverTimestamp(),
-        updatedAt: serverTimestamp(),
-        publishedAt: serverTimestamp(),
-      }, { merge: true });
-      batch.update(submissionRef, {
-        status: "approved",
-        publishedQuoteId: quoteId,
-        reviewedBy: user.uid,
-        reviewedAt: serverTimestamp(),
-        reviewLicense: license,
-      });
+
+      if (submission.kind === "imported") {
+        batch.update(quoteRef, {
+          authorSlug,
+          license,
+          attributionStatus: "reviewed",
+          status: "published",
+          updatedAt: serverTimestamp(),
+          publishedAt: serverTimestamp(),
+          reviewedBy: user.uid,
+          reviewedAt: serverTimestamp(),
+        });
+      } else {
+        const submissionRef = doc(db, "quoteSubmissions", submission.id);
+        batch.set(quoteRef, {
+          text: submission.text,
+          authorName: submission.authorName,
+          authorSlug,
+          source: submission.source,
+          sourceUrl: "",
+          topics,
+          language: "en",
+          license,
+          attributionStatus: "reviewed",
+          status: "published",
+          contentHash: quoteId,
+          normalizedText: normalizeSearch(submission.text),
+          searchTokens: searchTokens([submission.text, submission.authorName, submission.source, ...topics]),
+          schemaVersion: 1,
+          createdAt: submission.createdAt || serverTimestamp(),
+          updatedAt: serverTimestamp(),
+          publishedAt: serverTimestamp(),
+          reviewedBy: user.uid,
+          reviewedAt: serverTimestamp(),
+        }, { merge: true });
+        batch.update(submissionRef, {
+          status: "approved",
+          publishedQuoteId: quoteId,
+          reviewedBy: user.uid,
+          reviewedAt: serverTimestamp(),
+          reviewLicense: license,
+        });
+      }
       await batch.commit();
       setSubmissions((current) => current.filter((item) => item.id !== submission.id));
       setNotice("Quote published: “" + submission.text.slice(0, 100) + (submission.text.length > 100 ? "…”" : "”"));
@@ -228,7 +282,8 @@ export function AdminReview() {
     setError("");
     setNotice("");
     try {
-      await updateDoc(doc(db, "quoteSubmissions", submission.id), {
+      const collectionName = submission.kind === "imported" ? "quotes" : "quoteSubmissions";
+      await updateDoc(doc(db, collectionName, submission.id), {
         status: "rejected",
         reviewedBy: user.uid,
         reviewedAt: serverTimestamp(),
@@ -317,8 +372,8 @@ export function AdminReview() {
           {submissions.map((submission) => (
             <article key={submission.id} className="rounded-2xl border border-border bg-card p-5 sm:p-7">
               <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-900/10 px-3 py-1 text-xs font-semibold text-amber-800 dark:text-amber-300"><CircleAlert className="h-3.5 w-3.5" /> Pending review</span>
-                <span className="text-xs text-muted-foreground">Submitted by {submission.submittedByName}{submission.createdAt?.toDate ? " · " + submission.createdAt.toDate().toLocaleDateString() : ""}</span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-900/10 px-3 py-1 text-xs font-semibold text-amber-800 dark:text-amber-300"><CircleAlert className="h-3.5 w-3.5" /> {submission.kind === "imported" ? "Imported · pending review" : "Community submission"}</span>
+                <span className="text-xs text-muted-foreground">{submission.kind === "imported" ? submission.submittedByName : "Submitted by " + submission.submittedByName}{submission.createdAt?.toDate ? " · " + submission.createdAt.toDate().toLocaleDateString() : ""}</span>
               </div>
               <blockquote className="stoic-quote-text text-xl leading-relaxed sm:text-2xl">“{submission.text}”</blockquote>
               <p className="mt-4 text-sm font-semibold text-primary">— {submission.authorName}</p>
