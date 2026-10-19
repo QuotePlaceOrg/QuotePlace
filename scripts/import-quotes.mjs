@@ -37,13 +37,6 @@ if (!inputPath) {
   process.exit(2);
 }
 
-if (publishReviewed && !defaultLicense) {
-  console.error(
-    "Publishing requires --license <license-label> as a fallback, or a license field on every JSONL record.",
-  );
-  process.exit(2);
-}
-
 const serviceAccountJson = process.env.FIREBASE_SERVICE_ACCOUNT_JSON;
 let credential = applicationDefault();
 
