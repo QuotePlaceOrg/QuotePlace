@@ -9,7 +9,8 @@
 <script type="importmap">
 {"imports": {
   "firebase/app": "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js",
-  "firebase/analytics": "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js"
+  "firebase/analytics": "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js",
+  "firebase/auth": "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"
 }}
 </script>
 <script type="module">
@@ -26,6 +27,36 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+/* ---------- GOOGLE LOGIN (Firebase Auth) ----------
+   Sign-in with Google creates/uses the same profile entry as the
+   email login, so saved quotes live in one place. */
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut as fbSignOut } from "firebase/auth";
+const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
+window.__qpGoogleLogout = () => { try { store.set("qp_google", false); } catch (e) {} fbSignOut(auth).catch(() => {}); };
+const googleBtn = document.getElementById("googleBtn");
+if (googleBtn) googleBtn.onclick = async () => {
+  const err = document.getElementById("authE");
+  err.textContent = "";
+  try {
+    const res = await signInWithPopup(auth, googleProvider);
+    const u = res.user, email = (u.email || "").toLowerCase();
+    if (!email) throw new Error("Google account has no email address.");
+    const prev = users[email] || {};
+    users[email] = { name: u.displayName || prev.name || email.split("@")[0], h: prev.h || "", saved: prev.saved || [] };
+    me = email;
+    store.set("qp_users", users); store.set("qp_me", me); store.set("qp_google", true);
+    document.getElementById("authD").close();
+    toast("Welcome, " + users[me].name); render();
+  } catch (e) {
+    if (e && e.code === "auth/operation-not-allowed") err.textContent = "Google sign-in is not enabled for this project yet. Enable Google in Firebase Console → Authentication → Sign-in method.";
+    else if (e && e.code === "auth/popup-closed-by-user") err.textContent = "Google sign-in was cancelled.";
+    else if (e && e.code === "auth/popup-blocked") err.textContent = "The sign-in popup was blocked. Allow popups for this site and try again.";
+    else if (e && e.code === "auth/unauthorized-domain") err.textContent = "This domain is not authorized for Google sign-in. Add it in Firebase Console → Authentication → Settings → Authorized domains.";
+    else err.textContent = "Google sign-in failed. Please try again.";
+  }
+};
 </script>
 <style>
 :root{color-scheme:light;--bg:#fff;--ink:#17202e;--mute:#5d6878;--card:#fff;--line:#e2e6ea;--blue:#2740d6;--onblue:#fff;
@@ -118,6 +149,8 @@ footer{padding:30px 5vw 40px;color:var(--mute);border-top:1px solid var(--line);
 
 <dialog id="authD">
   <h2 id="authT">Log in</h2>
+  <button class="btn" id="googleBtn" style="width:100%;margin-top:2px">Continue with Google</button>
+  <p style="text-align:center;color:var(--mute);font-size:14px;margin:8px 0 0">or with email</p>
   <div id="nameWrap" hidden><label for="fn">Name</label><input id="fn" autocomplete="name"></div>
   <label for="fe">Email</label><input id="fe" type="email" autocomplete="email">
   <label for="fp">Password</label><input id="fp" type="password" autocomplete="current-password">
@@ -221,7 +254,7 @@ $("#authGo").onclick=async()=>{
   me=email;store.set("qp_users",users);store.set("qp_me",me);
   $("#authD").close();$("#fp").value="";toast("Welcome, "+users[me].name);render();
 };
-$("#authBtn").onclick=()=>{if(me){me=null;store.set("qp_me",null);view="all";toast("Logged out");render()}else openAuth("login")};
+$("#authBtn").onclick=()=>{if(me){if(window.__qpGoogleLogout)window.__qpGoogleLogout();me=null;store.set("qp_me",null);view="all";toast("Logged out");render()}else openAuth("login")};
 
 /* ---------- SAVE ---------- */
 function toggleSave(id){
