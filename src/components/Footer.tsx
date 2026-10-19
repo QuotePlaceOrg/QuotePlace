@@ -2,21 +2,25 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="mt-16 border-t border-[var(--border)] bg-[var(--muted)]/40">
-      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:grid-cols-2 md:grid-cols-4">
+    <footer className="mt-16 border-t-[3px] border-t-[var(--primary)] bg-[var(--foreground)] text-[var(--background)]">
+      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:grid-cols-2 md:grid-cols-3">
         <div>
-          <p className="font-serif text-lg font-bold">StoicBare</p>
-          <p className="mt-2 text-sm text-[var(--muted-foreground)]">A bare, focused collection of public-domain wisdom. No ads, no distractions — just words that have shaped thought for thousands of years.</p>
+          <p className="flex items-center gap-2 font-display text-lg font-black tracking-[0.08em]">
+            <span aria-hidden="true" className="inline-block h-3 w-3 rotate-45 bg-[#A67C52]" />
+            Quote Place
+          </p>
+          <p className="mt-2 text-sm opacity-70">Words worth passing on.</p>
         </div>
-        <nav aria-label="Quick links">
-          <p className="font-medium">Quick links</p>
+        <nav aria-label="Browse">
+          <p className="eyebrow !text-[var(--background)] opacity-70">Browse</p>
           <ul className="mt-2 space-y-1 text-sm">
             <li><Link href="/quotes" className="hover:underline">Quotes</Link></li>
             <li><Link href="/topics" className="hover:underline">Topics</Link></li>
+            <li><Link href="/" className="hover:underline">Today&apos;s quote</Link></li>
           </ul>
         </nav>
         <nav aria-label="Help">
-          <p className="font-medium">Help</p>
+          <p className="eyebrow !text-[var(--background)] opacity-70">Help</p>
           <ul className="mt-2 space-y-1 text-sm">
             <li><Link href="/faq" className="hover:underline">FAQ</Link></li>
             <li><Link href="/contact" className="hover:underline">Contact</Link></li>
@@ -24,7 +28,7 @@ export default function Footer() {
           </ul>
         </nav>
       </div>
-      <div className="border-t border-[var(--border)] py-4 text-center text-xs">© {new Date().getFullYear()} StoicBare. All quotes are public domain.</div>
+      <div className="border-t border-[var(--border)] py-4 text-center text-xs opacity-70">© {new Date().getFullYear()} Quote Place. All quotes are public domain or used with attribution.</div>
     </footer>
   );
 }

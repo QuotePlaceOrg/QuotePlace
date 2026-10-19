@@ -24,8 +24,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--border)] bg-[var(--background)]/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
-        <Link href="/" className="text-xl font-serif font-bold tracking-tight" aria-label="StoicBare home">
-          Stoic<span className="text-[var(--primary)]">Bare</span>
+        <Link href="/" className="flex items-center gap-2" aria-label="Quote Place home">
+          <span aria-hidden="true" className="inline-block h-3 w-3 rotate-45 bg-[#A67C52]" />
+          <span className="font-display text-xl font-black tracking-[0.08em]">Quote Place</span>
         </Link>
         <nav className="hidden items-center gap-5 text-sm md:flex" aria-label="Primary">
           {NAV.map((n) => <Link key={n.href} href={n.href} className="hover:underline">{n.label}</Link>)}
@@ -36,12 +37,12 @@ export default function Header() {
           role="search"
         >
           <label htmlFor="header-search" className="sr-only">Search quotes</label>
-          <input id="header-search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search quotes…" className="rounded-l-md border border-[var(--border)] bg-white px-3 py-2 text-sm" />
-          <button type="submit" className="rounded-r-md bg-[var(--primary)] px-3 py-2 text-sm text-white">Search</button>
+          <input id="header-search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search quotes…" className="border border-[var(--border)] bg-[var(--background)] px-3 py-2 text-sm" />
+          <button type="submit" className="bg-[var(--primary)] px-3 py-2 text-sm text-white">Search</button>
         </form>
         {user ? (
           <>
-            <Link href="/profile" className="flex items-center gap-2 rounded-md border border-[var(--border)] bg-white px-2 py-1.5 text-sm font-medium" aria-label="Open your profile">
+            <Link href="/profile" className="flex items-center gap-2 border border-[var(--border)] bg-[var(--background)] px-2 py-1.5 text-sm font-medium" aria-label="Open your profile">
               {profile?.photoURL || user.photoURL ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={(profile?.photoURL || user.photoURL) ?? ""} alt="" className="h-7 w-7 rounded-full object-cover" />
@@ -50,12 +51,12 @@ export default function Header() {
               )}
               <span className="max-w-[8rem] truncate">{displayName}</span>
             </Link>
-            <button type="button" onClick={() => logOut()} className="rounded-md bg-[var(--primary)] px-3 py-2 text-sm font-medium text-white">Log out</button>
+            <button type="button" onClick={() => logOut()} className="bg-[var(--primary)] px-3 py-2 text-sm font-medium text-white">Log out</button>
           </>
         ) : (
-          <Link href="/login" className="rounded-md bg-[var(--primary)] px-3 py-2 text-sm font-medium text-white">Login</Link>
+          <Link href="/login" className="bg-[var(--primary)] px-3 py-2 text-sm font-medium text-white">Login</Link>
         )}
-        <button type="button" className="rounded-md border border-[var(--border)] bg-white px-3 py-2 text-sm md:hidden" aria-expanded={open} onClick={() => setOpen((v) => !v)}>
+        <button type="button" className="border border-[var(--border)] bg-[var(--background)] px-3 py-2 text-sm md:hidden" aria-expanded={open} onClick={() => setOpen((v) => !v)}>
           Menu
         </button>
       </div>
@@ -66,8 +67,8 @@ export default function Header() {
           </div>
           <form className="mt-3 flex" onSubmit={(e) => { e.preventDefault(); setOpen(false); router.push(`/quotes?q=${encodeURIComponent(q)}`); }} role="search">
             <label htmlFor="header-search-mobile" className="sr-only">Search quotes</label>
-            <input id="header-search-mobile" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search quotes…" className="w-full rounded-l-md border border-[var(--border)] bg-white px-3 py-2 text-sm" />
-            <button type="submit" className="rounded-r-md bg-[var(--primary)] px-3 py-2 text-sm text-white">Search</button>
+            <input id="header-search-mobile" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search quotes…" className="w-full border border-[var(--border)] bg-[var(--background)] px-3 py-2 text-sm" />
+            <button type="submit" className="bg-[var(--primary)] px-3 py-2 text-sm text-white">Search</button>
           </form>
         </nav>
       )}

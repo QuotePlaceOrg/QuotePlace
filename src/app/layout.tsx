@@ -8,66 +8,66 @@ import Footer from "@/components/Footer";
 
 // NOTE: Fonts load at runtime via <link> (not next/font/google) — the
 // build-time next/font loader broke the Turbopack/OpenNext deploy (issue #2).
-// If Google Fonts is unreachable, globals.css falls back to Georgia / system sans.
+// If Google Fonts is unreachable, globals.css falls back to Georgia / system serif.
 export const metadata: Metadata = {
-  title: "StoicBare — Wisdom from the Ages",
+  title: "Quote Place — Words worth passing on",
   description:
-    "A bare, focused collection of public-domain quotes — from Stoic sages (Marcus Aurelius, Seneca, Epictetus) and Greek philosophers (Socrates, Plato, Aristotle) to Eastern masters (Confucius, Lao Tzu), Enlightenment thinkers (Voltaire, Franklin, Kant), Transcendentalists (Emerson, Thoreau), and modern wits (Nietzsche, Tolstoy, Twain, Wilde). Curated for clarity, discipline, and resilience.",
+    "Quote Place turns the best lines ever written into images you can send, post, or keep. Quotes of every genre — wisdom, life, love, success, poetry, grief, courage — with real attribution. No accounts to create, no watermarks, no noise.",
   keywords: [
-    "stoicbare",
-    "stoicism",
-    "stoic quotes",
-    "philosophy quotes",
+    "quote place",
+    "quotes",
+    "quote images",
+    "shareable quotes",
     "public domain quotes",
-    "wisdom from the ages",
-    "ancient wisdom",
+    "wisdom quotes",
+    "life quotes",
+    "love quotes",
+    "motivational quotes",
+    "poetry quotes",
+    "quotes worth sharing",
     "marcus aurelius",
     "seneca",
     "epictetus",
-    "musonius rufus",
-    "cleanthes",
-    "zeno of citium",
-    "socrates",
-    "plato",
-    "aristotle",
     "confucius",
     "lao tzu",
-    "cicero",
-    "montaigne",
-    "francis bacon",
-    "voltaire",
-    "benjamin franklin",
-    "immanuel kant",
+    "oscar wilde",
+    "mark twain",
     "ralph waldo emerson",
     "henry david thoreau",
     "friedrich nietzsche",
     "leo tolstoy",
-    "mark twain",
-    "oscar wilde",
     "meditations",
     "enchiridion",
     "letters from a stoic",
     "analects",
     "tao te ching",
     "walden",
-    "memento mori",
-    "amor fati",
   ],
-  authors: [{ name: "StoicBare" }],
+  authors: [{ name: "Quote Place" }],
   metadataBase: new URL("https://stoicbare.app"),
+  icons: { icon: "/favicon.svg" },
   openGraph: {
-    title: "StoicBare — Wisdom from the Ages",
+    title: "Quote Place — Words worth passing on",
     description:
-      "A bare, focused collection of public-domain quotes — Stoic sages, Greek philosophers, Eastern masters, Enlightenment thinkers, and modern wits. Curated for clarity, discipline, and resilience.",
+      "The best lines ever written, set as images you can send, post, or keep. Quotes of every genre, with real attribution.",
     url: "https://stoicbare.app",
-    siteName: "StoicBare",
+    siteName: "Quote Place",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Quote Place — Words worth passing on",
+      },
+    ],
     type: "website",
   },
   twitter: {
-    card: "summary",
-    title: "StoicBare — Wisdom from the Ages",
+    card: "summary_large_image",
+    title: "Quote Place — Words worth passing on",
     description:
-      "Public-domain quotes — Stoic, Greek, Eastern, Enlightenment, Transcendentalist, and modern wits.",
+      "The best lines ever written, set as images you can send, post, or keep.",
+    images: ["/og.png"],
   },
   robots: { index: true, follow: true },
 };
@@ -75,9 +75,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "StoicBare",
+  name: "Quote Place",
   description:
-    "A bare, focused collection of public-domain quotes — Stoic sages, Greek philosophers, Eastern masters, Enlightenment thinkers, and modern wits.",
+    "Quote Place turns the best lines ever written into images you can send, post, or keep. Quotes of every genre, with real attribution.",
   url: "https://stoicbare.app/",
   inLanguage: "en",
 };
@@ -93,7 +93,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
           rel="stylesheet"
         />
         <script

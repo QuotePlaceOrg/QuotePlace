@@ -1,4 +1,4 @@
-// StoicBare data — frontend-only seed.
+// Quote Place data — frontend-only seed.
 // All quotes are short, widely-attributed public-domain sayings from long-dead
 // authors. No modern / living authors. No invented quotes.
 // Firestore-ready shape: id, text, authorId, topics[], source, language.

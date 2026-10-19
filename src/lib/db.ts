@@ -1,4 +1,4 @@
-// StoicBare — typed Firestore data layer.
+// Quote Place — typed Firestore data layer.
 // Every read falls back to the static seed (src/lib/data.ts / blog-seed.ts) when
 // Firebase is not configured or the read fails, so the site never breaks.
 // Writes require Firebase + a signed-in user and throw otherwise — callers
