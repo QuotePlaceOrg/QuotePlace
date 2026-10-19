@@ -25,7 +25,7 @@ export default function SignupPage() {
   return (
     <div className="mx-auto max-w-md px-4 py-12">
       <h1 className="text-center text-3xl font-bold">Create your account</h1>
-      <p className="mt-2 text-center text-sm text-[var(--muted-foreground)]">Save favourites across devices and contribute quotes.</p>
+      <p className="mt-2 text-center text-sm text-[var(--muted-foreground)]">Save favourites across devices.</p>
       {!configured && <p className="mt-4 rounded-md bg-amber-50 px-3 py-2 text-sm" role="note">Firebase is not configured yet — sign-up will fail until .env.local is set. See DATABASE.md.</p>}
       <div className="mt-6 rounded-xl border border-[var(--border)] bg-[var(--card)] p-6">
         <button type="button" disabled={busy} onClick={async () => { setError(""); setBusy(true); try { await signInWithGoogle(); router.push("/profile"); } catch (err) { setError(err instanceof Error ? err.message : "Sign-up failed."); } finally { setBusy(false); } }} className="w-full rounded-md border border-[var(--border)] bg-white px-4 py-2.5 text-sm font-medium disabled:opacity-50">Continue with Google</button>
