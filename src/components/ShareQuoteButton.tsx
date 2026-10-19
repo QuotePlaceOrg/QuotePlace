@@ -14,8 +14,8 @@ import { createSubmission, incrementQuoteCounter } from "@/lib/db";
 type Variant = "light" | "dark" | "parchment";
 
 const PALETTES: Record<Variant, { bg: string; text: string; muted: string; rule: string; frame: string }> = {
-  light: { bg: "#F2EAD9", text: "#1A1815", muted: "#6B6459", rule: "#B87333", frame: "#D8CBB0" },
-  dark: { bg: "#0F3D3E", text: "#F2EAD9", muted: "#C9C2B4", rule: "#B87333", frame: "#1D5A58" },
+  light: { bg: "#FFFFFF", text: "#1A1815", muted: "#6B6459", rule: "#B87333", frame: "#E5E5E0" },
+  dark: { bg: "#0F3D3E", text: "#FFFFFF", muted: "#C9C2B4", rule: "#B87333", frame: "#1D5A58" },
   parchment: { bg: "#EFE3CB", text: "#2A2118", muted: "#6B6459", rule: "#B87333", frame: "#D8CBA8" },
 };
 
