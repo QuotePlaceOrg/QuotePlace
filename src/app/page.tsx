@@ -1029,7 +1029,6 @@ export default function Home() {
               quotes={QUOTES.slice(0, 9)}
               onAuthorClick={handlePickAuthor}
             />
-            <LiveQuoteLibrary />
           </>
         )}
 
@@ -1069,6 +1068,7 @@ export default function Home() {
             />
           </div>
         )}
+        <LiveQuoteLibrary />
       </main>
 
       <Footer />
