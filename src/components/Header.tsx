@@ -26,9 +26,9 @@ export default function Header() {
       <div className="flex w-full items-center gap-3 px-8 py-3">
         <Link href="/" className="flex items-center gap-2" aria-label="Quote Place home">
           <span aria-hidden="true" className="inline-block h-3 w-3 rotate-45 bg-[#B87333]" />
-          <span style={{ fontFamily: '"Playfair Display", Georgia, serif' }} className="text-xl font-black tracking-[0.08em]">Quote Place</span>
+          <span style={{ fontFamily: '"Playfair Display", Georgia, serif' }} className="text-xl font-medium leading-none tracking-normal">Quote Place</span>
         </Link>
-        <nav className="hidden items-center gap-5 text-sm md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-5 text-sm leading-none md:flex" aria-label="Primary">
           {NAV.map((n) => <Link key={n.href} href={n.href} className="hover:underline">{n.label}</Link>)}
         </nav>
         <form
