@@ -621,7 +621,7 @@ export function LiveQuoteLibrary() {
           </div>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             <Sparkles className="h-4 w-4 text-primary" />
-            Built for a 100,000+ quote collection
+            Designed for 100,000+ quotes
           </div>
         </div>
 
