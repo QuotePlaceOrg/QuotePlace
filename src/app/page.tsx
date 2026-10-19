@@ -5,17 +5,17 @@ import { listQuotes } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
 
-// Theme: Quote Place design system (parchment / ink / teal / copper, Playfair Display logo + Fraunces + Newsreader
+// Theme: Quote Place design system (white / ink / teal / copper, Playfair Display logo + Fraunces + Newsreader
 // + IBM Plex Mono). The <link> tags for these fonts live in layout.tsx; the
 // Georgia fallbacks keep the editorial serif look if a font fails to load.
 const SERIF_DISPLAY = "'Fraunces', Georgia, 'Times New Roman', serif";
 const SERIF_BODY = "'Newsreader', Georgia, 'Times New Roman', serif";
 const MONO = "'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace";
 
-const PAPER = "#F2EAD9";
+const PAPER = "#FFFFFF";
 const INK = "#1A1815";
 const FADED = "#6B6459";
-const HAIRLINE = "#D8CBB0";
+const HAIRLINE = "#E5E5E0";
 const TEAL = "#0F3D3E";
 
 function toCardQuote(q: { id: string; text: string; authorId: string; topics: string[]; source: string }) {
