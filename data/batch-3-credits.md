@@ -1,0 +1,172 @@
+# Batch 3 — portrait credits
+
+All portraits from Wikimedia Commons, license verified via the Commons API at fetch time.
+
+- **A.P.J. Abdul Kalam** — M. Prasanna Kumar, CC BY-SA 2.0
+- **Abba Eban** — News service, Public domain
+- **Abdul Sattar Edhi** — Hussain, CC BY-SA 3.0
+- **Abraham Lincoln** — Gardner, Alexander, 1821-1882, photographer, Public domain
+- **Adam Smith** — Unknown author, Public domain
+- **Alan Turing** — Elliott & Fry, Public domain
+- **Albert Camus** — Studio Harcourt, Public domain
+- **Aleksandr Solzhenitsyn** — Bert Verhoeff for Anefo, CC0
+- **Alfred Tennyson** — Francis Job Short, Public domain
+- **Amartya Sen** — Elke Wetzig (Elya), CC BY-SA 3.0
+- **Anne Frank** — Anonymous, Public domain
+- **Antoine de Saint-Exupéry** — Unknown author, Public domain
+- **Antonio Machado** — Unknown author, Public domain
+- **Aristotle** — After Lysippos, Public domain
+- **Arthur Conan Doyle** — The Library of Congress, Public domain
+- **Astrid Lindgren** — Tire Burnäs, Public domain
+- **Aung San Suu Kyi** — Cabinet Public Relations Office (Japan), CC BY 4.0
+- **B.R. Ambedkar** — Rajasekharan Parameswaran, CC BY-SA 4.0
+- **Bal Gangadhar Tilak** — Unknown authorUnknown author, Public domain
+- **Ban Ki-moon** — World Economic Forum, CC BY-SA 2.0
+- **Barack Obama** — Pete Souza, Public domain
+- **Benjamin Franklin** — Joseph-Siffred Duplessis, Public domain
+- **Bertolt Brecht** — Fritz Peyer, CC BY-SA 4.0
+- **Bhagat Singh** — Danielconnellartistsglobal, CC BY-SA 4.0
+- **Blaise Pascal** — unknown; a copy of the painting of François II Quesnel, which was made for Gérard Edelinck en 1691, Public domain
+- **Booker T. Washington** — Henry Ossawa Tanner, Public domain
+- **Chanakya** — Unknown author, Public domain
+- **Charles Dickens** — Jeremiah Gurney, Public domain
+- **Charlotte Brontë** — George Richmond, Public domain
+- **Chimamanda Ngozi Adichie** — librairie mollat, CC BY 3.0
+- **Chinua Achebe** — Carlo Bavagnoli, Public domain
+- **Clive James** — Brian Aris, Public domain
+- **Confucius** — Unknown author, CC0
+- **Dalai Lama** — Niccolò Caranti, CC BY-SA 3.0
+- **Dante Alighieri** — After Sandro Botticelli, Public domain
+- **David Ben-Gurion** — Willem van de Poll, CC0
+- **Desiderius Erasmus** — Attributed to Lucas Cranach the Elder, Public domain
+- **Desmond Tutu** — Benny Gool, Public domain
+- **Dogen** — Unknown author, Public domain
+- **Edward Said** — Barenboim-Said Akademie gGmbH, CC0
+- **Ellen Johnson Sirleaf** — PMO Barbados, Public domain
+- **Emily Dickinson** — Miscellaneous Items in High Demand, PPOC, Library of Congress, Public domain
+- **Erich Fromm** — Müller-May, CC BY-SA 3.0 de
+- **Ernest Hemingway** — Unknown authorUnknown author or not provided, Public domain
+- **Ernest Rutherford** — Oswald Birley, CC BY 4.0
+- **Faiz Ahmed Faiz** — Bpldxb, CC BY-SA 3.0
+- **Franz Kafka** — Unknown photographer, Public domain
+- **François de La Rochefoucauld** — Pierre-Philippe Choffard, CC0
+- **Frederick Douglass** — unattributed, Public domain
+- **Friedrich Nietzsche** — Gustav-Adolf Schultze (d. 1897), Public domain
+- **Fyodor Dostoevsky** — Unknown author, Public domain
+- **Gautama Buddha** — Wonderlane, CC BY 2.0
+- **George Bernard Shaw** — Alvin Langdon Coburn, Public domain
+- **George Santayana** — Unknown author, Public domain
+- **Germaine Greer** — Helen Morgan, CC BY 2.0
+- **Golda Meir** — Willem van de Poll, CC0
+- **Hakuin Ekaku** — Hakuin Ekaku (self-portrait), Public domain
+- **Hayao Miyazaki** — Natasha Baucas at https://www.flickr.com/photos/sdnatasha/, CC BY 2.0
+- **Heinrich Heine** — Moritz Daniel Oppenheim, Public domain
+- **Helen Keller** — Los Angeles Times; restored by User:Rhododendrites, Public domain
+- **Henrik Ibsen** — Eilif Peterssen, Public domain
+- **Henry David Thoreau** — Unknown authorUnknown author, Public domain
+- **Heraclitus** — Hendrick ter Brugghen, Public domain
+- **Ho Chi Minh** — Unknown author, Public domain
+- **Isaac Newton** — Godfrey Kneller, Public domain
+- **J.K. Rowling** — Daniel Ogren, CC BY 2.0
+- **J.M. Barrie** — Elliott & Fry, photographers, Public domain
+- **J.R.R. Tolkien** — Unknown photo studio commissioned by Tolkien's students 1925/6, Public domain
+- **Jacinda Ardern** — Stuartyeates, CC BY-SA 4.0
+- **James Baldwin** — Allan warren, CC BY-SA 3.0
+- **James Joyce** — Alex Ehrenzweig, Public domain
+- **Jane Austen** — Engraving by William Home Lizars after James Andrews, Public domain
+- **Jawaharlal Nehru** — Keystone View Company/FPG, Public domain
+- **Jean-Jacques Rousseau** — François Guérin, Public domain
+- **Jean-Paul Sartre** — flickr user 69061470@N05, CC BY 3.0
+- **Jiddu Krishnamurti** — Albert Witzel, Public domain
+- **John F. Kennedy** — Cecil W. Stoughton, Public domain
+- **John Keats** — William Hilton, Public domain
+- **John Lennon** — Eric Koch for Anefo, CC0
+- **José Rizal** — PhiliptheNumber1, Public domain
+- **Kahlil Gibran** — F. Holland Day, Public domain
+- **Kamo no Chōmei** — Unknown artist, Public domain
+- **Karl Marx** — John Jabez Edwin Mayall, Public domain
+- **Kartini** — Unknown photographer, CC BY-SA 3.0
+- **Katherine Mansfield** — Archives New Zealand from New Zealand, CC BY-SA 2.0
+- **Kim Dae-jung** — derivative work: WorldPeaceGypsy Kim_Young-sam,_1998-Jan-5.jpg:, Public domain
+- **Kobayashi Issa** — Yoshi Canopus, CC BY-SA 3.0
+- **Kofi Annan** — Hecker / MSC, CC BY 3.0
+- **Kwame Nkrumah** — Abbie Rowe, Public domain
+- **Kūkai** — anonymous, Public domain
+- **Langston Hughes** — Carl Van Vechten, Public domain
+- **Lao Tzu** — Unknown author, Public domain
+- **Lee Kuan Yew** — Warren K. Leffler, Public domain
+- **Leo Tolstoy** — Sergei Prokudin-Gorskii, Public domain
+- **Lewis Carroll** — Oscar Gustave Rejlander, CC0
+- **Li Bai** — Liang Kai, Public domain
+- **Lord Byron** — Thomas Phillips, Public domain
+- **Louis Pasteur** — Paul Nadar, Public domain
+- **Ludwig Wittgenstein** — Moritz Nähr, Public domain
+- **Mahatma Gandhi** — Elliott &amp; Fry, Public domain
+- **Mahmoud Darwish** — Shubhoshreemitra, CC BY-SA 4.0
+- **Malala Yousafzai** — DFID - UK Department for International Development, CC BY 2.0
+- **Marcus Aurelius** — Daniel Martin, CC BY-SA 4.0
+- **Mark Twain** — James Carroll Beckwith, Public domain
+- **Martin Buber** — Erich Büttner, Public domain
+- **Martin Luther King Jr.** — Associated Press, Public domain
+- **Mary Shelley** — Richard Rothwell, Public domain
+- **Matsuo Bashō** — Nakamura Hōchū, Public domain
+- **Maya Angelou** — Bee Photos by Ryan Marty, Public domain
+- **Meher Baba** — Central News (Agence photographique). Agence photographique pour le document reproduit (commanditaire)
+
+Agence Rol. Agence photographique (commanditaire), Public domain
+- **Mencius** — anonymous, Public domain
+- **Michel de Montaigne** — Engraving by J. C. G. Fritzsch, Public domain
+- **Michelle Obama** — Official White House Photo by Chuck Kennedy, Public domain
+- **Milan Kundera** — Elisa Cabot, CC BY-SA 2.0
+- **Miyamoto Musashi** — Unknown author, Public domain
+- **Mother Teresa** — John Mathew Smith &amp; www.celebrity-photos.com from Laurel  Maryland, USA, CC BY-SA 2.0
+- **Muhammad Ali** — Ira Rosenberg, Public domain
+- **Muhammad Ali Jinnah** — Unknown authorUnknown author, Public domain
+- **Muhammad Yunus** — Press Information Department, Public domain
+- **Mustafa Kemal Atatürk** — Unknown authorUnknown author, Public domain
+- **Nadine Gordimer** — Boberger. Photo: Bengt Oberger, CC BY 3.0
+- **Naguib Mahfouz** — Unknown authorUnknown author, Public domain
+- **Nelson Mandela** — Kingkongphoto & www.celebrity-photos.com, CC BY-SA 2.0
+- **Oprah Winfrey** — US Embassy South Africa, Public domain
+- **Oscar Wilde** — Napoleon Sarony (restoration by Adam Cuerden), Public domain
+- **Osho** — Marcel Antonisse / Anefo, CC0
+- **Paramahansa Yogananda** — Unknown author, Public domain
+- **Patrice Lumumba** — Unknown authorUnknown author, CC0
+- **Pedro Calderón de la Barca** — Pedro de Villafranca, Public domain
+- **Peter Singer** — L214 / Les Parasites, CC BY-SA 4.0
+- **Plato** — Copy of Silanion (?), Public domain
+- **Pramoedya Ananta Toer** — Uncredited, possibly employee(s) of Gunung Agung, Public domain
+- **Rabindranath Tagore** — Unknown authorUnknown author, Public domain
+- **Ramakrishna** — Abinash Chandra Dey, Public domain
+- **Ramana Maharshi** — G. G. Welling, Public domain
+- **René Descartes** — After Frans Hals, Public domain
+- **Robert Frost** — Walter Albertin, World Telegram staff photographer, Public domain
+- **Rumi** — Hossein Behzad, Public domain
+- **Samuel Beckett** — Unknown author, Public domain
+- **Sei Shōnagon** — Unknown author, Public domain
+- **Seneca** — Livioandronico2013 (bust photo), CC BY-SA 4.0
+- **Shimon Peres** — Avi Ohayon, CC BY-SA 3.0
+- **Shirdi Sai Baba** — Public domain
+- **Simone de Beauvoir** — Moshe Milner, CC BY-SA 3.0
+- **Socrates** — Livioandronico2013 (bust photo), CC BY-SA 4.0
+- **Sojourner Truth** — National Portrait Gallery Edit this at Wikidata, CC0
+- **Steve Biko** — Cape Argus, Public domain
+- **Subhas Chandra Bose** — Netaji Research Bureau (Calcutta), Public domain
+- **Sukarno** — Uncredited; scanned by Crisco 1492. Colorized and restored by Ryuji Takeda, Public domain
+- **Sun Tzu** — Unknown author, Public domain
+- **Swami Sivananda** — Nobody60, CC BY-SA 3.0
+- **Swami Vivekananda** — Dziewa (Wikimedia), Public domain
+- **Theodore Roosevelt** — Unknown authorUnknown author, Public domain
+- **Thich Nhat Hanh** — Marloes (tussenpozen), CC BY 2.0
+- **Thomas Sankara** — CelmaKoumba, CC BY-SA 4.0
+- **Toni Morrison** — From dust jacket: "Photograph: Bert Andrews", Public domain
+- **Victor Hugo** — Étienne Carjat, Public domain
+- **Vincent van Gogh** — Vincent van Gogh, Public domain
+- **W.E.B. Du Bois** — James E. Purdy / Adam Cuerden, Public domain
+- **Walt Whitman** — Samuel Murray, Public domain
+- **Wangari Maathai** — Demosh, CC BY 2.0
+- **William Shakespeare** — Attributed to John Taylor, Public domain
+- **Winston Churchill** — Central Office of Information, Public domain
+- **Wole Soyinka** — Frankie Fouganthin, CC BY-SA 4.0
+- **Yayoi Kusama** — Muriel Guingand, CC BY 3.0
+- **Yi Sun-sin** — Unknown author, Public domain
