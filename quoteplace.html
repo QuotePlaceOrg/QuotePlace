@@ -195,6 +195,13 @@ const QUOTES=[
 {t:"The best time to plant a tree was twenty years ago. The second best is now.",a:"Chinese proverb",c:"Action"},
 {t:"Be kind, for everyone you meet is fighting a hard battle.",a:"Ian Maclaren",c:"Life"}
 ].map((q,i)=>({id:"q"+(i+1),...q}));
+/* ---------- CATEGORIES & AUTHORS ----------
+   Every quote has exactly ONE category, from this locked list only.
+   If a quote fits two, pick the strongest. Never free-type a category.
+   Author is one plain name per quote (e.g. "Marcus Aurelius",
+   "Anonymous", "Japanese proverb") — one canonical spelling per
+   person, trimmed, consistently capitalised. */
+const CATEGORIES=["Action","Calm","Courage","Friendship","Habits","Happiness","Life","Love","Success","Wisdom"];
 const PAL=[["#f2c6d0","#3a1020"],["#2740d6","#ffffff"],["#ffd23f","#1e1a05"],["#1f3b34","#e9f3ee"],["#ff7a59","#2b0f06"],["#cfe3f5","#102338"],["#2b2433","#f4e9ff"],["#bfe5c8","#0f2a18"]];
 const col=q=>PAL[(+q.id.slice(1)*3)%PAL.length];
 
@@ -216,7 +223,7 @@ function cardHTML(q){
 }
 function esc(s){return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
 function render(){
-  const cats=["All",...new Set(QUOTES.map(q=>q.c))];
+  const cats=["All",...CATEGORIES];
   $("#chips").innerHTML=cats.map(c=>`<button class="chip" aria-pressed="${c===cat}" data-c="${c}">${c}</button>`).join("");
   let list=QUOTES.filter(q=>(view==="all"||saved().includes(q.id))&&(cat==="All"||q.c===cat)&&(q.t+q.a).toLowerCase().includes(term));
   $("#grid").innerHTML=list.map(cardHTML).join("");
