@@ -1,4 +1,4 @@
-// StoicBare — shared Firestore types. See DATABASE.md for the full schema.
+// Quote Place — shared Firestore types. See DATABASE.md for the full schema.
 // Timestamps are `number` (ms since epoch) in app code; Firestore converters
 // translate to/from Firestore Timestamp. `createdAt` etc. are numbers everywhere.
 
