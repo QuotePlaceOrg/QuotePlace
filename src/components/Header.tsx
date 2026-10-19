@@ -23,10 +23,10 @@ export default function Header() {
   const displayName = profile?.displayName || user?.displayName || "Reader";
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--border)] bg-[var(--background)]/95 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
+      <div className="flex w-full items-center gap-3 px-8 py-3">
         <Link href="/" className="flex items-center gap-2" aria-label="Quote Place home">
-          <span aria-hidden="true" className="inline-block h-3 w-3 rotate-45 bg-[#A67C52]" />
-          <span className="font-display text-xl font-black tracking-[0.08em]">Quote Place</span>
+          <span aria-hidden="true" className="inline-block h-3 w-3 rotate-45 bg-[#B87333]" />
+          <span style={{ fontFamily: '"Playfair Display", Georgia, serif' }} className="text-xl font-black tracking-[0.08em]">Quote Place</span>
         </Link>
         <nav className="hidden items-center gap-5 text-sm md:flex" aria-label="Primary">
           {NAV.map((n) => <Link key={n.href} href={n.href} className="hover:underline">{n.label}</Link>)}
@@ -61,7 +61,7 @@ export default function Header() {
         </button>
       </div>
       {open && (
-        <nav className="border-t border-[var(--border)] px-4 py-3 md:hidden" aria-label="Mobile">
+        <nav className="border-t border-[var(--border)] px-8 py-3 md:hidden" aria-label="Mobile">
           <div className="flex flex-wrap gap-4 text-sm">
             {NAV.map((n) => <Link key={n.href} href={n.href} onClick={() => setOpen(false)}>{n.label}</Link>)}
           </div>
