@@ -3,6 +3,8 @@ name: Deploy check
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -37,8 +39,9 @@ jobs:
           script: |
             const sha = context.sha.slice(0, 7);
             const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
-            const title = `Deploy failed: ${sha} on main`;
-            const body = `Cloudflare deploy-check failed for commit ${context.sha}.\n\nWorkflow run: ${runUrl}\n\nCheck the run logs for the full error. The failing step is usually \`bun install\`, \`bun run build\`, or OpenNext build.\n\nLabel: deploy-failed`;
+            const branch = context.payload.pull_request?.head?.ref || context.ref.replace("refs/heads/", "");
+            const title = `Deploy check failed: ${sha} (${branch})`;
+            const body = `Cloudflare compatibility build failed for commit ${context.sha} on branch ${branch}.\n\nWorkflow run: ${runUrl}\n\nCheck the run logs for the first failing step: dependency installation, Next.js build, or OpenNext Cloudflare build.\n\nLabel: deploy-failed`;
             const existing = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
