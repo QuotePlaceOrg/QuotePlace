@@ -14,6 +14,8 @@
  */
 
 import { getApps, getApp, initializeApp, type FirebaseApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 import {
   getAnalytics,
   isSupported,
@@ -37,6 +39,10 @@ export const firebaseConfig = {
  */
 export const firebaseApp: FirebaseApp =
   getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
+
+/** Firebase Authentication and Firestore share the same app instance. */
+export const auth = getAuth(firebaseApp);
+export const db = getFirestore(firebaseApp);
 
 /**
  * Cached Analytics instance (per browser session). `null` until
