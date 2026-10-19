@@ -4,801 +4,601 @@
    "id": "b1",
    "t": "Everything has beauty, but not everyone sees it.",
    "a": "Confucius",
-   "c": "Wisdom",
-   "img": "images/batch-1/b1.jpg",
-   "style": "editorial"
+   "c": "Wisdom"
   },
   {
    "id": "b2",
    "t": "It does not matter how slowly you go as long as you do not stop.",
    "a": "Confucius",
-   "c": "Action",
-   "img": "images/batch-1/b2.jpg",
-   "style": "dark"
+   "c": "Action"
   },
   {
    "id": "b3",
    "t": "Our greatest glory is not in never falling, but in rising every time we fall.",
    "a": "Confucius",
-   "c": "Courage",
-   "img": "images/batch-1/b3.jpg",
-   "style": "highlight"
+   "c": "Courage"
   },
   {
    "id": "b4",
    "t": "Wherever you stand, be the soul of that place.",
    "a": "Rumi",
-   "c": "Life",
-   "img": "images/batch-1/b4.jpg",
-   "style": "duotone"
+   "c": "Life"
   },
   {
    "id": "b5",
    "t": "You are not a drop in the ocean. You are the entire ocean in a drop.",
    "a": "Rumi",
-   "c": "Wisdom",
-   "img": "images/batch-1/b5.jpg",
-   "style": "split"
+   "c": "Wisdom"
   },
   {
    "id": "b6",
    "t": "The wound is the place where the Light enters you.",
    "a": "Rumi",
-   "c": "Life",
-   "img": "images/batch-1/b6.jpg",
-   "style": "bigword"
+   "c": "Life"
   },
   {
    "id": "b7",
    "t": "We suffer more often in imagination than in reality.",
    "a": "Seneca",
-   "c": "Calm",
-   "img": "images/batch-1/b7.jpg",
-   "style": "editorial"
+   "c": "Calm"
   },
   {
    "id": "b8",
    "t": "Luck is what happens when preparation meets opportunity.",
    "a": "Seneca",
-   "c": "Success",
-   "img": "images/batch-1/b8.jpg",
-   "style": "dark"
+   "c": "Success"
   },
   {
    "id": "b9",
    "t": "No man is free who is not master of himself.",
    "a": "Seneca",
-   "c": "Wisdom",
-   "img": "images/batch-1/b9.jpg",
-   "style": "highlight"
+   "c": "Wisdom"
   },
   {
    "id": "b10",
    "t": "You have power over your mind — not outside events.",
    "a": "Marcus Aurelius",
-   "c": "Calm",
-   "img": "images/batch-1/b10.jpg",
-   "style": "duotone"
+   "c": "Calm"
   },
   {
    "id": "b11",
    "t": "The happiness of your life depends upon the quality of your thoughts.",
    "a": "Marcus Aurelius",
-   "c": "Happiness",
-   "img": "images/batch-1/b11.jpg",
-   "style": "split"
+   "c": "Happiness"
   },
   {
    "id": "b12",
    "t": "Waste no more time arguing what a good man should be. Be one.",
    "a": "Marcus Aurelius",
-   "c": "Action",
-   "img": "images/batch-1/b12.jpg",
-   "style": "bigword"
+   "c": "Action"
   },
   {
    "id": "b13",
    "t": "The mind is everything. What you think, you become.",
    "a": "Buddha",
-   "c": "Wisdom",
-   "img": "images/batch-1/b13.jpg",
-   "style": "face"
+   "c": "Wisdom"
   },
   {
    "id": "b14",
    "t": "Peace comes from within. Do not seek it without.",
    "a": "Buddha",
-   "c": "Calm",
-   "img": "images/batch-1/b14.jpg",
-   "style": "dark"
+   "c": "Calm"
   },
   {
    "id": "b15",
    "t": "Do the best you can until you know better. Then when you know better, do better.",
    "a": "Maya Angelou",
-   "c": "Wisdom",
-   "img": "images/batch-1/b15.jpg",
-   "style": "highlight"
+   "c": "Wisdom"
   },
   {
    "id": "b16",
    "t": "If you don't like something, change it. If you can't change it, change your attitude.",
    "a": "Maya Angelou",
-   "c": "Action",
-   "img": "images/batch-1/b16.jpg",
-   "style": "duotone"
+   "c": "Action"
   },
   {
    "id": "b17",
    "t": "Life is like riding a bicycle. To keep your balance, you must keep moving.",
    "a": "Albert Einstein",
-   "c": "Life",
-   "img": "images/batch-1/b17.jpg",
-   "style": "face"
+   "c": "Life"
   },
   {
    "id": "b18",
    "t": "Imagination is more important than knowledge.",
    "a": "Albert Einstein",
-   "c": "Wisdom",
-   "img": "images/batch-1/b18.jpg",
-   "style": "bigword"
+   "c": "Wisdom"
   },
   {
    "id": "b19",
    "t": "In the middle of difficulty lies opportunity.",
    "a": "Albert Einstein",
-   "c": "Courage",
-   "img": "images/batch-1/b19.jpg",
-   "style": "editorial"
+   "c": "Courage"
   },
   {
    "id": "b20",
    "t": "The future depends on what you do today.",
    "a": "Mahatma Gandhi",
-   "c": "Action",
-   "img": "images/batch-1/b20.jpg",
-   "style": "face"
+   "c": "Action"
   },
   {
    "id": "b21",
    "t": "Live as if you were to die tomorrow. Learn as if you were to live forever.",
    "a": "Mahatma Gandhi",
-   "c": "Life",
-   "img": "images/batch-1/b21.jpg",
-   "style": "highlight"
+   "c": "Life"
   },
   {
    "id": "b22",
    "t": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
    "a": "Winston Churchill",
-   "c": "Success",
-   "img": "images/batch-1/b22.jpg",
-   "style": "duotone"
+   "c": "Success"
   },
   {
    "id": "b23",
    "t": "If you're going through hell, keep going.",
    "a": "Winston Churchill",
-   "c": "Courage",
-   "img": "images/batch-1/b23.jpg",
-   "style": "split"
+   "c": "Courage"
   },
   {
    "id": "b24",
    "t": "This above all: to thine own self be true.",
    "a": "William Shakespeare",
-   "c": "Wisdom",
-   "img": "images/batch-1/b24.jpg",
-   "style": "bigword"
+   "c": "Wisdom"
   },
   {
    "id": "b25",
    "t": "We know what we are, but know not what we may be.",
    "a": "William Shakespeare",
-   "c": "Life",
-   "img": "images/batch-1/b25.jpg",
-   "style": "editorial"
+   "c": "Life"
   },
   {
    "id": "b26",
    "t": "I declare after all there is no enjoyment like reading!",
    "a": "Jane Austen",
-   "c": "Happiness",
-   "img": "images/batch-1/b26.jpg",
-   "style": "dark"
+   "c": "Happiness"
   },
   {
    "id": "b27",
    "t": "Beauty will save the world.",
    "a": "Fyodor Dostoevsky",
-   "c": "Wisdom",
-   "img": "images/batch-1/b27.jpg",
-   "style": "highlight"
+   "c": "Wisdom"
   },
   {
    "id": "b28",
    "t": "Man is a creature who can get used to anything.",
    "a": "Fyodor Dostoevsky",
-   "c": "Life",
-   "img": "images/batch-1/b28.jpg",
-   "style": "duotone"
+   "c": "Life"
   },
   {
    "id": "b29",
    "t": "You can't cross the sea merely by standing and staring at the water.",
    "a": "Rabindranath Tagore",
-   "c": "Action",
-   "img": "images/batch-1/b29.jpg",
-   "style": "split"
+   "c": "Action"
   },
   {
    "id": "b30",
    "t": "The butterfly counts not months but moments, and has time enough.",
    "a": "Rabindranath Tagore",
-   "c": "Life",
-   "img": "images/batch-1/b30.jpg",
-   "style": "bigword"
+   "c": "Life"
   },
   {
    "id": "b31",
    "t": "Work is love made visible.",
    "a": "Khalil Gibran",
-   "c": "Action",
-   "img": "images/batch-1/b31.jpg",
-   "style": "editorial"
+   "c": "Action"
   },
   {
    "id": "b32",
    "t": "Tenderness and kindness are not signs of weakness and despair, but manifestations of strength and resolution.",
    "a": "Khalil Gibran",
-   "c": "Wisdom",
-   "img": "images/batch-1/b32.jpg",
-   "style": "dark"
+   "c": "Wisdom"
   },
   {
    "id": "b33",
    "t": "When you want something, all the universe conspires in helping you to achieve it.",
    "a": "Paulo Coelho",
-   "c": "Success",
-   "img": "images/batch-1/b33.jpg",
-   "style": "highlight"
+   "c": "Success"
   },
   {
    "id": "b34",
    "t": "One day you will wake up and there won't be any more time to do the things you've always wanted. Do it now.",
    "a": "Paulo Coelho",
-   "c": "Action",
-   "img": "images/batch-1/b34.jpg",
-   "style": "duotone"
+   "c": "Action"
   },
   {
    "id": "b35",
    "t": "The biggest adventure you can take is to live the life of your dreams.",
    "a": "Oprah Winfrey",
-   "c": "Life",
-   "img": "images/batch-1/b35.jpg",
-   "style": "split"
+   "c": "Life"
   },
   {
    "id": "b36",
    "t": "Stay hungry, stay foolish.",
    "a": "Steve Jobs",
-   "c": "Life",
-   "img": "images/batch-1/b36.jpg",
-   "style": "bigword"
+   "c": "Life"
   },
   {
    "id": "b37",
    "t": "Your time is limited, so don't waste it living someone else's life.",
    "a": "Steve Jobs",
-   "c": "Life",
-   "img": "images/batch-1/b37.jpg",
-   "style": "editorial"
+   "c": "Life"
   },
   {
    "id": "b38",
    "t": "Be water, my friend.",
    "a": "Bruce Lee",
-   "c": "Calm",
-   "img": "images/batch-1/b38.jpg",
-   "style": "dark"
+   "c": "Calm"
   },
   {
    "id": "b39",
    "t": "I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times.",
    "a": "Bruce Lee",
-   "c": "Habits",
-   "img": "images/batch-1/b39.jpg",
-   "style": "highlight"
+   "c": "Habits"
   },
   {
    "id": "b40",
    "t": "Happiness is not something ready made. It comes from your own actions.",
    "a": "Dalai Lama",
-   "c": "Happiness",
-   "img": "images/batch-1/b40.jpg",
-   "style": "duotone"
+   "c": "Happiness"
   },
   {
    "id": "b41",
    "t": "Be kind whenever possible. It is always possible.",
    "a": "Dalai Lama",
-   "c": "Life",
-   "img": "images/batch-1/b41.jpg",
-   "style": "split"
+   "c": "Life"
   },
   {
    "id": "b42",
    "t": "Not all of us can do great things. But we can do small things with great love.",
    "a": "Mother Teresa",
-   "c": "Love",
-   "img": "images/batch-1/b42.jpg",
-   "style": "face"
+   "c": "Love"
   },
   {
    "id": "b43",
    "t": "Be yourself; everyone else is already taken.",
    "a": "Oscar Wilde",
-   "c": "Life",
-   "img": "images/batch-1/b43.jpg",
-   "style": "face"
+   "c": "Life"
   },
   {
    "id": "b44",
    "t": "We are all in the gutter, but some of us are looking at the stars.",
    "a": "Oscar Wilde",
-   "c": "Courage",
-   "img": "images/batch-1/b44.jpg",
-   "style": "dark"
+   "c": "Courage"
   },
   {
    "id": "b45",
    "t": "That which does not kill us makes us stronger.",
    "a": "Friedrich Nietzsche",
-   "c": "Courage",
-   "img": "images/batch-1/b45.jpg",
-   "style": "highlight"
+   "c": "Courage"
   },
   {
    "id": "b46",
    "t": "I was taught that the way of progress was neither swift nor easy.",
    "a": "Marie Curie",
-   "c": "Success",
-   "img": "images/batch-1/b46.jpg",
-   "style": "face"
+   "c": "Success"
   },
   {
    "id": "b47",
    "t": "Pleasure in the job puts perfection in the work.",
    "a": "Aristotle",
-   "c": "Success",
-   "img": "images/batch-1/b47.jpg",
-   "style": "split"
+   "c": "Success"
   },
   {
    "id": "b48",
    "t": "I know that I know nothing.",
    "a": "Socrates",
-   "c": "Wisdom",
-   "img": "images/batch-1/b48.jpg",
-   "style": "bigword"
+   "c": "Wisdom"
   },
   {
    "id": "b49",
    "t": "Simplicity is the ultimate sophistication.",
    "a": "Leonardo da Vinci",
-   "c": "Wisdom",
-   "img": "images/batch-1/b49.jpg",
-   "style": "face"
+   "c": "Wisdom"
   },
   {
    "id": "b50",
    "t": "Learning never exhausts the mind.",
    "a": "Leonardo da Vinci",
-   "c": "Wisdom",
-   "img": "images/batch-1/b50.jpg",
-   "style": "dark"
+   "c": "Wisdom"
   },
   {
    "id": "b51",
    "t": "I dream my painting and I paint my dream.",
    "a": "Vincent van Gogh",
-   "c": "Action",
-   "img": "images/batch-1/b51.jpg",
-   "style": "face"
+   "c": "Action"
   },
   {
    "id": "b52",
    "t": "Feet, what do I need you for when I have wings to fly?",
    "a": "Frida Kahlo",
-   "c": "Courage",
-   "img": "images/batch-1/b52.jpg",
-   "style": "duotone"
+   "c": "Courage"
   },
   {
    "id": "b53",
    "t": "In spite of everything, I still believe that people are really good at heart.",
    "a": "Anne Frank",
-   "c": "Love",
-   "img": "images/batch-1/b53.jpg",
-   "style": "split"
+   "c": "Love"
   },
   {
    "id": "b54",
    "t": "The best and most beautiful things in the world cannot be seen or even touched — they must be felt with the heart.",
    "a": "Helen Keller",
-   "c": "Love",
-   "img": "images/batch-1/b54.jpg",
-   "style": "bigword"
+   "c": "Love"
   },
   {
    "id": "b55",
    "t": "You are never too old to set another goal or to dream a new dream.",
    "a": "C.S. Lewis",
-   "c": "Courage",
-   "img": "images/batch-1/b55.jpg",
-   "style": "editorial"
+   "c": "Courage"
   },
   {
    "id": "b56",
    "t": "Hardships often prepare ordinary people for an extraordinary destiny.",
    "a": "C.S. Lewis",
-   "c": "Courage",
-   "img": "images/batch-1/b56.jpg",
-   "style": "dark"
+   "c": "Courage"
   },
   {
    "id": "b57",
    "t": "It is impossible to live without failing at something, unless you live so cautiously that you might as well not have lived at all.",
    "a": "J.K. Rowling",
-   "c": "Courage",
-   "img": "images/batch-1/b57.jpg",
-   "style": "highlight"
+   "c": "Courage"
   },
   {
    "id": "b58",
    "t": "One child, one teacher, one book, one pen can change the world.",
    "a": "Malala Yousafzai",
-   "c": "Action",
-   "img": "images/batch-1/b58.jpg",
-   "style": "face"
+   "c": "Action"
   },
   {
    "id": "b59",
    "t": "There is no passion to be found playing small.",
    "a": "Nelson Mandela",
-   "c": "Courage",
-   "img": "images/batch-1/b59.jpg",
-   "style": "split"
+   "c": "Courage"
   },
   {
    "id": "b60",
    "t": "The time is always right to do what is right.",
    "a": "Martin Luther King Jr.",
-   "c": "Action",
-   "img": "images/batch-1/b60.jpg",
-   "style": "bigword"
+   "c": "Action"
   },
   {
    "id": "b61",
    "t": "When they go low, we go high.",
    "a": "Michelle Obama",
-   "c": "Courage",
-   "img": "images/batch-1/b61.jpg",
-   "style": "editorial"
+   "c": "Courage"
   },
   {
    "id": "b62",
    "t": "The best way to not feel hopeless is to get up and do something.",
    "a": "Barack Obama",
-   "c": "Action",
-   "img": "images/batch-1/b62.jpg",
-   "style": "dark"
+   "c": "Action"
   },
   {
    "id": "b63",
    "t": "The most important investment you can make is in yourself.",
    "a": "Warren Buffett",
-   "c": "Success",
-   "img": "images/batch-1/b63.jpg",
-   "style": "highlight"
+   "c": "Success"
   },
   {
    "id": "b64",
    "t": "All our dreams can come true, if we have the courage to pursue them.",
    "a": "Walt Disney",
-   "c": "Courage",
-   "img": "images/batch-1/b64.jpg",
-   "style": "duotone"
+   "c": "Courage"
   },
   {
    "id": "b65",
    "t": "Nothing is impossible. The word itself says 'I'm possible'!",
    "a": "Audrey Hepburn",
-   "c": "Courage",
-   "img": "images/batch-1/b65.jpg",
-   "style": "split"
+   "c": "Courage"
   },
   {
    "id": "b66",
    "t": "A day without laughter is a day wasted.",
    "a": "Charlie Chaplin",
-   "c": "Happiness",
-   "img": "images/batch-1/b66.jpg",
-   "style": "bigword"
+   "c": "Happiness"
   },
   {
    "id": "b67",
    "t": "Life is what happens to you while you're busy making other plans.",
    "a": "John Lennon",
-   "c": "Life",
-   "img": "images/batch-1/b67.jpg",
-   "style": "editorial"
+   "c": "Life"
   },
   {
    "id": "b68",
    "t": "Love the life you live. Live the life you love.",
    "a": "Bob Marley",
-   "c": "Love",
-   "img": "images/batch-1/b68.jpg",
-   "style": "dark"
+   "c": "Love"
   },
   {
    "id": "b69",
    "t": "Don't count the days, make the days count.",
    "a": "Muhammad Ali",
-   "c": "Action",
-   "img": "images/batch-1/b69.jpg",
-   "style": "face"
+   "c": "Action"
   },
   {
    "id": "b70",
    "t": "I've failed over and over and over again in my life. And that is why I succeed.",
    "a": "Michael Jordan",
-   "c": "Success",
-   "img": "images/batch-1/b70.jpg",
-   "style": "duotone"
+   "c": "Success"
   },
   {
    "id": "b71",
    "t": "I am lucky that whatever fear I have inside me, my desire to win is always stronger.",
    "a": "Serena Williams",
-   "c": "Courage",
-   "img": "images/batch-1/b71.jpg",
-   "style": "split"
+   "c": "Courage"
   },
   {
    "id": "b72",
    "t": "Dream, dream, dream. Dreams transform into thoughts and thoughts result in action.",
    "a": "A.P.J. Abdul Kalam",
-   "c": "Success",
-   "img": "images/batch-1/b72.jpg",
-   "style": "face"
+   "c": "Success"
   },
   {
    "id": "b73",
    "t": "Arise, awake, and stop not till the goal is reached.",
    "a": "Swami Vivekananda",
-   "c": "Action",
-   "img": "images/batch-1/b73.jpg",
-   "style": "face"
+   "c": "Action"
   },
   {
    "id": "b74",
    "t": "A person should not be too honest. Straight trees are cut first.",
    "a": "Chanakya",
-   "c": "Wisdom",
-   "img": "images/batch-1/b74.jpg",
-   "style": "dark"
+   "c": "Wisdom"
   },
   {
    "id": "b75",
    "t": "Pain is inevitable. Suffering is optional.",
    "a": "Haruki Murakami",
-   "c": "Calm",
-   "img": "images/batch-1/b75.jpg",
-   "style": "highlight"
+   "c": "Calm"
   },
   {
    "id": "b76",
    "t": "The journey of a thousand miles begins with one step.",
    "a": "Lao Tzu",
-   "c": "Action",
-   "img": "images/batch-1/b76.jpg",
-   "style": "duotone"
+   "c": "Action"
   },
   {
    "id": "b77",
    "t": "In the midst of chaos, there is also opportunity.",
    "a": "Sun Tzu",
-   "c": "Wisdom",
-   "img": "images/batch-1/b77.jpg",
-   "style": "split"
+   "c": "Wisdom"
   },
   {
    "id": "b78",
    "t": "Do nothing that is of no use.",
    "a": "Miyamoto Musashi",
-   "c": "Habits",
-   "img": "images/batch-1/b78.jpg",
-   "style": "bigword"
+   "c": "Habits"
   },
   {
    "id": "b79",
    "t": "Even the darkest night will end and the sun will rise.",
    "a": "Victor Hugo",
-   "c": "Courage",
-   "img": "images/batch-1/b79.jpg",
-   "style": "face"
+   "c": "Courage"
   },
   {
    "id": "b80",
    "t": "It is only with the heart that one can see rightly.",
    "a": "Antoine de Saint-Exupéry",
-   "c": "Love",
-   "img": "images/batch-1/b80.jpg",
-   "style": "dark"
+   "c": "Love"
   },
   {
    "id": "b81",
    "t": "In the depth of winter, I finally learned that within me there lay an invincible summer.",
    "a": "Albert Camus",
-   "c": "Courage",
-   "img": "images/batch-1/b81.jpg",
-   "style": "highlight"
+   "c": "Courage"
   },
   {
    "id": "b82",
    "t": "A book must be the axe for the frozen sea within us.",
    "a": "Franz Kafka",
-   "c": "Wisdom",
-   "img": "images/batch-1/b82.jpg",
-   "style": "face"
+   "c": "Wisdom"
   },
   {
    "id": "b83",
    "t": "Everyone thinks of changing the world, but no one thinks of changing himself.",
    "a": "Leo Tolstoy",
-   "c": "Wisdom",
-   "img": "images/batch-1/b83.jpg",
-   "style": "split"
+   "c": "Wisdom"
   },
   {
    "id": "b84",
    "t": "Knowledge is of no value unless you put it into practice.",
    "a": "Anton Chekhov",
-   "c": "Action",
-   "img": "images/batch-1/b84.jpg",
-   "style": "bigword"
+   "c": "Action"
   },
   {
    "id": "b85",
    "t": "You can cut all the flowers but you cannot keep Spring from coming.",
    "a": "Pablo Neruda",
-   "c": "Courage",
-   "img": "images/batch-1/b85.jpg",
-   "style": "editorial"
+   "c": "Courage"
   },
   {
    "id": "b86",
    "t": "The world was so recent that many things lacked names.",
    "a": "Gabriel García Márquez",
-   "c": "Wisdom",
-   "img": "images/batch-1/b86.jpg",
-   "style": "dark"
+   "c": "Wisdom"
   },
   {
    "id": "b87",
    "t": "I have always imagined that Paradise will be a kind of library.",
    "a": "Jorge Luis Borges",
-   "c": "Wisdom",
-   "img": "images/batch-1/b87.jpg",
-   "style": "highlight"
+   "c": "Wisdom"
   },
   {
    "id": "b88",
    "t": "If you don't like someone's story, write your own.",
    "a": "Chinua Achebe",
-   "c": "Courage",
-   "img": "images/batch-1/b88.jpg",
-   "style": "duotone"
+   "c": "Courage"
   },
   {
    "id": "b89",
    "t": "Do your little bit of good where you are; it's those little bits of good put together that overwhelm the world.",
    "a": "Desmond Tutu",
-   "c": "Action",
-   "img": "images/batch-1/b89.jpg",
-   "style": "split"
+   "c": "Action"
   },
   {
    "id": "b90",
    "t": "To live is to choose. But to choose well, you must know who you are and what you stand for.",
    "a": "Kofi Annan",
-   "c": "Wisdom",
-   "img": "images/batch-1/b90.jpg",
-   "style": "bigword"
+   "c": "Wisdom"
   },
   {
    "id": "b91",
    "t": "It's the little things citizens do. That's what will make the difference.",
    "a": "Wangari Maathai",
-   "c": "Action",
-   "img": "images/batch-1/b91.jpg",
-   "style": "editorial"
+   "c": "Action"
   },
   {
    "id": "b92",
    "t": "I don't believe in taking right decisions. I take decisions and then make them right.",
    "a": "Ratan Tata",
-   "c": "Success",
-   "img": "images/batch-1/b92.jpg",
-   "style": "dark"
+   "c": "Success"
   },
   {
    "id": "b93",
    "t": "People throw stones at you and you convert them into milestones.",
    "a": "Sachin Tendulkar",
-   "c": "Success",
-   "img": "images/batch-1/b93.jpg",
-   "style": "highlight"
+   "c": "Success"
   },
   {
    "id": "b94",
    "t": "All we have to decide is what to do with the time that is given us.",
    "a": "J.R.R. Tolkien",
-   "c": "Life",
-   "img": "images/batch-1/b94.jpg",
-   "style": "duotone"
+   "c": "Life"
   },
   {
    "id": "b95",
    "t": "A person who has good thoughts cannot ever be ugly.",
    "a": "Roald Dahl",
-   "c": "Wisdom",
-   "img": "images/batch-1/b95.jpg",
-   "style": "split"
+   "c": "Wisdom"
   },
   {
    "id": "b96",
    "t": "You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.",
    "a": "Dr. Seuss",
-   "c": "Courage",
-   "img": "images/batch-1/b96.jpg",
-   "style": "bigword"
+   "c": "Courage"
   },
   {
    "id": "b97",
    "t": "Listen to the mustn'ts, child. Listen to the don'ts.",
    "a": "Shel Silverstein",
-   "c": "Courage",
-   "img": "images/batch-1/b97.jpg",
-   "style": "editorial"
+   "c": "Courage"
   },
   {
    "id": "b98",
    "t": "If there's a book that you want to read, but it hasn't been written yet, then you must write it.",
    "a": "Toni Morrison",
-   "c": "Action",
-   "img": "images/batch-1/b98.jpg",
-   "style": "dark"
+   "c": "Action"
   },
   {
    "id": "b99",
    "t": "Not everything that is faced can be changed, but nothing can be changed until it is faced.",
    "a": "James Baldwin",
-   "c": "Courage",
-   "img": "images/batch-1/b99.jpg",
-   "style": "highlight"
+   "c": "Courage"
   },
   {
    "id": "b100",
    "t": "Hold fast to dreams, for if dreams die, life is a broken-winged bird that cannot fly.",
    "a": "Langston Hughes",
-   "c": "Courage",
-   "img": "images/batch-1/b100.jpg",
-   "style": "face"
+   "c": "Courage"
   }
  ],
  "authors": {
