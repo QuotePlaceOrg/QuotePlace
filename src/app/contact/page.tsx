@@ -21,7 +21,7 @@ export default function ContactPage() {
           if (!email.includes("@")) { setError("A valid email is required."); return; }
           if (message.trim().length < 10) { setError("Message must be at least 10 characters."); return; }
           setError("");
-          const subject = encodeURIComponent(`StoicBare contact from ${name.trim()}`);
+          const subject = encodeURIComponent(`Quote Place contact from ${name.trim()}`);
           const body = encodeURIComponent(`Name: ${name.trim()}\nEmail: ${email.trim()}\n\n${message.trim()}`);
           window.location.href = `mailto:stoicbare@gmail.com?subject=${subject}&body=${body}`;
           setDone(true);
