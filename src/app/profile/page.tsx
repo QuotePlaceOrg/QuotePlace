@@ -70,7 +70,6 @@ function ProfileInner() {
   const [name, setName] = useState("");
   const [bio, setBio] = useState("");
   const [photoURL, setPhotoURL] = useState("");
-  const [newsletter, setNewsletter] = useState(false);
   const [theme, setTheme] = useState("light");
   const [saved, setSaved] = useState(false);
   const [deleteStep, setDeleteStep] = useState(0);
@@ -114,7 +113,7 @@ function ProfileInner() {
   useEffect(() => {
     if (profile) {
       setName(profile.displayName); setBio(profile.bio); setPhotoURL(profile.photoURL ?? "");
-      setNewsletter(profile.preferences.newsletter); setTheme(profile.preferences.theme);
+      setTheme(profile.preferences.theme);
       setStats(profile.stats);
     }
   }, [profile]);
@@ -167,7 +166,7 @@ function ProfileInner() {
     e.preventDefault();
     if (user) {
       try {
-        await updateUserProfile(user.uid, { displayName: name, bio, photoURL: photoURL || null, preferences: { newsletter, theme } });
+        await updateUserProfile(user.uid, { displayName: name, bio, photoURL: photoURL || null, preferences: { theme } });
         setSaved(true); return;
       } catch { /* preview */ }
     }
@@ -367,7 +366,6 @@ function ProfileInner() {
               <div><label htmlFor="set-name" className="block text-sm font-medium">Display name</label><input id="set-name" value={name} onChange={(e) => setName(e.target.value)} className="mt-1 w-full rounded-md border border-[var(--border)] bg-white px-3 py-2" /></div>
               <div><label htmlFor="set-photo" className="block text-sm font-medium">Photo URL</label><input id="set-photo" value={photoURL} onChange={(e) => setPhotoURL(e.target.value)} placeholder="https://…" className="mt-1 w-full rounded-md border border-[var(--border)] bg-white px-3 py-2" /></div>
               <div className="sm:col-span-2"><label htmlFor="set-bio" className="block text-sm font-medium">Bio</label><textarea id="set-bio" value={bio} onChange={(e) => setBio(e.target.value)} rows={2} className="mt-1 w-full rounded-md border border-[var(--border)] bg-white px-3 py-2" /></div>
-              <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={newsletter} onChange={(e) => setNewsletter(e.target.checked)} /> Weekly newsletter</label>
               <div><label htmlFor="set-theme" className="block text-sm font-medium">Theme</label><select id="set-theme" value={theme} onChange={(e) => setTheme(e.target.value)} className="mt-1 rounded-md border border-[var(--border)] bg-white px-3 py-2 text-sm"><option value="light">Light</option><option value="dark">Dark (saved preference; dark theme styles arrive with the theme release)</option></select></div>
             </div>
             <button type="submit" className="mt-4 rounded-md bg-[var(--primary)] px-4 py-2 text-white">Save settings</button>

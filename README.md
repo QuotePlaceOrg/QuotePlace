@@ -63,7 +63,7 @@ GOOGLE_APPLICATION_CREDENTIALS=./service-account.json bun run seed:firestore
 
 ## Pages
 
-- `/` Home — hero, Quote of the Day, Featured Quotes, FAQ teaser, newsletter
+- `/` Home — hero, Quote of the Day, Featured Quotes, FAQ teaser
 - `/quotes` + `/quotes/[id]` — search, filters, pagination, detail, like + save
 - `/topics` + `/topics/[slug]` — topic list + detail
 - `/about`, `/faq`
@@ -73,13 +73,11 @@ GOOGLE_APPLICATION_CREDENTIALS=./service-account.json bun run seed:firestore
 
 ## Deploy
 
-- **Host**: Fly.io via Antideploy. **Antideploy deploys from `main`** — merge
-  to `main` to ship.
-- **Build**: `npm run build` produces the Next.js standalone output
-  (`.next/standalone/`); `npm start` runs
-  `node .next/standalone/server.js`.
-- **Env vars**: the 7 `NEXT_PUBLIC_FIREBASE_*` values live in
-  Antideploy → Settings → Environment Variables. They are baked into the
+- **Host**: Vercel. Import the repo in Vercel; Vercel auto-deploys on
+  push to `main`.
+- **Env vars**: set all 7 `NEXT_PUBLIC_FIREBASE_*` values in Vercel →
+  Project Settings → Environment Variables. They do NOT carry over from
+  Antideploy — they must be re-added in Vercel. They are baked into the
   bundle at build time — set them **before** triggering a rebuild.
 - **Backend config**: deploy Firestore rules/indexes/storage with the
   Firebase CLI from your laptop:
