@@ -106,7 +106,8 @@
    "id": "b18",
    "t": "Imagination is more important than knowledge.",
    "a": "Albert Einstein",
-   "c": "Wisdom"
+   "c": "Wisdom",
+   "img": "images/batch-2/b18.jpg"
   },
   {
    "id": "b19",
@@ -262,7 +263,8 @@
    "id": "b44",
    "t": "We are all in the gutter, but some of us are looking at the stars.",
    "a": "Oscar Wilde",
-   "c": "Courage"
+   "c": "Courage",
+   "img": "images/batch-2/b44.jpg"
   },
   {
    "id": "b45",
