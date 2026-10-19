@@ -104,7 +104,11 @@ environment. Never place either credential in a committed `.env` file. You can
 also set `FIREBASE_PROJECT_ID`; it defaults to `stoicbare-86bfa`.
 
 For 100,000 documents, the import performs document-existence reads plus writes.
-Check Firebase billing and quotas before importing at scale.
+In Firestore Standard's free quota, 50,000 document reads and 20,000 document writes
+are included per day (plus 1 GiB stored data). A fresh 100,000-record import may
+therefore take several days on free quota or incur usage charges on a bill-enabled
+project. See the [official Firestore pricing and quotas](https://firebase.google.com/docs/firestore/pricing)
+before importing at scale.
 
 ## 5. Editor review
 
