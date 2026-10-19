@@ -12,17 +12,13 @@ export default function Footer() {
           <p className="font-medium">Quick links</p>
           <ul className="mt-2 space-y-1 text-sm">
             <li><Link href="/quotes" className="hover:underline">Quotes</Link></li>
-            <li><Link href="/authors" className="hover:underline">Authors</Link></li>
             <li><Link href="/topics" className="hover:underline">Topics</Link></li>
-            <li><Link href="/articles" className="hover:underline">Articles</Link></li>
-            <li><Link href="/story" className="hover:underline">Story</Link></li>
           </ul>
         </nav>
         <nav aria-label="Help">
           <p className="font-medium">Help</p>
           <ul className="mt-2 space-y-1 text-sm">
             <li><Link href="/faq" className="hover:underline">FAQ</Link></li>
-            <li><Link href="/contribute" className="hover:underline">Contribute</Link></li>
             <li><Link href="/contact" className="hover:underline">Contact</Link></li>
             <li><Link href="/about" className="hover:underline">About</Link></li>
           </ul>
