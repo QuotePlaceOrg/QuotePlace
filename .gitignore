@@ -64,3 +64,9 @@ server.log
 
 # Internal Z.ai dev log — not part of the public website
 /worklog.md
+
+# Firebase service account key — grants admin access to Firestore. NEVER commit.
+service-account.json
+*.service-account.json
+stoicbare-*-service-account.json
+google-credentials.json

@@ -129,6 +129,112 @@ export const storage = getStorage(firebaseApp);
 
 Then call them from client components (these modules are also browser-only).
 
+## Backend setup (one-time, on your laptop)
+
+StoicBare ships with config files for the Firebase backend (rules, indexes,
+storage rules, seed script). To activate the backend in your Firebase
+project (`stoicbare-86bfa`), run these commands from your **local laptop**
+(not in the sandbox — these need your Google credentials):
+
+### 1. Deploy Firestore rules + indexes + storage rules
+
+```bash
+# Install Firebase CLI (one-time)
+npm install -g firebase-tools
+
+# Log in with the Google account that owns stoicbare-86bfa
+firebase login
+
+# Push the config files to your Firebase project
+firebase deploy --only firestore:rules,firestore:indexes,storage
+```
+
+What this does:
+- **firestore.rules** — security rules go live (public can read published
+  quotes/authors/topics/blogs; signed-in users can create pending quotes;
+  users own their profile + likes; admin-only for moderation)
+- **firestore.indexes.json** — 6 composite indexes created (status+createdAt
+  for newest, status+likeCount for trending, status+authorId+createdAt for
+  by-author, status+topics+likeCount for by-topic, etc.). These keep
+  queries fast at the 100k+ quote target.
+- **storage.rules** — rules for blog cover images + user avatar uploads
+
+Verify at https://console.firebase.google.com → stoicbare-86bfa →
+Firestore → Rules / Indexes tabs.
+
+### 2. Enable Google sign-in (you've already done this)
+
+Firebase Console → Authentication → Sign-in method → Google → Enable.
+Email/password is also enabled if you want that as an alternative.
+
+### 3. Seed the database
+
+Right now your Firestore is empty — the site reads from the hardcoded
+`QUOTES` array in `src/app/page.tsx`. "Seeding" means running a one-time
+script that takes those 62 quotes + 23 authors and writes them to Firestore.
+
+```bash
+# One-time: install firebase-admin (the Node.js Admin SDK)
+npm install --save-dev firebase-admin
+# or with bun:
+bun add -d firebase-admin
+
+# Generate a service account key:
+#   Firebase Console → ⚙️ Project Settings → Service Accounts tab →
+#   "Generate new private key" → saves a JSON file to your laptop
+#   Save it as e.g. ~/.stoicbare-service-account.json
+#   ⚠️ Never commit this file — it grants admin access to your Firestore.
+
+# Run the seed
+GOOGLE_APPLICATION_CREDENTIALS=~/.stoicbare-service-account.json \
+  node scripts/seed-quotes.mjs
+# or with bun:
+GOOGLE_APPLICATION_CREDENTIALS=~/.stoicbare-service-account.json \
+  bun run scripts/seed-quotes.mjs
+```
+
+What this does:
+- Reads `scripts/seed-data.mjs` (a self-contained snapshot of the 23 authors
+  + 62 quotes from `src/app/page.tsx`)
+- Writes 23 docs to the `authors` collection (id = author slug, e.g.
+  `marcus-aurelius`)
+- Writes 62 docs to the `quotes` collection with `status="published"`,
+  `contributorId=null`, `likeCount=0`, `createdAt=serverTimestamp()`
+- Idempotent: re-running overwrites by doc ID (no duplicates)
+
+Verify at Firebase Console → Firestore → Data tab — you should see
+23 author docs + 62 quote docs.
+
+### 4. (Optional) Switch page.tsx to read from Firestore
+
+The demo currently reads from the local `QUOTES` array for instant
+first-paint. To switch to Firestore reads:
+
+- In `src/app/page.tsx`, replace `const QUOTES: Quote[] = [...]` with a
+  `useEffect` that calls `getPublishedQuotes()` (defined in
+  `src/lib/firestore.ts`). Keep the local array as fallback if Firestore
+  returns empty.
+- For the search at 1k+ quotes scale, switch to Algolia / Typesense —
+  Firestore's text search is limited to ~200 docs per query.
+
+### 5. (Optional) Set up an admin claim
+
+To let your user account moderate contributions (publish/reject pending
+quotes), set the `admin: true` custom claim via the Firebase Admin SDK:
+
+```bash
+# One-time: install the Admin SDK globally or use a small script
+node -e "
+  const admin = require('firebase-admin');
+  admin.initializeApp({ credential: admin.credential.applicationDefault() });
+  admin.auth().setCustomUserClaims('YOUR_USER_UID', { admin: true })
+    .then(() => { console.log('✅ Admin claim set'); process.exit(0); })
+    .catch(e => { console.error('❌', e); process.exit(1); });
+"
+```
+
+Get your UID from Firebase Console → Authentication → Users → copy the UID.
+
 ## License
 
 MIT. All quotes are public domain (1st c. BC through early 20th c., all
