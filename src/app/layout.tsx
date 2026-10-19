@@ -1,26 +1,14 @@
 import type { Metadata } from "next";
-import { Inter, Lora } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { FirebaseAnalytics } from "@/components/firebase-analytics";
-import { AuthProvider } from "@/components/auth-context";
-import { AuthModal } from "@/components/auth-modal";
+import { AuthProvider } from "@/lib/auth-context";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
-
-const lora = Lora({
-  variable: "--font-lora",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
-
+// NOTE: Fonts load at runtime via <link> (not next/font/google) — the
+// build-time next/font loader broke the Turbopack/OpenNext deploy (issue #2).
+// If Google Fonts is unreachable, globals.css falls back to Georgia / system sans.
 export const metadata: Metadata = {
   title: "StoicBare — Wisdom from the Ages",
   description:
@@ -102,17 +90,22 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+          rel="stylesheet"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body
-        className={`${inter.variable} ${lora.variable} font-sans antialiased bg-background text-foreground`}
-      >
+      <body className="font-sans antialiased bg-background text-foreground min-h-screen flex flex-col">
         <AuthProvider>
-          {children}
-          <AuthModal />
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
         </AuthProvider>
         <Toaster />
         <FirebaseAnalytics />
