@@ -1,26 +1,28 @@
 # StoicBare
 
-A bare, focused collection of public-domain Stoic quotes from Marcus Aurelius,
-Seneca, Epictetus, Musonius Rufus, Cleanthes, and Zeno of Citium. No ads, no
-distractions — just the words that have shaped human thought for two thousand
-years.
+A bare, focused collection of public-domain quotes from across the ages —
+**Stoic sages, Greek philosophers, Eastern masters, Enlightenment thinkers,
+Transcendentalists, and modern wits.** No ads, no distractions — just the
+words that have shaped human thought across millennia.
 
+> The name is **StoicBare**, but the content is broader than just Stoicism:
+> 23 authors spanning 6th c. BC (Lao Tzu, Confucius, Zeno) through early 20th
+> c. (Mark Twain, Oscar Wilde, Leo Tolstoy). All quotes are public domain.
 > Reverse-engineered from the public landing page at `quotelibrary.org` using
 > [`rea-agents`](https://github.com/morluto/rea) (REA — Reverse Engineer
-> Anything) and rebuilt as **StoicBare** on Next.js 16. The source site's
-> *structure* (sticky header, hero with quote marks, quote of the day,
-> browse-by-author grid, featured-quotes grid, footer with quick links) is
-> reproduced; the source site's *content* (modern quotes from living/mid-century
-> authors) is not — StoicBare only carries public-domain Stoic texts. The
-> visual identity is original to StoicBare: warm ivory parchment + charcoal
-> text + antique-bronze accent + Lora serif headings.
+> Anything) and rebuilt on Next.js 16. The source site's *structure* (sticky
+> header, hero with quote marks, quote of the day, browse-by-author grid,
+> featured-quotes grid, footer with quick links) is reproduced; the source
+> site's *content* (modern copyrighted quotes) is not. The visual identity is
+> original to StoicBare: warm ivory parchment + charcoal text + antique-bronze
+> accent + Lora serif headings.
 
 ## Stack
 
 - **Framework**: Next.js 16 (App Router) + TypeScript 5
 - **Styling**: Tailwind CSS 4 + shadcn/ui (New York) + Lucide icons
 - **Fonts**: Inter (body) + Lora (serif headings/quotes), both via `next/font/google`
-- **Content**: 25 public-domain Stoic quotes from 6 authors (ancient Greek/Roman texts)
+- **Content**: 62 public-domain quotes from 23 authors across 2500 years
 - **Backend**: Firebase (`firebase@13`) — Analytics wired up; ready to extend to
   Firestore / Auth / Storage
 
@@ -34,13 +36,11 @@ years.
     {!filtering && (
       <>
         <Hero>                          ← big quote marks + h1 + subtitle + search
-        + popular topic pills (wisdom / virtue / discipline / …)
+        + 21 popular topic pills
         <QuoteOfTheDay>                 ← deterministic per calendar day
-        + author + source + topic tags + share buttons (Twitter / Facebook /
-        LinkedIn / Copy)
-        <BrowseByAuthor>                ← 6 author cards (Marcus / Seneca / Epictetus
-        / Musonius / Cleanthes / Zeno) with avatar + lifespan + bio + quote count
-        <FeaturedQuotes>                ← 9 quote cards
+        + author + source + topic tags + share buttons
+        <BrowseByAuthor>                ← 23 author cards across all traditions
+        <FeaturedQuotes>                ← 12 quote cards (sliced from 62)
       </>
     )}
     {filtering && <SearchResults>}      ← when search or author filter is active
@@ -50,13 +50,32 @@ years.
 </div>
 ```
 
+## Traditions covered (23 authors)
+
+| Tradition | Authors |
+|---|---|
+| **Stoic (6)** | Marcus Aurelius, Seneca, Epictetus, Musonius Rufus, Cleanthes, Zeno of Citium |
+| **Greek (3)** | Socrates, Plato, Aristotle |
+| **Eastern (2)** | Confucius, Lao Tzu |
+| **Roman non-Stoic (1)** | Cicero |
+| **Renaissance (2)** | Montaigne, Francis Bacon |
+| **Enlightenment (3)** | Voltaire, Benjamin Franklin, Immanuel Kant |
+| **Transcendentalist (2)** | Ralph Waldo Emerson, Henry David Thoreau |
+| **Late 19th c. (2)** | Friedrich Nietzsche, Leo Tolstoy |
+| **Modern wits (2)** | Mark Twain, Oscar Wilde |
+
+All 1st c. BC through early 20th c. — every author deceased before 1928,
+firmly in the public domain across all jurisdictions.
+
 ## Interactions
 
 - **Search** — matches quote text, source, topic, or author name
-- **Topic pills** — click to filter (`wisdom`, `virtue`, `discipline`,
-  `resilience`, `death`, `anger`, `time`, `fate`, `courage`, `self-knowledge`)
-- **Author click** — filter to that author's quotes (also accessible from the
-  Browse-by-Author grid)
+- **Topic pills** — click to filter (21 topics: wisdom / virtue / discipline /
+  resilience / death / anger / time / fate / courage / self-knowledge /
+  knowledge / learning / truth / action / freedom / change / nature /
+  happiness / hope / purpose / mind)
+- **Author click** — filter to that author's quotes (accessible from any
+  Browse-by-Author card or any quote card)
 - **Clear filter** — resets the search/author filter and returns to the home view
 - **Quote of the Day** — rotates daily (deterministic by day-of-year % QUOTES.length)
 - **Copy quote** — copies the QoTD text + author attribution to clipboard
@@ -78,7 +97,7 @@ src/
 ├── app/
 │   ├── globals.css     ← StoicBare theme (ivory + charcoal + bronze, Lora serif)
 │   ├── layout.tsx      ← Inter + Lora fonts, metadata, JSON-LD, <FirebaseAnalytics />
-│   └── page.tsx        ← the full single-page site
+│   └── page.tsx        ← the full single-page site + AUTHORS/QUOTES/TOPICS data
 ├── components/
 │   ├── firebase-analytics.tsx   ← client-only mount; inits Analytics post-hydration
 │   └── ui/                       ← shadcn/ui primitives (Button, Input, …)
@@ -93,25 +112,17 @@ src/
 The Firebase web config (apiKey, appId, measurementId, …) lives in
 `src/lib/firebase.ts`. The web SDK is initialized lazily and only on the
 client (browser) — `isSupported()` is checked before `getAnalytics(app)`,
-so Analytics is gracefully skipped during SSR / in unsupported environments
-(private browsing with cookies disabled, etc.).
+so Analytics is gracefully skipped during SSR / in unsupported environments.
 
-The Firebase web config is **designed to be public** — security for your
-project is enforced by Firebase Security Rules, not by hiding this config.
-You can see it shipping on https://stoicbare.app once deployed.
-
-To extend to other Firebase products, add the SDKs in `src/lib/firebase.ts`:
+To extend to Firestore / Auth / Storage, add the SDKs in `src/lib/firebase.ts`:
 
 ```ts
-// Firestore
 import { getFirestore } from "firebase/firestore";
 export const db = getFirestore(firebaseApp);
 
-// Auth
 import { getAuth } from "firebase/auth";
 export const auth = getAuth(firebaseApp);
 
-// Storage
 import { getStorage } from "firebase/storage";
 export const storage = getStorage(firebaseApp);
 ```
@@ -120,5 +131,5 @@ Then call them from client components (these modules are also browser-only).
 
 ## License
 
-MIT. All quotes are public domain (ancient Greek and Roman texts, 1st–2nd
-century BC/AD). Source attributions are noted per quote.
+MIT. All quotes are public domain (1st c. BC through early 20th c., all
+authors deceased before 1928). Source attributions are noted per quote.
