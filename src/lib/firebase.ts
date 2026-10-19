@@ -1,60 +1,61 @@
-/**
- * Firebase client for StoicBare.
- *
- * Initialized lazily and only on the client (browser). The web SDK's
- * Analytics module accesses `window` and the browser cookie API, so it
- * must not run during Next.js server-side rendering. We use `isSupported()`
- * to gracefully skip environments where analytics can't run (e.g. private
- * browsing with cookies disabled).
- *
- * The Firebase web config (apiKey, appId, measurementId, etc.) is designed
- * to be public — security for your Firebase project is enforced by Firebase
- * Security Rules, not by hiding this config. You can move any of these
- * values to NEXT_PUBLIC_* env vars if you want to vary them per environment.
- */
-
-import { getApps, getApp, initializeApp, type FirebaseApp } from "firebase/app";
-import {
-  getAnalytics,
-  isSupported,
-  type Analytics,
-} from "firebase/analytics";
-import { getFirestore, type Firestore } from "firebase/firestore";
+// Firebase client — env-based config only (no hardcoded keys), safe when env
+// vars are missing (the site falls back to the static seed).
+// Analytics is client-only and lazy: it must not run during SSR.
+// Never import this from a server component that must build without env vars:
+// every getter returns null when the config is incomplete.
+import { initializeApp, getApps, type FirebaseApp } from "firebase/app";
 import { getAuth, type Auth } from "firebase/auth";
+import { getFirestore, type Firestore } from "firebase/firestore";
+import { getAnalytics, isSupported, type Analytics } from "firebase/analytics";
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyD5NrCTK71Rk4qVYsQyp_t-wrf55vskEHI",
-  authDomain: "stoicbare-86bfa.firebaseapp.com",
-  projectId: "stoicbare-86bfa",
-  storageBucket: "stoicbare-86bfa.firebasestorage.app",
-  messagingSenderId: "283688843634",
-  appId: "1:283688843634:web:830af8f511ed9ebabec5eb",
-  measurementId: "G-6W2P37RQJ6",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
-/**
- * Singleton Firebase App. Hot Module Reload (HMR) and React Strict Mode
- * can re-run module top-level code; `getApps()` lets us avoid
- * "Firebase App named '[DEFAULT]' already exists" errors.
- */
-export const firebaseApp: FirebaseApp =
-  getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
+export function isFirebaseConfigured(): boolean {
+  return Boolean(
+    process.env.NEXT_PUBLIC_FIREBASE_API_KEY &&
+      process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID &&
+      process.env.NEXT_PUBLIC_FIREBASE_APP_ID
+  );
+}
 
-/**
- * Firestore singleton. Firestore works on both server and client (it makes
- * HTTP requests under the hood, no `window` access), so we can init eagerly.
- * Designed for 100k+ quotes scale — see src/lib/firestore.ts for indexes.
- */
-export const firestore: Firestore = getFirestore(firebaseApp);
+let app: FirebaseApp | null = null;
 
-/**
- * Auth singleton. Auth SDK accesses browser APIs (storage, popup) so it must
- * not run during SSR; getAuth() returns a stub on the server. We initialise
- * eagerly here — it only sets up internal state, doesn't open any sessions.
- * Use `onAuthStateChanged` in client components to subscribe to the user.
- */
-export const auth: Auth = getAuth(firebaseApp);
+export function getFirebaseApp(): FirebaseApp | null {
+  if (!isFirebaseConfigured()) return null;
+  if (app) return app;
+  if (getApps().length > 0) {
+    app = getApps()[0]!;
+    return app;
+  }
+  app = initializeApp({
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID!,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID!,
+    measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+  });
+  return app;
+}
 
+export function getDb(): Firestore | null {
+  const a = getFirebaseApp();
+  return a ? getFirestore(a) : null;
+}
+
+export function getFirebaseAuth(): Auth | null {
+  const a = getFirebaseApp();
+  return a ? getAuth(a) : null;
+}
 
 /**
  * Cached Analytics instance (per browser session). `null` until
@@ -65,7 +66,8 @@ let analyticsPromise: Promise<Analytics | null> | null = null;
 
 /**
  * Initialize Firebase Analytics on the client only. Safe to call from a
- * React effect — returns `null` on the server or in unsupported environments.
+ * React effect — returns `null` on the server, when Firebase is not
+ * configured, or in unsupported environments.
  *
  * Idempotent: the same instance is returned on subsequent calls.
  */
@@ -83,7 +85,9 @@ export function getFirebaseAnalytics(): Promise<Analytics | null> {
   analyticsPromise = isSupported()
     .then((supported) => {
       if (!supported) return null;
-      analyticsInstance = getAnalytics(firebaseApp);
+      const a = getFirebaseApp();
+      if (!a) return null;
+      analyticsInstance = getAnalytics(a);
       return analyticsInstance;
     })
     .catch((err) => {
@@ -100,7 +104,7 @@ export function getFirebaseAnalytics(): Promise<Analytics | null> {
  */
 export async function logEvent(
   name: string,
-  params?: Record<string, unknown>,
+  params?: Record<string, unknown>
 ): Promise<void> {
   const analytics = await getFirebaseAnalytics();
   if (!analytics) return;

@@ -50,6 +50,11 @@
 :root {
   --radius: 0.5rem;
 
+  /* Runtime Google Fonts <link> (see layout.tsx) — these vars were previously
+     injected by next/font/google. Required by @theme inline below. */
+  --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-lora: "Lora", Georgia, serif;
+
   /* Page */
   --background: oklch(0.97 0.02 80);   /* warm ivory parchment */
   --foreground: oklch(0.2 0.01 50);    /* deep charcoal */
@@ -243,3 +248,5 @@
     font-size: 6rem !important;
   }
 }
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }

@@ -10,7 +10,7 @@ export type Quote = {
   authorId: string;
   topics: string[];
   source: string;
-  language: "en";
+  language: string;
 };
 
 export type Author = {

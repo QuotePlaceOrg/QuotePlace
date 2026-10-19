@@ -1,23 +1,24 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getQuote, getAuthor, quotesByAuthor, QUOTES } from "@/lib/data";
+import { getAuthor } from "@/lib/data";
 import QuoteCard from "@/components/QuoteCard";
 import QuoteDetailActions from "@/components/QuoteDetailActions";
 import AuthorCard from "@/components/AuthorCard";
-import { getQuote as getQuoteDoc, listQuotes } from "@/lib/db";
+import { getQuote as getQuoteDoc, getAuthorDoc, listQuotes } from "@/lib/db";
 
 export default async function QuoteDetail({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const quote = getQuote(id);
+  const quote = await getQuoteDoc(id); // Firestore first, seed fallback inside db.ts
   if (!quote) notFound();
-  const author = getAuthor(quote.authorId);
+  const authorDoc = await getAuthorDoc(quote.authorId);
+  const author = authorDoc ?? getAuthor(quote.authorId) ?? { id: quote.authorId, name: quote.authorName, epithet: "", lifespan: "", bio: "" };
   // Real Firestore like count (0 when the doc has none yet). Never invented.
-  const doc = await getQuoteDoc(id);
-  const realLikeCount = doc?.likeCount ?? 0;
+  const realLikeCount = quote.likeCount;
+  const all = (await listQuotes({ pageSize: 500 })).quotes;
   const counts = new Map<string, number>();
-  for (const q of (await listQuotes({ pageSize: 500 })).quotes) counts.set(q.id, q.likeCount);
-  const related = quotesByAuthor(quote.authorId).filter((q) => q.id !== quote.id).slice(0, 3);
-  const more = QUOTES.filter((q) => q.id !== quote.id && q.topics.some((t) => quote.topics.includes(t))).slice(0, 3);
+  for (const q of all) counts.set(q.id, q.likeCount);
+  const related = all.filter((q) => q.authorId === quote.authorId && q.id !== quote.id).slice(0, 3);
+  const more = all.filter((q) => q.id !== quote.id && q.topics.some((t) => quote.topics.includes(t))).slice(0, 3);
   return (
     <div className="mx-auto max-w-3xl px-4 py-10">
       <Link href="/quotes" className="text-sm text-[var(--primary)] hover:underline">← All quotes</Link>

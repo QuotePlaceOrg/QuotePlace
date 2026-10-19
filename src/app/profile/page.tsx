@@ -3,10 +3,11 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
-import { QUOTES, getQuote as getStaticQuote } from "@/lib/data";
+import type { QuoteDoc } from "@/lib/types";
 import QuoteCard from "@/components/QuoteCard";
 import { useAuth } from "@/lib/auth-context";
 import {
+  getQuote, listQuotes,
   getUserFavorites, getUserLikes, updateUserProfile,
   listUserCollections, createCollection, updateCollection, deleteCollection,
   addQuoteToCollection, removeQuoteFromCollection, listUserSubmissions,
@@ -50,6 +51,10 @@ function ProfileInner() {
   const [collections, setCollections] = useState<UserCollection[]>([]);
   const [submissions, setSubmissions] = useState<SubmissionDoc[]>([]);
   const [stats, setStats] = useState({ likesGiven: 0, favoritesCount: 0, contributionsCount: 0, commentsCount: 0 });
+  // Firestore-resolved quote docs for favourites / liked / collection ids
+  // (static-seed lookups would drop Firestore-only quotes).
+  const [quoteDocs, setQuoteDocs] = useState<Record<string, QuoteDoc>>({});
+  const [pickerQuotes, setPickerQuotes] = useState<QuoteDoc[]>([]);
 
   // Collection editor state
   const [newName, setNewName] = useState("");
@@ -93,6 +98,20 @@ function ProfileInner() {
 
   useEffect(() => { reload(); }, [reload]);
   useEffect(() => {
+    let cancelled = false;
+    const ids = [...new Set([...favIds, ...likedIds, ...collections.flatMap((c) => c.quoteIds)])];
+    (async () => {
+      const entries = await Promise.all(ids.map(async (id) => [id, await getQuote(id)] as const));
+      if (!cancelled) {
+        const map: Record<string, QuoteDoc> = {};
+        for (const [id, q] of entries) if (q) map[id] = q;
+        setQuoteDocs(map);
+      }
+    })();
+    listQuotes({ pageSize: 12 }).then(({ quotes }) => { if (!cancelled) setPickerQuotes(quotes); }).catch(() => {});
+    return () => { cancelled = true; };
+  }, [favIds, likedIds, collections]);
+  useEffect(() => {
     if (profile) {
       setName(profile.displayName); setBio(profile.bio); setPhotoURL(profile.photoURL ?? "");
       setNewsletter(profile.preferences.newsletter); setTheme(profile.preferences.theme);
@@ -101,8 +120,8 @@ function ProfileInner() {
   }, [profile]);
   useEffect(() => { setStats((s) => ({ ...s, favoritesCount: favIds.length, likesGiven: likedIds.length })); }, [favIds, likedIds]);
 
-  const favQuotes = useMemo(() => favIds.map((id) => getStaticQuote(id)).filter((q): q is NonNullable<typeof q> => Boolean(q)), [favIds]);
-  const likedQuotes = useMemo(() => likedIds.map((id) => getStaticQuote(id)).filter((q): q is NonNullable<typeof q> => Boolean(q)), [likedIds]);
+  const favQuotes = useMemo(() => favIds.map((id) => quoteDocs[id]).filter((q): q is QuoteDoc => Boolean(q)), [favIds, quoteDocs]);
+  const likedQuotes = useMemo(() => likedIds.map((id) => quoteDocs[id]).filter((q): q is QuoteDoc => Boolean(q)), [likedIds, quoteDocs]);
 
   async function handleCreateCollection(e: React.FormEvent) {
     e.preventDefault();
@@ -284,7 +303,7 @@ function ProfileInner() {
                       <details className="mt-3">
                         <summary className="cursor-pointer text-sm text-[var(--primary)]">Add / remove quotes</summary>
                         <div className="mt-2 grid gap-2 md:grid-cols-2">
-                          {QUOTES.slice(0, 12).map((q) => (
+                          {pickerQuotes.map((q) => (
                             <label key={q.id} className="flex items-start gap-2 rounded-md border border-[var(--border)] p-2 text-sm">
                               <input type="checkbox" checked={c.quoteIds.includes(q.id)} onChange={() => handleToggleQuoteInCollection(c.id, q.id)} className="mt-0.5" />
                               <span className="line-clamp-2">{q.text}</span>
@@ -295,7 +314,7 @@ function ProfileInner() {
                       </details>
                       {c.quoteIds.length > 0 && (
                         <div className="mt-3 grid gap-4 md:grid-cols-2">
-                          {c.quoteIds.map((qid) => { const q = getStaticQuote(qid); return q ? <QuoteCard key={qid} quote={q} /> : null; })}
+                          {c.quoteIds.map((qid) => { const q = quoteDocs[qid]; return q ? <QuoteCard key={qid} quote={q} /> : null; })}
                         </div>
                       )}
                     </>
