@@ -3,7 +3,6 @@ import { TOPICS } from "@/lib/data";
 import SearchBar from "@/components/SearchBar";
 import QuoteOfTheDay from "@/components/QuoteOfTheDay";
 import QuoteCard from "@/components/QuoteCard";
-import NewsletterForm from "@/components/NewsletterForm";
 import { listQuotes } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
@@ -70,10 +69,6 @@ export default async function Home() {
           <details className="rounded-md border border-[var(--border)] p-3"><summary className="cursor-pointer font-medium">Can I use quotes in my work?</summary><p className="mt-2 text-[var(--muted-foreground)]">These are short public-domain sayings. You may use them with attribution to the author.</p></details>
         </div>
         <Link href="/faq" className="mt-4 inline-block text-sm text-[var(--primary)] hover:underline">View all FAQs</Link>
-      </section>
-
-      <section className="mt-12" id="newsletter">
-        <NewsletterForm />
       </section>
 
       <section className="mt-12">
