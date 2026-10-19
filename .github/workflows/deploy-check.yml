@@ -29,14 +29,25 @@ jobs:
       - name: Verify frozen lockfile
         run: bun install --frozen-lockfile --dry-run
 
-      - name: Validate Wrangler config
-        run: bunx wrangler deploy --dry-run --outdir /tmp/stoicbare-wrangler-dry-run
-
       - name: Next.js build
         run: bun run build
 
       - name: OpenNext Cloudflare build
         run: bunx -y @opennextjs/cloudflare@1.20.12 build
+
+      - name: Validate Wrangler preview config
+        run: |
+          node -e "const c=require('fs').readFileSync('wrangler.jsonc','utf8'); if (!c.includes('\"previews\"')) { console.error('wrangler.jsonc missing previews block'); process.exit(1) }"
+          bunx wrangler deploy --dry-run --outdir /tmp/stoicbare-wrangler-dry-run
+
+      - name: Report preview assets
+        run: |
+          if [ -f .open-next/assets/_headers ]; then
+            echo "OpenNext generated .open-next/assets/_headers:"
+            cat .open-next/assets/_headers
+          else
+            echo "No .open-next/assets/_headers file generated."
+          fi
 
       - name: Create issue on failure
         if: failure()
