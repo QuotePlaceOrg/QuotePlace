@@ -331,7 +331,7 @@ function toggleSave(id){
 }
 
 /* ---------- SHARE ---------- */
-const link=id=>location.href.split("#")[0]+"#"+id;
+const link=id=>"https://quoteplace.vercel.app/quote/"+id+"/";
 function drawCanvas(q){
   const [bg,fg]=col(q),c=document.createElement("canvas");c.width=1080;c.height=1080;const x=c.getContext("2d");
   x.fillStyle=bg;x.fillRect(0,0,1080,1080);x.fillStyle=fg;x.textBaseline="top";
@@ -369,7 +369,7 @@ $("#shX").onclick=()=>$("#shareD").close();
 $("#grid").onclick=e=>{
   const b=e.target.closest("[data-a]");
   if(b){const id=b.closest(".q").dataset.id;b.dataset.a==="save"?toggleSave(id):openShare(id);return;}
-  const f=e.target.closest(".q"); if(f) openDetail(f.dataset.id);
+  const f=e.target.closest(".q"); if(f) location.href="/quote/"+f.dataset.id+"/";
 };
 $("#detail").onclick=e=>{
   if(e.target.id==="detail")return closeDetail();
@@ -420,7 +420,7 @@ addEventListener("hashchange",route);
 render();
 route();
 loadData();
-if(location.hash&&QUOTES.some(q=>q.id===location.hash.slice(1)))openShare(location.hash.slice(1));
+if(/^#b\d+$/.test(location.hash))location.replace("/quote/"+location.hash.slice(1)+"/");
 </script>
 </body>
 </html>
