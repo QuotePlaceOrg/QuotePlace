@@ -284,6 +284,9 @@ async function loadData(){
     const list=await (await fetch("https://cdn.jsdelivr.net/gh/QuotePlaceOrg/quoteplace-authors@main/authors.json")).json();
     list.forEach(a=>{ AUTHORS[a.name]={born:a.born,died:a.died,role:a.role,bio:a.bio}; });
   }catch(e){}
+  /* Shuffle the whole feed on every page load: face cards and
+     non-face cards mix together, and the order is fresh each visit. */
+  for(let i=QUOTES.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=QUOTES[i];QUOTES[i]=QUOTES[j];QUOTES[j]=t;}
   render();
 }
 
