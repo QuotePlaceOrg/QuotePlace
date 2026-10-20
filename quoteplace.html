@@ -89,6 +89,7 @@ header{display:flex;align-items:center;gap:16px;padding:14px 5vw;border-bottom:1
 .btn{border:1.5px solid var(--ink);background:none;padding:8px 16px;border-radius:99px;font-weight:600}
 .btn.pri{background:var(--blue);border-color:var(--blue);color:var(--onblue)}
 .nav{border:0;background:none;padding:8px 4px;font-weight:600;color:var(--mute)}
+a.nav{text-decoration:none;cursor:pointer}
 .nav[aria-current=true]{color:var(--ink);box-shadow:inset 0 -3px var(--blue)}
 .hero{padding:7vh 5vw 3vh;max-width:1100px}
 .hero h1{font:400 clamp(40px,7vw,84px)/1 "DM Serif Display",serif;margin:0 0 14px;letter-spacing:-.01em}
@@ -167,6 +168,8 @@ footer{padding:30px 5vw 40px;color:var(--mute);border-top:1px solid var(--line);
   <button class="logo" id="home">Quote<b>Place</b></button>
   <button class="nav" id="navAll" aria-current="true">Browse</button>
   <button class="nav" id="navSaved" aria-current="false">Saved</button>
+  <a class="nav" href="/topics/">Topics</a>
+  <a class="nav" href="/authors/">Authors</a>
   <span class="sp"></span>
   <span id="who"></span>
   <button class="btn pri" id="authBtn">Log in</button>
@@ -200,7 +203,7 @@ footer{padding:30px 5vw 40px;color:var(--mute);border-top:1px solid var(--line);
 <div id="empty" class="empty" hidden></div>
 
 <section id="legal" aria-live="polite"></section>
-<footer><nav class="xlinks" aria-label="Explore"><a href="/topics/">Topics</a><a href="/authors/">Authors</a></nav><nav id="flinks" aria-label="Company and legal"></nav><div>© 2026 QuotePlace. Quotes belong to their authors. Image credits stay with the uploader.</div></footer>
+<footer><nav id="flinks" aria-label="Company and legal"></nav><div>© 2026 QuotePlace. Quotes belong to their authors. Image credits stay with the uploader.</div></footer>
 
 <dialog id="authD">
   <h2 id="authT">Log in</h2>
