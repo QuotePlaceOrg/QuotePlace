@@ -1,0 +1,3101 @@
+{
+ "quotes": [
+  {
+   "id": "b2420",
+   "t": "Be here now.",
+   "a": "Ram Dass",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2421",
+   "t": "We're all just walking each other home.",
+   "a": "Ram Dass",
+   "c": "Life",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2422",
+   "t": "The quieter you become, the more you can hear.",
+   "a": "Ram Dass",
+   "c": "Calm",
+   "style": "sunset"
+  },
+  {
+   "id": "b2423",
+   "t": "Our journey is about being more deeply involved in life and yet less attached to it.",
+   "a": "Ram Dass",
+   "c": "Life",
+   "style": "sage"
+  },
+  {
+   "id": "b2424",
+   "t": "Every time you are tempted to react in the same old way, ask if you want to be a prisoner of the past or a pioneer of the future.",
+   "a": "Deepak Chopra",
+   "c": "Action",
+   "style": "blush"
+  },
+  {
+   "id": "b2425",
+   "t": "In the midst of movement and chaos, keep stillness inside of you.",
+   "a": "Deepak Chopra",
+   "c": "Calm",
+   "style": "navy"
+  },
+  {
+   "id": "b2426",
+   "t": "When you make a choice, you change the future.",
+   "a": "Deepak Chopra",
+   "c": "Action",
+   "style": "cream"
+  },
+  {
+   "id": "b2427",
+   "t": "The way you think, the way you behave, the way you eat, can influence your life by 30 to 50 years.",
+   "a": "Deepak Chopra",
+   "c": "Life",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2428",
+   "t": "The only way out is in.",
+   "a": "Sadhguru",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2429",
+   "t": "If you resist change, you resist life.",
+   "a": "Sadhguru",
+   "c": "Life",
+   "style": "sage"
+  },
+  {
+   "id": "b2430",
+   "t": "Learning to listen is the essence of intelligent living.",
+   "a": "Sadhguru",
+   "c": "Wisdom",
+   "style": "blush"
+  },
+  {
+   "id": "b2431",
+   "t": "The sign of intelligence is that you are always wondering. Idiots are always sure about everything they are doing in their life.",
+   "a": "Sadhguru",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2432",
+   "t": "Love is not an emotion. It is your very existence.",
+   "a": "Sri Sri Ravi Shankar",
+   "c": "Love",
+   "style": "cream"
+  },
+  {
+   "id": "b2433",
+   "t": "Faith is realizing that you always get what you need.",
+   "a": "Sri Sri Ravi Shankar",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2434",
+   "t": "I tell you, deep inside you is a fountain of bliss, a fountain of joy.",
+   "a": "Sri Sri Ravi Shankar",
+   "c": "Happiness",
+   "style": "sunset"
+  },
+  {
+   "id": "b2435",
+   "t": "Nothing in the world can bother you as much as your own mind. In fact, others seem to be bothering you, but it is not others, it is your own mind.",
+   "a": "Sri Sri Ravi Shankar",
+   "c": "Calm",
+   "style": "sage"
+  },
+  {
+   "id": "b2436",
+   "t": "Remember to look up at the stars and not down at your feet. Try to make sense of what you see and wonder about what makes the universe exist. Be curious.",
+   "a": "Stephen Hawking",
+   "c": "Wisdom",
+   "style": "blush"
+  },
+  {
+   "id": "b2437",
+   "t": "Intelligence is the ability to adapt to change.",
+   "a": "Stephen Hawking",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2438",
+   "t": "However difficult life may seem, there is always something you can do and succeed at. It matters that you don't just give up.",
+   "a": "Stephen Hawking",
+   "c": "Courage",
+   "style": "cream"
+  },
+  {
+   "id": "b2439",
+   "t": "We are just an advanced breed of monkeys on a minor planet of a very average star. But we can understand the Universe. That makes us something very special.",
+   "a": "Stephen Hawking",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2440",
+   "t": "I would rather have questions that can't be answered than answers that can't be questioned.",
+   "a": "Richard Feynman",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2441",
+   "t": "The first principle is that you must not fool yourself — and you are the easiest person to fool.",
+   "a": "Richard Feynman",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2442",
+   "t": "What I cannot create, I do not understand.",
+   "a": "Richard Feynman",
+   "c": "Wisdom",
+   "style": "blush"
+  },
+  {
+   "id": "b2443",
+   "t": "I think I can safely say that nobody understands quantum mechanics.",
+   "a": "Richard Feynman",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2444",
+   "t": "The universe is under no obligation to make sense to you.",
+   "a": "Neil deGrasse Tyson",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2445",
+   "t": "The good thing about science is that it's true whether or not you believe in it.",
+   "a": "Neil deGrasse Tyson",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2446",
+   "t": "We are all connected; to each other, biologically; to the earth, chemically; to the rest of the universe, atomically.",
+   "a": "Neil deGrasse Tyson",
+   "c": "Life",
+   "style": "sunset"
+  },
+  {
+   "id": "b2447",
+   "t": "Knowing how to think empowers you far beyond those who know only what to think.",
+   "a": "Neil deGrasse Tyson",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2448",
+   "t": "Everyone you will ever meet knows something you don't.",
+   "a": "Bill Nye",
+   "c": "Wisdom",
+   "style": "blush"
+  },
+  {
+   "id": "b2449",
+   "t": "There's no Planet B.",
+   "a": "Bill Nye",
+   "c": "Life",
+   "style": "navy"
+  },
+  {
+   "id": "b2450",
+   "t": "Science is the key to our future, and if you don't believe in science, then you're holding everybody back.",
+   "a": "Bill Nye",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2451",
+   "t": "What you do makes a difference, and you have to decide what kind of difference you want to make.",
+   "a": "Jane Goodall",
+   "c": "Action",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2452",
+   "t": "The greatest danger to our future is apathy.",
+   "a": "Jane Goodall",
+   "c": "Courage",
+   "style": "sunset"
+  },
+  {
+   "id": "b2453",
+   "t": "Only if we understand, can we care. Only if we care, we will help. Only if we help, we shall be saved.",
+   "a": "Jane Goodall",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2454",
+   "t": "Every individual matters. Every individual has a role to play. Every individual makes a difference.",
+   "a": "Jane Goodall",
+   "c": "Action",
+   "style": "blush"
+  },
+  {
+   "id": "b2455",
+   "t": "The natural world is the greatest source of excitement; the greatest source of visual beauty; the greatest source of intellectual interest. It is the greatest source of so much in life that makes life worth living.",
+   "a": "David Attenborough",
+   "c": "Life",
+   "style": "navy"
+  },
+  {
+   "id": "b2456",
+   "t": "An understanding of the natural world and what's in it is a source of not only a great curiosity but great fulfillment.",
+   "a": "David Attenborough",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2457",
+   "t": "I just wish the world was twice as big and half of it was still unexplored.",
+   "a": "David Attenborough",
+   "c": "Life",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2458",
+   "t": "If we take care of nature, nature will take care of us.",
+   "a": "David Attenborough",
+   "c": "Life",
+   "style": "sunset"
+  },
+  {
+   "id": "b2459",
+   "t": "One sometimes finds what one is not looking for.",
+   "a": "Alexander Fleming",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2460",
+   "t": "Never neglect an extraordinary appearance or happening.",
+   "a": "Alexander Fleming",
+   "c": "Wisdom",
+   "style": "blush"
+  },
+  {
+   "id": "b2461",
+   "t": "When I woke up just after dawn on September 28, 1928, I certainly didn't plan to revolutionize all medicine by discovering the world's first antibiotic, or bacteria killer. But I suppose that was exactly what I did.",
+   "a": "Alexander Fleming",
+   "c": "Life",
+   "style": "navy"
+  },
+  {
+   "id": "b2462",
+   "t": "The real question is not whether machines think but whether men do.",
+   "a": "B. F. Skinner",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2463",
+   "t": "Education is what survives when what has been learnt has been forgotten.",
+   "a": "B. F. Skinner",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2464",
+   "t": "A failure is not always a mistake; it may simply be the best one can do under the circumstances. The real mistake is to stop trying.",
+   "a": "B. F. Skinner",
+   "c": "Courage",
+   "style": "sunset"
+  },
+  {
+   "id": "b2465",
+   "t": "Facts are the air of scientists. Without them you never can fly.",
+   "a": "Ivan Pavlov",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2466",
+   "t": "Don't become a mere recorder of facts, but try to penetrate the mystery of their origin.",
+   "a": "Ivan Pavlov",
+   "c": "Wisdom",
+   "style": "blush"
+  },
+  {
+   "id": "b2467",
+   "t": "Perfect as the wing of a bird may be, it will never enable the bird to fly if unsupported by the air.",
+   "a": "Ivan Pavlov",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2468",
+   "t": "Anything one man can imagine, other men can make real.",
+   "a": "Jules Verne",
+   "c": "Action",
+   "style": "cream"
+  },
+  {
+   "id": "b2469",
+   "t": "Science, my lad, is made up of mistakes, but they are mistakes which it is useful to make, because they lead little by little to the truth.",
+   "a": "Jules Verne",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2470",
+   "t": "We may brave human laws, but we cannot resist natural ones.",
+   "a": "Jules Verne",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2471",
+   "t": "The chance which now seems lost may present itself at the last moment.",
+   "a": "Jules Verne",
+   "c": "Courage",
+   "style": "sage"
+  },
+  {
+   "id": "b2472",
+   "t": "Adapt or perish, now as ever, is nature's inexorable imperative.",
+   "a": "H. G. Wells",
+   "c": "Action",
+   "style": "blush"
+  },
+  {
+   "id": "b2473",
+   "t": "Human history becomes more and more a race between education and catastrophe.",
+   "a": "H. G. Wells",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2474",
+   "t": "Moral indignation is jealousy with a halo.",
+   "a": "H. G. Wells",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2475",
+   "t": "What really matters is what you do with what you have.",
+   "a": "H. G. Wells",
+   "c": "Life",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2476",
+   "t": "So we beat on, boats against the current, borne back ceaselessly into the past.",
+   "a": "F. Scott Fitzgerald",
+   "c": "Life",
+   "style": "sunset"
+  },
+  {
+   "id": "b2477",
+   "t": "The test of a first-rate intelligence is the ability to hold two opposed ideas in the mind at the same time, and still retain the ability to function.",
+   "a": "F. Scott Fitzgerald",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2478",
+   "t": "There are no second acts in American lives.",
+   "a": "F. Scott Fitzgerald",
+   "c": "Life",
+   "style": "blush"
+  },
+  {
+   "id": "b2479",
+   "t": "Show me a hero, and I'll write you a tragedy.",
+   "a": "F. Scott Fitzgerald",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2480",
+   "t": "A woman must have money and a room of her own if she is to write fiction.",
+   "a": "Virginia Woolf",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2481",
+   "t": "One cannot think well, love well, sleep well, if one has not dined well.",
+   "a": "Virginia Woolf",
+   "c": "Life",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2482",
+   "t": "I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.",
+   "a": "Virginia Woolf",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2483",
+   "t": "Life is not a series of gig lamps symmetrically arranged; life is a luminous halo, a semi-transparent envelope surrounding us from the beginning of consciousness to the end.",
+   "a": "Virginia Woolf",
+   "c": "Life",
+   "style": "sage"
+  },
+  {
+   "id": "b2484",
+   "t": "If you can keep your head when all about you are losing theirs and blaming it on you.",
+   "a": "Rudyard Kipling",
+   "c": "Courage",
+   "style": "blush"
+  },
+  {
+   "id": "b2485",
+   "t": "Oh, East is East, and West is West, and never the twain shall meet.",
+   "a": "Rudyard Kipling",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2486",
+   "t": "For the strength of the Pack is the Wolf, and the strength of the Wolf is the Pack.",
+   "a": "Rudyard Kipling",
+   "c": "Friendship",
+   "style": "cream"
+  },
+  {
+   "id": "b2487",
+   "t": "I keep six honest serving-men (They taught me all I knew); their names are What and Why and When and How and Where and Who.",
+   "a": "Rudyard Kipling",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2488",
+   "t": "The Child is father of the Man.",
+   "a": "William Wordsworth",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2489",
+   "t": "I wandered lonely as a cloud that floats on high o'er vales and hills, when all at once I saw a crowd, a host, of golden daffodils.",
+   "a": "William Wordsworth",
+   "c": "Calm",
+   "style": "sage"
+  },
+  {
+   "id": "b2490",
+   "t": "Getting and spending, we lay waste our powers.",
+   "a": "William Wordsworth",
+   "c": "Life",
+   "style": "blush"
+  },
+  {
+   "id": "b2491",
+   "t": "Poetry is the spontaneous overflow of powerful feelings: it takes its origin from emotion recollected in tranquillity.",
+   "a": "William Wordsworth",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2492",
+   "t": "Fill your paper with the breathings of your heart.",
+   "a": "William Wordsworth",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2493",
+   "t": "Who has seen the wind? Neither I nor you: but when the leaves hang trembling, the wind is passing through.",
+   "a": "Christina Rossetti",
+   "c": "Calm",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2494",
+   "t": "My heart is like a singing bird whose nest is in a watered shoot; my heart is like an apple-tree whose boughs are bent with thickset fruit.",
+   "a": "Christina Rossetti",
+   "c": "Happiness",
+   "style": "sunset"
+  },
+  {
+   "id": "b2495",
+   "t": "When I am dead, my dearest, sing no sad songs for me.",
+   "a": "Christina Rossetti",
+   "c": "Life",
+   "style": "sage"
+  },
+  {
+   "id": "b2496",
+   "t": "Better by far you should forget and smile than that you should remember and be sad.",
+   "a": "Christina Rossetti",
+   "c": "Love",
+   "style": "blush"
+  },
+  {
+   "id": "b2497",
+   "t": "I took a deep breath and listened to the old brag of my heart. I am, I am, I am.",
+   "a": "Sylvia Plath",
+   "c": "Life",
+   "style": "navy"
+  },
+  {
+   "id": "b2498",
+   "t": "I can never read all the books I want; I can never be all the people I want and live all the lives I want.",
+   "a": "Sylvia Plath",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2499",
+   "t": "Out of the ash I rise with my red hair, and I eat men like air.",
+   "a": "Sylvia Plath",
+   "c": "Courage",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2500",
+   "t": "Kiss me, and you will see how important I am.",
+   "a": "Sylvia Plath",
+   "c": "Love",
+   "style": "sunset"
+  },
+  {
+   "id": "b2501",
+   "t": "Even after all this time, the sun never says to the earth, 'You owe me.' Look what happens with a love like that. It lights the whole sky.",
+   "a": "Hafiz",
+   "c": "Love",
+   "style": "sage"
+  },
+  {
+   "id": "b2502",
+   "t": "Fear is the cheapest room in the house. I would like to see you living in better conditions.",
+   "a": "Hafiz",
+   "c": "Courage",
+   "style": "blush"
+  },
+  {
+   "id": "b2503",
+   "t": "I wish I could show you, when you are lonely or in darkness, the astonishing light of your own being.",
+   "a": "Hafiz",
+   "c": "Life",
+   "style": "navy"
+  },
+  {
+   "id": "b2504",
+   "t": "Your heart and my heart are very, very old friends.",
+   "a": "Hafiz",
+   "c": "Friendship",
+   "style": "cream"
+  },
+  {
+   "id": "b2505",
+   "t": "Nations are born in the hearts of poets; they prosper and die in the hands of politicians.",
+   "a": "Allama Iqbal",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2506",
+   "t": "The ultimate aim of the ego is not to see something, but to be something.",
+   "a": "Allama Iqbal",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2507",
+   "t": "Raise your selfhood so high that before every decree of destiny, God Himself asks His servant: 'Tell me, what is your will?'",
+   "a": "Allama Iqbal",
+   "c": "Action",
+   "style": "sage"
+  },
+  {
+   "id": "b2508",
+   "t": "Vision without power does bring moral elevation but cannot give a lasting culture.",
+   "a": "Allama Iqbal",
+   "c": "Wisdom",
+   "style": "blush"
+  },
+  {
+   "id": "b2509",
+   "t": "I too have a tongue in my mouth. If only you would ask what I have to say.",
+   "a": "Jaun Elia",
+   "c": "Life",
+   "style": "navy"
+  },
+  {
+   "id": "b2510",
+   "t": "Who will look after this house now? Every day, something or the other breaks.",
+   "a": "Jaun Elia",
+   "c": "Life",
+   "style": "cream"
+  },
+  {
+   "id": "b2511",
+   "t": "Why do I find no peace of mind? There was, after all, only one person in the whole world.",
+   "a": "Jaun Elia",
+   "c": "Love",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2512",
+   "t": "I am convinced my mother always spoke the truth — in the days of my childhood, fairies used to live in the moon.",
+   "a": "Jaun Elia",
+   "c": "Happiness",
+   "style": "sunset"
+  },
+  {
+   "id": "b2513",
+   "t": "This is only the beginning of love — why do you weep? Wait and watch what is yet to come.",
+   "a": "Mir Taqi Mir",
+   "c": "Love",
+   "style": "sage"
+  },
+  {
+   "id": "b2514",
+   "t": "Every leaf, every shrub knows the state of my heart; the flower alone does not know, though the whole garden knows.",
+   "a": "Mir Taqi Mir",
+   "c": "Love",
+   "style": "blush"
+  },
+  {
+   "id": "b2515",
+   "t": "You appeared before me and I lost my senses; you parted me even from my own self.",
+   "a": "Mir Taqi Mir",
+   "c": "Love",
+   "style": "navy"
+  },
+  {
+   "id": "b2516",
+   "t": "My existence is like a bubble; all this display is but a mirage.",
+   "a": "Mir Taqi Mir",
+   "c": "Life",
+   "style": "cream"
+  },
+  {
+   "id": "b2517",
+   "t": "You will never tire, you will never stop, you will never turn back — take this oath, take this oath, take this oath! Agneepath! Agneepath! Agneepath!",
+   "a": "Harivansh Rai Bachchan",
+   "c": "Courage",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2518",
+   "t": "The boat never crosses if it fears the waves; those who keep trying never truly lose.",
+   "a": "Harivansh Rai Bachchan",
+   "c": "Action",
+   "style": "sunset"
+  },
+  {
+   "id": "b2519",
+   "t": "A body of clay, a mind brimming with joy, a life of one fleeting moment — that is my introduction.",
+   "a": "Harivansh Rai Bachchan",
+   "c": "Life",
+   "style": "sage"
+  },
+  {
+   "id": "b2520",
+   "t": "What has passed is a chapter closed; what is gone is gone.",
+   "a": "Harivansh Rai Bachchan",
+   "c": "Life",
+   "style": "blush"
+  },
+  {
+   "id": "b2521",
+   "t": "I am a cloud filled with the water of sorrow.",
+   "a": "Mahadevi Varma",
+   "c": "Life",
+   "style": "navy"
+  },
+  {
+   "id": "b2522",
+   "t": "Burn on, sweetly, sweetly, O my little lamp.",
+   "a": "Mahadevi Varma",
+   "c": "Life",
+   "style": "cream"
+  },
+  {
+   "id": "b2523",
+   "t": "If you had come even once, flowers of tenderness and tidings would have lain strewn along your path.",
+   "a": "Mahadevi Varma",
+   "c": "Love",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2524",
+   "t": "Gallantly she fought, like a true warrior — she was the Rani of Jhansi.",
+   "a": "Subhadra Kumari Chauhan",
+   "c": "Courage",
+   "style": "sunset"
+  },
+  {
+   "id": "b2525",
+   "t": "This tale we have heard from the lips of the Bundela bards.",
+   "a": "Subhadra Kumari Chauhan",
+   "c": "Courage",
+   "style": "sage"
+  },
+  {
+   "id": "b2526",
+   "t": "If this kadamba tree, Mother, stood on the banks of the Yamuna, I too would sit upon it and slowly become Kanhaiya.",
+   "a": "Subhadra Kumari Chauhan",
+   "c": "Life",
+   "style": "blush"
+  },
+  {
+   "id": "b2527",
+   "t": "Tell me, how should the springtime of heroes be?",
+   "a": "Subhadra Kumari Chauhan",
+   "c": "Courage",
+   "style": "navy"
+  },
+  {
+   "id": "b2528",
+   "t": "Forgiveness adorns only the serpent that has venom; what worth has the one that is toothless, venomless, meek and mild?",
+   "a": "Ramdhari Singh Dinkar",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2529",
+   "t": "When destruction descends upon man, his reason is the first to die.",
+   "a": "Ramdhari Singh Dinkar",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2530",
+   "t": "No more supplication — now there shall be war: victory in life, or death.",
+   "a": "Ramdhari Singh Dinkar",
+   "c": "Courage",
+   "style": "sunset"
+  },
+  {
+   "id": "b2531",
+   "t": "If you carry a restlessness in your heart as you walk, then you are truly alive.",
+   "a": "Javed Akhtar",
+   "c": "Life",
+   "style": "sage"
+  },
+  {
+   "id": "b2532",
+   "t": "Everyone stands one step away from happiness; every house is short of just one room.",
+   "a": "Javed Akhtar",
+   "c": "Happiness",
+   "style": "blush"
+  },
+  {
+   "id": "b2533",
+   "t": "I do not like going where everyone goes; I do not like travelling the well-trodden road.",
+   "a": "Javed Akhtar",
+   "c": "Life",
+   "style": "navy"
+  },
+  {
+   "id": "b2534",
+   "t": "Everywhere, in every place, there are countless people — and yet man remains a victim of loneliness.",
+   "a": "Javed Akhtar",
+   "c": "Life",
+   "style": "cream"
+  },
+  {
+   "id": "b2535",
+   "t": "I am not angry with you, O life; I am only bewildered by you.",
+   "a": "Gulzar",
+   "c": "Life",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2536",
+   "t": "The moment that is coming is about to slip away; if you can, live a whole lifetime within this passing moment.",
+   "a": "Gulzar",
+   "c": "Life",
+   "style": "sunset"
+  },
+  {
+   "id": "b2537",
+   "t": "We have a little, and a little is all we need; life, somehow, carries on.",
+   "a": "Gulzar",
+   "c": "Happiness",
+   "style": "sage"
+  },
+  {
+   "id": "b2538",
+   "t": "My name will be lost, this face will change; my voice alone is my identity.",
+   "a": "Gulzar",
+   "c": "Life",
+   "style": "blush"
+  },
+  {
+   "id": "b2539",
+   "t": "The purpose of literature is the criticism of life.",
+   "a": "Munshi Premchand",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2540",
+   "t": "What a wretched custom — the man who could not get even a rag to cover his body while alive must be given a new shroud when he is dead.",
+   "a": "Munshi Premchand",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2541",
+   "t": "I am a labourer. The day I do not labour, I have no right to eat.",
+   "a": "Munshi Premchand",
+   "c": "Habits",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2542",
+   "t": "Who drinks in order to endure, Parvati? I drink only so that I can breathe.",
+   "a": "Sarat Chandra Chattopadhyay",
+   "c": "Love",
+   "style": "sunset"
+  },
+  {
+   "id": "b2543",
+   "t": "Dying is not so easy, Parvati — not so easy at all.",
+   "a": "Sarat Chandra Chattopadhyay",
+   "c": "Life",
+   "style": "sage"
+  },
+  {
+   "id": "b2544",
+   "t": "I bow to thee, Mother! Rich with thy swift-flowing streams, bright with thy orchard blossoms, cool with thy balmy winds, dark with the harvests of ripened fields.",
+   "a": "Bankim Chandra Chatterjee",
+   "c": "Courage",
+   "style": "blush"
+  },
+  {
+   "id": "b2545",
+   "t": "Traveller, have you lost your way?",
+   "a": "Bankim Chandra Chatterjee",
+   "c": "Life",
+   "style": "navy"
+  },
+  {
+   "id": "b2546",
+   "t": "Bengal has no history of her own; that history must be written by Bengalis themselves.",
+   "a": "Bankim Chandra Chatterjee",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2547",
+   "t": "Stay a while, O traveller, if you were born in Bengal — rest a brief moment at this grave.",
+   "a": "Michael Madhusudan Dutt",
+   "c": "Life",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2548",
+   "t": "O Bengal, countless gems lie stored within your treasury.",
+   "a": "Michael Madhusudan Dutt",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2549",
+   "t": "Friend, how am I to hold back my heart?",
+   "a": "Michael Madhusudan Dutt",
+   "c": "Love",
+   "style": "sage"
+  },
+  {
+   "id": "b2550",
+   "t": "Say, O hero! Say — my head is held high!",
+   "a": "Kazi Nazrul Islam",
+   "c": "Courage",
+   "style": "blush"
+  },
+  {
+   "id": "b2551",
+   "t": "Break open the iron gates of that prison; smash the blood-stained altar of stone.",
+   "a": "Kazi Nazrul Islam",
+   "c": "Courage",
+   "style": "navy"
+  },
+  {
+   "id": "b2552",
+   "t": "We are two flowers upon a single stalk — the Hindu and the Muslim.",
+   "a": "Kazi Nazrul Islam",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2553",
+   "t": "I sing the song of equality, where all barriers and differences have melted into one.",
+   "a": "Kazi Nazrul Islam",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2554",
+   "t": "Liberty, when it begins to take root, is a plant of rapid growth.",
+   "a": "George Washington",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2555",
+   "t": "Perseverance and spirit have done wonders in all ages.",
+   "a": "George Washington",
+   "c": "Action",
+   "style": "sage"
+  },
+  {
+   "id": "b2556",
+   "t": "Associate yourself with men of good quality if you esteem your own reputation; for it is better to be alone than in bad company.",
+   "a": "George Washington",
+   "c": "Friendship",
+   "style": "blush"
+  },
+  {
+   "id": "b2557",
+   "t": "It is better to offer no excuse than a bad one.",
+   "a": "George Washington",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2558",
+   "t": "I came, I saw, I conquered.",
+   "a": "Julius Caesar",
+   "c": "Action",
+   "style": "cream"
+  },
+  {
+   "id": "b2559",
+   "t": "The die is cast.",
+   "a": "Julius Caesar",
+   "c": "Action",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2560",
+   "t": "Men are nearly always willing to believe what they wish to believe.",
+   "a": "Julius Caesar",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2561",
+   "t": "Experience is the teacher of all things.",
+   "a": "Julius Caesar",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2562",
+   "t": "You too, my child?",
+   "a": "Julius Caesar",
+   "c": "Life",
+   "style": "blush"
+  },
+  {
+   "id": "b2563",
+   "t": "I will not be led in a triumph.",
+   "a": "Cleopatra",
+   "c": "Courage",
+   "style": "navy"
+  },
+  {
+   "id": "b2564",
+   "t": "Bury me beside Antony.",
+   "a": "Cleopatra",
+   "c": "Love",
+   "style": "cream"
+  },
+  {
+   "id": "b2565",
+   "t": "We are not amused.",
+   "a": "Queen Victoria",
+   "c": "Happiness",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2566",
+   "t": "I will be good.",
+   "a": "Queen Victoria",
+   "c": "Life",
+   "style": "sunset"
+  },
+  {
+   "id": "b2567",
+   "t": "Great events make me quiet and calm; it is only trifles that irritate my nerves.",
+   "a": "Queen Victoria",
+   "c": "Calm",
+   "style": "sage"
+  },
+  {
+   "id": "b2568",
+   "t": "The Queen is most anxious to enlist everyone who can speak or write to join in checking this mad, wicked folly of 'Women's Rights', with all its attendant horrors.",
+   "a": "Queen Victoria",
+   "c": "Life",
+   "style": "blush"
+  },
+  {
+   "id": "b2569",
+   "t": "I know I have the body of a weak and feeble woman; but I have the heart and stomach of a king, and of a king of England too.",
+   "a": "Elizabeth I",
+   "c": "Courage",
+   "style": "navy"
+  },
+  {
+   "id": "b2570",
+   "t": "I have already joined myself in marriage to a husband, namely the kingdom of England.",
+   "a": "Elizabeth I",
+   "c": "Life",
+   "style": "cream"
+  },
+  {
+   "id": "b2571",
+   "t": "I would rather be a beggar and single than a queen and married.",
+   "a": "Elizabeth I",
+   "c": "Life",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2572",
+   "t": "Though God hath raised me high, yet this I count the glory of my Crown, that I have reigned with your loves.",
+   "a": "Elizabeth I",
+   "c": "Love",
+   "style": "sunset"
+  },
+  {
+   "id": "b2573",
+   "t": "I shall be an autocrat: that's my trade. And the good Lord will forgive me: that's his.",
+   "a": "Catherine the Great",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2574",
+   "t": "Power without a nation's confidence is nothing.",
+   "a": "Catherine the Great",
+   "c": "Wisdom",
+   "style": "blush"
+  },
+  {
+   "id": "b2575",
+   "t": "I praise loudly. I blame softly.",
+   "a": "Catherine the Great",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2576",
+   "t": "A great wind is blowing, and that gives you either imagination or a headache.",
+   "a": "Catherine the Great",
+   "c": "Life",
+   "style": "cream"
+  },
+  {
+   "id": "b2577",
+   "t": "The more a man knows, the more he forgives.",
+   "a": "Catherine the Great",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2578",
+   "t": "If I am not in the state of grace, may God put me there; and if I am, may God so keep me.",
+   "a": "Joan of Arc",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2579",
+   "t": "Hold the cross high so I may see it through the flames.",
+   "a": "Joan of Arc",
+   "c": "Courage",
+   "style": "sage"
+  },
+  {
+   "id": "b2580",
+   "t": "I am not afraid; I was born to do this.",
+   "a": "Joan of Arc",
+   "c": "Courage",
+   "style": "blush"
+  },
+  {
+   "id": "b2581",
+   "t": "Act, and God will act.",
+   "a": "Joan of Arc",
+   "c": "Action",
+   "style": "navy"
+  },
+  {
+   "id": "b2582",
+   "t": "I was a queen, and you took away my crown; a wife, and you killed my husband; a mother, and you deprived me of my children. My blood alone remains: take it, but do not make me suffer long.",
+   "a": "Marie Antoinette",
+   "c": "Courage",
+   "style": "cream"
+  },
+  {
+   "id": "b2583",
+   "t": "Courage! I have shown it for years; think you I shall lose it at the moment when my sufferings are to end?",
+   "a": "Marie Antoinette",
+   "c": "Courage",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2584",
+   "t": "There is nothing new except what has been forgotten.",
+   "a": "Marie Antoinette",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2585",
+   "t": "People always say that I didn't give up my seat because I was tired, but that isn't true. The only tired I was, was tired of giving in.",
+   "a": "Rosa Parks",
+   "c": "Courage",
+   "style": "sage"
+  },
+  {
+   "id": "b2586",
+   "t": "I have learned over the years that when one's mind is made up, this diminishes fear; knowing what must be done does away with fear.",
+   "a": "Rosa Parks",
+   "c": "Courage",
+   "style": "blush"
+  },
+  {
+   "id": "b2587",
+   "t": "I would like to be known as a person who is concerned about freedom and equality and justice and prosperity for all people.",
+   "a": "Rosa Parks",
+   "c": "Life",
+   "style": "navy"
+  },
+  {
+   "id": "b2588",
+   "t": "Each person must live their life as a model for others.",
+   "a": "Rosa Parks",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2589",
+   "t": "I want you to act as if your house is on fire, because it is.",
+   "a": "Greta Thunberg",
+   "c": "Action",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2590",
+   "t": "You have stolen my dreams and my childhood with your empty words.",
+   "a": "Greta Thunberg",
+   "c": "Life",
+   "style": "sunset"
+  },
+  {
+   "id": "b2591",
+   "t": "We cannot solve a crisis without treating it as a crisis.",
+   "a": "Greta Thunberg",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2592",
+   "t": "Change is coming, whether you like it or not.",
+   "a": "Greta Thunberg",
+   "c": "Action",
+   "style": "blush"
+  },
+  {
+   "id": "b2593",
+   "t": "Our house is still on fire, and your inaction is fueling the flames by the hour.",
+   "a": "Greta Thunberg",
+   "c": "Action",
+   "style": "navy"
+  },
+  {
+   "id": "b2594",
+   "t": "The only way to do great work is to love what you do.",
+   "a": "Steve Jobs",
+   "c": "Success",
+   "style": "cream"
+  },
+  {
+   "id": "b2595",
+   "t": "Stay hungry. Stay foolish.",
+   "a": "Steve Jobs",
+   "c": "Life",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2596",
+   "t": "Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life.",
+   "a": "Steve Jobs",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2597",
+   "t": "Design is not just what it looks like and feels like. Design is how it works.",
+   "a": "Steve Jobs",
+   "c": "Success",
+   "style": "sage"
+  },
+  {
+   "id": "b2598",
+   "t": "Innovation distinguishes between a leader and a follower.",
+   "a": "Steve Jobs",
+   "c": "Success",
+   "style": "blush"
+  },
+  {
+   "id": "b2599",
+   "t": "Your most unhappy customers are your greatest source of learning.",
+   "a": "Bill Gates",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2600",
+   "t": "Success is a lousy teacher. It seduces smart people into thinking they can't lose.",
+   "a": "Bill Gates",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2601",
+   "t": "We always overestimate the change that will occur in the next two years and underestimate the change that will occur in the next ten years.",
+   "a": "Bill Gates",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2602",
+   "t": "It's fine to celebrate success, but it is more important to heed the lessons of failure.",
+   "a": "Bill Gates",
+   "c": "Success",
+   "style": "sunset"
+  },
+  {
+   "id": "b2603",
+   "t": "I believe that if you show people the problems and you show them the solutions, they will be moved to act.",
+   "a": "Bill Gates",
+   "c": "Action",
+   "style": "sage"
+  },
+  {
+   "id": "b2604",
+   "t": "When something is important enough, you do it even if the odds are not in your favor.",
+   "a": "Elon Musk",
+   "c": "Action",
+   "style": "blush"
+  },
+  {
+   "id": "b2605",
+   "t": "Failure is an option here. If things are not failing, you are not innovating enough.",
+   "a": "Elon Musk",
+   "c": "Success",
+   "style": "navy"
+  },
+  {
+   "id": "b2606",
+   "t": "Persistence is very important. You should not give up unless you are forced to give up.",
+   "a": "Elon Musk",
+   "c": "Habits",
+   "style": "cream"
+  },
+  {
+   "id": "b2607",
+   "t": "The first step is to establish that something is possible; then probability will occur.",
+   "a": "Elon Musk",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2608",
+   "t": "I think it is possible for ordinary people to choose to be extraordinary.",
+   "a": "Elon Musk",
+   "c": "Life",
+   "style": "sunset"
+  },
+  {
+   "id": "b2609",
+   "t": "Your brand is what other people say about you when you're not in the room.",
+   "a": "Jeff Bezos",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2610",
+   "t": "I knew that if I failed I wouldn't regret that, but I knew the one thing I might regret is not trying.",
+   "a": "Jeff Bezos",
+   "c": "Courage",
+   "style": "blush"
+  },
+  {
+   "id": "b2611",
+   "t": "If you double the number of experiments you do per year, you're going to double your inventiveness.",
+   "a": "Jeff Bezos",
+   "c": "Action",
+   "style": "navy"
+  },
+  {
+   "id": "b2612",
+   "t": "Invention requires a long-term willingness to be misunderstood.",
+   "a": "Jeff Bezos",
+   "c": "Success",
+   "style": "cream"
+  },
+  {
+   "id": "b2613",
+   "t": "What we need to do is always lean into the future.",
+   "a": "Jeff Bezos",
+   "c": "Action",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2614",
+   "t": "Price is what you pay; value is what you get.",
+   "a": "Warren Buffett",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2615",
+   "t": "It takes 20 years to build a reputation and five minutes to ruin it. If you think about that, you'll do things differently.",
+   "a": "Warren Buffett",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2616",
+   "t": "Be fearful when others are greedy, and be greedy when others are fearful.",
+   "a": "Warren Buffett",
+   "c": "Wisdom",
+   "style": "blush"
+  },
+  {
+   "id": "b2617",
+   "t": "The most important investment you can make is in yourself.",
+   "a": "Warren Buffett",
+   "c": "Success",
+   "style": "navy"
+  },
+  {
+   "id": "b2618",
+   "t": "Someone is sitting in the shade today because someone planted a tree a long time ago.",
+   "a": "Warren Buffett",
+   "c": "Life",
+   "style": "cream"
+  },
+  {
+   "id": "b2619",
+   "t": "If somebody offers you an amazing opportunity but you are not sure you can do it, say yes - then learn how to do it later.",
+   "a": "Richard Branson",
+   "c": "Action",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2620",
+   "t": "Business opportunities are like buses, there's always another one coming.",
+   "a": "Richard Branson",
+   "c": "Success",
+   "style": "sunset"
+  },
+  {
+   "id": "b2621",
+   "t": "You don't learn to walk by following rules. You learn by doing, and by falling over.",
+   "a": "Richard Branson",
+   "c": "Action",
+   "style": "sage"
+  },
+  {
+   "id": "b2622",
+   "t": "Clients do not come first. Employees come first. If you take care of your employees, they will take care of the clients.",
+   "a": "Richard Branson",
+   "c": "Wisdom",
+   "style": "blush"
+  },
+  {
+   "id": "b2623",
+   "t": "The brave may not live forever, but the cautious do not live at all.",
+   "a": "Richard Branson",
+   "c": "Courage",
+   "style": "navy"
+  },
+  {
+   "id": "b2624",
+   "t": "The man who dies rich, dies disgraced.",
+   "a": "Andrew Carnegie",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2625",
+   "t": "Put all your eggs in one basket, and then watch that basket.",
+   "a": "Andrew Carnegie",
+   "c": "Success",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2626",
+   "t": "The first man gets the oyster; the second man gets the shell.",
+   "a": "Andrew Carnegie",
+   "c": "Success",
+   "style": "sunset"
+  },
+  {
+   "id": "b2627",
+   "t": "As I grow older, I pay less attention to what men say. I just watch what they do.",
+   "a": "Andrew Carnegie",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2628",
+   "t": "Aim for the highest.",
+   "a": "Andrew Carnegie",
+   "c": "Success",
+   "style": "blush"
+  },
+  {
+   "id": "b2629",
+   "t": "I do not think there is any other quality so essential to success of any kind as the quality of perseverance. It overcomes almost everything, even nature.",
+   "a": "John D. Rockefeller",
+   "c": "Success",
+   "style": "navy"
+  },
+  {
+   "id": "b2630",
+   "t": "The ability to deal with people is as purchasable a commodity as sugar or coffee, and I will pay more for that ability than for any other under the sun.",
+   "a": "John D. Rockefeller",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2631",
+   "t": "Good management consists in showing average people how to do the work of superior people.",
+   "a": "John D. Rockefeller",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2632",
+   "t": "Singleness of purpose is one of the chief essentials for success in life.",
+   "a": "John D. Rockefeller",
+   "c": "Success",
+   "style": "sunset"
+  },
+  {
+   "id": "b2633",
+   "t": "Charity is injurious unless it helps the recipient to become independent of it.",
+   "a": "John D. Rockefeller",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2634",
+   "t": "I never dreamed about success. I worked for it.",
+   "a": "Estee Lauder",
+   "c": "Success",
+   "style": "blush"
+  },
+  {
+   "id": "b2635",
+   "t": "Telephone, telegraph, tell a woman.",
+   "a": "Estee Lauder",
+   "c": "Success",
+   "style": "navy"
+  },
+  {
+   "id": "b2636",
+   "t": "If you don't sell, it's not the product that's wrong, it's you.",
+   "a": "Estee Lauder",
+   "c": "Action",
+   "style": "cream"
+  },
+  {
+   "id": "b2637",
+   "t": "No one ever became a success without taking chances. One must be able to recognize the moment and seize it without delay.",
+   "a": "Estee Lauder",
+   "c": "Courage",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2638",
+   "t": "There is only one boss: the customer. And he can fire everybody in the company, from the chairman on down, simply by spending his money somewhere else.",
+   "a": "Sam Walton",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2639",
+   "t": "Exceed your customers' expectations. If you do, they'll come back over and over again.",
+   "a": "Sam Walton",
+   "c": "Success",
+   "style": "sage"
+  },
+  {
+   "id": "b2640",
+   "t": "Celebrate your successes. Find some humor in your failures. Don't take yourself so seriously. Loosen up, and everybody around you will loosen up.",
+   "a": "Sam Walton",
+   "c": "Happiness",
+   "style": "blush"
+  },
+  {
+   "id": "b2641",
+   "t": "High expectations are the key to everything.",
+   "a": "Sam Walton",
+   "c": "Success",
+   "style": "navy"
+  },
+  {
+   "id": "b2642",
+   "t": "Outstanding leaders go out of their way to boost the self-esteem of their personnel. If people believe in themselves, it's amazing what they can accomplish.",
+   "a": "Sam Walton",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2643",
+   "t": "I don't believe in taking the right decisions. I take decisions and then make them right.",
+   "a": "Ratan Tata",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2644",
+   "t": "Take the stones people throw at you, and use them to build a monument.",
+   "a": "Ratan Tata",
+   "c": "Courage",
+   "style": "sunset"
+  },
+  {
+   "id": "b2645",
+   "t": "Ups and downs in life are very important to keep us going, because a straight line even in an ECG means we are not alive.",
+   "a": "Ratan Tata",
+   "c": "Life",
+   "style": "sage"
+  },
+  {
+   "id": "b2646",
+   "t": "The day I am not able to fly will be a sad day for me.",
+   "a": "Ratan Tata",
+   "c": "Happiness",
+   "style": "blush"
+  },
+  {
+   "id": "b2647",
+   "t": "Think big, think fast, think ahead. Ideas are no one's monopoly.",
+   "a": "Dhirubhai Ambani",
+   "c": "Action",
+   "style": "navy"
+  },
+  {
+   "id": "b2648",
+   "t": "Our dreams have to be bigger. Our ambitions higher. Our commitment deeper. And our efforts greater. This is my dream for Reliance and for India.",
+   "a": "Dhirubhai Ambani",
+   "c": "Success",
+   "style": "cream"
+  },
+  {
+   "id": "b2649",
+   "t": "Growth has no limit at Reliance. I keep revising my vision. Only when you dream it, you can do it.",
+   "a": "Dhirubhai Ambani",
+   "c": "Success",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2650",
+   "t": "Pursue your goals even in the face of difficulties, and convert adversities into opportunities.",
+   "a": "Dhirubhai Ambani",
+   "c": "Courage",
+   "style": "sunset"
+  },
+  {
+   "id": "b2651",
+   "t": "In God we trust; everybody else brings data to the table.",
+   "a": "Narayana Murthy",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2652",
+   "t": "Our assets walk out of the door each evening. We have to make sure that they come back the next morning.",
+   "a": "Narayana Murthy",
+   "c": "Wisdom",
+   "style": "blush"
+  },
+  {
+   "id": "b2653",
+   "t": "When in doubt, disclose.",
+   "a": "Narayana Murthy",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2654",
+   "t": "The real power of money is the power to give it away.",
+   "a": "Narayana Murthy",
+   "c": "Life",
+   "style": "cream"
+  },
+  {
+   "id": "b2655",
+   "t": "Performance leads to recognition. Recognition leads to respect. Respect leads to power.",
+   "a": "Narayana Murthy",
+   "c": "Success",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2656",
+   "t": "If people are not laughing at your goals, your goals are too small.",
+   "a": "Azim Premji",
+   "c": "Success",
+   "style": "sunset"
+  },
+  {
+   "id": "b2657",
+   "t": "Success is achieved twice: once in the mind, and the second time in the real world.",
+   "a": "Azim Premji",
+   "c": "Success",
+   "style": "sage"
+  },
+  {
+   "id": "b2658",
+   "t": "I strongly believe that those of us who are privileged to have wealth should contribute significantly to try and create a better world for the millions who are far less privileged.",
+   "a": "Azim Premji",
+   "c": "Life",
+   "style": "blush"
+  },
+  {
+   "id": "b2659",
+   "t": "The success of every woman should be the inspiration to another. We should raise each other up.",
+   "a": "Serena Williams",
+   "c": "Success",
+   "style": "navy"
+  },
+  {
+   "id": "b2660",
+   "t": "I am lucky that whatever fear I have inside me, my desire to win is always stronger.",
+   "a": "Serena Williams",
+   "c": "Courage",
+   "style": "cream"
+  },
+  {
+   "id": "b2661",
+   "t": "I really think a champion is defined not by their wins but by how they can recover when they fall.",
+   "a": "Serena Williams",
+   "c": "Success",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2662",
+   "t": "Luck has nothing to do with it, because I have spent many, many hours, countless hours, on the court working for my one moment in time, not knowing when it would come.",
+   "a": "Serena Williams",
+   "c": "Habits",
+   "style": "sunset"
+  },
+  {
+   "id": "b2663",
+   "t": "People throw stones at you and you convert them into milestones.",
+   "a": "Sachin Tendulkar",
+   "c": "Success",
+   "style": "sage"
+  },
+  {
+   "id": "b2664",
+   "t": "My life between 22 yards for 24 years; it is hard to believe that that wonderful journey has come to an end.",
+   "a": "Sachin Tendulkar",
+   "c": "Life",
+   "style": "blush"
+  },
+  {
+   "id": "b2665",
+   "t": "I hate losing and cricket being my first love, once I enter the ground it's a different zone altogether and that hunger for winning is always there.",
+   "a": "Sachin Tendulkar",
+   "c": "Courage",
+   "style": "navy"
+  },
+  {
+   "id": "b2666",
+   "t": "Enjoy the game and chase your dreams. Dreams do come true.",
+   "a": "Sachin Tendulkar",
+   "c": "Life",
+   "style": "cream"
+  },
+  {
+   "id": "b2667",
+   "t": "Self-belief and hard work will always earn you success.",
+   "a": "Virat Kohli",
+   "c": "Success",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2668",
+   "t": "I love playing under pressure. In fact, if there's no pressure, then I'm not in the perfect zone.",
+   "a": "Virat Kohli",
+   "c": "Courage",
+   "style": "sunset"
+  },
+  {
+   "id": "b2669",
+   "t": "Whatever you want to do, do with full passion and work really hard towards it. Don't look anywhere else.",
+   "a": "Virat Kohli",
+   "c": "Action",
+   "style": "sage"
+  },
+  {
+   "id": "b2670",
+   "t": "The bat is not a toy, it's a weapon.",
+   "a": "Virat Kohli",
+   "c": "Action",
+   "style": "blush"
+  },
+  {
+   "id": "b2671",
+   "t": "You don't play for the crowd, you play for the country.",
+   "a": "M. S. Dhoni",
+   "c": "Courage",
+   "style": "navy"
+  },
+  {
+   "id": "b2672",
+   "t": "I have always believed that process is more important than results.",
+   "a": "M. S. Dhoni",
+   "c": "Habits",
+   "style": "cream"
+  },
+  {
+   "id": "b2673",
+   "t": "I believe in giving more than 100 percent on the field, and I don't really worry about the result if there's great commitment on the field.",
+   "a": "M. S. Dhoni",
+   "c": "Action",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2674",
+   "t": "Till the full stop doesn't come, the sentence is not complete.",
+   "a": "M. S. Dhoni",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2675",
+   "t": "Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.",
+   "a": "Pele",
+   "c": "Success",
+   "style": "sage"
+  },
+  {
+   "id": "b2676",
+   "t": "The more difficult the victory, the greater the happiness in winning.",
+   "a": "Pele",
+   "c": "Happiness",
+   "style": "blush"
+  },
+  {
+   "id": "b2677",
+   "t": "Enthusiasm is everything. It must be taut and vibrating like a guitar string.",
+   "a": "Pele",
+   "c": "Action",
+   "style": "navy"
+  },
+  {
+   "id": "b2678",
+   "t": "I was born to play football, just like Beethoven was born to play music.",
+   "a": "Pele",
+   "c": "Life",
+   "style": "cream"
+  },
+  {
+   "id": "b2679",
+   "t": "I made mistakes and I paid for them, but the ball is never stained.",
+   "a": "Diego Maradona",
+   "c": "Life",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2680",
+   "t": "To see the ball, to run after it, makes me the happiest man in the world.",
+   "a": "Diego Maradona",
+   "c": "Happiness",
+   "style": "sunset"
+  },
+  {
+   "id": "b2681",
+   "t": "I am Maradona, who makes goals, who makes mistakes. I can take it all, I have shoulders big enough to fight with everybody.",
+   "a": "Diego Maradona",
+   "c": "Courage",
+   "style": "sage"
+  },
+  {
+   "id": "b2682",
+   "t": "When I wear the national team shirt, its sole contact with my skin makes it stand on end.",
+   "a": "Diego Maradona",
+   "c": "Love",
+   "style": "blush"
+  },
+  {
+   "id": "b2683",
+   "t": "You have to fight to reach your dream. You have to sacrifice and work hard for it.",
+   "a": "Lionel Messi",
+   "c": "Action",
+   "style": "navy"
+  },
+  {
+   "id": "b2684",
+   "t": "I have many years to get better and better, and that has to be my ambition. The day you think there is no improvement to be made is a sad one for any player.",
+   "a": "Lionel Messi",
+   "c": "Success",
+   "style": "cream"
+  },
+  {
+   "id": "b2685",
+   "t": "Money is not a motivating factor. Money doesn't thrill me or make me play better. I'm just happy with a ball at my feet.",
+   "a": "Lionel Messi",
+   "c": "Life",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2686",
+   "t": "I never think about the play or visualize anything. I do what comes to me at that moment. Instinct. It has always been like that.",
+   "a": "Lionel Messi",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2687",
+   "t": "Your love makes me strong. Your hate makes me unstoppable.",
+   "a": "Cristiano Ronaldo",
+   "c": "Courage",
+   "style": "sage"
+  },
+  {
+   "id": "b2688",
+   "t": "Talent without working hard is nothing.",
+   "a": "Cristiano Ronaldo",
+   "c": "Habits",
+   "style": "blush"
+  },
+  {
+   "id": "b2689",
+   "t": "I am not a perfectionist, but I like to feel that things are done well.",
+   "a": "Cristiano Ronaldo",
+   "c": "Success",
+   "style": "navy"
+  },
+  {
+   "id": "b2690",
+   "t": "Dedication, hard work all the time, and belief.",
+   "a": "Cristiano Ronaldo",
+   "c": "Habits",
+   "style": "cream"
+  },
+  {
+   "id": "b2691",
+   "t": "Worrying gets you nowhere. If you turn up worrying about how you're going to perform, you've already lost.",
+   "a": "Usain Bolt",
+   "c": "Calm",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2692",
+   "t": "There are better starters than me, but I'm a strong finisher.",
+   "a": "Usain Bolt",
+   "c": "Success",
+   "style": "sunset"
+  },
+  {
+   "id": "b2693",
+   "t": "Don't think about the start of the race, think about the ending.",
+   "a": "Usain Bolt",
+   "c": "Action",
+   "style": "sage"
+  },
+  {
+   "id": "b2694",
+   "t": "I know what I can do, so I never doubt myself.",
+   "a": "Usain Bolt",
+   "c": "Courage",
+   "style": "blush"
+  },
+  {
+   "id": "b2695",
+   "t": "You can't put a limit on anything. The more you dream, the farther you get.",
+   "a": "Michael Phelps",
+   "c": "Success",
+   "style": "navy"
+  },
+  {
+   "id": "b2696",
+   "t": "I think goals should never be easy, they should force you to work, even if they are uncomfortable at the time.",
+   "a": "Michael Phelps",
+   "c": "Action",
+   "style": "cream"
+  },
+  {
+   "id": "b2697",
+   "t": "If you want to be the best, you have to do things that other people aren't willing to do.",
+   "a": "Michael Phelps",
+   "c": "Habits",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2698",
+   "t": "Things won't go perfect. It's all about how you adapt from those things and learn from mistakes.",
+   "a": "Michael Phelps",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2699",
+   "t": "I never wanted to be the next Bruce Lee. I just wanted to be the first Jackie Chan.",
+   "a": "Jackie Chan",
+   "c": "Life",
+   "style": "sage"
+  },
+  {
+   "id": "b2700",
+   "t": "Do not let circumstances control you. You change your circumstances.",
+   "a": "Jackie Chan",
+   "c": "Action",
+   "style": "blush"
+  },
+  {
+   "id": "b2701",
+   "t": "The best fights are the ones we avoid.",
+   "a": "Jackie Chan",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2702",
+   "t": "The mind is the limit. As long as the mind can envision the fact that you can do something, you can do it, as long as you really believe 100 percent.",
+   "a": "Arnold Schwarzenegger",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2703",
+   "t": "Strength does not come from winning. Your struggles develop your strengths. When you go through hardships and decide not to surrender, that is strength.",
+   "a": "Arnold Schwarzenegger",
+   "c": "Courage",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2704",
+   "t": "Just remember, you can't climb the ladder of success with your hands in your pockets.",
+   "a": "Arnold Schwarzenegger",
+   "c": "Action",
+   "style": "sunset"
+  },
+  {
+   "id": "b2705",
+   "t": "The worst thing I can be is the same as everybody else. I hate that.",
+   "a": "Arnold Schwarzenegger",
+   "c": "Life",
+   "style": "sage"
+  },
+  {
+   "id": "b2706",
+   "t": "What is the point of being on this Earth if you are going to be like everyone else?",
+   "a": "Arnold Schwarzenegger",
+   "c": "Life",
+   "style": "blush"
+  },
+  {
+   "id": "b2707",
+   "t": "Success isn't always about greatness. It's about consistency. Consistent hard work leads to success. Greatness will come.",
+   "a": "Dwayne Johnson",
+   "c": "Habits",
+   "style": "navy"
+  },
+  {
+   "id": "b2708",
+   "t": "Blood, sweat and respect. The first two you give, the last one you earn.",
+   "a": "Dwayne Johnson",
+   "c": "Success",
+   "style": "cream"
+  },
+  {
+   "id": "b2709",
+   "t": "Don't be afraid to be ambitious about your goals. Hard work never stops. Neither should your dreams.",
+   "a": "Dwayne Johnson",
+   "c": "Action",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2710",
+   "t": "One of the most important things you can accomplish is just being yourself.",
+   "a": "Dwayne Johnson",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2711",
+   "t": "I love what I do. I take great pride in what I do. And I can't do something halfway, three-quarters, nine-tenths. If I'm going to do something, I go all the way.",
+   "a": "Tom Cruise",
+   "c": "Action",
+   "style": "sage"
+  },
+  {
+   "id": "b2712",
+   "t": "When you have to cope with a lot of problems, you're either going to sink or swim.",
+   "a": "Tom Cruise",
+   "c": "Courage",
+   "style": "blush"
+  },
+  {
+   "id": "b2713",
+   "t": "I disagree with people who think you learn more from getting beat up than you do from winning.",
+   "a": "Tom Cruise",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2714",
+   "t": "Success is not a good teacher. Failure makes you humble.",
+   "a": "Shah Rukh Khan",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2715",
+   "t": "I sell dreams and peddle love to millions of people.",
+   "a": "Shah Rukh Khan",
+   "c": "Life",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2716",
+   "t": "Success and failure are both part of life. Both are not permanent.",
+   "a": "Shah Rukh Khan",
+   "c": "Life",
+   "style": "sunset"
+  },
+  {
+   "id": "b2717",
+   "t": "Change is the nature of life but challenge is the aim of life. So you have to challenge the changes, not change the challenges.",
+   "a": "Amitabh Bachchan",
+   "c": "Life",
+   "style": "sage"
+  },
+  {
+   "id": "b2718",
+   "t": "Everyone must accept that we will age and age is not always flattering.",
+   "a": "Amitabh Bachchan",
+   "c": "Life",
+   "style": "blush"
+  },
+  {
+   "id": "b2719",
+   "t": "No one is perfect, and criticism is always welcome and expected.",
+   "a": "Amitabh Bachchan",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2720",
+   "t": "Miracles do happen, but one has to work hard for them.",
+   "a": "Rajinikanth",
+   "c": "Action",
+   "style": "cream"
+  },
+  {
+   "id": "b2721",
+   "t": "My fans are my God.",
+   "a": "Rajinikanth",
+   "c": "Life",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2722",
+   "t": "I do what I feel is right. I am not scared to walk on the new path and take risk.",
+   "a": "Aamir Khan",
+   "c": "Courage",
+   "style": "sunset"
+  },
+  {
+   "id": "b2723",
+   "t": "I have had unsuccessful films, but I learned a lot from those films. I give my failures as much respect as I give my success.",
+   "a": "Aamir Khan",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2724",
+   "t": "I have never done a film for money. I have only done films when the story excited me.",
+   "a": "Aamir Khan",
+   "c": "Action",
+   "style": "blush"
+  },
+  {
+   "id": "b2725",
+   "t": "Climate change is real, it is happening right now. It is the most urgent threat facing our entire species, and we need to work collectively together and stop procrastinating.",
+   "a": "Leonardo DiCaprio",
+   "c": "Action",
+   "style": "navy"
+  },
+  {
+   "id": "b2726",
+   "t": "Let us not take this planet for granted. I do not take tonight for granted.",
+   "a": "Leonardo DiCaprio",
+   "c": "Life",
+   "style": "cream"
+  },
+  {
+   "id": "b2727",
+   "t": "If you can do what you do best and be happy, you're further along in life than most people.",
+   "a": "Leonardo DiCaprio",
+   "c": "Happiness",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2728",
+   "t": "Everybody has gone through something that has changed them in a way that they could never go back to the person they once were.",
+   "a": "Leonardo DiCaprio",
+   "c": "Life",
+   "style": "sunset"
+  },
+  {
+   "id": "b2729",
+   "t": "A career is wonderful, but you can't curl up with it on a cold night.",
+   "a": "Marilyn Monroe",
+   "c": "Life",
+   "style": "sage"
+  },
+  {
+   "id": "b2730",
+   "t": "That's the trouble, a sex symbol becomes a thing. But if I'm going to be a symbol of something I'd rather have it sex than some other things they've got symbols of.",
+   "a": "Marilyn Monroe",
+   "c": "Wisdom",
+   "style": "blush"
+  },
+  {
+   "id": "b2731",
+   "t": "I knew I belonged to the public and to the world, not because I was talented or even beautiful, but because I had never belonged to anything or anyone else.",
+   "a": "Marilyn Monroe",
+   "c": "Life",
+   "style": "navy"
+  },
+  {
+   "id": "b2732",
+   "t": "If I'd observed all the rules I'd never have gotten anywhere.",
+   "a": "Marilyn Monroe",
+   "c": "Action",
+   "style": "cream"
+  },
+  {
+   "id": "b2733",
+   "t": "The most important thing is to enjoy your life — to be happy — it's all that matters.",
+   "a": "Audrey Hepburn",
+   "c": "Happiness",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2734",
+   "t": "As you grow older, you will discover that you have two hands, one for helping yourself, the other for helping others.",
+   "a": "Audrey Hepburn",
+   "c": "Life",
+   "style": "sunset"
+  },
+  {
+   "id": "b2735",
+   "t": "I love people who make me laugh. I honestly think it's the thing I like most, to laugh. It cures a multitude of ills. It's probably the most important thing in a person.",
+   "a": "Audrey Hepburn",
+   "c": "Happiness",
+   "style": "sage"
+  },
+  {
+   "id": "b2736",
+   "t": "Elegance is the only beauty that never fades.",
+   "a": "Audrey Hepburn",
+   "c": "Wisdom",
+   "style": "blush"
+  },
+  {
+   "id": "b2737",
+   "t": "I never think of myself as an icon. What is in other people's minds is not in my mind. I just do my thing.",
+   "a": "Audrey Hepburn",
+   "c": "Life",
+   "style": "navy"
+  },
+  {
+   "id": "b2738",
+   "t": "We think too much and feel too little. More than machinery we need humanity; more than cleverness we need kindness and gentleness.",
+   "a": "Charlie Chaplin",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2739",
+   "t": "Life is a tragedy when seen in close-up, but a comedy in long-shot.",
+   "a": "Charlie Chaplin",
+   "c": "Life",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2740",
+   "t": "To truly laugh, you must be able to take your pain and play with it.",
+   "a": "Charlie Chaplin",
+   "c": "Happiness",
+   "style": "sunset"
+  },
+  {
+   "id": "b2741",
+   "t": "Failure is unimportant. It takes courage to make a fool of yourself.",
+   "a": "Charlie Chaplin",
+   "c": "Courage",
+   "style": "sage"
+  },
+  {
+   "id": "b2742",
+   "t": "Imagination means nothing without doing.",
+   "a": "Charlie Chaplin",
+   "c": "Action",
+   "style": "blush"
+  },
+  {
+   "id": "b2743",
+   "t": "Reason is, and ought only to be, the slave of the passions.",
+   "a": "David Hume",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2744",
+   "t": "Custom is the great guide of human life.",
+   "a": "David Hume",
+   "c": "Habits",
+   "style": "cream"
+  },
+  {
+   "id": "b2745",
+   "t": "A wise man proportions his belief to the evidence.",
+   "a": "David Hume",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2746",
+   "t": "Beauty in things exists in the mind which contemplates them.",
+   "a": "David Hume",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2747",
+   "t": "Truth springs from argument amongst friends.",
+   "a": "David Hume",
+   "c": "Friendship",
+   "style": "sage"
+  },
+  {
+   "id": "b2748",
+   "t": "Give me a place to stand, and I shall move the Earth.",
+   "a": "Archimedes",
+   "c": "Wisdom",
+   "style": "blush"
+  },
+  {
+   "id": "b2749",
+   "t": "Eureka!",
+   "a": "Archimedes",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2750",
+   "t": "There are things which seem incredible to most men who have not studied mathematics.",
+   "a": "Archimedes",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2751",
+   "t": "There is no royal road to geometry.",
+   "a": "Euclid",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2752",
+   "t": "What has been affirmed without proof can also be denied without proof.",
+   "a": "Euclid",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2753",
+   "t": "Things which are equal to the same thing are also equal to one another.",
+   "a": "Euclid",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2754",
+   "t": "Add four to one hundred, multiply by eight, and then add sixty-two thousand. The result is approximately the circumference of a circle of diameter twenty thousand.",
+   "a": "Aryabhata",
+   "c": "Wisdom",
+   "style": "blush"
+  },
+  {
+   "id": "b2755",
+   "t": "Ask the right questions, and nature will open the doors to her secrets.",
+   "a": "C. V. Raman",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2756",
+   "t": "The essence of science is independent thinking, hard work, and not equipment. When I got my Nobel Prize, I had spent hardly 200 rupees on my equipment.",
+   "a": "C. V. Raman",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2757",
+   "t": "We must teach science in the mother tongue. Otherwise, science will become a highbrow activity. It will not be an activity in which all people can participate.",
+   "a": "C. V. Raman",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2758",
+   "t": "I have ventured to send you the accompanying article for your perusal and opinion.",
+   "a": "Satyendra Nath Bose",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2759",
+   "t": "No power is more expensive than no power.",
+   "a": "Homi Bhabha",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2760",
+   "t": "My success will not depend on what A or B thinks of me. My success will be what I make of my work.",
+   "a": "Homi Bhabha",
+   "c": "Success",
+   "style": "blush"
+  },
+  {
+   "id": "b2761",
+   "t": "A scientific institution has to be grown with great care like a tree — its growth in terms of quality and achievement can only be accelerated to a very limited extent.",
+   "a": "Homi Bhabha",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2762",
+   "t": "We must be second to none in the application of advanced technologies to the real problems of man and society.",
+   "a": "Vikram Sarabhai",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2763",
+   "t": "He who can listen to the music in the midst of noise can achieve great things.",
+   "a": "Vikram Sarabhai",
+   "c": "Calm",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2764",
+   "t": "The development of a nation is intimately linked with the understanding and application of science and technology by its people.",
+   "a": "Vikram Sarabhai",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2765",
+   "t": "India's place in the sun would come from the partnership between the wisdom of its rural people and the skill of its professionals.",
+   "a": "Verghese Kurien",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2766",
+   "t": "Remember, your work may be only to sweep a railway crossing, but it is your duty to keep it so clean that no other crossing in the world is as clean as yours.",
+   "a": "M. Visvesvaraya",
+   "c": "Action",
+   "style": "blush"
+  },
+  {
+   "id": "b2767",
+   "t": "Industrialize or perish.",
+   "a": "M. Visvesvaraya",
+   "c": "Action",
+   "style": "navy"
+  },
+  {
+   "id": "b2768",
+   "t": "The true laboratory is the mind, where behind illusions we uncover the laws of truth.",
+   "a": "Jagadish Chandra Bose",
+   "c": "Wisdom",
+   "style": "cream"
+  },
+  {
+   "id": "b2769",
+   "t": "The poet is intimate with truth, while the scientist approaches it awkwardly.",
+   "a": "Jagadish Chandra Bose",
+   "c": "Wisdom",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2770",
+   "t": "I dedicate today this Institute — not merely a laboratory but a temple.",
+   "a": "Jagadish Chandra Bose",
+   "c": "Wisdom",
+   "style": "sunset"
+  },
+  {
+   "id": "b2771",
+   "t": "An equation for me has no meaning, unless it expresses a thought of God.",
+   "a": "Srinivasa Ramanujan",
+   "c": "Wisdom",
+   "style": "sage"
+  },
+  {
+   "id": "b2772",
+   "t": "No, it is a very interesting number; it is the smallest number expressible as the sum of two cubes in two different ways.",
+   "a": "Srinivasa Ramanujan",
+   "c": "Wisdom",
+   "style": "blush"
+  },
+  {
+   "id": "b2773",
+   "t": "While asleep, I had an unusual experience. There was a red screen formed by flowing blood, as it were. I was observing it. Suddenly a hand began to write on the screen.",
+   "a": "Srinivasa Ramanujan",
+   "c": "Wisdom",
+   "style": "navy"
+  },
+  {
+   "id": "b2774",
+   "t": "The path from dreams to success does exist. May you have the vision to find it, the courage to get on to it, and the perseverance to follow it.",
+   "a": "Kalpana Chawla",
+   "c": "Success",
+   "style": "cream"
+  },
+  {
+   "id": "b2775",
+   "t": "When you look at the stars and the galaxy, you feel that you are not just from any particular piece of land, but from the solar system.",
+   "a": "Kalpana Chawla",
+   "c": "Life",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2776",
+   "t": "Do something because you really want to do it. If you're doing it just for the goal and don't enjoy the path, then I think you're cheating yourself.",
+   "a": "Kalpana Chawla",
+   "c": "Action",
+   "style": "sunset"
+  },
+  {
+   "id": "b2777",
+   "t": "The International Space Station is my happy place.",
+   "a": "Sunita Williams",
+   "c": "Happiness",
+   "style": "sage"
+  },
+  {
+   "id": "b2778",
+   "t": "Saare Jahan Se Achha.",
+   "a": "Rakesh Sharma",
+   "c": "Life",
+   "style": "blush"
+  }
+ ],
+ "authors": {
+  "Ram Dass": {
+   "born": "1931",
+   "died": "2019",
+   "role": "Spiritual teacher and author",
+   "bio": "Ram Dass, born Richard Alpert, was an American spiritual teacher and former Harvard psychologist whose work with Timothy Leary on psychedelics made him a counterculture figure. After meeting guru Neem Karoli Baba in India in 1967, he took the name Ram Dass ('servant of God') and wrote the landmark book Be Here Now (1971). He spent the rest of his life teaching Eastern spirituality, compassion and conscious aging to Western audiences."
+  },
+  "Deepak Chopra": {
+   "born": "1946",
+   "died": "",
+   "role": "Author and alternative medicine advocate",
+   "bio": "Deepak Chopra is an Indian-American author and alternative medicine advocate, trained as an endocrinologist, who became one of the best-known popularizers of Ayurveda and mind-body medicine. His books, including The Seven Spiritual Laws of Success (1994), have sold tens of millions of copies worldwide. He co-founded the Chopra Center for Wellbeing in California."
+  },
+  "Sadhguru": {
+   "born": "1957",
+   "died": "",
+   "role": "Yogi and founder of the Isha Foundation",
+   "bio": "Sadhguru, born Jaggi Vasudev in Mysuru, India, is a yogi and mystic who founded the Isha Foundation in 1992, a non-profit offering yoga programs worldwide. His book Inner Engineering (2016) became an international bestseller. He is a frequent speaker at the United Nations, World Economic Forum and leading universities."
+  },
+  "Sri Sri Ravi Shankar": {
+   "born": "1956",
+   "died": "",
+   "role": "Spiritual leader and founder of the Art of Living Foundation",
+   "bio": "Sri Sri Ravi Shankar is an Indian spiritual leader who founded the Art of Living Foundation in 1982, which teaches the Sudarshan Kriya breathing technique and stress-relief programs in more than 150 countries. He has been widely recognized for humanitarian and peace work, including mediation efforts in conflict zones. His teachings emphasize meditation, service and a stress-free, violence-free society."
+  },
+  "Stephen Hawking": {
+   "born": "1942",
+   "died": "2018",
+   "role": "Theoretical physicist and cosmologist",
+   "bio": "Stephen Hawking was an English theoretical physicist and cosmologist who predicted that black holes emit radiation, now called Hawking radiation. Diagnosed with motor neurone disease at 21 and given a few years to live, he spent over five decades in a wheelchair communicating through a speech synthesizer. His book A Brief History of Time (1988) sold more than 10 million copies and made him the world's most famous scientist."
+  },
+  "Richard Feynman": {
+   "born": "1918",
+   "died": "1988",
+   "role": "Theoretical physicist and Nobel laureate",
+   "bio": "Richard Feynman was an American theoretical physicist who shared the 1965 Nobel Prize in Physics for his work on quantum electrodynamics. A member of the Manhattan Project as a young man, he later became famous for his bongo-playing, safecracking and irreverent memoir Surely You're Joking, Mr. Feynman! (1985). His Caltech lectures remain a classic of science teaching, and he famously exposed the O-ring failure behind the Challenger disaster."
+  },
+  "Neil deGrasse Tyson": {
+   "born": "1958",
+   "died": "",
+   "role": "Astrophysicist and science communicator",
+   "bio": "Neil deGrasse Tyson is an American astrophysicist who has directed New York's Hayden Planetarium since 1996. He hosted the 2014 revival of Cosmos and the talk show StarTalk, bringing astronomy to mass audiences. His book Astrophysics for People in a Hurry (2017) was a long-running bestseller."
+  },
+  "Bill Nye": {
+   "born": "1955",
+   "died": "",
+   "role": "Science educator and television presenter",
+   "bio": "Bill Nye is an American science educator and mechanical engineer who hosted the award-winning children's show Bill Nye the Science Guy (1993-1998), which taught science to a generation of viewers. He later became CEO of the Planetary Society and a prominent voice on climate change. His Netflix series Bill Nye Saves the World (2017-2018) applied his signature style to adult audiences."
+  },
+  "Jane Goodall": {
+   "born": "1934",
+   "died": "",
+   "role": "Primatologist and conservationist",
+   "bio": "Jane Goodall is an English primatologist who began studying wild chimpanzees at Gombe Stream National Park, Tanzania, in 1960, and overturned science's understanding of tool use and animal emotion. She founded the Jane Goodall Institute in 1977 and the youth program Roots & Shoots in 1991. Named a UN Messenger of Peace, she has spent decades campaigning for animal welfare and environmental protection."
+  },
+  "David Attenborough": {
+   "born": "1926",
+   "died": "",
+   "role": "Broadcaster and natural historian",
+   "bio": "Sir David Attenborough is an English broadcaster and natural historian whose landmark BBC series, beginning with Zoo Quest (1954) and including Life on Earth (1979) and Planet Earth (2006), defined the nature documentary. Over a career spanning more than 70 years, he has filmed wildlife on every continent. In later life he has become a leading voice on climate change and biodiversity loss, notably in A Life on Our Planet (2020)."
+  },
+  "Alexander Fleming": {
+   "born": "1881",
+   "died": "1955",
+   "role": "Bacteriologist who discovered penicillin",
+   "bio": "Sir Alexander Fleming was a Scottish bacteriologist whose accidental discovery of penicillin in 1928, from a mould contaminating his culture plates at St Mary's Hospital, London, ushered in the antibiotic era. Developed into a drug by Florey and Chain, penicillin transformed medicine and saved hundreds of millions of lives. Fleming shared the 1945 Nobel Prize in Physiology or Medicine for the discovery."
+  },
+  "B. F. Skinner": {
+   "born": "1904",
+   "died": "1990",
+   "role": "Psychologist and founder of radical behaviorism",
+   "bio": "Burrhus Frederic Skinner was an American psychologist who developed the theory of operant conditioning and invented the operant conditioning chamber, known as the 'Skinner box'. A Harvard professor for most of his career, he argued that behavior is shaped by its consequences of reinforcement and punishment. His books, including Walden Two (1948) and Beyond Freedom and Dignity (1971), made him one of the most influential and controversial psychologists of the 20th century."
+  },
+  "Ivan Pavlov": {
+   "born": "1849",
+   "died": "1936",
+   "role": "Physiologist known for classical conditioning",
+   "bio": "Ivan Petrovich Pavlov was a Russian physiologist who won the 1904 Nobel Prize for his work on the digestive system. His experiments with dogs, which learned to salivate at the sound of a bell associated with food, revealed the conditioned reflex, a cornerstone of behavioral psychology known as classical conditioning or 'Pavlovian' learning. He ran a large research institute in St. Petersburg well into his eighties."
+  },
+  "Jules Verne": {
+   "born": "1828",
+   "died": "1905",
+   "role": "Novelist and pioneer of science fiction",
+   "bio": "Jules Verne was a French novelist whose 'Extraordinary Voyages' series, including Journey to the Center of the Earth (1864), Twenty Thousand Leagues Under the Seas (1870) and Around the World in Eighty Days (1872), made him a founding father of science fiction. Writing in Amiens, he imagined submarines, space travel and world travel long before they were practical. He remains one of the most translated authors in the world."
+  },
+  "H. G. Wells": {
+   "born": "1866",
+   "died": "1946",
+   "role": "Novelist and historian",
+   "bio": "Herbert George Wells was an English writer who pioneered science fiction with The Time Machine (1895), The Invisible Man (1897), The War of the Worlds (1898) and The First Men in the Moon (1901), imagining time travel, invasion and spaceflight decades ahead of reality. He was also a prolific social commentator whose Outline of History (1920) became a bestseller. Nominated for the Nobel Prize in Literature four times, he is often called the father of science fiction."
+  },
+  "F. Scott Fitzgerald": {
+   "born": "1896",
+   "died": "1940",
+   "role": "Novelist of the Jazz Age",
+   "bio": "Francis Scott Key Fitzgerald was an American novelist whose masterpiece The Great Gatsby (1925) became the defining portrait of the Jazz Age and is now ranked among the greatest American novels. His other works include This Side of Paradise (1920) and Tender Is the Night (1934). He died in Hollywood at 44, believing himself a failure, shortly before Gatsby's posthumous canonization."
+  },
+  "Virginia Woolf": {
+   "born": "1882",
+   "died": "1941",
+   "role": "Novelist and essayist",
+   "bio": "Virginia Woolf was an English writer and a central figure of literary modernism, famous for stream-of-consciousness novels such as Mrs Dalloway (1925) and To the Lighthouse (1927). Her essay A Room of One's Own (1929) became a foundational feminist text on women and writing. With her husband Leonard she founded the Hogarth Press, which published her own work and that of T. S. Eliot and others."
+  },
+  "Rudyard Kipling": {
+   "born": "1865",
+   "died": "1936",
+   "role": "Poet, novelist and Nobel laureate",
+   "bio": "Rudyard Kipling was an English poet and storyteller born in Bombay, India, whose works include The Jungle Book (1894), Kim (1901) and the poem 'If—' (1910), repeatedly voted among Britain's favourite poems. A journalist in India as a young man, he drew on the British Empire's landscapes and soldiers for his ballads and tales. In 1907 he became the first English-language writer to receive the Nobel Prize in Literature, and still its youngest recipient."
+  },
+  "William Wordsworth": {
+   "born": "1770",
+   "died": "1850",
+   "role": "Romantic poet and Poet Laureate",
+   "bio": "William Wordsworth was an English poet who, with Samuel Taylor Coleridge, launched the Romantic movement with their joint Lyrical Ballads (1798), arguing for poetry in the language of common life. Living in the Lake District, he wrote beloved lyrics such as 'I Wandered Lonely as a Cloud' and the autobiographical epic The Prelude, published after his death. He served as Poet Laureate from 1843 until his death in 1850."
+  },
+  "Christina Rossetti": {
+   "born": "1830",
+   "died": "1894",
+   "role": "Poet",
+   "bio": "Christina Rossetti was an English poet of Italian descent, sister of the Pre-Raphaelite artist Dante Gabriel Rossetti, for whom she modelled. Her collection Goblin Market and Other Poems (1862) established her reputation, and her devotional verse and the carol 'In the Bleak Midwinter' kept her famous after her death. Long underrated, she is now regarded as one of the finest Victorian poets."
+  },
+  "Sylvia Plath": {
+   "born": "1932",
+   "died": "1963",
+   "role": "Poet and novelist",
+   "bio": "Sylvia Plath was an American poet and novelist best known for her novel The Bell Jar and the posthumous Ariel poems. Her intensely confessional writing explored identity, depression and the natural world. She was awarded a posthumous Pulitzer Prize for her Collected Poems in 1982."
+  },
+  "Hafiz": {
+   "born": "1315",
+   "died": "1390",
+   "role": "Persian poet",
+   "bio": "Khwaja Shams-ud-Din Muhammad, known as Hafiz of Shiraz, was a Persian lyric poet whose Divan is the most beloved poetry collection in Iran. His ghazals on love, wine and divine longing have been translated into many languages. His work later inspired Goethe's West-Eastern Divan."
+  },
+  "Allama Iqbal": {
+   "born": "1877",
+   "died": "1938",
+   "role": "Poet and philosopher",
+   "bio": "Sir Muhammad Iqbal, known as Allama Iqbal, was a poet-philosopher of British India who wrote in Urdu and Persian. His poetry, including Shikwa and the philosophy of Khudi (selfhood), stirred a generation to self-respect and action. He is honoured as the national poet of Pakistan."
+  },
+  "Jaun Elia": {
+   "born": "1931",
+   "died": "2002",
+   "role": "Urdu poet",
+   "bio": "Syed Sibt-e-Asghar Naqvi, known as Jaun Elia, was a Pakistani Urdu poet, scholar and philosopher born in Amroha, India. His verse blends deep classical learning with a rebellious, melancholic wit unlike any other Urdu poet. His first collection, Shayad, appeared in 1991, yet his couplets are among the most quoted in the language."
+  },
+  "Mir Taqi Mir": {
+   "born": "1723",
+   "died": "1810",
+   "role": "Urdu poet",
+   "bio": "Mir Taqi Mir, honoured as Khuda-e-Sukhan (God of Poetry), was the pre-eminent Urdu poet of eighteenth-century Delhi and Lucknow. His ghazals of love, loss and the decline of Delhi set the standard for classical Urdu poetry. His six diwans and masnavis remain central to the Urdu canon."
+  },
+  "Harivansh Rai Bachchan": {
+   "born": "1907",
+   "died": "2003",
+   "role": "Hindi poet",
+   "bio": "Harivansh Rai Bachchan was one of the most popular Hindi poets of the twentieth century, famed for Madhushala (1935) and the fiery poem Agneepath. He taught at Allahabad University and earned a doctorate from Cambridge on the poet W. B. Yeats. He was the father of actor Amitabh Bachchan."
+  },
+  "Mahadevi Varma": {
+   "born": "1907",
+   "died": "1987",
+   "role": "Hindi poet",
+   "bio": "Mahadevi Varma was a leading poet of the Chhayavaad movement in Hindi literature and a pioneer of women's education in India. Her collections, including Rashmi and Neerja, weave mysticism, longing and compassion. She received the Jnanpith Award and the Padma Vibhushan."
+  },
+  "Subhadra Kumari Chauhan": {
+   "born": "1904",
+   "died": "1948",
+   "role": "Hindi poet",
+   "bio": "Subhadra Kumari Chauhan was a Hindi poet celebrated for heroic ballads such as Jhansi ki Rani, which became an anthem of Indian nationalism. She was also a freedom fighter who took part in Gandhi's Non-Cooperation Movement. Her poems and stories for children remain beloved across India."
+  },
+  "Ramdhari Singh Dinkar": {
+   "born": "1908",
+   "died": "1974",
+   "role": "Hindi poet",
+   "bio": "Ramdhari Singh Dinkar, honoured as Rashtrakavi (the national poet), was a Hindi poet of rebellion, nationalism and moral fire. His epics Kurukshetra and Rashmirathi retell the Mahabharata with bold questioning of war, fate and forgiveness. He received the Jnanpith Award and served in India's Rajya Sabha."
+  },
+  "Javed Akhtar": {
+   "born": "1945",
+   "died": "",
+   "role": "Poet, lyricist and screenwriter",
+   "bio": "Javed Akhtar is an Indian poet, film lyricist and screenwriter who, with Salim Khan, wrote classics such as Sholay and Deewaar. His Urdu poetry collections Tarkash and Lava combine romance with sharp social conscience. He has won multiple National Film Awards and the Padma Bhushan."
+  },
+  "Gulzar": {
+   "born": "1934",
+   "died": "",
+   "role": "Poet, lyricist and filmmaker",
+   "bio": "Gulzar, born Sampooran Singh Kalra, is an Indian poet, lyricist and filmmaker writing in Urdu and Hindi. His film songs, from Anand to the Oscar-winning 'Jai Ho', and his three-line Triveni poetry made him a household name. He has received the Dadasaheb Phalke Award, the Sahitya Akademi Award and the Jnanpith."
+  },
+  "Munshi Premchand": {
+   "born": "1880",
+   "died": "1936",
+   "role": "Novelist and short-story writer",
+   "bio": "Dhanpat Rai Srivastava, known as Munshi Premchand, was the most influential Hindi-Urdu fiction writer of his era. Novels such as Godaan and stories such as Kafan and Idgah portrayed the struggles of peasants, women and the poor with unmatched realism. He wrote around three hundred short stories and a dozen novels."
+  },
+  "Sarat Chandra Chattopadhyay": {
+   "born": "1876",
+   "died": "1938",
+   "role": "Bengali novelist",
+   "bio": "Sarat Chandra Chattopadhyay was Bengal's most widely read novelist, whose Devdas, Parineeta and Srikanta depict love, family and rural society. His works have been translated into many languages and adapted into numerous films. He is remembered for his deep compassion for women and the marginalised."
+  },
+  "Bankim Chandra Chatterjee": {
+   "born": "1838",
+   "died": "1894",
+   "role": "Bengali novelist",
+   "bio": "Bankim Chandra Chatterjee pioneered the Bengali novel with works such as Durgeshnandini, Kapalkundala and Anandamath. Anandamath gave India the hymn Vande Mataram, which became a rallying song of the freedom movement. He is regarded as the father of the modern Bengali novel."
+  },
+  "Michael Madhusudan Dutt": {
+   "born": "1824",
+   "died": "1873",
+   "role": "Bengali poet and playwright",
+   "bio": "Michael Madhusudan Dutt introduced blank verse, the epic form and the sonnet into Bengali poetry. His masterpiece Meghnad Badh Kavya (1861) retells the Ramayana with the demon prince Meghnad as its tragic hero. Writing in both English and Bengali, he transformed the course of Bengali literature."
+  },
+  "Kazi Nazrul Islam": {
+   "born": "1899",
+   "died": "1976",
+   "role": "Bengali poet",
+   "bio": "Kazi Nazrul Islam, the Bidrohi Kavi or Rebel Poet, was a Bengali poet, musician and revolutionary voice against colonial oppression. His poem Bidrohi and his songs of Hindu-Muslim unity made him a legend across Bengal. He is the national poet of Bangladesh."
+  },
+  "George Washington": {
+   "born": "1732",
+   "died": "1799",
+   "role": "First President of the United States",
+   "bio": "George Washington commanded the Continental Army during the American Revolutionary War and presided over the Constitutional Convention of 1787. He served as the first President of the United States from 1789 to 1797, setting enduring precedents for the office. He is remembered as the Father of His Country."
+  },
+  "Julius Caesar": {
+   "born": "100 BC",
+   "died": "44 BC",
+   "role": "Roman general and statesman",
+   "bio": "Gaius Julius Caesar was a Roman general and statesman whose conquest of Gaul extended Rome's power to the Rhine and the English Channel. As dictator he reformed the calendar and the state before his assassination on the Ides of March, 44 BC. His commentaries on the Gallic Wars remain classics of Latin prose."
+  },
+  "Cleopatra": {
+   "born": "69 BC",
+   "died": "30 BC",
+   "role": "Queen of Egypt",
+   "bio": "Cleopatra VII was the last active ruler of Ptolemaic Egypt, famed for her intellect, her command of many languages, and her alliances with Julius Caesar and Mark Antony. Defeated by Octavian after the Battle of Actium, she died in 30 BC as Egypt became a Roman province. Her life and words survive chiefly through the ancient historians Plutarch and Cassius Dio."
+  },
+  "Queen Victoria": {
+   "born": "1819",
+   "died": "1901",
+   "role": "Queen of the United Kingdom",
+   "bio": "Queen Victoria reigned from 1837 to 1901, the longest reign of any British monarch until Elizabeth II. The Victorian era saw industrial growth, a vast empire and sweeping social change, and she became Empress of India in 1876. Her journals and letters fill volumes, and her devotion to Prince Albert shaped her life after his early death."
+  },
+  "Elizabeth I": {
+   "born": "1533",
+   "died": "1603",
+   "role": "Queen of England",
+   "bio": "The last Tudor monarch, Elizabeth I reigned over England from 1558 to 1603, an era of flourishing arts, exploration and naval triumph. Never married, she famously declared herself wedded to her kingdom and defended it against the Spanish Armada in 1588."
+  },
+  "Catherine the Great": {
+   "born": "1729",
+   "died": "1796",
+   "role": "Empress of Russia",
+   "bio": "Born a German princess, Catherine seized the Russian throne in 1762 and reigned for 34 years. An Enlightenment correspondent of Voltaire and Diderot, she expanded Russia's borders and modernised its administration, arts and culture."
+  },
+  "Joan of Arc": {
+   "born": "1412",
+   "died": "1431",
+   "role": "French saint and military leader",
+   "bio": "A peasant girl from Domremy, Joan said divine voices guided her to lift the siege of Orleans in 1429 and see Charles VII crowned at Reims. Captured, tried for heresy and burned at Rouen in 1431, she was canonised in 1920 and is a patron saint of France."
+  },
+  "Marie Antoinette": {
+   "born": "1755",
+   "died": "1793",
+   "role": "Queen of France",
+   "bio": "The Austrian-born queen consort of Louis XVI, Marie Antoinette became a symbol of royal excess during the French Revolution, though the infamous 'let them eat cake' line was never actually hers. She was guillotined in Paris in October 1793, months after her husband."
+  },
+  "Rosa Parks": {
+   "born": "1913",
+   "died": "2005",
+   "role": "Civil rights activist",
+   "bio": "A seamstress and NAACP activist in Montgomery, Alabama, Rosa Parks refused to surrender her bus seat to a white passenger on 1 December 1955. Her arrest sparked the 381-day Montgomery bus boycott and made her an enduring icon of the American civil rights movement."
+  },
+  "Greta Thunberg": {
+   "born": "2003",
+   "died": "",
+   "role": "Climate activist",
+   "bio": "Swedish climate activist Greta Thunberg began a solo school strike outside Sweden's parliament in August 2018, aged fifteen. Her Fridays for Future protest grew into a global youth movement, and she has addressed the United Nations and the Davos forum demanding urgent action on the climate crisis."
+  },
+  "Steve Jobs": {
+   "born": "1955",
+   "died": "2011",
+   "role": "Co-founder of Apple",
+   "bio": "Co-founder of Apple, Steve Jobs helped launch the personal computer era and later reinvented music, phones and tablets with the iPod, iPhone and iPad. Forced out of Apple in 1985, he founded NeXT and built Pixar into a major studio before returning in 1997 to rescue the company he had started."
+  },
+  "Bill Gates": {
+   "born": "1955",
+   "died": "",
+   "role": "Co-founder of Microsoft",
+   "bio": "Bill Gates co-founded Microsoft in 1975 and built the software that powered the personal computer revolution, leading the company for 25 years. He later devoted himself to philanthropy, co-founding the Gates Foundation, one of the world's largest charitable organisations."
+  },
+  "Elon Musk": {
+   "born": "1971",
+   "died": "",
+   "role": "Entrepreneur, CEO of Tesla and SpaceX",
+   "bio": "South African-born entrepreneur Elon Musk co-founded PayPal before building Tesla into the world's leading electric carmaker and SpaceX into a pioneer of reusable rockets. Known for audacious goals, from colonising Mars to brain-computer interfaces, he is among the world's wealthiest people."
+  },
+  "Jeff Bezos": {
+   "born": "1964",
+   "died": "",
+   "role": "Founder of Amazon",
+   "bio": "Jeff Bezos founded Amazon in 1994 as an online bookstore and grew it into one of the world's most valuable companies, reshaping retail and cloud computing along the way. He stepped down as CEO in 2021 and also founded the spaceflight company Blue Origin."
+  },
+  "Warren Buffett": {
+   "born": "1930",
+   "died": "",
+   "role": "Investor, CEO of Berkshire Hathaway",
+   "bio": "Investor Warren Buffett, the 'Oracle of Omaha', turned Berkshire Hathaway into one of the world's largest conglomerates through patient, disciplined value investing. Famous for his annual shareholder letters and frugal personal habits, he has pledged to give away the great majority of his fortune."
+  },
+  "Richard Branson": {
+   "born": "1950",
+   "died": "",
+   "role": "Founder of the Virgin Group",
+   "bio": "British entrepreneur Richard Branson founded the Virgin brand with a mail-order record business in 1970 and expanded it into airlines, telecoms, hotels and space tourism. A flamboyant risk-taker, he has set world records in ballooning and flew to the edge of space aboard his own Virgin Galactic craft in 2021."
+  },
+  "Andrew Carnegie": {
+   "born": "1835",
+   "died": "1919",
+   "role": "Industrialist and philanthropist",
+   "bio": "Scottish-American steel magnate Andrew Carnegie built Carnegie Steel into the largest steel empire of the nineteenth century. After selling his company in 1901, he devoted his fortune to philanthropy, funding some 2,500 public libraries and preaching his 'Gospel of Wealth'."
+  },
+  "John D. Rockefeller": {
+   "born": "1839",
+   "died": "1937",
+   "role": "Industrialist, co-founder of Standard Oil",
+   "bio": "Co-founder of Standard Oil, John D. Rockefeller became America's first billionaire and is often regarded as the richest American of all time. In later life he turned to philanthropy, helping to found the University of Chicago and the Rockefeller Foundation."
+  },
+  "Estee Lauder": {
+   "born": "1908",
+   "died": "2004",
+   "role": "Founder of Estee Lauder Companies",
+   "bio": "Estee Lauder founded her cosmetics company in 1946 with a handful of products and a genius for personal selling, elegant packaging and the free sample. She built it into a global beauty empire and was the only woman on Time magazine's 1998 list of the twenty most influential business figures of the century."
+  },
+  "Sam Walton": {
+   "born": "1918",
+   "died": "1992",
+   "role": "Founder of Walmart",
+   "bio": "Sam Walton opened the first Walmart in Rogers, Arkansas, in 1962, preaching rock-bottom prices for small-town America. His relentless focus on costs, logistics and the customer built the world's largest retailer and made him, for a time, America's richest man."
+  },
+  "Ratan Tata": {
+   "born": "1937",
+   "died": "2024",
+   "role": "Industrialist, chairman emeritus of Tata Sons",
+   "bio": "Chairman of Tata Sons for more than two decades, Ratan Tata transformed the Tata group into a global conglomerate with acquisitions such as Tetley, Corus and Jaguar Land Rover. Revered in India for his integrity and philanthropy, he also championed the Tata Nano, the world's cheapest car."
+  },
+  "Dhirubhai Ambani": {
+   "born": "1932",
+   "died": "2002",
+   "role": "Founder of Reliance Industries",
+   "bio": "Dhirubhai Ambani rose from a petrol station attendant in Yemen to found Reliance, growing it from a small textile trading firm into India's largest private-sector conglomerate. He pioneered India's equity culture, drawing hundreds of thousands of small investors into the stock market."
+  },
+  "Narayana Murthy": {
+   "born": "1946",
+   "died": "",
+   "role": "Co-founder of Infosys",
+   "bio": "N. R. Narayana Murthy co-founded Infosys in 1981 with six colleagues and a small borrowed sum, and led it into a global IT services giant. A champion of corporate governance and what he calls compassionate capitalism, he is widely regarded as the father of India's IT sector."
+  },
+  "Azim Premji": {
+   "born": "1945",
+   "died": "",
+   "role": "Chairman of Wipro",
+   "bio": "Azim Premji took over his family's cooking-oil business at twenty-one and diversified Wipro into a global IT services leader. One of India's most generous philanthropists, he was the first Indian to sign the Giving Pledge and has endowed the Azim Premji Foundation with most of his wealth."
+  },
+  "Serena Williams": {
+   "born": "1981",
+   "died": "",
+   "role": "Tennis champion",
+   "bio": "American tennis legend who won 23 Grand Slam singles titles, the most in the Open Era, along with four Olympic gold medals. Born in Saginaw, Michigan, and raised in Compton, California, she dominated women's tennis for over two decades and became a successful businesswoman and advocate for women."
+  },
+  "Sachin Tendulkar": {
+   "born": "1973",
+   "died": "",
+   "role": "Cricketer",
+   "bio": "Indian cricket icon widely regarded as one of the greatest batsmen in history, scoring 100 international centuries across a 24-year career. He debuted for India at just 16 in 1989 and retired in 2013 after a record 200 Test matches, carrying the hopes of a billion fans."
+  },
+  "Virat Kohli": {
+   "born": "1988",
+   "died": "",
+   "role": "Cricketer",
+   "bio": "Indian batsman and former national captain, celebrated for his intense fitness, aggressive batting and record-breaking run chases in one-day internationals. He captained India to the 2008 Under-19 World Cup title as a teenager and became one of the most prolific run-scorers in modern cricket."
+  },
+  "M. S. Dhoni": {
+   "born": "1981",
+   "died": "",
+   "role": "Cricketer",
+   "bio": "Indian wicketkeeper-batsman and captain who led India to the 2007 T20 World Cup, the 2011 ODI World Cup and the 2013 Champions Trophy, the only captain to win all three ICC white-ball titles. Nicknamed 'Captain Cool', he is revered for his calm finishing of matches under pressure."
+  },
+  "Pele": {
+   "born": "1940",
+   "died": "2022",
+   "role": "Footballer",
+   "bio": "Brazilian footballer widely considered the greatest player of all time, the only man to win three World Cups, in 1958, 1962 and 1970. He scored more than a thousand career goals for Santos and Brazil and was named FIFA's Player of the Century."
+  },
+  "Diego Maradona": {
+   "born": "1960",
+   "died": "2020",
+   "role": "Footballer",
+   "bio": "Argentine football genius who captained his country to victory at the 1986 World Cup, scoring the famous 'Goal of the Century' against England. Brilliant and controversial in equal measure, he starred for Boca Juniors, Barcelona and Napoli, where he remains a folk hero."
+  },
+  "Lionel Messi": {
+   "born": "1987",
+   "died": "",
+   "role": "Footballer",
+   "bio": "Argentine forward regarded as one of the greatest footballers ever, winner of a record eight Ballon d'Or awards. After 21 years at Barcelona he moved to Paris Saint-Germain and then Inter Miami, and in 2022 he captained Argentina to the World Cup title."
+  },
+  "Cristiano Ronaldo": {
+   "born": "1985",
+   "died": "",
+   "role": "Footballer",
+   "bio": "Portuguese forward and five-time Ballon d'Or winner, the all-time top scorer in men's international football and in the UEFA Champions League. Born in Madeira, he starred for Manchester United, Real Madrid and Juventus before moving to Al-Nassr in Saudi Arabia."
+  },
+  "Usain Bolt": {
+   "born": "1986",
+   "died": "",
+   "role": "Sprinter",
+   "bio": "Jamaican sprinter, the fastest man in history, who set world records in the 100 metres (9.58 seconds) and 200 metres (19.19 seconds) in 2009. He won eight Olympic gold medals across the 2008, 2012 and 2016 Games and became famous for his 'lightning bolt' celebration pose."
+  },
+  "Michael Phelps": {
+   "born": "1985",
+   "died": "",
+   "role": "Swimmer",
+   "bio": "American swimmer and the most decorated Olympian of all time, with 28 Olympic medals, 23 of them gold. He won a record eight golds at the 2008 Beijing Games and has since become a prominent advocate for mental health awareness."
+  },
+  "Jackie Chan": {
+   "born": "1954",
+   "died": "",
+   "role": "Actor and martial artist",
+   "bio": "Hong Kong actor, martial artist and stunt performer famous for performing his own dangerous stunts and blending action with physical comedy. Trained at a Peking opera school from childhood, he rose to stardom with Drunken Master and Rush Hour and received an honorary Academy Award in 2016."
+  },
+  "Arnold Schwarzenegger": {
+   "born": "1947",
+   "died": "",
+   "role": "Actor, bodybuilder and former governor",
+   "bio": "Austrian-born bodybuilder who won seven Mr. Olympia titles before becoming one of Hollywood's biggest action stars with films such as The Terminator and Total Recall. He later served two terms as Governor of California, from 2003 to 2011."
+  },
+  "Dwayne Johnson": {
+   "born": "1972",
+   "died": "",
+   "role": "Actor and former wrestler",
+   "bio": "American actor and former professional wrestler known as 'The Rock', one of WWE's biggest stars before moving into Hollywood. He became one of the world's highest-paid actors through the Fast & Furious and Jumanji franchises and co-founded Seven Bucks Productions."
+  },
+  "Tom Cruise": {
+   "born": "1962",
+   "died": "",
+   "role": "Actor",
+   "bio": "American actor and producer, one of Hollywood's most enduring stars for over four decades and famous for performing his own stunts in the Mission: Impossible series. His hits range from Top Gun and Jerry Maguire to Top Gun: Maverick, one of the highest-grossing films of all time."
+  },
+  "Shah Rukh Khan": {
+   "born": "1965",
+   "died": "",
+   "role": "Actor",
+   "bio": "Indian actor known as the 'King of Bollywood', one of the world's most popular film stars with a career spanning more than a hundred films. Rising from television in the late 1980s, he became a global icon with films like Dilwale Dulhania Le Jayenge and co-owns the Kolkata Knight Riders cricket team."
+  },
+  "Amitabh Bachchan": {
+   "born": "1942",
+   "died": "",
+   "role": "Actor",
+   "bio": "Legendary Indian actor, the defining superstar of Hindi cinema since the 1970s with classics such as Zanjeer, Deewaar and Sholay. After a celebrated career revival in the 2000s, he has hosted the quiz show Kaun Banega Crorepati for over two decades and remains Bollywood's most revered figure."
+  },
+  "Rajinikanth": {
+   "born": "1950",
+   "died": "",
+   "role": "Actor",
+   "bio": "Superstar of Tamil cinema, worshipped by fans for his inimitable style, screen presence and dialogue delivery. Born Shivaji Rao Gaekwad, he worked as a bus conductor in Bangalore before debuting in 1975, and went on to become one of Asia's highest-paid actors."
+  },
+  "Aamir Khan": {
+   "born": "1965",
+   "died": "",
+   "role": "Actor and filmmaker",
+   "bio": "Indian actor and filmmaker known as Bollywood's 'Mr. Perfectionist' for his meticulous and highly selective choice of roles. His films, including Lagaan, 3 Idiots and Dangal, rank among the highest-grossing Indian films ever and often blend entertainment with social themes."
+  },
+  "Leonardo DiCaprio": {
+   "born": "1974",
+   "died": "",
+   "role": "Actor and environmentalist",
+   "bio": "American actor who rose from child roles to global stardom with Titanic and won the Academy Award for Best Actor for The Revenant in 2016. Off screen he is a leading environmental activist and founded the Leonardo DiCaprio Foundation in 1998 to protect wildlife and fight climate change."
+  },
+  "Marilyn Monroe": {
+   "born": "1926",
+   "died": "1962",
+   "role": "Actress",
+   "bio": "American actress and the most enduring sex symbol of Hollywood's golden age, starring in comedies such as Gentlemen Prefer Blondes and Some Like It Hot. Born Norma Jeane Mortenson, she fought to be taken seriously as an actress and founded her own production company in 1955."
+  },
+  "Audrey Hepburn": {
+   "born": "1929",
+   "died": "1993",
+   "role": "Actress and humanitarian",
+   "bio": "Audrey Hepburn was a British actress and humanitarian celebrated for films such as Roman Holiday, Breakfast at Tiffany's and My Fair Lady. In later life she devoted herself to UNICEF, serving as a Goodwill Ambassador in some of the world's poorest regions."
+  },
+  "Charlie Chaplin": {
+   "born": "1889",
+   "died": "1977",
+   "role": "Comic actor and filmmaker",
+   "bio": "Charlie Chaplin was an English comic actor and filmmaker whose Little Tramp became a global icon of silent cinema. He co-founded United Artists and wrote, directed and starred in classics including City Lights, Modern Times and The Great Dictator."
+  },
+  "David Hume": {
+   "born": "1711",
+   "died": "1776",
+   "role": "Philosopher",
+   "bio": "David Hume was a Scottish Enlightenment philosopher, historian and economist, best known for A Treatise of Human Nature and An Enquiry Concerning Human Understanding. His scepticism about causation, miracles and the self profoundly influenced Western philosophy."
+  },
+  "Archimedes": {
+   "born": "287 BC",
+   "died": "212 BC",
+   "role": "Mathematician and inventor",
+   "bio": "Archimedes of Syracuse was a Greek mathematician, physicist and inventor regarded as one of the greatest mathematicians of antiquity. He calculated an accurate approximation of pi, formulated the principle of buoyancy, and designed machines such as the screw pump and compound pulleys."
+  },
+  "Euclid": {
+   "born": "",
+   "died": "",
+   "role": "Mathematician",
+   "bio": "Euclid was a Greek mathematician active in Alexandria around 300 BCE, often called the father of geometry. His Elements, a systematic treatment of geometry and number theory in thirteen books, remained the standard mathematical textbook for more than two thousand years."
+  },
+  "Aryabhata": {
+   "born": "476",
+   "died": "550",
+   "role": "Mathematician and astronomer",
+   "bio": "Aryabhata was an Indian mathematician and astronomer whose Aryabhatiya, composed in 499 CE, gave an accurate approximation of pi and described the rotation of the Earth on its axis. He advanced the use of place value in Indian mathematics and correctly explained the causes of eclipses."
+  },
+  "C. V. Raman": {
+   "born": "1888",
+   "died": "1970",
+   "role": "Physicist",
+   "bio": "Chandrasekhara Venkata Raman was an Indian physicist who won the 1930 Nobel Prize in Physics for discovering that light changes wavelength when it passes through a transparent material, the Raman effect. He founded the Indian Academy of Sciences and the Raman Research Institute in Bengaluru."
+  },
+  "Satyendra Nath Bose": {
+   "born": "1894",
+   "died": "1974",
+   "role": "Physicist",
+   "bio": "Satyendra Nath Bose was an Indian physicist whose 1924 work on quantum statistics, developed with Albert Einstein, predicted a new state of matter, the Bose-Einstein condensate. The class of particles known as bosons is named after him."
+  },
+  "Homi Bhabha": {
+   "born": "1909",
+   "died": "1966",
+   "role": "Nuclear physicist",
+   "bio": "Homi Jehangir Bhabha was an Indian nuclear physicist who founded the Tata Institute of Fundamental Research and chaired the Atomic Energy Commission. Regarded as the father of India's nuclear programme, he built it around a three-stage plan based on India's thorium reserves."
+  },
+  "Vikram Sarabhai": {
+   "born": "1919",
+   "died": "1971",
+   "role": "Physicist and space pioneer",
+   "bio": "Vikram Sarabhai was an Indian physicist and innovator who founded the Indian Space Research Organisation and the Physical Research Laboratory. Known as the father of the Indian space programme, he insisted that advanced technology be applied to the real problems of man and society."
+  },
+  "Verghese Kurien": {
+   "born": "1921",
+   "died": "2012",
+   "role": "Social entrepreneur",
+   "bio": "Verghese Kurien was an Indian social entrepreneur who built the Anand cooperative model behind Amul and led Operation Flood, the world's largest dairy development programme. His work turned India from a milk-deficient nation into the world's largest milk producer, lifting millions of farmers out of poverty."
+  },
+  "M. Visvesvaraya": {
+   "born": "1861",
+   "died": "1962",
+   "role": "Civil engineer and statesman",
+   "bio": "Mokshagundam Visvesvaraya was an Indian civil engineer who designed the Krishna Raja Sagara dam and served as Diwan of Mysore from 1912 to 1918. A pioneer of planned industrialisation whose slogan was 'Industrialize or perish', he founded institutions including the Mysore Soap Factory and the State Bank of Mysore."
+  },
+  "Jagadish Chandra Bose": {
+   "born": "1858",
+   "died": "1937",
+   "role": "Physicist and biologist",
+   "bio": "Jagadish Chandra Bose was an Indian physicist and plant physiologist who pioneered the investigation of radio and microwave optics and demonstrated that plants respond to stimuli. He founded the Bose Institute in Calcutta in 1917 and is considered a father of radio science."
+  },
+  "Srinivasa Ramanujan": {
+   "born": "1887",
+   "died": "1920",
+   "role": "Mathematician",
+   "bio": "Srinivasa Ramanujan was a largely self-taught Indian mathematician who, working with G. H. Hardy at Cambridge, produced some 3,900 results in number theory, infinite series and continued fractions. His intuitive genius and early death at 32 made him one of mathematics' most celebrated figures."
+  },
+  "Kalpana Chawla": {
+   "born": "1962",
+   "died": "2003",
+   "role": "Astronaut",
+   "bio": "Kalpana Chawla was an Indian-American astronaut and engineer, the first woman of Indian origin to fly in space. She flew on two Space Shuttle Columbia missions and died in the Columbia disaster of 1 February 2003, along with her six crewmates."
+  },
+  "Sunita Williams": {
+   "born": "1965",
+   "died": "",
+   "role": "Astronaut",
+   "bio": "Sunita Williams is an American astronaut and retired US Navy officer of Indian-Slovenian heritage who has flown multiple long-duration missions to the International Space Station. She has commanded the ISS and set records for spacewalking by a woman."
+  },
+  "Rakesh Sharma": {
+   "born": "1949",
+   "died": "",
+   "role": "Cosmonaut",
+   "bio": "Rakesh Sharma is a former Indian Air Force pilot who, on 3 April 1984, became the first Indian citizen to travel to space, flying aboard the Soviet Soyuz T-11 to the Salyut 7 station. Asked by Prime Minister Indira Gandhi how India looked from space, he famously replied, 'Saare Jahan Se Achha.'"
+  }
+ }
+}
