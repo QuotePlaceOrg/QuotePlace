@@ -197,26 +197,7 @@ footer{padding:30px 5vw 40px;color:var(--mute);border-top:1px solid var(--line);
    To use real images: add img:"https://your-cdn/quote-123.jpg" to any item.
    Items without img are drawn as colour cards. For thousands of quotes,
    load this list from your database/API instead of keeping it inline. */
-const QUOTES=[
-{t:"Well begun is half done.",a:"Aristotle",c:"Action"},
-{t:"It always seems impossible until it's done.",a:"Nelson Mandela",c:"Courage"},
-{t:"The only way out is through.",a:"Robert Frost",c:"Courage"},
-{t:"We are what we repeatedly do.",a:"Will Durant",c:"Habits"},
-{t:"Nothing in life is to be feared, only understood.",a:"Marie Curie",c:"Courage"},
-{t:"Do what you can, with what you have, where you are.",a:"Theodore Roosevelt",c:"Action"},
-{t:"Whatever you are, be a good one.",a:"Abraham Lincoln",c:"Life"},
-{t:"Not all those who wander are lost.",a:"J.R.R. Tolkien",c:"Life"},
-{t:"The unexamined life is not worth living.",a:"Socrates",c:"Wisdom"},
-{t:"Fall seven times, stand up eight.",a:"Japanese proverb",c:"Courage"},
-{t:"He who has a why can bear almost any how.",a:"Friedrich Nietzsche",c:"Wisdom"},
-{t:"A small deed done is better than a great deed planned.",a:"Peter Marshall",c:"Action"},
-{t:"Quiet the mind, and the soul will speak.",a:"Ma Jaya Sati Bhagavati",c:"Calm"},
-{t:"Nature does not hurry, yet everything is accomplished.",a:"Lao Tzu",c:"Calm"},
-{t:"You can't stop the waves, but you can learn to surf.",a:"Jon Kabat-Zinn",c:"Calm"},
-{t:"Small habits, repeated daily, become who you are.",a:"Anonymous",c:"Habits"},
-{t:"The best time to plant a tree was twenty years ago. The second best is now.",a:"Chinese proverb",c:"Action"},
-{t:"Be kind, for everyone you meet is fighting a hard battle.",a:"Ian Maclaren",c:"Life"}
-].map((q,i)=>({id:"q"+(i+1),...q}));
+const QUOTES=[]; /* batch quotes load from data/manifest.json */
 /* ---------- CATEGORIES & AUTHORS ----------
    Every quote has exactly ONE category, from this locked list only.
    If a quote fits two, pick the strongest. Never free-type a category.
