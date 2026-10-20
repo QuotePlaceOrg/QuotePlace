@@ -238,10 +238,13 @@ const saved=()=>me?(users[me]?.saved||[]):[];
 /* ---------- RENDER ---------- */
 const heart='<svg viewBox="0 0 24 24"><path d="M12 21s-7-4.6-9.3-9A5.4 5.4 0 0 1 12 6.5 5.4 5.4 0 0 1 21.3 12C19 16.4 12 21 12 21z"/></svg>';
 const shareI='<svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.5l6.8-4M8.6 13.5l6.8 4"/></svg>';
+const TILE_STYLES={cream:["#FAF6EC","#1A1815","#8C3226"],charcoal:["#18161C","#F5F0E4","#D4AF69"],sunset:["linear-gradient(160deg,#754878,#D86E54 55%,#FAB26E)","#FFFFFF","#FFE3B3"],sage:["#B0BCA8","#1E2620","#41563C"],blush:["#F4E4E0","#60202C","#B05860"],navy:["#101C34","#F0F4FA","#82AADC"]};
 function cardHTML(q){
-  const [bg,fg]=col(q),on=saved().includes(q.id);
-  const face=q.img?`<img src="${q.img}" alt="${esc(q.t)} — ${esc(q.a)}" loading="lazy">`
-   :`<div class="face" style="background:${bg};color:${fg}"><blockquote>${esc(q.t)}</blockquote><cite>${esc(q.a)}</cite></div>`;
+  const on=saved().includes(q.id);
+  let face;
+  if(q.img)face=`<img src="${q.img}" alt="${esc(q.t)} — ${esc(q.a)}" loading="lazy">`;
+  else if(TILE_STYLES[q.style]){const s=TILE_STYLES[q.style];face=`<div class="face" style="background:${s[0]};color:${s[1]}"><blockquote>${esc(q.t)}</blockquote><cite style="color:${s[2]};opacity:1">${esc(q.a)}</cite></div>`;}
+  else{const [bg,fg]=col(q);face=`<div class="face" style="background:${bg};color:${fg}"><blockquote>${esc(q.t)}</blockquote><cite>${esc(q.a)}</cite></div>`;}
   return `<figure class="q" data-id="${q.id}">${face}<div class="acts"><button class="ic ${on?"on":""}" data-a="save" aria-label="${on?"Unsave":"Save"} quote" aria-pressed="${on}">${heart}</button><button class="ic" data-a="share" aria-label="Share quote">${shareI}</button></div></figure>`;
 }
 function esc(s){return s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
@@ -274,20 +277,22 @@ let AUTHORS={};
 async function loadData(){
   try{
     const m=await (await fetch("data/manifest.json")).json();
-    for(const f of (m.batches||[])){
-      const b=await (await fetch("data/"+f)).json();
-      (b.quotes||[]).forEach(q=>{ if(!QUOTES.some(x=>x.id===q.id)) QUOTES.push({id:q.id,t:q.t,a:q.a,c:q.c,img:q.img}); });
+    const batches=await Promise.all((m.batches||[]).map(f=>fetch("data/"+f).then(r=>r.json()).catch(()=>null)));
+    for(const b of batches){
+      if(!b)continue;
+      (b.quotes||[]).forEach(q=>{ if(!QUOTES.some(x=>x.id===q.id)) QUOTES.push({id:q.id,t:q.t,a:q.a,c:q.c,img:q.img,style:q.style}); });
       Object.assign(AUTHORS, b.authors||{});
     }
-  }catch(e){}
-  try{
-    const list=await (await fetch("https://cdn.jsdelivr.net/gh/QuotePlaceOrg/quoteplace-authors@main/authors.json")).json();
-    list.forEach(a=>{ AUTHORS[a.name]={born:a.born,died:a.died,role:a.role,bio:a.bio}; });
   }catch(e){}
   /* Shuffle the whole feed on every page load: face cards and
      non-face cards mix together, and the order is fresh each visit. */
   for(let i=QUOTES.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=QUOTES[i];QUOTES[i]=QUOTES[j];QUOTES[j]=t;}
   render();
+  /* Legacy author bios load in the background — the grid must not wait on them. */
+  fetch("https://cdn.jsdelivr.net/gh/QuotePlaceOrg/quoteplace-authors@main/authors.json")
+    .then(r=>r.json())
+    .then(list=>{ list.forEach(a=>{ AUTHORS[a.name]={born:a.born,died:a.died,role:a.role,bio:a.bio}; }); })
+    .catch(()=>{});
 }
 
 /* ---------- QUOTE DETAIL (Pinterest-style) ----------
