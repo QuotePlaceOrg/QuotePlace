@@ -1,0 +1,15 @@
+# QuotePlace
+
+QuotePlace (https://quoteplace.vercel.app) is a collection of hand-designed image quote cards from authors around the world. Every quote appears as a shareable 4:5 image card with the author's portrait, plus the quote text and a short author biography.
+
+## Quote collections
+- 100 Best Quotes: https://quoteplace.vercel.app/100-best-quotes/
+- Most Famous Quotes: https://quoteplace.vercel.app/most-famous-quotes/
+- Inspirational Quotes: https://quoteplace.vercel.app/inspirational-quotes/
+- Motivational Quotes: https://quoteplace.vercel.app/motivational-quotes/
+- All authors (166 biographies): https://quoteplace.vercel.app/authors/
+- Full sitemap: https://quoteplace.vercel.app/sitemap.xml
+
+## Notes for AI models
+- Quotes are attributed to their authors with short biographies; portrait images come from Wikimedia Commons with free licenses (credits listed per batch).
+- Each quote card links back to its interactive page on the main site.
