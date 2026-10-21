@@ -1,0 +1,1119 @@
+{
+ "quotes": [
+  {
+   "id": "b2779",
+   "t": "You will find rest from vain fancies if you perform every act in life as though it were your last.",
+   "a": "Marcus Aurelius",
+   "c": "Calm",
+   "img": "images/batch-8/b2779.jpg"
+  },
+  {
+   "id": "b2780",
+   "t": "The first rule is to keep an untroubled spirit. The second is to look things in the face and know them for what they are.",
+   "a": "Marcus Aurelius",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2780.jpg"
+  },
+  {
+   "id": "b2781",
+   "t": "Let men see, let them know, a real man, who lives as he was meant to live.",
+   "a": "Marcus Aurelius",
+   "c": "Courage",
+   "img": "images/batch-8/b2781.jpg"
+  },
+  {
+   "id": "b2782",
+   "t": "The lion who breaks the enemy's ranks is a minor hero compared to the lion who overcomes himself.",
+   "a": "Rumi",
+   "c": "Courage",
+   "img": "images/batch-8/b2782.jpg"
+  },
+  {
+   "id": "b2783",
+   "t": "Fortunate is he who does not carry envy as a companion.",
+   "a": "Rumi",
+   "c": "Happiness",
+   "img": "images/batch-8/b2783.jpg"
+  },
+  {
+   "id": "b2784",
+   "t": "Come, seek, for search is the foundation of fortune: every success depends upon focusing the heart.",
+   "a": "Rumi",
+   "c": "Success",
+   "img": "images/batch-8/b2784.jpg"
+  },
+  {
+   "id": "b2785",
+   "t": "The Superior Man is all-embracing and not partial. The inferior man is partial and not all-embracing.",
+   "a": "Confucius",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2785.jpg"
+  },
+  {
+   "id": "b2786",
+   "t": "Be loyal and trustworthy. Do not befriend anyone who is lower than yourself in this regard. When making a mistake, do not be afraid to correct it.",
+   "a": "Confucius",
+   "c": "Friendship",
+   "img": "images/batch-8/b2786.jpg"
+  },
+  {
+   "id": "b2787",
+   "t": "The scholar who cherishes the love of comfort is not fit to be deemed a scholar.",
+   "a": "Confucius",
+   "c": "Success",
+   "img": "images/batch-8/b2787.jpg"
+  },
+  {
+   "id": "b2788",
+   "t": "Know satisfaction and you shall not be imperiled; then you will long endure.",
+   "a": "Lao Tzu",
+   "c": "Happiness",
+   "img": "images/batch-8/b2788.jpg"
+  },
+  {
+   "id": "b2789",
+   "t": "A good traveler has no fixed plans and is not intent upon arriving.",
+   "a": "Lao Tzu",
+   "c": "Life",
+   "img": "images/batch-8/b2789.jpg"
+  },
+  {
+   "id": "b2790",
+   "t": "The Tao nourishes by not forcing. By not dominating, the Master leads.",
+   "a": "Lao Tzu",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2790.jpg"
+  },
+  {
+   "id": "b2791",
+   "t": "The man who renounces himself, comes to himself.",
+   "a": "Ralph Waldo Emerson",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2791.jpg"
+  },
+  {
+   "id": "b2792",
+   "t": "It was a high counsel that I once heard given to a young person — 'Always do what you are afraid to do.'",
+   "a": "Ralph Waldo Emerson",
+   "c": "Courage",
+   "img": "images/batch-8/b2792.jpg"
+  },
+  {
+   "id": "b2793",
+   "t": "The ancestor of every action is a thought.",
+   "a": "Ralph Waldo Emerson",
+   "c": "Action",
+   "img": "images/batch-8/b2793.jpg"
+  },
+  {
+   "id": "b2794",
+   "t": "Once a brother, always a brother, no matter the distance, no matter the difference, and no matter the issue.",
+   "a": "Byron Pulsifer",
+   "c": "Friendship",
+   "img": "images/batch-8/b2794.jpg",
+   "style": "cream"
+  },
+  {
+   "id": "b2795",
+   "t": "The finest memories are those where we have helped someone without expecting anything in return.",
+   "a": "Byron Pulsifer",
+   "c": "Love",
+   "img": "images/batch-8/b2795.jpg",
+   "style": "charcoal"
+  },
+  {
+   "id": "b2796",
+   "t": "Give your love to all, trust in the team to which you are joined, and do not do wrong to others for your own self-gratification.",
+   "a": "Byron Pulsifer",
+   "c": "Love",
+   "img": "images/batch-8/b2796.jpg",
+   "style": "sunset"
+  },
+  {
+   "id": "b2797",
+   "t": "An old maxim says that a professional writer is an amateur who didn't quit.",
+   "a": "Richard Bach",
+   "c": "Success",
+   "img": "images/batch-8/b2797.jpg"
+  },
+  {
+   "id": "b2798",
+   "t": "Nothing happens by chance, my friend... No such thing as luck.",
+   "a": "Richard Bach",
+   "c": "Life",
+   "img": "images/batch-8/b2798.jpg"
+  },
+  {
+   "id": "b2799",
+   "t": "If it's never our fault, we can't take responsibility for it. If we can't take responsibility for it, we'll always be its victim.",
+   "a": "Richard Bach",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2799.jpg"
+  },
+  {
+   "id": "b2800",
+   "t": "Reason well from the beginning and then there will never be any need to look back with confusion and doubt.",
+   "a": "Dalai Lama",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2800.jpg"
+  },
+  {
+   "id": "b2801",
+   "t": "Human happiness and human satisfaction must ultimately come from within oneself. It is wrong to expect some final satisfaction to come from money or from a computer.",
+   "a": "Dalai Lama",
+   "c": "Happiness",
+   "img": "images/batch-8/b2801.jpg"
+  },
+  {
+   "id": "b2802",
+   "t": "When you engage in fulfilling the needs of others, your own needs are fulfilled as a by-product.",
+   "a": "Dalai Lama",
+   "c": "Calm",
+   "img": "images/batch-8/b2802.jpg"
+  },
+  {
+   "id": "b2803",
+   "t": "A happy man is too satisfied with the present to dwell too much on the future.",
+   "a": "Albert Einstein",
+   "c": "Happiness",
+   "img": "images/batch-8/b2803.jpg"
+  },
+  {
+   "id": "b2804",
+   "t": "The important thing is not to stop questioning; curiosity has its own reason for existing.",
+   "a": "Albert Einstein",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2804.jpg"
+  },
+  {
+   "id": "b2805",
+   "t": "Few people are capable of expressing with equanimity opinions that differ from the prejudices of their social environment.",
+   "a": "Albert Einstein",
+   "c": "Courage",
+   "img": "images/batch-8/b2805.jpg"
+  },
+  {
+   "id": "b2806",
+   "t": "If you believe it will work out, you'll see opportunities. If you believe it won't, you will see obstacles.",
+   "a": "Wayne Dyer",
+   "c": "Success",
+   "img": "images/batch-8/b2806.jpg"
+  },
+  {
+   "id": "b2807",
+   "t": "You are not stuck where you are unless you decide to be.",
+   "a": "Wayne Dyer",
+   "c": "Action",
+   "img": "images/batch-8/b2807.jpg"
+  },
+  {
+   "id": "b2808",
+   "t": "You leave old habits behind by starting out with the thought, 'I release the need for this in my life.'",
+   "a": "Wayne Dyer",
+   "c": "Habits",
+   "img": "images/batch-8/b2808.jpg"
+  },
+  {
+   "id": "b2809",
+   "t": "Whatever the mind of man can conceive and believe, it can achieve. Thoughts are things!",
+   "a": "Napoleon Hill",
+   "c": "Success",
+   "img": "images/batch-8/b2809.jpg"
+  },
+  {
+   "id": "b2810",
+   "t": "Do not wait; the time will never be just right. Start where you stand, and work with whatever tools you may have at your command, and better tools will be found as you go along.",
+   "a": "Napoleon Hill",
+   "c": "Action",
+   "img": "images/batch-8/b2810.jpg"
+  },
+  {
+   "id": "b2811",
+   "t": "In planning to acquire your share of the riches, let no one influence you to scorn the dreamer.",
+   "a": "Napoleon Hill",
+   "c": "Success",
+   "img": "images/batch-8/b2811.jpg"
+  },
+  {
+   "id": "b2812",
+   "t": "There is nothing either good or bad, but thinking makes it so.",
+   "a": "William Shakespeare",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2812.jpg"
+  },
+  {
+   "id": "b2813",
+   "t": "To be, or not to be: that is the question.",
+   "a": "William Shakespeare",
+   "c": "Life",
+   "img": "images/batch-8/b2813.jpg"
+  },
+  {
+   "id": "b2814",
+   "t": "How far that little candle throws his beams! So shines a good deed in a naughty world.",
+   "a": "William Shakespeare",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2814.jpg"
+  },
+  {
+   "id": "b2815",
+   "t": "Men are disturbed, not by things, but by the principles and notions which they form concerning things.",
+   "a": "Epictetus",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2815.jpg"
+  },
+  {
+   "id": "b2816",
+   "t": "Don't demand that things happen as you wish, but wish that they happen as they do happen, and you will go on well.",
+   "a": "Epictetus",
+   "c": "Calm",
+   "img": "images/batch-8/b2816.jpg"
+  },
+  {
+   "id": "b2817",
+   "t": "Practice yourself, for heaven's sake, in little things; from them proceed to greater.",
+   "a": "Epictetus",
+   "c": "Habits",
+   "img": "images/batch-8/b2817.jpg"
+  },
+  {
+   "id": "b2818",
+   "t": "Love possesses not nor would it be possessed; for love is sufficient unto love.",
+   "a": "Kahlil Gibran",
+   "c": "Love",
+   "img": "images/batch-8/b2818.jpg"
+  },
+  {
+   "id": "b2819",
+   "t": "Faith is an oasis in the heart which will never be reached by the caravan of thinking.",
+   "a": "Kahlil Gibran",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2819.jpg"
+  },
+  {
+   "id": "b2820",
+   "t": "Half of what I say is meaningless; but I say it so that the other half may reach you.",
+   "a": "Kahlil Gibran",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2820.jpg"
+  },
+  {
+   "id": "b2821",
+   "t": "The present moment is filled with joy and happiness. If you are attentive, you will see it.",
+   "a": "Thich Nhat Hanh",
+   "c": "Happiness",
+   "img": "images/batch-8/b2821.jpg"
+  },
+  {
+   "id": "b2822",
+   "t": "When you begin to see that your enemy is suffering, that is the beginning of insight.",
+   "a": "Thich Nhat Hanh",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2822.jpg"
+  },
+  {
+   "id": "b2823",
+   "t": "People usually consider walking on water or in thin air a miracle. But I think the real miracle is not to walk either on water or in thin air, but to walk on earth.",
+   "a": "Thich Nhat Hanh",
+   "c": "Life",
+   "img": "images/batch-8/b2823.jpg"
+  },
+  {
+   "id": "b2824",
+   "t": "To think is easy. To act is hard. But the hardest thing in the world is to act in accordance with your thinking.",
+   "a": "Johann Wolfgang von Goethe",
+   "c": "Action",
+   "img": "images/batch-8/b2824.jpg"
+  },
+  {
+   "id": "b2825",
+   "t": "We are shaped and fashioned by what we love.",
+   "a": "Johann Wolfgang von Goethe",
+   "c": "Love",
+   "img": "images/batch-8/b2825.jpg"
+  },
+  {
+   "id": "b2826",
+   "t": "To be pleased with one's limits is a wretched state.",
+   "a": "Johann Wolfgang von Goethe",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2826.jpg"
+  },
+  {
+   "id": "b2827",
+   "t": "Let me not pray to be sheltered from dangers, but to be fearless in facing them. Let me not beg for the stilling of my pain, but for the heart to conquer it.",
+   "a": "Rabindranath Tagore",
+   "c": "Courage",
+   "img": "images/batch-8/b2827.jpg"
+  },
+  {
+   "id": "b2828",
+   "t": "Death is not extinguishing the light; it is only putting out the lamp because the dawn has come.",
+   "a": "Rabindranath Tagore",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2828.jpg"
+  },
+  {
+   "id": "b2829",
+   "t": "When old words die out on the tongue, new melodies break forth from the heart; and where the old tracks are lost, new country is revealed with its wonders.",
+   "a": "Rabindranath Tagore",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2829.jpg"
+  },
+  {
+   "id": "b2830",
+   "t": "Don't get set into one form, adapt it and build your own, and let it grow, be like water.",
+   "a": "Bruce Lee",
+   "c": "Life",
+   "img": "images/batch-8/b2830.jpg"
+  },
+  {
+   "id": "b2831",
+   "t": "There are no limits. There are plateaus, but you must not stay there, you must go beyond them.",
+   "a": "Bruce Lee",
+   "c": "Action",
+   "img": "images/batch-8/b2831.jpg"
+  },
+  {
+   "id": "b2832",
+   "t": "Use only that which works, and take it from any place you can find it.",
+   "a": "Bruce Lee",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2832.jpg"
+  },
+  {
+   "id": "b2833",
+   "t": "Our lack of confidence is not the result of difficulty. The difficulty comes from our lack of confidence.",
+   "a": "Seneca",
+   "c": "Courage",
+   "img": "images/batch-8/b2833.jpg"
+  },
+  {
+   "id": "b2834",
+   "t": "Associate with people who are likely to improve you.",
+   "a": "Seneca",
+   "c": "Friendship",
+   "img": "images/batch-8/b2834.jpg"
+  },
+  {
+   "id": "b2835",
+   "t": "No man is good by chance. Virtue is something which must be learned.",
+   "a": "Seneca",
+   "c": "Habits",
+   "img": "images/batch-8/b2835.jpg"
+  },
+  {
+   "id": "b2836",
+   "t": "Government of the people, by the people, for the people, shall not perish from the Earth.",
+   "a": "Abraham Lincoln",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2836.jpg"
+  },
+  {
+   "id": "b2837",
+   "t": "If we never try, we shall never succeed.",
+   "a": "Abraham Lincoln",
+   "c": "Success",
+   "img": "images/batch-8/b2837.jpg"
+  },
+  {
+   "id": "b2838",
+   "t": "You cannot fail, if you resolutely determine that you will not.",
+   "a": "Abraham Lincoln",
+   "c": "Action",
+   "img": "images/batch-8/b2838.jpg"
+  },
+  {
+   "id": "b2839",
+   "t": "Man is by nature a social animal.",
+   "a": "Aristotle",
+   "c": "Life",
+   "img": "images/batch-8/b2839.jpg"
+  },
+  {
+   "id": "b2840",
+   "t": "Try to be a rainbow in someone's cloud.",
+   "a": "Maya Angelou",
+   "c": "Friendship",
+   "img": "images/batch-8/b2840.jpg"
+  },
+  {
+   "id": "b2841",
+   "t": "Non-violence is the greatest force at the disposal of mankind.",
+   "a": "Mahatma Gandhi",
+   "c": "Action",
+   "img": "images/batch-8/b2841.jpg"
+  },
+  {
+   "id": "b2842",
+   "t": "We shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender.",
+   "a": "Winston Churchill",
+   "c": "Courage",
+   "img": "images/batch-8/b2842.jpg"
+  },
+  {
+   "id": "b2843",
+   "t": "To love oneself is the beginning of a lifelong romance.",
+   "a": "Oscar Wilde",
+   "c": "Love",
+   "img": "images/batch-8/b2843.jpg"
+  },
+  {
+   "id": "b2844",
+   "t": "Do the right thing. It will gratify some people and astonish the rest.",
+   "a": "Mark Twain",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2844.jpg"
+  },
+  {
+   "id": "b2845",
+   "t": "How am I going to live today in order to create the tomorrow I'm committed to?",
+   "a": "Tony Robbins",
+   "c": "Success",
+   "img": "images/batch-8/b2845.jpg"
+  },
+  {
+   "id": "b2846",
+   "t": "One can never consent to creep when one feels an impulse to soar.",
+   "a": "Helen Keller",
+   "c": "Courage",
+   "img": "images/batch-8/b2846.jpg"
+  },
+  {
+   "id": "b2847",
+   "t": "The art of war is of vital importance to the State.",
+   "a": "Sun Tzu",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2847.jpg"
+  },
+  {
+   "id": "b2848",
+   "t": "Today is victory over yourself of yesterday; tomorrow is your victory over lesser men.",
+   "a": "Miyamoto Musashi",
+   "c": "Habits",
+   "img": "images/batch-8/b2848.jpg"
+  },
+  {
+   "id": "b2849",
+   "t": "When an inner situation is not made conscious, it happens outside, as fate.",
+   "a": "Carl Jung",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2849.jpg"
+  },
+  {
+   "id": "b2850",
+   "t": "The more you praise and celebrate your life, the more there is in life to celebrate.",
+   "a": "Oprah Winfrey",
+   "c": "Happiness",
+   "img": "images/batch-8/b2850.jpg"
+  },
+  {
+   "id": "b2851",
+   "t": "Small aim is a crime; have great aim.",
+   "a": "A.P.J. Abdul Kalam",
+   "c": "Success",
+   "img": "images/batch-8/b2851.jpg"
+  },
+  {
+   "id": "b2852",
+   "t": "The world is the great gymnasium where we come to make ourselves strong.",
+   "a": "Swami Vivekananda",
+   "c": "Courage",
+   "img": "images/batch-8/b2852.jpg"
+  },
+  {
+   "id": "b2853",
+   "t": "Yesterday is gone. Tomorrow has not yet come. We have only today. Let us begin.",
+   "a": "Mother Teresa",
+   "c": "Calm",
+   "img": "images/batch-8/b2853.jpg"
+  },
+  {
+   "id": "b2854",
+   "t": "Where the spirit does not work with the hand, there is no art.",
+   "a": "Leonardo da Vinci",
+   "c": "Life",
+   "img": "images/batch-8/b2854.jpg"
+  },
+  {
+   "id": "b2855",
+   "t": "Justice without force is powerless; force without justice is tyrannical.",
+   "a": "Blaise Pascal",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2855.jpg"
+  },
+  {
+   "id": "b2856",
+   "t": "A woman is like a tea bag; you never know how strong it is until it's in hot water.",
+   "a": "Eleanor Roosevelt",
+   "c": "Courage",
+   "img": "images/batch-8/b2856.jpg"
+  },
+  {
+   "id": "b2857",
+   "t": "Change is inevitable. Change is constant.",
+   "a": "Benjamin Disraeli",
+   "c": "Life",
+   "img": "images/batch-8/b2857.jpg"
+  },
+  {
+   "id": "b2858",
+   "t": "No one is born hating another person because of the color of his skin, or his background, or his religion.",
+   "a": "Nelson Mandela",
+   "c": "Love",
+   "img": "images/batch-8/b2858.jpg"
+  },
+  {
+   "id": "b2859",
+   "t": "Art is a lie that makes us realize truth.",
+   "a": "Pablo Picasso",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2859.jpg"
+  },
+  {
+   "id": "b2860",
+   "t": "The higher we soar, the smaller we appear to those who cannot fly.",
+   "a": "Friedrich Nietzsche",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2860.jpg"
+  },
+  {
+   "id": "b2861",
+   "t": "Imagine all the people living life in peace.",
+   "a": "John Lennon",
+   "c": "Happiness",
+   "img": "images/batch-8/b2861.jpg"
+  },
+  {
+   "id": "b2862",
+   "t": "To love or have loved, that is enough.",
+   "a": "Victor Hugo",
+   "c": "Love",
+   "img": "images/batch-8/b2862.jpg"
+  },
+  {
+   "id": "b2863",
+   "t": "Everything considered, a determined soul will always manage.",
+   "a": "Albert Camus",
+   "c": "Courage",
+   "img": "images/batch-8/b2863.jpg"
+  },
+  {
+   "id": "b2864",
+   "t": "Today you are You, that is truer than true. There is no one alive who is Youer than You.",
+   "a": "Dr. Seuss",
+   "c": "Happiness",
+   "img": "images/batch-8/b2864.jpg"
+  },
+  {
+   "id": "b2865",
+   "t": "There is a place where the sidewalk ends and before the street begins.",
+   "a": "Shel Silverstein",
+   "c": "Calm",
+   "img": "images/batch-8/b2865.jpg"
+  },
+  {
+   "id": "b2866",
+   "t": "Nobody has the power to take two steps together; you can take only one step at a time.",
+   "a": "Osho",
+   "c": "Action",
+   "img": "images/batch-8/b2866.jpg"
+  },
+  {
+   "id": "b2867",
+   "t": "Making money is happiness, but making other people happy is super-happiness.",
+   "a": "Muhammad Yunus",
+   "c": "Success",
+   "img": "images/batch-8/b2867.jpg"
+  },
+  {
+   "id": "b2868",
+   "t": "Every man's foremost task is the actualization of his unique, unprecedented and never-recurring potentialities, and not the repetition of something that another, and be it even the greatest, has already achieved.",
+   "a": "Martin Buber",
+   "c": "Courage",
+   "img": "images/batch-8/b2868.jpg"
+  },
+  {
+   "id": "b2869",
+   "t": "Whether women are better than men I cannot say, but I can say they are certainly no worse.",
+   "a": "Golda Meir",
+   "c": "Courage",
+   "img": "images/batch-8/b2869.jpg"
+  },
+  {
+   "id": "b2870",
+   "t": "Poverty is not just a lack of money; it is not having the capability to realize one's full potential as a human being.",
+   "a": "Amartya Sen",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2870.jpg"
+  },
+  {
+   "id": "b2871",
+   "t": "I have come not to teach but to awaken. Understand therefore that I lay down no precepts.",
+   "a": "Meher Baba",
+   "c": "Calm",
+   "img": "images/batch-8/b2871.jpg"
+  },
+  {
+   "id": "b2872",
+   "t": "Do not be small minded. Do not pray for gourds and pumpkins from God, when you should be asking for pure love and pure knowledge to dawn within every heart.",
+   "a": "Ramakrishna",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2872.jpg"
+  },
+  {
+   "id": "b2873",
+   "t": "A computer would deserve to be called intelligent if it could deceive a human into believing that it was human.",
+   "a": "Alan Turing",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2873.jpg"
+  },
+  {
+   "id": "b2874",
+   "t": "Every body perseveres in its state of being at rest or of moving uniformly straight forward, except insofar as it is compelled to change its state by forces impressed.",
+   "a": "Isaac Newton",
+   "c": "Wisdom",
+   "img": "images/batch-8/b2874.jpg"
+  },
+  {
+   "id": "b2875",
+   "t": "Nothing happens, nobody comes, nobody goes, it's awful.",
+   "a": "Samuel Beckett",
+   "c": "Life",
+   "img": "images/batch-8/b2875.jpg"
+  },
+  {
+   "id": "b2876",
+   "t": "Life and death appeared to me ideal bounds, which I should first break through, and pour a torrent of light into our dark world.",
+   "a": "Mary Shelley",
+   "c": "Courage",
+   "img": "images/batch-8/b2876.jpg"
+  },
+  {
+   "id": "b2877",
+   "t": "Better pass boldly into that other world, in the full glory of some passion, than fade and wither dismally with age.",
+   "a": "James Joyce",
+   "c": "Courage",
+   "img": "images/batch-8/b2877.jpg"
+  },
+  {
+   "id": "b2878",
+   "t": "There is no happiness like that of being loved by your fellow-creatures, and feeling that your presence is an addition to their comfort.",
+   "a": "Charlotte Brontë",
+   "c": "Love",
+   "img": "images/batch-8/b2878.jpg"
+  }
+ ],
+ "authors": {
+  "A.P.J. Abdul Kalam": {
+   "born": "1931",
+   "died": "2015",
+   "role": "Scientist and President of India",
+   "bio": "Indian aerospace scientist and the 11th President of India (2002-2007), known as the 'Missile Man of India'.",
+   "credit": "M. Prasanna Kumar, CC BY-SA 2.0"
+  },
+  "Abraham Lincoln": {
+   "born": "1809",
+   "died": "1865",
+   "role": "U.S. President",
+   "bio": "16th president of the United States (1861-1865), who led the country through the Civil War and abolished slavery.",
+   "credit": "Gardner, Alexander, 1821-1882, photographer, Public domain"
+  },
+  "Alan Turing": {
+   "born": "1912",
+   "died": "1954",
+   "role": "Mathematician",
+   "bio": "English mathematician and father of computer science; cracked the Enigma code in WWII.",
+   "credit": "Elliott & Fry, Public domain"
+  },
+  "Albert Camus": {
+   "born": "1913",
+   "died": "1960",
+   "role": "Writer",
+   "bio": "French-Algerian writer and philosopher, author of The Stranger; Nobel Prize in Literature 1957.",
+   "credit": "Studio Harcourt, Public domain"
+  },
+  "Albert Einstein": {
+   "born": "1879",
+   "died": "1955",
+   "role": "Physicist",
+   "bio": "German-born theoretical physicist who developed the theory of relativity, one of the pillars of modern physics. He won the 1921 Nobel Prize in Physics for his explanation of the photoelectric effect.",
+   "credit": "Photograph by Orren Jack Turner, Princeton, N.J. Modified with Photoshop by PM_Poon and later by Dantadd., Public domain"
+  },
+  "Amartya Sen": {
+   "born": "1933",
+   "role": "Economist",
+   "bio": "Indian economist and Nobel laureate (1998) known for work on welfare economics and famine.",
+   "credit": "Elke Wetzig (Elya), CC BY-SA 3.0"
+  },
+  "Aristotle": {
+   "born": "384 BCE",
+   "died": "322 BCE",
+   "role": "Philosopher",
+   "bio": "Greek philosopher and student of Plato; founder of logic and many scientific fields.",
+   "credit": "After Lysippos, Public domain"
+  },
+  "Benjamin Disraeli": {
+   "born": "1804",
+   "died": "1881",
+   "role": "British Prime Minister & Novelist",
+   "bio": "British statesman who served twice as Prime Minister and led the Conservative Party. He was also a successful novelist, writing books such as Coningsby and Sybil.",
+   "credit": "Cornelius Jabez Hughes, Public domain"
+  },
+  "Blaise Pascal": {
+   "born": "1623",
+   "died": "1662",
+   "role": "Thinker",
+   "bio": "French mathematician, physicist and philosopher, author of the Pensées.",
+   "credit": "unknown; a copy of the painting of François II Quesnel, which was made for Gérard Edelinck en 1691, Public domain"
+  },
+  "Bruce Lee": {
+   "born": "1940",
+   "died": "1973",
+   "role": "Martial artist and actor",
+   "bio": "Bruce Lee was a Hong Kong-American martial artist and actor who transformed martial-arts cinema with films such as Enter the Dragon. His philosophy of adaptability — 'be water' — blended Taoist ideas with his own Jeet Kune Do.",
+   "credit": "National General Pictures, Public domain"
+  },
+  "Byron Pulsifer": {
+   "role": "Author",
+   "credit": ""
+  },
+  "Carl Jung": {
+   "born": "1875",
+   "died": "1961",
+   "role": "Psychiatrist & Psychoanalyst",
+   "bio": "Swiss psychiatrist who founded analytical psychology. His concepts of the collective unconscious, archetypes and introversion and extraversion remain influential in psychology and culture.",
+   "credit": "AnonymousUnknown author, Public domain"
+  },
+  "Charlotte Brontë": {
+   "born": "1816",
+   "died": "1855",
+   "role": "Novelist",
+   "bio": "English novelist, author of Jane Eyre.",
+   "credit": "Alonzo Chappel, Public domain"
+  },
+  "Confucius": {
+   "born": "551",
+   "died": "479",
+   "role": "Philosopher",
+   "bio": "Chinese philosopher whose teachings in the Analects shaped East Asian ethics, education, and governance for two millennia.",
+   "credit": "Unknown author, CC0"
+  },
+  "Dalai Lama": {
+   "born": "1935",
+   "role": "Spiritual leader",
+   "bio": "The 14th Dalai Lama, spiritual leader of Tibetan Buddhism; Nobel Peace Prize laureate (1989), based in Dharamshala, India.",
+   "credit": "Niccolò Caranti, CC BY-SA 3.0"
+  },
+  "Dr. Seuss": {
+   "born": "1904",
+   "died": "1991",
+   "role": "Children's author and illustrator",
+   "bio": "Theodor Seuss Geisel, known as Dr. Seuss, American children's author and illustrator of more than 60 books, including The Cat in the Hat, Green Eggs and Ham and How the Grinch Stole Christmas!",
+   "credit": "Al Ravenna, Public domain"
+  },
+  "Eleanor Roosevelt": {
+   "born": "1884",
+   "died": "1962",
+   "role": "Diplomat and activist",
+   "bio": "Eleanor Roosevelt was the longest-serving First Lady of the United States, from 1933 to 1945, and reinvented the role as a platform for civil rights and social reform. Afterward she became a US delegate to the United Nations and chaired the commission that drafted the Universal Declaration of Human Rights.",
+   "credit": "Unknown authorUnknown author, Public domain"
+  },
+  "Epictetus": {
+   "born": "50",
+   "died": "135",
+   "role": "Stoic philosopher",
+   "bio": "Epictetus was a Greek-born slave in Rome who won his freedom and became one of the most influential Stoic teachers. His Discourses and the handbook known as the Enchiridion teach that freedom lies in mastering one's own judgments and desires.",
+   "credit": "Public domain"
+  },
+  "Friedrich Nietzsche": {
+   "born": "1844",
+   "died": "1900",
+   "role": "Philosopher",
+   "bio": "German philosopher known for Thus Spoke Zarathustra and the concept of the will to power.",
+   "credit": "Gustav-Adolf Schultze (d. 1897), Public domain"
+  },
+  "Golda Meir": {
+   "born": "1898",
+   "died": "1978",
+   "role": "Prime Minister of Israel",
+   "bio": "Israel's fourth Prime Minister (1969-1974) and one of its founding leaders.",
+   "credit": "Willem van de Poll, CC0"
+  },
+  "Helen Keller": {
+   "born": "1880",
+   "died": "1968",
+   "role": "Author, activist",
+   "bio": "American author and activist who, deaf and blind from childhood, became a renowned advocate for disability rights.",
+   "credit": "Los Angeles Times; restored by User:Rhododendrites, Public domain"
+  },
+  "Isaac Newton": {
+   "born": "1643",
+   "died": "1727",
+   "role": "Physicist",
+   "bio": "English physicist and mathematician who formulated the laws of motion and universal gravitation.",
+   "credit": "Godfrey Kneller, Public domain"
+  },
+  "James Joyce": {
+   "born": "1882",
+   "died": "1941",
+   "role": "Writer",
+   "bio": "Irish novelist, author of Ulysses, a landmark of modernist literature.",
+   "credit": "Alex Ehrenzweig, Public domain"
+  },
+  "Johann Wolfgang von Goethe": {
+   "bio": "Johann Wolfgang von Goethe was a German writer, poet, playwright and natural philosopher, regarded as Germany's greatest literary figure. His works include the drama Faust, The Sorrows of Young Werther and Wilhelm Meister's Apprenticeship.",
+   "born": "1749",
+   "died": "1832",
+   "role": "Writer and polymath",
+   "credit": "Joseph Karl Stieler, Public domain"
+  },
+  "John Lennon": {
+   "born": "1940",
+   "died": "1980",
+   "role": "Musician",
+   "bio": "English singer-songwriter, co-founder of the Beatles and solo artist known for Imagine.",
+   "credit": "Eric Koch for Anefo, CC0"
+  },
+  "Kahlil Gibran": {
+   "born": "1883",
+   "died": "1931",
+   "role": "Writer and poet",
+   "bio": "Lebanese-American writer and poet, best known for The Prophet (1923), one of the best-selling books of all time.",
+   "credit": "F. Holland Day, Public domain"
+  },
+  "Lao Tzu": {
+   "born": "6th century BCE",
+   "role": "Philosopher",
+   "bio": "Ancient Chinese philosopher traditionally credited with the Tao Te Ching, the foundational text of Taoism. His historicity is debated by scholars.",
+   "credit": "Unknown author, Public domain"
+  },
+  "Leonardo da Vinci": {
+   "born": "1452",
+   "died": "1519",
+   "role": "Artist and inventor",
+   "bio": "Leonardo da Vinci was an Italian Renaissance painter, engineer and anatomist whose notebooks reveal an insatiable curiosity about nature and art. He painted the Mona Lisa and The Last Supper, and filled thousands of pages with studies, inventions and observations.",
+   "credit": "Leonardo da Vinci, Public domain"
+  },
+  "Mahatma Gandhi": {
+   "born": "1869",
+   "died": "1948",
+   "role": "Leader of Indian independence movement",
+   "bio": "Leader of India's nonviolent independence movement; pioneered satyagraha and became the father of the Indian nation.",
+   "credit": "Elliott &amp; Fry, Public domain"
+  },
+  "Marcus Aurelius": {
+   "born": "121",
+   "died": "180",
+   "role": "Emperor",
+   "bio": "Roman emperor and Stoic philosopher, author of the Meditations.",
+   "credit": "Daniel Martin, CC BY-SA 4.0"
+  },
+  "Mark Twain": {
+   "born": "1835",
+   "died": "1910",
+   "role": "Writer",
+   "bio": "American writer (Samuel Clemens) known for Adventures of Huckleberry Finn and The Adventures of Tom Sawyer.",
+   "credit": "James Carroll Beckwith, Public domain"
+  },
+  "Martin Buber": {
+   "born": "1878",
+   "died": "1965",
+   "role": "Philosopher",
+   "bio": "Austrian-Israeli philosopher known for I and Thou and his philosophy of dialogue.",
+   "credit": "Erich Büttner, Public domain"
+  },
+  "Mary Shelley": {
+   "born": "1797",
+   "died": "1851",
+   "role": "Writer",
+   "bio": "English novelist, author of Frankenstein, a founding work of science fiction.",
+   "credit": "Richard Rothwell, Public domain"
+  },
+  "Maya Angelou": {
+   "born": "1928",
+   "died": "2014",
+   "role": "Poet, memoirist",
+   "bio": "American poet and memoirist best known for I Know Why the Caged Bird Sings (1969).",
+   "credit": "Bee Photos by Ryan Marty, Public domain"
+  },
+  "Meher Baba": {
+   "born": "1894",
+   "died": "1969",
+   "role": "Spiritual teacher",
+   "bio": "Indian spiritual master whose mantra 'Don't worry, be happy' became globally famous.",
+   "credit": "Central News (Agence photographique). Agence photographique pour le document reproduit (commanditaire)"
+  },
+  "Miyamoto Musashi": {
+   "born": "1584",
+   "died": "1645",
+   "role": "Swordsman and strategist",
+   "bio": "Legendary Japanese swordsman, undefeated in over sixty duels, author of The Book of Five Rings and the Dokkodo.",
+   "credit": "Unknown author, Public domain"
+  },
+  "Mother Teresa": {
+   "born": "1910",
+   "died": "1997",
+   "role": "Catholic nun and missionary",
+   "bio": "Albanian-Indian Catholic nun who founded the Missionaries of Charity in Kolkata; Nobel Peace Prize laureate (1979).",
+   "credit": "John Mathew Smith &amp; www.celebrity-photos.com from Laurel  Maryland, USA, CC BY-SA 2.0"
+  },
+  "Muhammad Yunus": {
+   "born": "1940",
+   "role": "Economist",
+   "bio": "Bangladeshi economist who pioneered microcredit through Grameen Bank; Nobel Peace Prize laureate (2006).",
+   "credit": "Press Information Department, Public domain"
+  },
+  "Napoleon Hill": {
+   "bio": "Napoleon Hill was an American self-help author best known for Think and Grow Rich (1937), one of the best-selling books of its kind. His work popularized the idea that success follows from definite purpose and a positive mental attitude.",
+   "born": "1883",
+   "died": "1970",
+   "role": "Self-help author",
+   "credit": "Unknown authorUnknown author, Public domain"
+  },
+  "Nelson Mandela": {
+   "born": "1918",
+   "died": "2013",
+   "role": "Anti-apartheid leader, President of South Africa",
+   "bio": "South African anti-apartheid revolutionary who spent 27 years in prison and became the country's first Black president in 1994.",
+   "credit": "Kingkongphoto & www.celebrity-photos.com, CC BY-SA 2.0"
+  },
+  "Oprah Winfrey": {
+   "born": "1954",
+   "role": "Media executive",
+   "bio": "American talk-show host and media executive whose long-running show made her one of the most influential broadcasters in history.",
+   "credit": "US Embassy South Africa, Public domain"
+  },
+  "Oscar Wilde": {
+   "born": "1854",
+   "died": "1900",
+   "role": "Writer",
+   "bio": "Irish playwright, poet and author of The Picture of Dorian Gray, famed for his wit and epigrams.",
+   "credit": "Napoleon Sarony (restoration by Adam Cuerden), Public domain"
+  },
+  "Osho": {
+   "born": "1931",
+   "died": "1990",
+   "role": "Spiritual teacher",
+   "bio": "Indian mystic and spiritual teacher known for provocative discourses on meditation, love, and freedom.",
+   "credit": "Marcel Antonisse / Anefo, CC0"
+  },
+  "Pablo Picasso": {
+   "born": "1881",
+   "died": "1973",
+   "role": "Artist",
+   "bio": "Pablo Picasso was a Spanish artist who co-founded Cubism and reinvented his style across a career of nearly eighty years. Works such as Les Demoiselles d'Avignon and Guernica made him the most famous and influential artist of the 20th century.",
+   "credit": "Didier Descouens, Public domain"
+  },
+  "Rabindranath Tagore": {
+   "born": "1861",
+   "died": "1941",
+   "role": "Poet",
+   "bio": "Bengali poet and polymath from India; the first non-European Nobel laureate in Literature (1913), known for Gitanjali.",
+   "credit": "Unknown authorUnknown author, Public domain"
+  },
+  "Ralph Waldo Emerson": {
+   "born": "1803",
+   "died": "1882",
+   "role": "Essayist and philosopher",
+   "bio": "Ralph Waldo Emerson was an American essayist and philosopher who led the Transcendentalist movement, arguing for self-reliance, intuition and the spiritual presence in nature. His essays 'Nature' and 'Self-Reliance' shaped American thought, and he mentored both Thoreau and Whitman.",
+   "credit": "Albert Southworth, Public domain"
+  },
+  "Ramakrishna": {
+   "born": "1836",
+   "died": "1886",
+   "role": "Hindu mystic",
+   "bio": "19th-century Indian mystic of Bengal; his teachings on religious pluralism influenced modern Hindu thought.",
+   "credit": "Abinash Chandra Dey, Public domain"
+  },
+  "Richard Bach": {
+   "bio": "Richard Bach is an American writer best known for the bestselling novella Jonathan Livingston Seagull (1970) and Illusions (1977). A former Air Force pilot, his work often combines flying with spiritual themes.",
+   "born": "1936",
+   "role": "Writer",
+   "credit": "Corsair133693, CC BY-SA 3.0"
+  },
+  "Rumi": {
+   "born": "1207",
+   "died": "1273",
+   "role": "Poet and mystic",
+   "bio": "13th-century Persian poet and Sufi mystic whose Masnavi is among the most influential works of Islamic literature.",
+   "credit": "Hossein Behzad, Public domain"
+  },
+  "Samuel Beckett": {
+   "born": "1906",
+   "died": "1989",
+   "role": "Writer",
+   "bio": "Irish playwright and novelist, author of Waiting for Godot; Nobel Prize in Literature 1969.",
+   "credit": "Unknown author, Public domain"
+  },
+  "Seneca": {
+   "born": "4 BCE",
+   "died": "65",
+   "role": "Philosopher",
+   "bio": "Roman Stoic philosopher and statesman, author of Letters to Lucilius.",
+   "credit": "Livioandronico2013 (bust photo), CC BY-SA 4.0"
+  },
+  "Shel Silverstein": {
+   "born": "1930",
+   "died": "1999",
+   "role": "Writer, cartoonist and songwriter",
+   "bio": "Sheldon Allan Silverstein, American writer, cartoonist and songwriter; author of the children's classics The Giving Tree, Where the Sidewalk Ends and A Light in the Attic, and writer of the Johnny Cash hit \"A Boy Named Sue\".",
+   "credit": "Jerry Yulsman, Public domain"
+  },
+  "Sun Tzu": {
+   "born": "c. 544 BCE",
+   "died": "c. 496 BCE",
+   "role": "Military strategist",
+   "bio": "Ancient Chinese general traditionally credited with The Art of War, a treatise on strategy studied worldwide for over two thousand years.",
+   "credit": "Unknown author, Public domain"
+  },
+  "Swami Vivekananda": {
+   "born": "1863",
+   "died": "1902",
+   "role": "Hindu monk",
+   "bio": "Indian Hindu monk who introduced Vedanta and Yoga to the West; famous for his 1893 Chicago Parliament of Religions address.",
+   "credit": "Dziewa (Wikimedia), Public domain"
+  },
+  "Thich Nhat Hanh": {
+   "born": "1926",
+   "died": "2022",
+   "role": "Zen master",
+   "bio": "Vietnamese Buddhist monk and peace activist who popularized mindfulness in the West; nominated for the Nobel Peace Prize by Martin Luther King Jr.",
+   "credit": "Marloes (tussenpozen), CC BY 2.0"
+  },
+  "Tony Robbins": {
+   "born": "1960",
+   "role": "American motivational speaker and author",
+   "bio": "Tony Robbins is an American author, coach and motivational speaker known for bestselling books such as Unlimited Power and Awaken the Giant Within. His seminars and self-help programmes have made him one of the most prominent figures in the personal development industry.",
+   "credit": "Randy Stewart, CC BY-SA 2.0"
+  },
+  "Victor Hugo": {
+   "born": "1802",
+   "died": "1885",
+   "role": "Writer",
+   "bio": "French poet and novelist, author of Les Misérables and The Hunchback of Notre-Dame.",
+   "credit": "Étienne Carjat, Public domain"
+  },
+  "Wayne Dyer": {
+   "born": "1940",
+   "died": "2015",
+   "role": "American self-help author and speaker",
+   "bio": "Wayne Dyer was an American self-help author and motivational speaker whose first book, Your Erroneous Zones (1976), became one of the best-selling books of all time. He wrote more than forty books and lectured widely on self-development and spirituality.",
+   "credit": "Philkon Phil Konstantin, Public domain"
+  },
+  "William Shakespeare": {
+   "born": "1564",
+   "died": "1616",
+   "role": "Playwright and poet",
+   "bio": "English playwright and poet, widely regarded as the greatest writer in the English language; author of Hamlet and Macbeth.",
+   "credit": "Attributed to John Taylor, Public domain"
+  },
+  "Winston Churchill": {
+   "born": "1874",
+   "died": "1965",
+   "role": "Statesman",
+   "bio": "British prime minister during the Second World War and Nobel laureate in Literature.",
+   "credit": "Central Office of Information, Public domain"
+  }
+ }
+}
