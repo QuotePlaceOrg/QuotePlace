@@ -1,13 +1,9 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Everyone can read quotes. Only you (via console or admin script) can write them.
-    match /quotes/{id} {
-      allow read: if true;
-      allow write: if false;
-    }
-    // Each user can read and write only their own saved list.
-    match /users/{uid}/saved/{quoteId} {
+    // Each signed-in user can read and write only their own profile doc
+    // (holds their saved quote ids). Everything else is denied.
+    match /users/{uid} {
       allow read, write: if request.auth != null && request.auth.uid == uid;
     }
   }

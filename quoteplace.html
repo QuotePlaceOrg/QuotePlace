@@ -34,7 +34,8 @@
 {"imports": {
   "firebase/app": "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js",
   "firebase/analytics": "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js",
-  "firebase/auth": "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"
+  "firebase/auth": "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js",
+  "firebase/firestore": "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"
 }}
 </script>
 <script type="module">
@@ -55,32 +56,11 @@ const analytics = getAnalytics(app);
 /* ---------- GOOGLE LOGIN (Firebase Auth) ----------
    Sign-in with Google creates/uses the same profile entry as the
    email login, so saved quotes live in one place. */
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut as fbSignOut } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 const auth = getAuth(app);
-const googleProvider = new GoogleAuthProvider();
-window.__qpGoogleLogout = () => { try { store.set("qp_google", false); } catch (e) {} fbSignOut(auth).catch(() => {}); };
-const googleBtn = document.getElementById("googleBtn");
-if (googleBtn) googleBtn.onclick = async () => {
-  const err = document.getElementById("authE");
-  err.textContent = "";
-  try {
-    const res = await signInWithPopup(auth, googleProvider);
-    const u = res.user, email = (u.email || "").toLowerCase();
-    if (!email) throw new Error("Google account has no email address.");
-    const prev = users[email] || {};
-    users[email] = { name: u.displayName || prev.name || email.split("@")[0], h: prev.h || "", saved: prev.saved || [] };
-    me = email;
-    store.set("qp_users", users); store.set("qp_me", me); store.set("qp_google", true);
-    document.getElementById("authD").close();
-    toast("Welcome, " + users[me].name); render();
-  } catch (e) {
-    if (e && e.code === "auth/operation-not-allowed") err.textContent = "Google sign-in is not enabled for this project yet. Enable Google in Firebase Console → Authentication → Sign-in method.";
-    else if (e && e.code === "auth/popup-closed-by-user") err.textContent = "Google sign-in was cancelled.";
-    else if (e && e.code === "auth/popup-blocked") err.textContent = "The sign-in popup was blocked. Allow popups for this site and try again.";
-    else if (e && e.code === "auth/unauthorized-domain") err.textContent = "This domain is not authorized for Google sign-in. Add it in Firebase Console → Authentication → Settings → Authorized domains.";
-    else err.textContent = "Google sign-in failed. Please try again.";
-  }
-};
+const db = getFirestore(app);
+window.__qpFb = { auth, db, GoogleAuthProvider, signInWithPopup, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, doc, getDoc, setDoc };
 </script>
 <style>
 :root{color-scheme:light;--bg:#fff;--ink:#17202e;--mute:#5d6878;--card:#fff;--line:#e2e6ea;--blue:#2740d6;--onblue:#fff;
@@ -412,6 +392,53 @@ function closeDetail(){ $("#detail").classList.remove("open"); document.body.sty
 
 /* ---------- AUTH (browser-only demo; swap for a real backend) ---------- */
 async function hash(s){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}
+/* ---------- CLOUD ACCOUNTS + SAVE SYNC (Firebase) ----------
+   Sign-in (email or Google) runs on Firebase Auth. Saved quotes live in
+   Firestore at users/{uid} and merge with this device's local list, so
+   the same account shows the same saves on every device. All cloud calls
+   are best-effort: if Firestore is unreachable, local behaviour is kept. */
+const FB=window.__qpFb||null;
+let fbUser=null,syncedUid=null;
+const fbDocRef=uid=>FB.doc(FB.db,"users",uid);
+async function syncOnLogin(u,opts={}){
+  if(!u||!u.email)return;
+  const email=u.email.toLowerCase();
+  if(!users[email])users[email]={name:u.displayName||email.split("@")[0],saved:[]};
+  if(u.displayName)users[email].name=u.displayName;
+  if(!users[email].saved)users[email].saved=[];
+  delete users[email].h;
+  fbUser=u;syncedUid=u.uid;
+  let cloud=[];
+  try{const snap=await FB.getDoc(fbDocRef(u.uid));if(snap.exists())cloud=snap.data().saved||[]}catch(e){}
+  users[email].saved=[...new Set([...cloud,...users[email].saved])];
+  me=email;store.set("qp_users",users);store.set("qp_me",me);
+  try{await FB.setDoc(fbDocRef(u.uid),{email,name:users[email].name,saved:users[email].saved,updatedAt:Date.now()},{merge:true})}catch(e){}
+  if(!opts.silent){$("#authD").close();$("#fp").value="";toast("Welcome, "+users[me].name)}
+  render();
+}
+async function pushSaved(){
+  if(!FB||!fbUser||!me)return;
+  try{await FB.setDoc(fbDocRef(fbUser.uid),{saved:users[me].saved,updatedAt:Date.now()},{merge:true})}catch(e){}
+}
+if(FB)FB.onAuthStateChanged(FB.auth,u=>{
+  if(u){if(syncedUid!==u.uid)syncOnLogin(u,{silent:true})}
+  else{fbUser=null;syncedUid=null;if(me){me=null;store.set("qp_me",null);render()}}
+});
+$("#googleBtn").onclick=async()=>{
+  const err=$("#authE");err.textContent="";
+  if(!FB)return err.textContent="Sign-in is unavailable right now (connection problem). Try again in a moment.";
+  try{
+    const res=await FB.signInWithPopup(FB.auth,new FB.GoogleAuthProvider());
+    if(!res.user.email){err.textContent="Google account has no email address.";return}
+    await syncOnLogin(res.user);
+  }catch(e){
+    if(e&&e.code==="auth/operation-not-allowed")err.textContent="Google sign-in is not enabled for this project yet. Enable Google in Firebase Console → Authentication → Sign-in method.";
+    else if(e&&e.code==="auth/popup-closed-by-user")err.textContent="Google sign-in was cancelled.";
+    else if(e&&e.code==="auth/popup-blocked")err.textContent="The sign-in popup was blocked. Allow popups for this site and try again.";
+    else if(e&&e.code==="auth/unauthorized-domain")err.textContent="This domain is not authorized for Google sign-in. Add it in Firebase Console → Authentication → Settings → Authorized domains.";
+    else err.textContent="Google sign-in failed. Please try again.";
+  }
+};
 function openAuth(m){mode=m;$("#authT").textContent=m==="login"?"Log in":"Create account";$("#authGo").textContent=m==="login"?"Log in":"Create account";
   $("#authSw").textContent=m==="login"?"Create account":"I have an account";$("#nameWrap").hidden=m==="login";$("#authE").textContent="";
   if(!$("#authD").open)$("#authD").showModal()}
@@ -421,23 +448,45 @@ $("#authGo").onclick=async()=>{
   const email=$("#fe").value.trim().toLowerCase(),pw=$("#fp").value,err=$("#authE");
   if(!/^\S+@\S+\.\S+$/.test(email))return err.textContent="Enter a valid email address.";
   if(pw.length<6)return err.textContent="Password needs at least 6 characters.";
-  const h=await hash(pw);
-  if(mode==="signup"){
-    if(users[email])return err.textContent="That email already has an account. Log in instead.";
-    const name=$("#fn").value.trim()||email.split("@")[0];
-    users[email]={name,h,saved:[]};
-  }else if(!users[email]||users[email].h!==h)return err.textContent="Email or password is wrong.";
-  me=email;store.set("qp_users",users);store.set("qp_me",me);
-  $("#authD").close();$("#fp").value="";toast("Welcome, "+users[me].name);render();
+  err.textContent="";
+  if(!FB)return err.textContent="Sign-in is unavailable right now (connection problem). Try again in a moment.";
+  try{
+    if(mode==="signup"){
+      const name=$("#fn").value.trim()||email.split("@")[0];
+      const res=await FB.createUserWithEmailAndPassword(FB.auth,email,pw);
+      if(!users[email])users[email]={name,saved:[]};else users[email].name=name;
+      store.set("qp_users",users);
+      await syncOnLogin(res.user);
+    }else{
+      try{
+        const res=await FB.signInWithEmailAndPassword(FB.auth,email,pw);
+        await syncOnLogin(res.user);
+      }catch(e1){
+        /* Legacy device-only account? Verify the old local password and
+           migrate the account to Firebase with the same password. */
+        const h=await hash(pw);
+        if(users[email]&&users[email].h&&users[email].h===h){
+          try{const res=await FB.createUserWithEmailAndPassword(FB.auth,email,pw);await syncOnLogin(res.user)}
+          catch(e2){err.textContent=e2&&e2.code==="auth/email-already-in-use"?"This email uses Google sign-in. Use Continue with Google.":"Could not sign you in. Please try again."}
+        }else err.textContent="Email or password is wrong.";
+      }
+    }
+  }catch(e){
+    if(e&&e.code==="auth/email-already-in-use")err.textContent="That email already has an account. Log in instead.";
+    else if(e&&e.code==="auth/operation-not-allowed")err.textContent="Email sign-in is not enabled for this project yet. Enable Email/Password in Firebase Console → Authentication → Sign-in method.";
+    else if(e&&e.code==="auth/weak-password")err.textContent="Password is too weak. Use at least 6 characters.";
+    else if(e&&e.code==="auth/network-request-failed")err.textContent="Network problem. Check your connection and try again.";
+    else err.textContent="Something went wrong. Please try again.";
+  }
 };
-$("#authBtn").onclick=()=>{if(me){if(window.__qpGoogleLogout)window.__qpGoogleLogout();me=null;store.set("qp_me",null);view="all";toast("Logged out");render()}else openAuth("login")};
+$("#authBtn").onclick=async()=>{if(me){try{if(FB)await FB.signOut(FB.auth)}catch(e){} fbUser=null;syncedUid=null;me=null;store.set("qp_me",null);view="all";toast("Logged out");render()}else openAuth("login")};
 
 /* ---------- SAVE ---------- */
 function toggleSave(id){
   if(!me){openAuth("login");toast("Log in to save quotes");return}
   const s=users[me].saved,i=s.indexOf(id);
   i<0?s.push(id):s.splice(i,1);
-  store.set("qp_users",users);toast(i<0?"Saved to your profile":"Removed from saved");render();
+  store.set("qp_users",users);pushSaved();toast(i<0?"Saved to your profile":"Removed from saved");render();
 }
 
 /* ---------- SHARE ---------- */
