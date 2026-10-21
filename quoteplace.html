@@ -397,11 +397,11 @@ async function hash(s){const b=await crypto.subtle.digest("SHA-256",new TextEnco
    Firestore at users/{uid} and merge with this device's local list, so
    the same account shows the same saves on every device. All cloud calls
    are best-effort: if Firestore is unreachable, local behaviour is kept. */
-const FB=window.__qpFb||null;
+const fb=()=>window.__qpFb||null;
 let fbUser=null,syncedUid=null;
-const fbDocRef=uid=>FB.doc(FB.db,"users",uid);
+const fbDocRef=uid=>{const F=fb();return F.doc(F.db,"users",uid)};
 async function syncOnLogin(u,opts={}){
-  if(!u||!u.email)return;
+  const F=fb();if(!F||!u||!u.email)return;
   const email=u.email.toLowerCase();
   if(!users[email])users[email]={name:u.displayName||email.split("@")[0],saved:[]};
   if(u.displayName)users[email].name=u.displayName;
@@ -409,26 +409,31 @@ async function syncOnLogin(u,opts={}){
   delete users[email].h;
   fbUser=u;syncedUid=u.uid;
   let cloud=[];
-  try{const snap=await FB.getDoc(fbDocRef(u.uid));if(snap.exists())cloud=snap.data().saved||[]}catch(e){}
+  try{const snap=await F.getDoc(fbDocRef(u.uid));if(snap.exists())cloud=snap.data().saved||[]}catch(e){}
   users[email].saved=[...new Set([...cloud,...users[email].saved])];
   me=email;store.set("qp_users",users);store.set("qp_me",me);
-  try{await FB.setDoc(fbDocRef(u.uid),{email,name:users[email].name,saved:users[email].saved,updatedAt:Date.now()},{merge:true})}catch(e){}
+  try{await F.setDoc(fbDocRef(u.uid),{email,name:users[email].name,saved:users[email].saved,updatedAt:Date.now()},{merge:true})}catch(e){}
   if(!opts.silent){$("#authD").close();$("#fp").value="";toast("Welcome, "+users[me].name)}
   render();
 }
 async function pushSaved(){
-  if(!FB||!fbUser||!me)return;
-  try{await FB.setDoc(fbDocRef(fbUser.uid),{saved:users[me].saved,updatedAt:Date.now()},{merge:true})}catch(e){}
+  const F=fb();if(!F||!fbUser||!me)return;
+  try{await F.setDoc(fbDocRef(fbUser.uid),{saved:users[me].saved,updatedAt:Date.now()},{merge:true})}catch(e){}
 }
-if(FB)FB.onAuthStateChanged(FB.auth,u=>{
-  if(u){if(syncedUid!==u.uid)syncOnLogin(u,{silent:true})}
-  else{fbUser=null;syncedUid=null;if(me){me=null;store.set("qp_me",null);render()}}
-});
+function initFbAuth(){
+  const F=fb();if(!F)return false;
+  F.onAuthStateChanged(F.auth,u=>{
+    if(u){if(syncedUid!==u.uid)syncOnLogin(u,{silent:true})}
+    else{fbUser=null;syncedUid=null;if(me){me=null;store.set("qp_me",null);render()}}
+  });
+  return true;
+}
+if(!initFbAuth())addEventListener("DOMContentLoaded",()=>initFbAuth());
 $("#googleBtn").onclick=async()=>{
   const err=$("#authE");err.textContent="";
-  if(!FB)return err.textContent="Sign-in is unavailable right now (connection problem). Try again in a moment.";
+  const F=fb();if(!F)return err.textContent="Sign-in is unavailable right now (connection problem). Try again in a moment.";
   try{
-    const res=await FB.signInWithPopup(FB.auth,new FB.GoogleAuthProvider());
+    const res=await F.signInWithPopup(F.auth,new F.GoogleAuthProvider());
     if(!res.user.email){err.textContent="Google account has no email address.";return}
     await syncOnLogin(res.user);
   }catch(e){
@@ -449,24 +454,24 @@ $("#authGo").onclick=async()=>{
   if(!/^\S+@\S+\.\S+$/.test(email))return err.textContent="Enter a valid email address.";
   if(pw.length<6)return err.textContent="Password needs at least 6 characters.";
   err.textContent="";
-  if(!FB)return err.textContent="Sign-in is unavailable right now (connection problem). Try again in a moment.";
+  const F=fb();if(!F)return err.textContent="Sign-in is unavailable right now (connection problem). Try again in a moment.";
   try{
     if(mode==="signup"){
       const name=$("#fn").value.trim()||email.split("@")[0];
-      const res=await FB.createUserWithEmailAndPassword(FB.auth,email,pw);
+      const res=await F.createUserWithEmailAndPassword(F.auth,email,pw);
       if(!users[email])users[email]={name,saved:[]};else users[email].name=name;
       store.set("qp_users",users);
       await syncOnLogin(res.user);
     }else{
       try{
-        const res=await FB.signInWithEmailAndPassword(FB.auth,email,pw);
+        const res=await F.signInWithEmailAndPassword(F.auth,email,pw);
         await syncOnLogin(res.user);
       }catch(e1){
         /* Legacy device-only account? Verify the old local password and
            migrate the account to Firebase with the same password. */
         const h=await hash(pw);
         if(users[email]&&users[email].h&&users[email].h===h){
-          try{const res=await FB.createUserWithEmailAndPassword(FB.auth,email,pw);await syncOnLogin(res.user)}
+          try{const res=await F.createUserWithEmailAndPassword(F.auth,email,pw);await syncOnLogin(res.user)}
           catch(e2){err.textContent=e2&&e2.code==="auth/email-already-in-use"?"This email uses Google sign-in. Use Continue with Google.":"Could not sign you in. Please try again."}
         }else err.textContent="Email or password is wrong.";
       }
@@ -479,7 +484,7 @@ $("#authGo").onclick=async()=>{
     else err.textContent="Something went wrong. Please try again.";
   }
 };
-$("#authBtn").onclick=async()=>{if(me){try{if(FB)await FB.signOut(FB.auth)}catch(e){} fbUser=null;syncedUid=null;me=null;store.set("qp_me",null);view="all";toast("Logged out");render()}else openAuth("login")};
+$("#authBtn").onclick=async()=>{if(me){try{const F=fb();if(F)await F.signOut(F.auth)}catch(e){} fbUser=null;syncedUid=null;me=null;store.set("qp_me",null);view="all";toast("Logged out");render()}else openAuth("login")};
 
 /* ---------- SAVE ---------- */
 function toggleSave(id){
