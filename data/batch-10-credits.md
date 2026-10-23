@@ -1,0 +1,63 @@
+# Batch 10 — portrait credits
+
+All portraits from Wikimedia Commons, license verified via the Commons API at fetch time. Portraits reused from batches 3/8 (same verified files) unless noted new.
+
+- **A.P.J. Abdul Kalam** — M. Prasanna Kumar, CC BY-SA 2.0
+- **Abraham Lincoln** — Gardner, Alexander, 1821-1882, photographer, Public domain
+- **Ada Lovelace** — no free portrait on Wikimedia Commons; text-tile cards
+- **Albert Camus** — Studio Harcourt, Public domain
+- **Albert Einstein** — Photograph by Orren Jack Turner, Princeton, N.J. Modified with Photoshop by PM_Poon and later by Dantadd., Public domain (File: Albert Einstein Head.jpg)
+- **Aristotle** — After Lysippos, Public domain
+- **Benjamin Disraeli** — Cornelius Jabez Hughes, Public domain (File: File:Benjamin Disraeli, Earl of Beaconsfield.jpg)
+- **Bill Watterson** — no free portrait on Wikimedia Commons; text-tile cards
+- **Blaise Pascal** — unknown; a copy of the painting of François II Quesnel, which was made for Gérard Edelinck en 1691, Public domain
+- **Bob Ross** — no free portrait on Wikimedia Commons; text-tile cards
+- **Bruce Lee** — National General Pictures, Public domain (File: File:Bruce Lee 1971 National General Pictures publicity photo.jpg)
+- **Byron Pulsifer** — no free portrait on Wikimedia Commons; text-tile cards
+- **Carl Jung** — AnonymousUnknown author, Public domain (File: File:CARL JUNG (1875 - 1961).jpg)
+- **Dalai Lama** — Niccolò Caranti, CC BY-SA 3.0
+- **Eleanor Roosevelt** — Unknown authorUnknown author, Public domain (File: Eleanor Roosevelt portrait 1933.jpg)
+- **Epictetus** — Public domain (File: Epictetus.jpg)
+- **Fred Rogers** — no free portrait on Wikimedia Commons; text-tile cards
+- **Freddie Mercury** — no free portrait on Wikimedia Commons; text-tile cards
+- **Friedrich Nietzsche** — Gustav-Adolf Schultze (d. 1897), Public domain
+- **George Bernard Shaw** — Sussman, Public domain (File: George Bernard Shaw, playwright (SAYRE 9001).jpg)
+- **Grace Hopper** — no free portrait on Wikimedia Commons; text-tile cards
+- **Helen Keller** — Los Angeles Times; restored by User:Rhododendrites, Public domain
+- **Jacques Cousteau** — no free portrait on Wikimedia Commons; text-tile cards
+- **Jim Henson** — no free portrait on Wikimedia Commons; text-tile cards
+- **Johann Wolfgang von Goethe** — Joseph Karl Stieler, Public domain (File: Goethe (Stieler 1828).jpg)
+- **John Lennon** — Eric Koch for Anefo, CC0
+- **Kahlil Gibran** — F. Holland Day, Public domain
+- **Kobe Bryant** — no free portrait on Wikimedia Commons; text-tile cards
+- **Leonardo da Vinci** — Leonardo da Vinci, Public domain (File: Leonardo self.jpg)
+- **Mahatma Gandhi** — Elliott &amp; Fry, Public domain
+- **Marcus Aurelius** — Daniel Martin, CC BY-SA 4.0
+- **Mark Twain** — James Carroll Beckwith, Public domain
+- **Maya Angelou** — Bee Photos by Ryan Marty, Public domain
+- **Miyamoto Musashi** — Unknown author, Public domain
+- **Mother Teresa** — John Mathew Smith &amp; www.celebrity-photos.com from Laurel  Maryland, USA, CC BY-SA 2.0
+- **Napoleon Hill** — Unknown authorUnknown author, Public domain (File: Napoleon Hill headshot.jpg)
+- **Nelson Mandela** — Kingkongphoto & www.celebrity-photos.com, CC BY-SA 2.0
+- **Oprah Winfrey** — US Embassy South Africa, Public domain
+- **Oscar Wilde** — Napoleon Sarony (restoration by Adam Cuerden), Public domain
+- **Pablo Picasso** — Didier Descouens, Public domain (File: File:(Barcelona) Retrat de Picasso - Pablo Gargallo - Museu Nacional d'Art de Catalunya.jpg)
+- **Pearl S. Buck** — no free portrait on Wikimedia Commons; text-tile cards
+- **Rabindranath Tagore** — Unknown authorUnknown author, Public domain
+- **Ralph Waldo Emerson** — Albert Southworth, Public domain (File: File:Daguerreotype of Ralph Waldo Emerson, 1846.jpg)
+- **Richard Bach** — Corsair133693, CC BY-SA 3.0 (File: File:Von Richthofen LYNN GARRISON - DICK BACH.jpg)
+- **Robin Williams** — no free portrait on Wikimedia Commons; text-tile cards
+- **Rumi** — Hossein Behzad, Public domain
+- **Seneca** — Livioandronico2013 (bust photo), CC BY-SA 4.0
+- **Simon Sinek** — no free portrait on Wikimedia Commons; text-tile cards
+- **Sophocles** — no free portrait on Wikimedia Commons; text-tile cards
+- **Steve Irwin** — no free portrait on Wikimedia Commons; text-tile cards
+- **Sun Tzu** — Unknown author, Public domain (File: 吴司马孙武.jpg)
+- **Swami Vivekananda** — Unknown author, Public domain (File: Swami Vivekananda at Parliament of Religions.jpg)
+- **Sylvia Earle** — no free portrait on Wikimedia Commons; text-tile cards
+- **Thich Nhat Hanh** — CC BY-SA 4.0 (File: File:Hòa thượng Ấn Kim - Tổ Tuân - Hoằng Tịnh. 印 金 祖 恂 弘 净.jpg)
+- **Tony Robbins** — CC BY 2.0 (File: Tony Robbins 1.jpg)
+- **Victor Hugo** — Étienne Carjat, Public domain (File: Victor Hugo by Étienne Carjat 1876 - full.jpg)
+- **Wayne Dyer** — Phil Konstantin, Public domain (File: WayneDyerByPhilKonstantin.jpg)
+- **William Shakespeare** — Public domain (File: Shakespeare.jpg)
+- **Winston Churchill** — Public domain (File: Sir Winston Churchill - 19086236948.jpg)
