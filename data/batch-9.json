@@ -46,7 +46,8 @@
    "a": "Ralph Waldo Emerson",
    "c": "Wisdom",
    "img": "images/batch-9/b2884.jpg",
-   "style": "navy"
+   "style": "navy",
+   "source": "Self-Reliance"
   },
   {
    "id": "b2885",
@@ -78,7 +79,8 @@
    "a": "Richard Bach",
    "c": "Life",
    "img": "images/batch-9/b2888.jpg",
-   "style": "sage"
+   "style": "sage",
+   "source": "Illusions"
   },
   {
    "id": "b2889",
@@ -86,7 +88,8 @@
    "a": "Richard Bach",
    "c": "Wisdom",
    "img": "images/batch-9/b2889.jpg",
-   "style": "blush"
+   "style": "blush",
+   "source": "Illusions"
   },
   {
    "id": "b2890",
@@ -94,7 +97,8 @@
    "a": "Richard Bach",
    "c": "Friendship",
    "img": "images/batch-9/b2890.jpg",
-   "style": "navy"
+   "style": "navy",
+   "source": "Illusions"
   },
   {
    "id": "b2891",
@@ -150,7 +154,8 @@
    "a": "Napoleon Hill",
    "c": "Success",
    "img": "images/batch-9/b2897.jpg",
-   "style": "cream"
+   "style": "cream",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b2898",
@@ -166,7 +171,8 @@
    "a": "Napoleon Hill",
    "c": "Success",
    "img": "images/batch-9/b2899.jpg",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b2900",
@@ -206,7 +212,8 @@
    "a": "Epictetus",
    "c": "Habits",
    "img": "images/batch-9/b2904.jpg",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Discourses"
   },
   {
    "id": "b2905",
@@ -222,7 +229,8 @@
    "a": "Rumi",
    "c": "Life",
    "img": "images/batch-9/b2906.jpg",
-   "style": "sage"
+   "style": "sage",
+   "source": "Masnavi"
   },
   {
    "id": "b2907",
@@ -238,7 +246,8 @@
    "a": "Rumi",
    "c": "Wisdom",
    "img": "images/batch-9/b2908.jpg",
-   "style": "navy"
+   "style": "navy",
+   "source": "Masnavi"
   },
   {
    "id": "b2909",
@@ -246,7 +255,8 @@
    "a": "William Shakespeare",
    "c": "Wisdom",
    "img": "images/batch-9/b2909.jpg",
-   "style": "cream"
+   "style": "cream",
+   "source": "Romeo and Juliet"
   },
   {
    "id": "b2910",
@@ -254,7 +264,8 @@
    "a": "William Shakespeare",
    "c": "Wisdom",
    "img": "images/batch-9/b2910.jpg",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Hamlet"
   },
   {
    "id": "b2911",
@@ -262,7 +273,8 @@
    "a": "William Shakespeare",
    "c": "Love",
    "img": "images/batch-9/b2911.jpg",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Romeo and Juliet"
   },
   {
    "id": "b2912",
@@ -270,7 +282,8 @@
    "a": "Marcus Aurelius",
    "c": "Happiness",
    "img": "images/batch-9/b2912.jpg",
-   "style": "sage"
+   "style": "sage",
+   "source": "Meditations"
   },
   {
    "id": "b2913",
@@ -278,7 +291,8 @@
    "a": "Marcus Aurelius",
    "c": "Wisdom",
    "img": "images/batch-9/b2913.jpg",
-   "style": "blush"
+   "style": "blush",
+   "source": "Meditations"
   },
   {
    "id": "b2914",
@@ -286,7 +300,8 @@
    "a": "Marcus Aurelius",
    "c": "Wisdom",
    "img": "images/batch-9/b2914.jpg",
-   "style": "navy"
+   "style": "navy",
+   "source": "Meditations"
   },
   {
    "id": "b2915",
@@ -294,7 +309,8 @@
    "a": "Kahlil Gibran",
    "c": "Wisdom",
    "img": "images/batch-9/b2915.jpg",
-   "style": "cream"
+   "style": "cream",
+   "source": "The Prophet"
   },
   {
    "id": "b2916",
@@ -302,7 +318,8 @@
    "a": "Kahlil Gibran",
    "c": "Love",
    "img": "images/batch-9/b2916.jpg",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "The Prophet"
   },
   {
    "id": "b2917",
@@ -310,7 +327,8 @@
    "a": "Kahlil Gibran",
    "c": "Love",
    "img": "images/batch-9/b2917.jpg",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "The Prophet"
   },
   {
    "id": "b2918",
@@ -382,7 +400,8 @@
    "a": "Rabindranath Tagore",
    "c": "Courage",
    "img": "images/batch-9/b2926.jpg",
-   "style": "navy"
+   "style": "navy",
+   "source": "Gitanjali"
   },
   {
    "id": "b2927",
@@ -390,7 +409,8 @@
    "a": "Abraham Lincoln",
    "c": "Success",
    "img": "images/batch-9/b2927.jpg",
-   "style": "cream"
+   "style": "cream",
+   "source": "Lincoln-Douglas Debates (1858)"
   },
   {
    "id": "b2928",
@@ -398,7 +418,8 @@
    "a": "Abraham Lincoln",
    "c": "Wisdom",
    "img": "images/batch-9/b2928.jpg",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Letter to Henry L. Pierce (1859)"
   },
   {
    "id": "b2929",
@@ -406,7 +427,8 @@
    "a": "Abraham Lincoln",
    "c": "Love",
    "img": "images/batch-9/b2929.jpg",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Second Inaugural Address (1865)"
   },
   {
    "id": "b2930",
@@ -438,7 +460,8 @@
    "a": "Seneca",
    "c": "Calm",
    "img": "images/batch-9/b2933.jpg",
-   "style": "cream"
+   "style": "cream",
+   "source": "Letters to Lucilius"
   },
   {
    "id": "b2934",
@@ -454,7 +477,8 @@
    "a": "Seneca",
    "c": "Wisdom",
    "img": "images/batch-9/b2935.jpg",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Letters to Lucilius"
   },
   {
    "id": "b2936",
@@ -470,7 +494,8 @@
    "a": "Aristotle",
    "c": "Happiness",
    "img": "images/batch-9/b2937.jpg",
-   "style": "blush"
+   "style": "blush",
+   "source": "Nicomachean Ethics"
   },
   {
    "id": "b2938",
@@ -478,7 +503,8 @@
    "a": "Aristotle",
    "c": "Wisdom",
    "img": "images/batch-9/b2938.jpg",
-   "style": "navy"
+   "style": "navy",
+   "source": "Politics"
   },
   {
    "id": "b2939",
@@ -486,7 +512,8 @@
    "a": "Mark Twain",
    "c": "Wisdom",
    "img": "images/batch-9/b2939.jpg",
-   "style": "cream"
+   "style": "cream",
+   "source": "Letter to George Bainton (1888)"
   },
   {
    "id": "b2940",
@@ -518,7 +545,8 @@
    "a": "Sun Tzu",
    "c": "Action",
    "img": "images/batch-9/b2943.jpg",
-   "style": "blush"
+   "style": "blush",
+   "source": "The Art of War"
   },
   {
    "id": "b2944",
@@ -534,7 +562,8 @@
    "a": "Oscar Wilde",
    "c": "Love",
    "img": "images/batch-9/b2945.jpg",
-   "style": "cream"
+   "style": "cream",
+   "source": "An Ideal Husband"
   },
   {
    "id": "b2946",

@@ -14,7 +14,8 @@
    "a": "Richard Bach",
    "c": "Courage",
    "img": "images/batch-12/b3180.jpg",
-   "portrait": "richard-bach.jpg"
+   "portrait": "richard-bach.jpg",
+   "source": "Jonathan Livingston Seagull"
   },
   {
    "id": "b3181",
@@ -22,7 +23,8 @@
    "a": "Richard Bach",
    "c": "Wisdom",
    "img": "images/batch-12/b3181.jpg",
-   "portrait": "richard-bach.jpg"
+   "portrait": "richard-bach.jpg",
+   "source": "Jonathan Livingston Seagull"
   },
   {
    "id": "b3182",
@@ -126,7 +128,8 @@
    "a": "Epictetus",
    "c": "Wisdom",
    "img": "images/batch-12/b3194.jpg",
-   "portrait": "epictetus.jpg"
+   "portrait": "epictetus.jpg",
+   "source": "Discourses"
   },
   {
    "id": "b3195",
@@ -174,7 +177,8 @@
    "a": "William Shakespeare",
    "c": "Wisdom",
    "img": "images/batch-12/b3200.jpg",
-   "portrait": "william-shakespeare.jpg"
+   "portrait": "william-shakespeare.jpg",
+   "source": "The Tempest"
   },
   {
    "id": "b3201",
@@ -182,7 +186,8 @@
    "a": "William Shakespeare",
    "c": "Life",
    "img": "images/batch-12/b3201.jpg",
-   "portrait": "william-shakespeare.jpg"
+   "portrait": "william-shakespeare.jpg",
+   "source": "The Tempest"
   },
   {
    "id": "b3202",
@@ -190,7 +195,8 @@
    "a": "William Shakespeare",
    "c": "Courage",
    "img": "images/batch-12/b3202.jpg",
-   "portrait": "william-shakespeare.jpg"
+   "portrait": "william-shakespeare.jpg",
+   "source": "As You Like It"
   },
   {
    "id": "b3203",
@@ -198,7 +204,8 @@
    "a": "Marcus Aurelius",
    "c": "Wisdom",
    "img": "images/batch-12/b3203.jpg",
-   "portrait": "marcus-aurelius.jpg"
+   "portrait": "marcus-aurelius.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3204",
@@ -206,7 +213,8 @@
    "a": "Marcus Aurelius",
    "c": "Calm",
    "img": "images/batch-12/b3204.jpg",
-   "portrait": "marcus-aurelius.jpg"
+   "portrait": "marcus-aurelius.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3205",
@@ -214,7 +222,8 @@
    "a": "Marcus Aurelius",
    "c": "Life",
    "img": "images/batch-12/b3205.jpg",
-   "portrait": "marcus-aurelius.jpg"
+   "portrait": "marcus-aurelius.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3206",
@@ -222,7 +231,8 @@
    "a": "Kahlil Gibran",
    "c": "Love",
    "img": "images/batch-12/b3206.jpg",
-   "portrait": "kahlil-gibran.jpg"
+   "portrait": "kahlil-gibran.jpg",
+   "source": "The Prophet"
   },
   {
    "id": "b3207",
@@ -366,7 +376,8 @@
    "a": "Seneca",
    "c": "Calm",
    "img": "images/batch-12/b3224.jpg",
-   "portrait": "seneca.jpg"
+   "portrait": "seneca.jpg",
+   "source": "On Anger"
   },
   {
    "id": "b3225",
@@ -374,7 +385,8 @@
    "a": "Seneca",
    "c": "Wisdom",
    "img": "images/batch-12/b3225.jpg",
-   "portrait": "seneca.jpg"
+   "portrait": "seneca.jpg",
+   "source": "Letters to Lucilius"
   },
   {
    "id": "b3226",
@@ -406,7 +418,8 @@
    "a": "Aristotle",
    "c": "Courage",
    "img": "images/batch-12/b3229.jpg",
-   "portrait": "aristotle.jpg"
+   "portrait": "aristotle.jpg",
+   "source": "Nicomachean Ethics"
   },
   {
    "id": "b3230",
@@ -494,7 +507,8 @@
    "a": "Sun Tzu",
    "c": "Wisdom",
    "img": "images/batch-12/b3240.jpg",
-   "portrait": "sun-tzu.jpg"
+   "portrait": "sun-tzu.jpg",
+   "source": "The Art of War"
   },
   {
    "id": "b3241",

@@ -68,7 +68,8 @@
    "t": "This being human is a guest house. Every morning a new arrival.",
    "a": "Rumi",
    "c": "Wisdom",
-   "img": "images/batch-15/b3488.jpg"
+   "img": "images/batch-15/b3488.jpg",
+   "source": "Masnavi"
   },
   {
    "id": "b3489",
@@ -89,70 +90,80 @@
    "t": "Think of yourself as dead. You have lived your life. Now, take what is left and live it properly.",
    "a": "Marcus Aurelius",
    "c": "Life",
-   "img": "images/batch-15/b3491.jpg"
+   "img": "images/batch-15/b3491.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3492",
    "t": "Because a thing seems difficult for you, do not think it impossible for anyone to accomplish.",
    "a": "Marcus Aurelius",
    "c": "Courage",
-   "img": "images/batch-15/b3492.jpg"
+   "img": "images/batch-15/b3492.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3493",
    "t": "You always own the option of having no opinion. There is never any need to get worked up about things you cannot control.",
    "a": "Marcus Aurelius",
    "c": "Calm",
-   "img": "images/batch-15/b3493.jpg"
+   "img": "images/batch-15/b3493.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3494",
    "t": "There is one quality which one must possess to win, and that is definiteness of purpose, the knowledge of what one wants, and a burning desire to possess it.",
    "a": "Napoleon Hill",
    "c": "Success",
-   "img": "images/batch-15/b3494.jpg"
+   "img": "images/batch-15/b3494.jpg",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b3495",
    "t": "Every man is what he is because of the dominating thoughts which he permits to occupy his mind.",
    "a": "Napoleon Hill",
    "c": "Wisdom",
-   "img": "images/batch-15/b3495.jpg"
+   "img": "images/batch-15/b3495.jpg",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b3496",
    "t": "Great achievement is usually born of great sacrifice, and is never the result of selfishness.",
    "a": "Napoleon Hill",
    "c": "Success",
-   "img": "images/batch-15/b3496.jpg"
+   "img": "images/batch-15/b3496.jpg",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b3497",
    "t": "One touch of nature makes the whole world kin.",
    "a": "William Shakespeare",
    "c": "Wisdom",
-   "img": "images/batch-15/b3497.jpg"
+   "img": "images/batch-15/b3497.jpg",
+   "source": "Troilus and Cressida"
   },
   {
    "id": "b3498",
    "t": "My bounty is as boundless as the sea, my love as deep.",
    "a": "William Shakespeare",
    "c": "Love",
-   "img": "images/batch-15/b3498.jpg"
+   "img": "images/batch-15/b3498.jpg",
+   "source": "Romeo and Juliet"
   },
   {
    "id": "b3499",
    "t": "We are such stuff as dreams are made on.",
    "a": "William Shakespeare",
    "c": "Wisdom",
-   "img": "images/batch-15/b3499.jpg"
+   "img": "images/batch-15/b3499.jpg",
+   "source": "The Tempest"
   },
   {
    "id": "b3500",
    "t": "Circumstances do not make the man, they only reveal him to himself.",
    "a": "Epictetus",
    "c": "Wisdom",
-   "img": "images/batch-15/b3500.jpg"
+   "img": "images/batch-15/b3500.jpg",
+   "source": "Discourses"
   },
   {
    "id": "b3501",
@@ -166,21 +177,24 @@
    "t": "It is not what happens to you, but how you react to it that matters.",
    "a": "Epictetus",
    "c": "Calm",
-   "img": "images/batch-15/b3502.jpg"
+   "img": "images/batch-15/b3502.jpg",
+   "source": "Enchiridion"
   },
   {
    "id": "b3503",
    "t": "If you cannot work with love but only with distaste, it is better that you should leave your work.",
    "a": "Kahlil Gibran",
    "c": "Action",
-   "img": "images/batch-15/b3503.jpg"
+   "img": "images/batch-15/b3503.jpg",
+   "source": "The Prophet"
   },
   {
    "id": "b3504",
    "t": "If you reveal your secrets to the wind, you should not blame the wind for revealing them to the trees.",
    "a": "Kahlil Gibran",
    "c": "Wisdom",
-   "img": "images/batch-15/b3504.jpg"
+   "img": "images/batch-15/b3504.jpg",
+   "source": "Sand and Foam"
   },
   {
    "id": "b3505",
@@ -243,7 +257,8 @@
    "t": "Where the mind is without fear and the head is held high, where knowledge is free, into that heaven of freedom, let my country awake.",
    "a": "Rabindranath Tagore",
    "c": "Courage",
-   "img": "images/batch-15/b3513.jpg"
+   "img": "images/batch-15/b3513.jpg",
+   "source": "Gitanjali"
   },
   {
    "id": "b3514",
@@ -299,14 +314,16 @@
    "t": "With malice toward none, with charity for all, with firmness in the right as God gives us to see the right.",
    "a": "Abraham Lincoln",
    "c": "Love",
-   "img": "images/batch-15/b3521.jpg"
+   "img": "images/batch-15/b3521.jpg",
+   "source": "Second Inaugural Address (1865)"
   },
   {
    "id": "b3522",
    "t": "That government of the people, by the people, for the people, shall not perish from the earth.",
    "a": "Abraham Lincoln",
    "c": "Courage",
-   "img": "images/batch-15/b3522.jpg"
+   "img": "images/batch-15/b3522.jpg",
+   "source": "Gettysburg Address (1863)"
   },
   {
    "id": "b3523",
@@ -334,7 +351,8 @@
    "t": "The best friend is the man who in wishing me well wishes it for my sake.",
    "a": "Aristotle",
    "c": "Friendship",
-   "img": "images/batch-15/b3526.jpg"
+   "img": "images/batch-15/b3526.jpg",
+   "source": "Nicomachean Ethics"
   },
   {
    "id": "b3527",
@@ -348,7 +366,8 @@
    "t": "Travel is fatal to prejudice, bigotry, and narrow-mindedness.",
    "a": "Mark Twain",
    "c": "Wisdom",
-   "img": "images/batch-15/b3528.jpg"
+   "img": "images/batch-15/b3528.jpg",
+   "source": "The Innocents Abroad"
   },
   {
    "id": "b3529",
@@ -439,7 +458,8 @@
    "t": "There is only one thing in life worse than being talked about, and that is not being talked about.",
    "a": "Oscar Wilde",
    "c": "Wisdom",
-   "img": "images/batch-15/b3541.jpg"
+   "img": "images/batch-15/b3541.jpg",
+   "source": "The Picture of Dorian Gray"
   },
   {
    "id": "b3542",

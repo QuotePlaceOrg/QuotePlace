@@ -5,21 +5,24 @@
    "t": "Break the chains of your thought, and you break the chains of your body, too.",
    "a": "Richard Bach",
    "c": "Courage",
-   "img": "images/batch-13/b3279.jpg"
+   "img": "images/batch-13/b3279.jpg",
+   "source": "Jonathan Livingston Seagull"
   },
   {
    "id": "b3280",
    "t": "You are never given a wish without also being given the power to make it true.",
    "a": "Richard Bach",
    "c": "Action",
-   "img": "images/batch-13/b3280.jpg"
+   "img": "images/batch-13/b3280.jpg",
+   "source": "Illusions"
   },
   {
    "id": "b3281",
    "t": "Argue for your limitations, and sure enough they are yours.",
    "a": "Richard Bach",
    "c": "Wisdom",
-   "img": "images/batch-13/b3281.jpg"
+   "img": "images/batch-13/b3281.jpg",
+   "source": "Illusions"
   },
   {
    "id": "b3282",
@@ -82,7 +85,8 @@
    "t": "Do not wait. The time will never be just right.",
    "a": "Napoleon Hill",
    "c": "Action",
-   "img": "images/batch-13/b3290.jpg"
+   "img": "images/batch-13/b3290.jpg",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b3291",
@@ -110,28 +114,32 @@
    "t": "Some things are within our power, and some things are not.",
    "a": "Epictetus",
    "c": "Action",
-   "img": "images/batch-13/b3294.jpg"
+   "img": "images/batch-13/b3294.jpg",
+   "source": "Enchiridion"
   },
   {
    "id": "b3295",
    "t": "Men are disturbed not by things, but by the views which they take of them.",
    "a": "Epictetus",
    "c": "Wisdom",
-   "img": "images/batch-13/b3295.jpg"
+   "img": "images/batch-13/b3295.jpg",
+   "source": "Enchiridion"
   },
   {
    "id": "b3296",
    "t": "Only the educated are free.",
    "a": "Epictetus",
    "c": "Wisdom",
-   "img": "images/batch-13/b3296.jpg"
+   "img": "images/batch-13/b3296.jpg",
+   "source": "Discourses"
   },
   {
    "id": "b3297",
    "t": "Out beyond ideas of wrongdoing and rightdoing there is a field. I will meet you there.",
    "a": "Rumi",
    "c": "Love",
-   "img": "images/batch-13/b3297.jpg"
+   "img": "images/batch-13/b3297.jpg",
+   "source": "Masnavi"
   },
   {
    "id": "b3298",
@@ -152,63 +160,72 @@
    "t": "All the world's a stage, and all the men and women merely players.",
    "a": "William Shakespeare",
    "c": "Life",
-   "img": "images/batch-13/b3300.jpg"
+   "img": "images/batch-13/b3300.jpg",
+   "source": "As You Like It"
   },
   {
    "id": "b3301",
    "t": "Better three hours too soon than a minute too late.",
    "a": "William Shakespeare",
    "c": "Life",
-   "img": "images/batch-13/b3301.jpg"
+   "img": "images/batch-13/b3301.jpg",
+   "source": "The Merry Wives of Windsor"
   },
   {
    "id": "b3302",
    "t": "Cowards die many times before their deaths.",
    "a": "William Shakespeare",
    "c": "Courage",
-   "img": "images/batch-13/b3302.jpg"
+   "img": "images/batch-13/b3302.jpg",
+   "source": "Julius Caesar"
   },
   {
    "id": "b3303",
    "t": "The soul becomes dyed with the colour of its thoughts.",
    "a": "Marcus Aurelius",
    "c": "Calm",
-   "img": "images/batch-13/b3303.jpg"
+   "img": "images/batch-13/b3303.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3304",
    "t": "Dwell on the beauty of life. Watch the stars, and see yourself running with them.",
    "a": "Marcus Aurelius",
    "c": "Happiness",
-   "img": "images/batch-13/b3304.jpg"
+   "img": "images/batch-13/b3304.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3305",
    "t": "Look well into thyself; there is a source of strength which will always spring up if thou wilt always look.",
    "a": "Marcus Aurelius",
    "c": "Wisdom",
-   "img": "images/batch-13/b3305.jpg"
+   "img": "images/batch-13/b3305.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3306",
    "t": "You give but little when you give of your possessions. It is when you give of yourself that you truly give.",
    "a": "Kahlil Gibran",
    "c": "Love",
-   "img": "images/batch-13/b3306.jpg"
+   "img": "images/batch-13/b3306.jpg",
+   "source": "The Prophet"
   },
   {
    "id": "b3307",
    "t": "When you work you are a flute through whose heart the whispering of the hours turns to music.",
    "a": "Kahlil Gibran",
    "c": "Action",
-   "img": "images/batch-13/b3307.jpg"
+   "img": "images/batch-13/b3307.jpg",
+   "source": "The Prophet"
   },
   {
    "id": "b3308",
    "t": "For life and death are one, even as the river and the sea are one.",
    "a": "Kahlil Gibran",
    "c": "Life",
-   "img": "images/batch-13/b3308.jpg"
+   "img": "images/batch-13/b3308.jpg",
+   "source": "The Prophet"
   },
   {
    "id": "b3309",
@@ -271,7 +288,8 @@
    "t": "Every child comes with the message that God is not yet discouraged of man.",
    "a": "Rabindranath Tagore",
    "c": "Life",
-   "img": "images/batch-13/b3317.jpg"
+   "img": "images/batch-13/b3317.jpg",
+   "source": "The Crescent Moon"
   },
   {
    "id": "b3318",
@@ -292,7 +310,8 @@
    "t": "We cannot escape history.",
    "a": "Abraham Lincoln",
    "c": "Wisdom",
-   "img": "images/batch-13/b3320.jpg"
+   "img": "images/batch-13/b3320.jpg",
+   "source": "Annual Message to Congress (1862)"
   },
   {
    "id": "b3321",
@@ -320,7 +339,8 @@
    "t": "We suffer more in imagination than in reality.",
    "a": "Seneca",
    "c": "Wisdom",
-   "img": "images/batch-13/b3324.jpg"
+   "img": "images/batch-13/b3324.jpg",
+   "source": "Letters to Lucilius"
   },
   {
    "id": "b3325",
@@ -334,14 +354,16 @@
    "t": "As is a tale, so is life: not how long it is, but how good it is, that matters.",
    "a": "Seneca",
    "c": "Life",
-   "img": "images/batch-13/b3326.jpg"
+   "img": "images/batch-13/b3326.jpg",
+   "source": "Letters to Lucilius"
   },
   {
    "id": "b3327",
    "t": "All men by nature desire to know.",
    "a": "Aristotle",
    "c": "Wisdom",
-   "img": "images/batch-13/b3327.jpg"
+   "img": "images/batch-13/b3327.jpg",
+   "source": "Metaphysics"
   },
   {
    "id": "b3328",
@@ -432,7 +454,8 @@
    "t": "In war, then, let your great object be victory, not lengthy campaigns.",
    "a": "Sun Tzu",
    "c": "Action",
-   "img": "images/batch-13/b3340.jpg"
+   "img": "images/batch-13/b3340.jpg",
+   "source": "The Art of War"
   },
   {
    "id": "b3341",
@@ -446,7 +469,8 @@
    "t": "Life imitates art far more than art imitates life.",
    "a": "Oscar Wilde",
    "c": "Wisdom",
-   "img": "images/batch-13/b3342.jpg"
+   "img": "images/batch-13/b3342.jpg",
+   "source": "The Decay of Lying"
   },
   {
    "id": "b3343",
@@ -670,7 +694,8 @@
    "t": "The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.",
    "a": "Jane Austen",
    "c": "Happiness",
-   "img": "images/batch-13/b3374.jpg"
+   "img": "images/batch-13/b3374.jpg",
+   "source": "Northanger Abbey"
   },
   {
    "id": "b3375",

@@ -47,7 +47,8 @@
    "t": "Uneasy lies the head that wears a crown.",
    "a": "William Shakespeare",
    "c": "Wisdom",
-   "img": "images/batch-17/b3685.jpg"
+   "img": "images/batch-17/b3685.jpg",
+   "source": "Henry IV, Part 2"
   },
   {
    "id": "b3686",
@@ -61,28 +62,32 @@
    "t": "Our bodies are our gardens, to the which our wills are gardeners.",
    "a": "William Shakespeare",
    "c": "Life",
-   "img": "images/batch-17/b3687.jpg"
+   "img": "images/batch-17/b3687.jpg",
+   "source": "Othello"
   },
   {
    "id": "b3688",
    "t": "Live a good life. If there are gods and they are just, then they will not care how devout you have been, but will welcome you based on the virtues you have lived by.",
    "a": "Marcus Aurelius",
    "c": "Wisdom",
-   "img": "images/batch-17/b3688.jpg"
+   "img": "images/batch-17/b3688.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3689",
    "t": "No one can lose either the past or the future, for how can anyone be deprived of what he does not possess?",
    "a": "Marcus Aurelius",
    "c": "Wisdom",
-   "img": "images/batch-17/b3689.jpg"
+   "img": "images/batch-17/b3689.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3690",
    "t": "It is not death that a man should fear, but he should fear never beginning to live.",
    "a": "Marcus Aurelius",
    "c": "Courage",
-   "img": "images/batch-17/b3690.jpg"
+   "img": "images/batch-17/b3690.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3691",
@@ -222,14 +227,16 @@
    "t": "We learn by teaching.",
    "a": "Seneca",
    "c": "Wisdom",
-   "img": "images/batch-17/b3710.jpg"
+   "img": "images/batch-17/b3710.jpg",
+   "source": "Letters to Lucilius"
   },
   {
    "id": "b3711",
    "t": "Life is long if you know how to use it.",
    "a": "Seneca",
    "c": "Life",
-   "img": "images/batch-17/b3711.jpg"
+   "img": "images/batch-17/b3711.jpg",
+   "source": "On the Shortness of Life"
   },
   {
    "id": "b3712",
@@ -369,7 +376,8 @@
    "t": "If your enemy is secure at all points, be prepared for him. If he is in superior strength, evade him.",
    "a": "Sun Tzu",
    "c": "Wisdom",
-   "img": "images/batch-17/b3731.jpg"
+   "img": "images/batch-17/b3731.jpg",
+   "source": "The Art of War"
   },
   {
    "id": "b3732",
@@ -404,7 +412,8 @@
    "t": "The basis of optimism is sheer terror.",
    "a": "Oscar Wilde",
    "c": "Wisdom",
-   "img": "images/batch-17/b3736.jpg"
+   "img": "images/batch-17/b3736.jpg",
+   "source": "The Picture of Dorian Gray"
   },
   {
    "id": "b3737",
@@ -418,7 +427,8 @@
    "t": "No great artist ever sees things as they really are. If he did, he would cease to be an artist.",
    "a": "Oscar Wilde",
    "c": "Wisdom",
-   "img": "images/batch-17/b3738.jpg"
+   "img": "images/batch-17/b3738.jpg",
+   "source": "The Decay of Lying"
   },
   {
    "id": "b3739",
@@ -691,7 +701,8 @@
    "t": "I hate to hear you talk about all women as if they were fine ladies instead of rational creatures.",
    "a": "Jane Austen",
    "c": "Wisdom",
-   "img": "images/batch-17/b3777.jpg"
+   "img": "images/batch-17/b3777.jpg",
+   "source": "Persuasion"
   },
   {
    "id": "b3778",

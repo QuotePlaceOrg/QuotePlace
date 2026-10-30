@@ -19,7 +19,8 @@
    "t": "A house divided against itself cannot stand.",
    "a": "Abraham Lincoln",
    "c": "Wisdom",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "House Divided Speech (1858)"
   },
   {
    "id": "b1004",
@@ -40,7 +41,8 @@
    "t": "Be the chief but never the lord.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "style": "navy"
+   "style": "navy",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1007",
@@ -103,7 +105,8 @@
    "t": "To lead people walk behind them.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1016",
@@ -131,7 +134,8 @@
    "t": "Ideas are the beginning points of all fortunes.",
    "a": "Napoleon Hill",
    "c": "Success",
-   "style": "cream"
+   "style": "cream",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b1020",
@@ -145,7 +149,8 @@
    "t": "Doing nothing is better than being busy doing nothing.",
    "a": "Lao Tzu",
    "c": "Calm",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1022",
@@ -180,7 +185,8 @@
    "t": "Work out your own salvation. Do not depend on others.",
    "a": "Gautama Buddha",
    "c": "Action",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Dhammapada"
   },
   {
    "id": "b1027",
@@ -341,7 +347,8 @@
    "t": "Don't wait. The time will never be just right.",
    "a": "Napoleon Hill",
    "c": "Action",
-   "style": "cream"
+   "style": "cream",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b1050",
@@ -488,7 +495,8 @@
    "t": "Anticipate the difficult by managing the easy.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "style": "sage"
+   "style": "sage",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1071",
@@ -530,7 +538,8 @@
    "t": "Argue for your limitations, and sure enough theyre yours.",
    "a": "Richard Bach",
    "c": "Wisdom",
-   "style": "sage"
+   "style": "sage",
+   "source": "Illusions"
   },
   {
    "id": "b1077",
@@ -621,7 +630,8 @@
    "t": "What we think, we become.",
    "a": "Gautama Buddha",
    "c": "Wisdom",
-   "style": "blush"
+   "style": "blush",
+   "source": "Dhammapada"
   },
   {
    "id": "b1090",
@@ -754,7 +764,8 @@
    "t": "Speak low, if you speak love.",
    "a": "William Shakespeare",
    "c": "Love",
-   "style": "navy"
+   "style": "navy",
+   "source": "Much Ado About Nothing"
   },
   {
    "id": "b1109",
@@ -775,7 +786,8 @@
    "t": "The greatest remedy for anger is delay.",
    "a": "Seneca",
    "c": "Calm",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "On Anger"
   },
   {
    "id": "b1112",
@@ -845,7 +857,8 @@
    "t": "Each day provides its own gifts.",
    "a": "Marcus Aurelius",
    "c": "Life",
-   "style": "cream"
+   "style": "cream",
+   "source": "Meditations"
   },
   {
    "id": "b1122",
@@ -866,7 +879,8 @@
    "t": "To bring anything into your life, imagine that it's already there.",
    "a": "Richard Bach",
    "c": "Wisdom",
-   "style": "sage"
+   "style": "sage",
+   "source": "Illusions"
   },
   {
    "id": "b1125",
@@ -950,7 +964,8 @@
    "t": "Loss is nothing else but change,and change is Natures delight.",
    "a": "Marcus Aurelius",
    "c": "Life",
-   "style": "sage"
+   "style": "sage",
+   "source": "Meditations"
   },
   {
    "id": "b1137",
@@ -971,7 +986,8 @@
    "t": "He who is contented is rich.",
    "a": "Lao Tzu",
    "c": "Happiness",
-   "style": "cream"
+   "style": "cream",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1140",
@@ -1125,7 +1141,8 @@
    "t": "Strong beliefs win strong men, and then make them stronger.",
    "a": "Richard Bach",
    "c": "Wisdom",
-   "style": "blush"
+   "style": "blush",
+   "source": "Illusions"
   },
   {
    "id": "b1162",
@@ -1188,7 +1205,8 @@
    "t": "Difficulties are things that show a person what they are.",
    "a": "Epictetus",
    "c": "Life",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Discourses"
   },
   {
    "id": "b1171",
@@ -1293,7 +1311,8 @@
    "t": "The mind is everything. What you think you become.",
    "a": "Gautama Buddha",
    "c": "Wisdom",
-   "style": "blush"
+   "style": "blush",
+   "source": "Dhammapada"
   },
   {
    "id": "b1186",
@@ -1356,14 +1375,16 @@
    "t": "Fears are nothing more than a state of mind.",
    "a": "Napoleon Hill",
    "c": "Courage",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b1195",
    "t": "The journey of a thousand miles begins with one step.",
    "a": "Lao Tzu",
    "c": "Action",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1196",
@@ -1461,7 +1482,8 @@
    "t": "Every problem has a gift for you in its hands.",
    "a": "Richard Bach",
    "c": "Life",
-   "style": "blush"
+   "style": "blush",
+   "source": "Illusions"
   },
   {
    "id": "b1210",
@@ -1685,7 +1707,8 @@
    "t": "If one does not know to which port is sailing, no wind is favorable.",
    "a": "Seneca",
    "c": "Wisdom",
-   "style": "cream"
+   "style": "cream",
+   "source": "Letters to Lucilius"
   },
   {
    "id": "b1242",
@@ -1860,7 +1883,8 @@
    "t": "Reviewing what you have learned and learning anew, you are fit to be a teacher.",
    "a": "Confucius",
    "c": "Wisdom",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "The Analects"
   },
   {
    "id": "b1267",
@@ -1944,7 +1968,8 @@
    "t": "The best way to pay for a lovely moment is to enjoy it.",
    "a": "Richard Bach",
    "c": "Happiness",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Illusions"
   },
   {
    "id": "b1279",
@@ -1965,7 +1990,8 @@
    "t": "Your worst enemy cannot harm you as much as your own unguarded thoughts.",
    "a": "Gautama Buddha",
    "c": "Wisdom",
-   "style": "blush"
+   "style": "blush",
+   "source": "Dhammapada"
   },
   {
    "id": "b1282",
@@ -2042,7 +2068,8 @@
    "t": "When your desires are strong enough you will appear to possess superhuman powers to achieve.",
    "a": "Napoleon Hill",
    "c": "Success",
-   "style": "sage"
+   "style": "sage",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b1293",
@@ -2133,7 +2160,8 @@
    "t": "The superior man is satisfied and composed; the mean man is always full of distress.",
    "a": "Confucius",
    "c": "Calm",
-   "style": "blush"
+   "style": "blush",
+   "source": "The Analects"
   },
   {
    "id": "b1306",
@@ -2294,7 +2322,8 @@
    "t": "If you would take, you must first give, this is the beginning of intelligence.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "style": "sage"
+   "style": "sage",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1329",
@@ -2315,7 +2344,8 @@
    "t": "To study and not think is a waste. To think and not study is dangerous.",
    "a": "Confucius",
    "c": "Wisdom",
-   "style": "cream"
+   "style": "cream",
+   "source": "The Analects"
   },
   {
    "id": "b1332",
@@ -2343,7 +2373,8 @@
    "t": "If you cannot do great things, do small things in a great way.",
    "a": "Napoleon Hill",
    "c": "Action",
-   "style": "blush"
+   "style": "blush",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b1336",
@@ -2392,7 +2423,8 @@
    "t": "The wise man does not lay up his own treasures. The more he gives to others, the more he has for his own.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "style": "navy"
+   "style": "navy",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1343",
@@ -2448,21 +2480,24 @@
    "t": "I will not be concerned at other men is not knowing me;I will be concerned at my own want of ability.",
    "a": "Confucius",
    "c": "Wisdom",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "The Analects"
   },
   {
    "id": "b1351",
    "t": "When you are content to be simply yourself and don't compare or compete, everybody will respect you.",
    "a": "Lao Tzu",
    "c": "Calm",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1352",
    "t": "Be not afraid of greatness: some are born great, some achieve greatness, and some have greatness thrust upon them.",
    "a": "William Shakespeare",
    "c": "Success",
-   "style": "sage"
+   "style": "sage",
+   "source": "Twelfth Night"
   },
   {
    "id": "b1353",
@@ -2735,7 +2770,8 @@
    "t": "In order to live free and happily you must sacrifice boredom. It is not always an easy sacrifice.",
    "a": "Richard Bach",
    "c": "Happiness",
-   "style": "cream"
+   "style": "cream",
+   "source": "Illusions"
   },
   {
    "id": "b1392",
@@ -2812,7 +2848,8 @@
    "t": "If the single man plant himself indomitably on his instincts, and there abide, the huge world will come round to him.",
    "a": "Ralph Waldo Emerson",
    "c": "Wisdom",
-   "style": "navy"
+   "style": "navy",
+   "source": "Self-Reliance"
   },
   {
    "id": "b1403",
@@ -2924,7 +2961,8 @@
    "t": "Everything that happens happens as it should, and if you observe carefully, you will find this to be so.",
    "a": "Marcus Aurelius",
    "c": "Calm",
-   "style": "sage"
+   "style": "sage",
+   "source": "Meditations"
   },
   {
    "id": "b1419",
@@ -2952,7 +2990,8 @@
    "t": "When you see a man of worth, think of how you may emulate him. When you see one who is unworthy, examine yourself.",
    "a": "Confucius",
    "c": "Wisdom",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "The Analects"
   },
   {
    "id": "b1423",
@@ -3197,7 +3236,8 @@
    "t": "At the center of your being you have the answer; you know who you are and you know what you want.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "style": "cream"
+   "style": "cream",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1458",
@@ -3260,7 +3300,8 @@
    "t": "You are always free to change your mind and choose a different future, or a different past.",
    "a": "Richard Bach",
    "c": "Wisdom",
-   "style": "sage"
+   "style": "sage",
+   "source": "Illusions"
   },
   {
    "id": "b1467",
@@ -3344,7 +3385,8 @@
    "t": "Being in humaneness is good. If we select other goodness and thus are far apart from humaneness, how can we be the wise?",
    "a": "Confucius",
    "c": "Wisdom",
-   "style": "sage"
+   "style": "sage",
+   "source": "The Analects"
   },
   {
    "id": "b1479",
@@ -3498,7 +3540,8 @@
    "t": "All difficult things have their origin in that which is easy, and great things in that which is small.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1501",
@@ -3589,7 +3632,8 @@
    "t": "I am not bothered by the fact that I am unknown. I am bothered when I do not know others.",
    "a": "Confucius",
    "c": "Wisdom",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "The Analects"
   },
   {
    "id": "b1514",
@@ -3827,7 +3871,8 @@
    "t": "Your friends will know you better in the first minute you meet than your acquaintances will know you in a thousand years.",
    "a": "Richard Bach",
    "c": "Friendship",
-   "style": "cream"
+   "style": "cream",
+   "source": "Illusions"
   },
   {
    "id": "b1548",
@@ -3967,7 +4012,8 @@
    "t": "Can miles truly separate you from friends... If you want to be with someone you love, aren't you already there?",
    "a": "Richard Bach",
    "c": "Friendship",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Illusions"
   },
   {
    "id": "b1568",
@@ -4002,7 +4048,8 @@
    "t": "We are what we think. All that we are arises with our thoughts. With our thoughts, we make the world.",
    "a": "Gautama Buddha",
    "c": "Wisdom",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Dhammapada"
   },
   {
    "id": "b1573",
@@ -4184,7 +4231,8 @@
    "t": "All that we are is the result of what we have thought. The mind is everything. What we think we become.",
    "a": "Gautama Buddha",
    "c": "Wisdom",
-   "style": "sage"
+   "style": "sage",
+   "source": "Dhammapada"
   },
   {
    "id": "b1599",
@@ -4198,14 +4246,16 @@
    "t": "How far that little candle throws its beams! So shines a good deed in a naughty world.",
    "a": "William Shakespeare",
    "c": "Wisdom",
-   "style": "navy"
+   "style": "navy",
+   "source": "The Merchant of Venice"
   },
   {
    "id": "b1601",
    "t": "Every adversity, every failure, every heartache carries with it the seed of an equal or greater benefit.",
    "a": "Napoleon Hill",
    "c": "Success",
-   "style": "cream"
+   "style": "cream",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b1602",
@@ -4247,7 +4297,8 @@
    "t": "I have just three things to teach: simplicity, patience, compassion. These three are your greatest treasures.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "style": "cream"
+   "style": "cream",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1608",
@@ -4296,7 +4347,8 @@
    "t": "When you realize there is nothing lacking, the whole world belongs to you.",
    "a": "Lao Tzu",
    "c": "Calm",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1615",
@@ -4345,7 +4397,8 @@
    "t": "He who lives in harmony with himself lives in harmony with the universe.",
    "a": "Marcus Aurelius",
    "c": "Calm",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Meditations"
   },
   {
    "id": "b1622",
@@ -4366,7 +4419,8 @@
    "t": "All achievements, all earned riches, have their beginning in an idea.",
    "a": "Napoleon Hill",
    "c": "Success",
-   "style": "navy"
+   "style": "navy",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b1625",
@@ -4422,14 +4476,16 @@
    "t": "In all things of nature there is something of the marvellous.",
    "a": "Aristotle",
    "c": "Wisdom",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Parts of Animals"
   },
   {
    "id": "b1633",
    "t": "The universe is transformation; our life is what our thoughts make it.",
    "a": "Marcus Aurelius",
    "c": "Wisdom",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Meditations"
   },
   {
    "id": "b1634",
@@ -4464,7 +4520,8 @@
    "t": "God has given you one face, and you make yourself another.",
    "a": "William Shakespeare",
    "c": "Wisdom",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Hamlet"
   },
   {
    "id": "b1639",
@@ -4779,14 +4836,16 @@
    "t": "Look back over the past, with its changing empires that rose and fell, and you can foresee the future, too.",
    "a": "Marcus Aurelius",
    "c": "Wisdom",
-   "style": "blush"
+   "style": "blush",
+   "source": "Meditations"
   },
   {
    "id": "b1684",
    "t": "Men are disturbed not by things, but by the view which they take of them.",
    "a": "Epictetus",
    "c": "Wisdom",
-   "style": "navy"
+   "style": "navy",
+   "source": "Enchiridion"
   },
   {
    "id": "b1685",
@@ -5094,7 +5153,8 @@
    "t": "No one saves us but ourselves. No one can and no one may. We ourselves must walk the path.",
    "a": "Gautama Buddha",
    "c": "Wisdom",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Dhammapada"
   },
   {
    "id": "b1729",
@@ -5304,7 +5364,8 @@
    "t": "When you see a good person, think of becoming like him. When you see someone not so good, reflect on your own weak points.",
    "a": "Confucius",
    "c": "Wisdom",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "The Analects"
   },
   {
    "id": "b1759",
@@ -5374,7 +5435,8 @@
    "t": "When you meet someone better than yourself, turn your thoughts to becoming his equal. When you meet someone not as good as you are, look within and examine your own self.",
    "a": "Confucius",
    "c": "Wisdom",
-   "style": "navy"
+   "style": "navy",
+   "source": "The Analects"
   },
   {
    "id": "b1769",
@@ -5416,7 +5478,8 @@
    "t": "By letting it go it all gets done. The world is won by those who let it go. But when you try and try. The world is beyond the winning.",
    "a": "Lao Tzu",
    "c": "Calm",
-   "style": "navy"
+   "style": "navy",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1775",
@@ -5500,7 +5563,8 @@
    "t": "When you arise in the morning, think of what a precious privilege it is to be alive — to breathe, to think, to enjoy, to love.",
    "a": "Marcus Aurelius",
    "c": "Life",
-   "style": "navy"
+   "style": "navy",
+   "source": "Meditations"
   },
   {
    "id": "b1787",
@@ -5528,7 +5592,8 @@
    "t": "Accept the things to which fate binds you, and love the people with whom fate brings you together, but do so with all your heart.",
    "a": "Marcus Aurelius",
    "c": "Calm",
-   "style": "sage"
+   "style": "sage",
+   "source": "Meditations"
   },
   {
    "id": "b1791",
@@ -5584,7 +5649,8 @@
    "t": "He who conquers others is strong; He who conquers himself is mighty.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "style": "navy"
+   "style": "navy",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1799",
@@ -5640,7 +5706,8 @@
    "t": "Sooner or later, those who win are those who think they can.",
    "a": "Richard Bach",
    "c": "Success",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Illusions"
   },
   {
    "id": "b1807",
@@ -5808,7 +5875,8 @@
    "t": "Better than a thousand hollow words, is one word that brings peace.",
    "a": "Gautama Buddha",
    "c": "Calm",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Dhammapada"
   },
   {
    "id": "b1831",
@@ -5843,7 +5911,8 @@
    "t": "Every gift from a friend is a wish for your happiness.",
    "a": "Richard Bach",
    "c": "Friendship",
-   "style": "cream"
+   "style": "cream",
+   "source": "Illusions"
   },
   {
    "id": "b1836",
@@ -5941,7 +6010,8 @@
    "t": "Learning is finding out what you already know.",
    "a": "Richard Bach",
    "c": "Wisdom",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Illusions"
   },
   {
    "id": "b1850",
@@ -5962,14 +6032,16 @@
    "t": "There is no great genius without some touch of madness.",
    "a": "Seneca",
    "c": "Wisdom",
-   "style": "navy"
+   "style": "navy",
+   "source": "On Tranquility of Mind"
   },
   {
    "id": "b1853",
    "t": "A jug fills drop by drop.",
    "a": "Gautama Buddha",
    "c": "Habits",
-   "style": "cream"
+   "style": "cream",
+   "source": "Dhammapada"
   },
   {
    "id": "b1854",
@@ -6018,7 +6090,8 @@
    "t": "Everything that exists is in a manner the seed of that which will be.",
    "a": "Marcus Aurelius",
    "c": "Wisdom",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Meditations"
   },
   {
    "id": "b1861",
@@ -6095,7 +6168,8 @@
    "t": "Opportunity often comes disguised in the form of misfortune, or temporary defeat.",
    "a": "Napoleon Hill",
    "c": "Success",
-   "style": "cream"
+   "style": "cream",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b1872",
@@ -6284,7 +6358,8 @@
    "t": "We know what we are, but know not what we may be.",
    "a": "William Shakespeare",
    "c": "Wisdom",
-   "style": "sage"
+   "style": "sage",
+   "source": "Hamlet"
   },
   {
    "id": "b1899",
@@ -6347,14 +6422,16 @@
    "t": "He who knows himself is enlightened.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "style": "cream"
+   "style": "cream",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1908",
    "t": "As our case is new, we must think and act anew.",
    "a": "Abraham Lincoln",
    "c": "Action",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Annual Message to Congress (1862)"
   },
   {
    "id": "b1909",
@@ -6536,7 +6613,8 @@
    "t": "The Superior Man is aware of Righteousness, the inferior man is aware of advantage.",
    "a": "Confucius",
    "c": "Wisdom",
-   "style": "sage"
+   "style": "sage",
+   "source": "The Analects"
   },
   {
    "id": "b1935",
@@ -6557,7 +6635,8 @@
    "t": "No man is free who is not master of himself.",
    "a": "Epictetus",
    "c": "Wisdom",
-   "style": "cream"
+   "style": "cream",
+   "source": "Discourses"
   },
   {
    "id": "b1938",
@@ -6592,7 +6671,8 @@
    "t": "Great acts are made up of small deeds.",
    "a": "Lao Tzu",
    "c": "Action",
-   "style": "navy"
+   "style": "navy",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1943",
@@ -6669,7 +6749,8 @@
    "t": "Nothing is at last sacred but the integrity of your own mind.",
    "a": "Ralph Waldo Emerson",
    "c": "Wisdom",
-   "style": "blush"
+   "style": "blush",
+   "source": "Self-Reliance"
   },
   {
    "id": "b1954",
@@ -6711,7 +6792,8 @@
    "t": "Chaos is inherent in all compounded things. Strive on with diligence.",
    "a": "Gautama Buddha",
    "c": "Wisdom",
-   "style": "blush"
+   "style": "blush",
+   "source": "Mahaparinibbana Sutta"
   },
   {
    "id": "b1960",
@@ -6725,7 +6807,8 @@
    "t": "Nothing great was ever achieved without enthusiasm.",
    "a": "Ralph Waldo Emerson",
    "c": "Success",
-   "style": "cream"
+   "style": "cream",
+   "source": "Circles"
   },
   {
    "id": "b1962",
@@ -6879,7 +6962,8 @@
    "t": "It's not what happens to you, but how you react to it that matters.",
    "a": "Epictetus",
    "c": "Wisdom",
-   "style": "blush"
+   "style": "blush",
+   "source": "Enchiridion"
   },
   {
    "id": "b1984",
@@ -6970,7 +7054,8 @@
    "t": "Nothing is softer or more flexible than water, yet nothing can resist it.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "style": "navy"
+   "style": "navy",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b1997",
@@ -6998,7 +7083,8 @@
    "t": "Fine words and an insinuating appearance are seldom associated with true virtue",
    "a": "Confucius",
    "c": "Wisdom",
-   "style": "sage"
+   "style": "sage",
+   "source": "The Analects"
   },
   {
    "id": "b2001",
@@ -7096,7 +7182,8 @@
    "t": "We are shaped by our thoughts; we become what we think. When the mind is pure, joy follows like a shadow that never leaves.",
    "a": "Gautama Buddha",
    "c": "Wisdom",
-   "style": "navy"
+   "style": "navy",
+   "source": "Dhammapada"
   },
   {
    "id": "b2015",
@@ -7166,7 +7253,8 @@
    "t": "When I let go of what I am, I become what I might be.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "style": "sage"
+   "style": "sage",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b2025",
@@ -7201,7 +7289,8 @@
    "t": "He who controls others may be powerful, but he who has mastered himself is mightier still.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b2030",
@@ -7306,7 +7395,8 @@
    "t": "To be great is to be misunderstood.",
    "a": "Ralph Waldo Emerson",
    "c": "Wisdom",
-   "style": "navy"
+   "style": "navy",
+   "source": "Self-Reliance"
   },
   {
    "id": "b2045",
@@ -7362,7 +7452,8 @@
    "t": "Keep silence for the most part, and speak only when you must, and then briefly.",
    "a": "Epictetus",
    "c": "Calm",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Enchiridion"
   },
   {
    "id": "b2053",
@@ -7467,7 +7558,8 @@
    "t": "Waste no more time arguing about what a good man should be. Be one.",
    "a": "Marcus Aurelius",
    "c": "Action",
-   "style": "blush"
+   "style": "blush",
+   "source": "Meditations"
   },
   {
    "id": "b2068",
@@ -7495,7 +7587,8 @@
    "t": "Always bear in mind that your own resolution to succeed is more important than any one thing.",
    "a": "Abraham Lincoln",
    "c": "Success",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Letter to Isham Reavis (1855)"
   },
   {
    "id": "b2072",
@@ -7656,7 +7749,8 @@
    "t": "Every person, all the events of your life are there because you have drawn them there. What you choose to do with them is up to you.",
    "a": "Richard Bach",
    "c": "Life",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Illusions"
   },
   {
    "id": "b2095",
@@ -7768,7 +7862,8 @@
    "t": "The superior man acts before he speaks, and afterwards speaks according to his action.",
    "a": "Confucius",
    "c": "Action",
-   "style": "navy"
+   "style": "navy",
+   "source": "The Analects"
   },
   {
    "id": "b2111",
@@ -7866,7 +7961,8 @@
    "t": "There is nothing happens to any person but what was in his power to go through with.",
    "a": "Marcus Aurelius",
    "c": "Wisdom",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Meditations"
   },
   {
    "id": "b2125",
@@ -7950,7 +8046,8 @@
    "t": "All the world is a stage, And all the men and women merely players.They have their exits and entrances; Each man in his time plays many parts.",
    "a": "William Shakespeare",
    "c": "Courage",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "As You Like It"
   },
   {
    "id": "b2137",
@@ -7971,7 +8068,8 @@
    "t": "To fly as fast as thought, you must begin by knowing that you have already arrived.",
    "a": "Richard Bach",
    "c": "Wisdom",
-   "style": "blush"
+   "style": "blush",
+   "source": "Jonathan Livingston Seagull"
   },
   {
    "id": "b2140",
@@ -8132,7 +8230,8 @@
    "t": "Learning without reflection is a waste, reflection without learning is dangerous.",
    "a": "Confucius",
    "c": "Wisdom",
-   "style": "sage"
+   "style": "sage",
+   "source": "The Analects"
   },
   {
    "id": "b2163",
@@ -8349,7 +8448,8 @@
    "t": "However many holy words you read, However many you speak, What good will they do you If you do not act on upon them?",
    "a": "Gautama Buddha",
    "c": "Action",
-   "style": "blush"
+   "style": "blush",
+   "source": "Dhammapada"
   },
   {
    "id": "b2194",
@@ -8419,7 +8519,8 @@
    "t": "He who knows, does not speak. He who speaks, does not know.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b2204",
@@ -8524,7 +8625,8 @@
    "t": "Meditation brings wisdom; lack of mediation leaves ignorance. Know well what leads you forward and what hold you back, and choose the path that leads to wisdom.",
    "a": "Gautama Buddha",
    "c": "Wisdom",
-   "style": "navy"
+   "style": "navy",
+   "source": "Dhammapada"
   },
   {
    "id": "b2219",
@@ -8552,7 +8654,8 @@
    "t": "Kindness in words creates confidence. Kindness in thinking creates profoundness. Kindness in giving creates love.",
    "a": "Lao Tzu",
    "c": "Love",
-   "style": "sage"
+   "style": "sage",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b2223",
@@ -8692,7 +8795,8 @@
    "t": "Moral excellence comes about as a result of habit. We become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts.",
    "a": "Aristotle",
    "c": "Habits",
-   "style": "navy"
+   "style": "navy",
+   "source": "Nicomachean Ethics"
   },
   {
    "id": "b2243",
@@ -8853,7 +8957,8 @@
    "t": "The mark of your ignorance is the depth of your belief in injustice and tragedy. What the caterpillar calls the end of the world, the Master calls the butterfly.",
    "a": "Richard Bach",
    "c": "Wisdom",
-   "style": "blush"
+   "style": "blush",
+   "source": "Illusions"
   },
   {
    "id": "b2266",
@@ -8972,7 +9077,8 @@
    "t": "What the caterpillar calls the end of the world, the master calls a butterfly.",
    "a": "Richard Bach",
    "c": "Wisdom",
-   "style": "sage"
+   "style": "sage",
+   "source": "Illusions"
   },
   {
    "id": "b2283",
@@ -9063,7 +9169,8 @@
    "t": "To give ones self earnestly to the duties due to men, and, while respecting spiritual beings, to keep aloof from them, may be called wisdom.",
    "a": "Confucius",
    "c": "Wisdom",
-   "style": "blush"
+   "style": "blush",
+   "source": "The Analects"
   },
   {
    "id": "b2296",
@@ -9084,7 +9191,8 @@
    "t": "You teach best what you most need to learn.",
    "a": "Richard Bach",
    "c": "Wisdom",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Illusions"
   },
   {
    "id": "b2299",
@@ -9168,7 +9276,8 @@
    "t": "There are no limitations to the mind except those we acknowledge.",
    "a": "Napoleon Hill",
    "c": "Success",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b2311",
@@ -9182,7 +9291,8 @@
    "t": "Don't be dismayed by good-byes. A farewell is necessary before you can meet again. And meeting again, after moments or lifetimes, is certain for those who are friends.",
    "a": "Richard Bach",
    "c": "Friendship",
-   "style": "sage"
+   "style": "sage",
+   "source": "Illusions"
   },
   {
    "id": "b2313",
@@ -9238,7 +9348,8 @@
    "t": "He who knows others is wise. He who knows himself is enlightened.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "style": "navy"
+   "style": "navy",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b2321",
@@ -9280,7 +9391,8 @@
    "t": "One who is too insistent on his own views, finds few to agree with him.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "style": "navy"
+   "style": "navy",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b2327",
@@ -9322,7 +9434,8 @@
    "t": "You are never given a wish without also being given the power to make it come true. You may have to work for it, however.",
    "a": "Richard Bach",
    "c": "Action",
-   "style": "navy"
+   "style": "navy",
+   "source": "Illusions"
   },
   {
    "id": "b2333",
@@ -9469,7 +9582,8 @@
    "t": "It is impossible for a man to learn what he thinks he already knows.",
    "a": "Epictetus",
    "c": "Wisdom",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Discourses"
   },
   {
    "id": "b2354",
@@ -9497,7 +9611,8 @@
    "t": "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.",
    "a": "Marcus Aurelius",
    "c": "Wisdom",
-   "style": "cream"
+   "style": "cream",
+   "source": "Meditations"
   },
   {
    "id": "b2358",
@@ -9588,7 +9703,8 @@
    "t": "He who wishes to secure the good of others, has already secured his own.",
    "a": "Confucius",
    "c": "Wisdom",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "The Analects"
   },
   {
    "id": "b2371",
@@ -9903,14 +10019,16 @@
    "t": "Here is one quality that one must possess to win, and that is definiteness of purpose, the knowledge of what one wants, and a burning desire to possess it.",
    "a": "Napoleon Hill",
    "c": "Success",
-   "style": "blush"
+   "style": "blush",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b2416",
    "t": "It is not in the stars to hold our destiny but in ourselves.",
    "a": "William Shakespeare",
    "c": "Life",
-   "style": "navy"
+   "style": "navy",
+   "source": "Julius Caesar"
   },
   {
    "id": "b2417",

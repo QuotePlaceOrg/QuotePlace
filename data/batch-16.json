@@ -40,7 +40,8 @@
    "t": "Desire is the starting point of all achievement, not a hope, not a wish, but a keen pulsating desire which transcends everything.",
    "a": "Napoleon Hill",
    "c": "Success",
-   "img": "images/batch-16/b3584.jpg"
+   "img": "images/batch-16/b3584.jpg",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b3585",
@@ -75,21 +76,24 @@
    "t": "Nothing great is created suddenly, any more than a bunch of grapes or a fig. If you tell me that you desire a fig, I answer you that there must be time.",
    "a": "Epictetus",
    "c": "Wisdom",
-   "img": "images/batch-16/b3589.jpg"
+   "img": "images/batch-16/b3589.jpg",
+   "source": "Discourses"
   },
   {
    "id": "b3590",
    "t": "You may be always victorious if you will never enter into any contest where the issue does not depend on yourself.",
    "a": "Epictetus",
    "c": "Courage",
-   "img": "images/batch-16/b3590.jpg"
+   "img": "images/batch-16/b3590.jpg",
+   "source": "Enchiridion"
   },
   {
    "id": "b3591",
    "t": "This place is a dream. Only a sleeper considers it real.",
    "a": "Rumi",
    "c": "Wisdom",
-   "img": "images/batch-16/b3591.jpg"
+   "img": "images/batch-16/b3591.jpg",
+   "source": "Masnavi"
   },
   {
    "id": "b3592",
@@ -110,42 +114,48 @@
    "t": "The fool doth think he is wise, but the wise man knows himself to be a fool.",
    "a": "William Shakespeare",
    "c": "Wisdom",
-   "img": "images/batch-16/b3594.jpg"
+   "img": "images/batch-16/b3594.jpg",
+   "source": "As You Like It"
   },
   {
    "id": "b3595",
    "t": "There is no darkness but ignorance.",
    "a": "William Shakespeare",
    "c": "Wisdom",
-   "img": "images/batch-16/b3595.jpg"
+   "img": "images/batch-16/b3595.jpg",
+   "source": "Twelfth Night"
   },
   {
    "id": "b3596",
    "t": "Love is a smoke made with the fume of sighs.",
    "a": "William Shakespeare",
    "c": "Love",
-   "img": "images/batch-16/b3596.jpg"
+   "img": "images/batch-16/b3596.jpg",
+   "source": "Romeo and Juliet"
   },
   {
    "id": "b3597",
    "t": "Our life is what our thoughts make it.",
    "a": "Marcus Aurelius",
    "c": "Wisdom",
-   "img": "images/batch-16/b3597.jpg"
+   "img": "images/batch-16/b3597.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3598",
    "t": "Be like the cliff against which the waves continually break; but it stands firm and tames the fury of the water around it.",
    "a": "Marcus Aurelius",
    "c": "Calm",
-   "img": "images/batch-16/b3598.jpg"
+   "img": "images/batch-16/b3598.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3599",
    "t": "You pray in your distress and in your need; would that you might pray also in the fullness of your joy and in your days of abundance.",
    "a": "Kahlil Gibran",
    "c": "Happiness",
-   "img": "images/batch-16/b3599.jpg"
+   "img": "images/batch-16/b3599.jpg",
+   "source": "The Prophet"
   },
   {
    "id": "b3600",
@@ -194,7 +204,8 @@
    "t": "I have spent my days stringing and unstringing my instrument while the song I came to sing remains unsung.",
    "a": "Rabindranath Tagore",
    "c": "Life",
-   "img": "images/batch-16/b3606.jpg"
+   "img": "images/batch-16/b3606.jpg",
+   "source": "Gitanjali"
   },
   {
    "id": "b3607",
@@ -250,7 +261,8 @@
    "t": "We are not given a short life but we make it short.",
    "a": "Seneca",
    "c": "Life",
-   "img": "images/batch-16/b3614.jpg"
+   "img": "images/batch-16/b3614.jpg",
+   "source": "On the Shortness of Life"
   },
   {
    "id": "b3615",
@@ -383,7 +395,8 @@
    "t": "Know thy self, know thy enemy. A thousand battles, a thousand victories.",
    "a": "Sun Tzu",
    "c": "Wisdom",
-   "img": "images/batch-16/b3633.jpg"
+   "img": "images/batch-16/b3633.jpg",
+   "source": "The Art of War"
   },
   {
    "id": "b3634",
@@ -397,7 +410,8 @@
    "t": "An idea that is not dangerous is unworthy of being called an idea at all.",
    "a": "Oscar Wilde",
    "c": "Wisdom",
-   "img": "images/batch-16/b3635.jpg"
+   "img": "images/batch-16/b3635.jpg",
+   "source": "The Soul of Man under Socialism"
   },
   {
    "id": "b3636",

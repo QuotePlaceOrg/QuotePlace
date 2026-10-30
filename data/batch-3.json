@@ -26,7 +26,8 @@
    "t": "Let me not pray to be sheltered from dangers, but to be fearless in facing them.",
    "a": "Rabindranath Tagore",
    "c": "Life",
-   "img": "images/batch-3/b105.jpg"
+   "img": "images/batch-3/b105.jpg",
+   "source": "Gitanjali"
   },
   {
    "id": "b106",
@@ -89,7 +90,8 @@
    "t": "Let there be spaces in your togetherness, and let the winds of the heavens dance between you.",
    "a": "Kahlil Gibran",
    "c": "Love",
-   "img": "images/batch-3/b114.jpg"
+   "img": "images/batch-3/b114.jpg",
+   "source": "The Prophet"
   },
   {
    "id": "b115",
@@ -194,7 +196,8 @@
    "t": "Your children are not your children. They are the sons and daughters of Life's longing for itself.",
    "a": "Kahlil Gibran",
    "c": "Life",
-   "img": "images/batch-3/b129.jpg"
+   "img": "images/batch-3/b129.jpg",
+   "source": "The Prophet"
   },
   {
    "id": "b130",
@@ -215,7 +218,8 @@
    "t": "Faith is the bird that feels the light when the dawn is still dark.",
    "a": "Rabindranath Tagore",
    "c": "Calm",
-   "img": "images/batch-3/b132.jpg"
+   "img": "images/batch-3/b132.jpg",
+   "source": "Fireflies"
   },
   {
    "id": "b133",
@@ -264,7 +268,8 @@
    "t": "In the sweetness of friendship let there be laughter, and sharing of pleasures.",
    "a": "Kahlil Gibran",
    "c": "Friendship",
-   "img": "images/batch-3/b139.jpg"
+   "img": "images/batch-3/b139.jpg",
+   "source": "The Prophet"
   },
   {
    "id": "b140",
@@ -348,7 +353,8 @@
    "t": "Health is the greatest gift, contentment the greatest wealth, faithfulness the best relationship.",
    "a": "Gautama Buddha",
    "c": "Happiness",
-   "img": "images/batch-3/b151.jpg"
+   "img": "images/batch-3/b151.jpg",
+   "source": "Dhammapada"
   },
   {
    "id": "b152",
@@ -460,7 +466,8 @@
    "t": "Your joy is your sorrow unmasked.",
    "a": "Kahlil Gibran",
    "c": "Happiness",
-   "img": "images/batch-3/b167.jpg"
+   "img": "images/batch-3/b167.jpg",
+   "source": "The Prophet"
   },
   {
    "id": "b168",
@@ -607,7 +614,8 @@
    "t": "And forget not that the earth delights to feel your bare feet and the winds long to play with your hair.",
    "a": "Kahlil Gibran",
    "c": "Happiness",
-   "img": "images/batch-3/b188.jpg"
+   "img": "images/batch-3/b188.jpg",
+   "source": "The Prophet"
   },
   {
    "id": "b189",
@@ -733,7 +741,8 @@
    "t": "Your pain is the breaking of the shell that encloses your understanding.",
    "a": "Kahlil Gibran",
    "c": "Life",
-   "img": "images/batch-3/b206.jpg"
+   "img": "images/batch-3/b206.jpg",
+   "source": "The Prophet"
   },
   {
    "id": "b207",
@@ -761,196 +770,224 @@
    "t": "The superior man is modest in his speech, but exceeds in his actions.",
    "a": "Confucius",
    "c": "Wisdom",
-   "img": "images/batch-3/b210.jpg"
+   "img": "images/batch-3/b210.jpg",
+   "source": "The Analects"
   },
   {
    "id": "b211",
    "t": "To see what is right and not to do it is want of courage.",
    "a": "Confucius",
    "c": "Courage",
-   "img": "images/batch-3/b211.jpg"
+   "img": "images/batch-3/b211.jpg",
+   "source": "The Analects"
   },
   {
    "id": "b212",
    "t": "He who learns but does not think, is lost. He who thinks but does not learn is in great danger.",
    "a": "Confucius",
    "c": "Wisdom",
-   "img": "images/batch-3/b212.jpg"
+   "img": "images/batch-3/b212.jpg",
+   "source": "The Analects"
   },
   {
    "id": "b213",
    "t": "When we see men of a contrary character, we should turn inwards and examine ourselves.",
    "a": "Confucius",
    "c": "Wisdom",
-   "img": "images/batch-3/b213.jpg"
+   "img": "images/batch-3/b213.jpg",
+   "source": "The Analects"
   },
   {
    "id": "b214",
    "t": "Real knowledge is to know the extent of one's ignorance.",
    "a": "Confucius",
    "c": "Wisdom",
-   "img": "images/batch-3/b214.jpg"
+   "img": "images/batch-3/b214.jpg",
+   "source": "The Analects"
   },
   {
    "id": "b215",
    "t": "The superior man thinks always of virtue; the common man thinks of comfort.",
    "a": "Confucius",
    "c": "Habits",
-   "img": "images/batch-3/b215.jpg"
+   "img": "images/batch-3/b215.jpg",
+   "source": "The Analects"
   },
   {
    "id": "b216",
    "t": "To go beyond is as wrong as to fall short.",
    "a": "Confucius",
    "c": "Wisdom",
-   "img": "images/batch-3/b216.jpg"
+   "img": "images/batch-3/b216.jpg",
+   "source": "The Analects"
   },
   {
    "id": "b217",
    "t": "To learn and at due times to repeat what one has learnt, is that not after all a pleasure?",
    "a": "Confucius",
    "c": "Happiness",
-   "img": "images/batch-3/b217.jpg"
+   "img": "images/batch-3/b217.jpg",
+   "source": "The Analects"
   },
   {
    "id": "b218",
    "t": "The superior man is conversant with righteousness; the mean man is conversant with gain.",
    "a": "Confucius",
    "c": "Wisdom",
-   "img": "images/batch-3/b218.jpg"
+   "img": "images/batch-3/b218.jpg",
+   "source": "The Analects"
   },
   {
    "id": "b219",
    "t": "By nature, men are nearly alike; by practice, they get to be wide apart.",
    "a": "Confucius",
    "c": "Wisdom",
-   "img": "images/batch-3/b219.jpg"
+   "img": "images/batch-3/b219.jpg",
+   "source": "The Analects"
   },
   {
    "id": "b220",
    "t": "What you do not want done to yourself, do not do to others.",
    "a": "Confucius",
    "c": "Friendship",
-   "img": "images/batch-3/b220.jpg"
+   "img": "images/batch-3/b220.jpg",
+   "source": "The Analects"
   },
   {
    "id": "b221",
    "t": "Knowing others is intelligence; knowing yourself is true wisdom. Mastering others is strength; mastering yourself is true power.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "img": "images/batch-3/b221.jpg"
+   "img": "images/batch-3/b221.jpg",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b222",
    "t": "He who knows that enough is enough will always have enough.",
    "a": "Lao Tzu",
    "c": "Happiness",
-   "img": "images/batch-3/b222.jpg"
+   "img": "images/batch-3/b222.jpg",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b223",
    "t": "He who conquers himself is the mightiest warrior.",
    "a": "Lao Tzu",
    "c": "Courage",
-   "img": "images/batch-3/b223.jpg"
+   "img": "images/batch-3/b223.jpg",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b224",
    "t": "A leader is best when people barely know he exists.",
    "a": "Lao Tzu",
    "c": "Success",
-   "img": "images/batch-3/b224.jpg"
+   "img": "images/batch-3/b224.jpg",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b225",
    "t": "He who does not trust enough will not be trusted.",
    "a": "Lao Tzu",
    "c": "Friendship",
-   "img": "images/batch-3/b225.jpg"
+   "img": "images/batch-3/b225.jpg",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b226",
    "t": "The best fighter is never angry.",
    "a": "Lao Tzu",
    "c": "Calm",
-   "img": "images/batch-3/b226.jpg"
+   "img": "images/batch-3/b226.jpg",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b227",
    "t": "When the best leader's work is done the people say, 'We did it ourselves.'",
    "a": "Lao Tzu",
    "c": "Success",
-   "img": "images/batch-3/b227.jpg"
+   "img": "images/batch-3/b227.jpg",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b228",
    "t": "Those who know do not speak. Those who speak do not know.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "img": "images/batch-3/b228.jpg"
+   "img": "images/batch-3/b228.jpg",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b229",
    "t": "He who talks more is sooner exhausted.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "img": "images/batch-3/b229.jpg"
+   "img": "images/batch-3/b229.jpg",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b230",
    "t": "If you know the enemy and know yourself, you need not fear the result of a hundred battles.",
    "a": "Sun Tzu",
    "c": "Wisdom",
-   "img": "images/batch-3/b230.jpg"
+   "img": "images/batch-3/b230.jpg",
+   "source": "The Art of War"
   },
   {
    "id": "b231",
    "t": "Victorious warriors win first and then go to war, while defeated warriors go to war first and then seek to win.",
    "a": "Sun Tzu",
    "c": "Action",
-   "img": "images/batch-3/b231.jpg"
+   "img": "images/batch-3/b231.jpg",
+   "source": "The Art of War"
   },
   {
    "id": "b232",
    "t": "All warfare is based on deception.",
    "a": "Sun Tzu",
    "c": "Wisdom",
-   "img": "images/batch-3/b232.jpg"
+   "img": "images/batch-3/b232.jpg",
+   "source": "The Art of War"
   },
   {
    "id": "b233",
    "t": "The supreme art of war is to subdue the enemy without fighting.",
    "a": "Sun Tzu",
    "c": "Wisdom",
-   "img": "images/batch-3/b233.jpg"
+   "img": "images/batch-3/b233.jpg",
+   "source": "The Art of War"
   },
   {
    "id": "b234",
    "t": "Let your plans be dark and impenetrable as night, and when you move, fall like a thunderbolt.",
    "a": "Sun Tzu",
    "c": "Action",
-   "img": "images/batch-3/b234.jpg"
+   "img": "images/batch-3/b234.jpg",
+   "source": "The Art of War"
   },
   {
    "id": "b235",
    "t": "He will win who knows when to fight and when not to fight.",
    "a": "Sun Tzu",
    "c": "Wisdom",
-   "img": "images/batch-3/b235.jpg"
+   "img": "images/batch-3/b235.jpg",
+   "source": "The Art of War"
   },
   {
    "id": "b236",
    "t": "He who is prudent and lies in wait for an enemy who is not, will be victorious.",
    "a": "Sun Tzu",
    "c": "Wisdom",
-   "img": "images/batch-3/b236.jpg"
+   "img": "images/batch-3/b236.jpg",
+   "source": "The Art of War"
   },
   {
    "id": "b237",
    "t": "Ponder and deliberate before you make a move.",
    "a": "Sun Tzu",
    "c": "Wisdom",
-   "img": "images/batch-3/b237.jpg"
+   "img": "images/batch-3/b237.jpg",
+   "source": "The Art of War"
   },
   {
    "id": "b238",
@@ -1531,91 +1568,104 @@
    "t": "The fault, dear Brutus, is not in our stars, but in ourselves.",
    "a": "William Shakespeare",
    "c": "Wisdom",
-   "img": "images/batch-3/b320.jpg"
+   "img": "images/batch-3/b320.jpg",
+   "source": "Julius Caesar"
   },
   {
    "id": "b321",
    "t": "Brevity is the soul of wit.",
    "a": "William Shakespeare",
    "c": "Wisdom",
-   "img": "images/batch-3/b321.jpg"
+   "img": "images/batch-3/b321.jpg",
+   "source": "Hamlet"
   },
   {
    "id": "b322",
    "t": "Cowards die many times before their deaths; the valiant never taste of death but once.",
    "a": "William Shakespeare",
    "c": "Courage",
-   "img": "images/batch-3/b322.jpg"
+   "img": "images/batch-3/b322.jpg",
+   "source": "Julius Caesar"
   },
   {
    "id": "b323",
    "t": "Love all, trust a few, do wrong to none.",
    "a": "William Shakespeare",
    "c": "Love",
-   "img": "images/batch-3/b323.jpg"
+   "img": "images/batch-3/b323.jpg",
+   "source": "All's Well That Ends Well"
   },
   {
    "id": "b324",
    "t": "Some are born great, some achieve greatness, and some have greatness thrust upon them.",
    "a": "William Shakespeare",
    "c": "Success",
-   "img": "images/batch-3/b324.jpg"
+   "img": "images/batch-3/b324.jpg",
+   "source": "Twelfth Night"
   },
   {
    "id": "b325",
    "t": "The course of true love never did run smooth.",
    "a": "William Shakespeare",
    "c": "Love",
-   "img": "images/batch-3/b325.jpg"
+   "img": "images/batch-3/b325.jpg",
+   "source": "A Midsummer Night's Dream"
   },
   {
    "id": "b326",
    "t": "All that glitters is not gold.",
    "a": "William Shakespeare",
    "c": "Wisdom",
-   "img": "images/batch-3/b326.jpg"
+   "img": "images/batch-3/b326.jpg",
+   "source": "The Merchant of Venice"
   },
   {
    "id": "b327",
    "t": "Love looks not with the eyes, but with the mind, and therefore is winged Cupid painted blind.",
    "a": "William Shakespeare",
    "c": "Love",
-   "img": "images/batch-3/b327.jpg"
+   "img": "images/batch-3/b327.jpg",
+   "source": "A Midsummer Night's Dream"
   },
   {
    "id": "b328",
    "t": "How far that little candle throws his beams! So shines a good deed in a weary world.",
    "a": "William Shakespeare",
    "c": "Friendship",
-   "img": "images/batch-3/b328.jpg"
+   "img": "images/batch-3/b328.jpg",
+   "source": "The Merchant of Venice"
   },
   {
    "id": "b329",
    "t": "The truth is rarely pure and never simple.",
    "a": "Oscar Wilde",
    "c": "Wisdom",
-   "img": "images/batch-3/b329.jpg"
+   "img": "images/batch-3/b329.jpg",
+   "source": "The Importance of Being Earnest"
   },
   {
    "id": "b330",
    "t": "To live is the rarest thing in the world. Most people exist, that is all.",
    "a": "Oscar Wilde",
    "c": "Life",
-   "img": "images/batch-3/b330.jpg"
+   "img": "images/batch-3/b330.jpg",
+   "source": "The Soul of Man under Socialism"
   },
   {
    "id": "b331",
    "t": "Experience is simply the name we give our mistakes.",
    "a": "Oscar Wilde",
    "c": "Wisdom",
-   "img": "images/batch-3/b331.jpg"
+   "img": "images/batch-3/b331.jpg",
+   "source": "Lady Windermere's Fan"
   },
   {
    "id": "b332",
    "t": "I can resist everything except temptation.",
    "a": "Oscar Wilde",
    "c": "Habits",
-   "img": "images/batch-3/b332.jpg"
+   "img": "images/batch-3/b332.jpg",
+   "source": "Lady Windermere's Fan"
   },
   {
    "id": "b333",
@@ -1629,35 +1679,40 @@
    "t": "The only way to get rid of a temptation is to yield to it.",
    "a": "Oscar Wilde",
    "c": "Habits",
-   "img": "images/batch-3/b334.jpg"
+   "img": "images/batch-3/b334.jpg",
+   "source": "The Picture of Dorian Gray"
   },
   {
    "id": "b335",
    "t": "The books that the world calls immoral are books that show the world its own shame.",
    "a": "Oscar Wilde",
    "c": "Wisdom",
-   "img": "images/batch-3/b335.jpg"
+   "img": "images/batch-3/b335.jpg",
+   "source": "The Picture of Dorian Gray"
   },
   {
    "id": "b336",
    "t": "There is no charm equal to tenderness of heart.",
    "a": "Jane Austen",
    "c": "Love",
-   "img": "images/batch-3/b336.jpg"
+   "img": "images/batch-3/b336.jpg",
+   "source": "Emma"
   },
   {
    "id": "b337",
    "t": "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
    "a": "Jane Austen",
    "c": "Love",
-   "img": "images/batch-3/b337.jpg"
+   "img": "images/batch-3/b337.jpg",
+   "source": "Pride and Prejudice"
   },
   {
    "id": "b338",
    "t": "Ah! There is nothing like staying at home, for real comfort.",
    "a": "Jane Austen",
    "c": "Calm",
-   "img": "images/batch-3/b338.jpg"
+   "img": "images/batch-3/b338.jpg",
+   "source": "Emma"
   },
   {
    "id": "b339",
@@ -2112,7 +2167,8 @@
    "t": "The whole is greater than the sum of its parts.",
    "a": "Aristotle",
    "c": "Wisdom",
-   "img": "images/batch-3/b403.jpg"
+   "img": "images/batch-3/b403.jpg",
+   "source": "Metaphysics"
   },
   {
    "id": "b404",
@@ -2133,56 +2189,64 @@
    "t": "The impediment to action advances action. What stands in the way becomes the way.",
    "a": "Marcus Aurelius",
    "c": "Courage",
-   "img": "images/batch-3/b406.jpg"
+   "img": "images/batch-3/b406.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b407",
    "t": "The universe is change; our life is what our thoughts make it.",
    "a": "Marcus Aurelius",
    "c": "Wisdom",
-   "img": "images/batch-3/b407.jpg"
+   "img": "images/batch-3/b407.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b408",
    "t": "The best revenge is to be unlike him who performed the injury.",
    "a": "Marcus Aurelius",
    "c": "Wisdom",
-   "img": "images/batch-3/b408.jpg"
+   "img": "images/batch-3/b408.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b409",
    "t": "Dwell on the beauty of life.",
    "a": "Marcus Aurelius",
    "c": "Happiness",
-   "img": "images/batch-3/b409.jpg"
+   "img": "images/batch-3/b409.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b410",
    "t": "If it is not right do not do it; if it is not true do not say it.",
    "a": "Marcus Aurelius",
    "c": "Wisdom",
-   "img": "images/batch-3/b410.jpg"
+   "img": "images/batch-3/b410.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b411",
    "t": "The soul becomes dyed with the color of its thoughts.",
    "a": "Marcus Aurelius",
    "c": "Wisdom",
-   "img": "images/batch-3/b411.jpg"
+   "img": "images/batch-3/b411.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b412",
    "t": "It is not that we have a short time to live, but that we waste a great deal of it.",
    "a": "Seneca",
    "c": "Life",
-   "img": "images/batch-3/b412.jpg"
+   "img": "images/batch-3/b412.jpg",
+   "source": "On the Shortness of Life"
   },
   {
    "id": "b413",
    "t": "While we wait for life, life passes.",
    "a": "Seneca",
    "c": "Life",
-   "img": "images/batch-3/b413.jpg"
+   "img": "images/batch-3/b413.jpg",
+   "source": "On the Shortness of Life"
   },
   {
    "id": "b414",

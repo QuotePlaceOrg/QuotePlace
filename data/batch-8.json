@@ -5,21 +5,24 @@
    "t": "You will find rest from vain fancies if you perform every act in life as though it were your last.",
    "a": "Marcus Aurelius",
    "c": "Calm",
-   "img": "images/batch-8/b2779.jpg"
+   "img": "images/batch-8/b2779.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b2780",
    "t": "The first rule is to keep an untroubled spirit. The second is to look things in the face and know them for what they are.",
    "a": "Marcus Aurelius",
    "c": "Wisdom",
-   "img": "images/batch-8/b2780.jpg"
+   "img": "images/batch-8/b2780.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b2781",
    "t": "Let men see, let them know, a real man, who lives as he was meant to live.",
    "a": "Marcus Aurelius",
    "c": "Courage",
-   "img": "images/batch-8/b2781.jpg"
+   "img": "images/batch-8/b2781.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b2782",
@@ -47,42 +50,48 @@
    "t": "The Superior Man is all-embracing and not partial. The inferior man is partial and not all-embracing.",
    "a": "Confucius",
    "c": "Wisdom",
-   "img": "images/batch-8/b2785.jpg"
+   "img": "images/batch-8/b2785.jpg",
+   "source": "The Analects"
   },
   {
    "id": "b2786",
    "t": "Be loyal and trustworthy. Do not befriend anyone who is lower than yourself in this regard. When making a mistake, do not be afraid to correct it.",
    "a": "Confucius",
    "c": "Friendship",
-   "img": "images/batch-8/b2786.jpg"
+   "img": "images/batch-8/b2786.jpg",
+   "source": "The Analects"
   },
   {
    "id": "b2787",
    "t": "The scholar who cherishes the love of comfort is not fit to be deemed a scholar.",
    "a": "Confucius",
    "c": "Success",
-   "img": "images/batch-8/b2787.jpg"
+   "img": "images/batch-8/b2787.jpg",
+   "source": "The Analects"
   },
   {
    "id": "b2788",
    "t": "Know satisfaction and you shall not be imperiled; then you will long endure.",
    "a": "Lao Tzu",
    "c": "Happiness",
-   "img": "images/batch-8/b2788.jpg"
+   "img": "images/batch-8/b2788.jpg",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b2789",
    "t": "A good traveler has no fixed plans and is not intent upon arriving.",
    "a": "Lao Tzu",
    "c": "Life",
-   "img": "images/batch-8/b2789.jpg"
+   "img": "images/batch-8/b2789.jpg",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b2790",
    "t": "The Tao nourishes by not forcing. By not dominating, the Master leads.",
    "a": "Lao Tzu",
    "c": "Wisdom",
-   "img": "images/batch-8/b2790.jpg"
+   "img": "images/batch-8/b2790.jpg",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b2791",
@@ -103,7 +112,8 @@
    "t": "The ancestor of every action is a thought.",
    "a": "Ralph Waldo Emerson",
    "c": "Action",
-   "img": "images/batch-8/b2793.jpg"
+   "img": "images/batch-8/b2793.jpg",
+   "source": "Spiritual Laws"
   },
   {
    "id": "b2794",
@@ -218,14 +228,16 @@
    "t": "Whatever the mind of man can conceive and believe, it can achieve. Thoughts are things!",
    "a": "Napoleon Hill",
    "c": "Success",
-   "img": "images/batch-8/b2809.jpg"
+   "img": "images/batch-8/b2809.jpg",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b2810",
    "t": "Do not wait; the time will never be just right. Start where you stand, and work with whatever tools you may have at your command, and better tools will be found as you go along.",
    "a": "Napoleon Hill",
    "c": "Action",
-   "img": "images/batch-8/b2810.jpg"
+   "img": "images/batch-8/b2810.jpg",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b2811",
@@ -239,35 +251,40 @@
    "t": "There is nothing either good or bad, but thinking makes it so.",
    "a": "William Shakespeare",
    "c": "Wisdom",
-   "img": "images/batch-8/b2812.jpg"
+   "img": "images/batch-8/b2812.jpg",
+   "source": "Hamlet"
   },
   {
    "id": "b2813",
    "t": "To be, or not to be: that is the question.",
    "a": "William Shakespeare",
    "c": "Life",
-   "img": "images/batch-8/b2813.jpg"
+   "img": "images/batch-8/b2813.jpg",
+   "source": "Hamlet"
   },
   {
    "id": "b2814",
    "t": "How far that little candle throws his beams! So shines a good deed in a naughty world.",
    "a": "William Shakespeare",
    "c": "Wisdom",
-   "img": "images/batch-8/b2814.jpg"
+   "img": "images/batch-8/b2814.jpg",
+   "source": "The Merchant of Venice"
   },
   {
    "id": "b2815",
    "t": "Men are disturbed, not by things, but by the principles and notions which they form concerning things.",
    "a": "Epictetus",
    "c": "Wisdom",
-   "img": "images/batch-8/b2815.jpg"
+   "img": "images/batch-8/b2815.jpg",
+   "source": "Enchiridion"
   },
   {
    "id": "b2816",
    "t": "Don't demand that things happen as you wish, but wish that they happen as they do happen, and you will go on well.",
    "a": "Epictetus",
    "c": "Calm",
-   "img": "images/batch-8/b2816.jpg"
+   "img": "images/batch-8/b2816.jpg",
+   "source": "Enchiridion"
   },
   {
    "id": "b2817",
@@ -281,7 +298,8 @@
    "t": "Love possesses not nor would it be possessed; for love is sufficient unto love.",
    "a": "Kahlil Gibran",
    "c": "Love",
-   "img": "images/batch-8/b2818.jpg"
+   "img": "images/batch-8/b2818.jpg",
+   "source": "The Prophet"
   },
   {
    "id": "b2819",
@@ -344,7 +362,8 @@
    "t": "Let me not pray to be sheltered from dangers, but to be fearless in facing them. Let me not beg for the stilling of my pain, but for the heart to conquer it.",
    "a": "Rabindranath Tagore",
    "c": "Courage",
-   "img": "images/batch-8/b2827.jpg"
+   "img": "images/batch-8/b2827.jpg",
+   "source": "Gitanjali"
   },
   {
    "id": "b2828",
@@ -393,7 +412,8 @@
    "t": "Associate with people who are likely to improve you.",
    "a": "Seneca",
    "c": "Friendship",
-   "img": "images/batch-8/b2834.jpg"
+   "img": "images/batch-8/b2834.jpg",
+   "source": "Letters to Lucilius"
   },
   {
    "id": "b2835",
@@ -407,7 +427,8 @@
    "t": "Government of the people, by the people, for the people, shall not perish from the Earth.",
    "a": "Abraham Lincoln",
    "c": "Wisdom",
-   "img": "images/batch-8/b2836.jpg"
+   "img": "images/batch-8/b2836.jpg",
+   "source": "Gettysburg Address (1863)"
   },
   {
    "id": "b2837",
@@ -428,7 +449,8 @@
    "t": "Man is by nature a social animal.",
    "a": "Aristotle",
    "c": "Life",
-   "img": "images/batch-8/b2839.jpg"
+   "img": "images/batch-8/b2839.jpg",
+   "source": "Politics"
   },
   {
    "id": "b2840",
@@ -484,7 +506,8 @@
    "t": "The art of war is of vital importance to the State.",
    "a": "Sun Tzu",
    "c": "Wisdom",
-   "img": "images/batch-8/b2847.jpg"
+   "img": "images/batch-8/b2847.jpg",
+   "source": "The Art of War"
   },
   {
    "id": "b2848",

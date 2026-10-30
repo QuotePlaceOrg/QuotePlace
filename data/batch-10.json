@@ -6,7 +6,8 @@
    "a": "Ralph Waldo Emerson",
    "c": "Wisdom",
    "img": "images/batch-10/b2979.jpg",
-   "portrait": "ralph-waldo-emerson.jpg"
+   "portrait": "ralph-waldo-emerson.jpg",
+   "source": "Self-Reliance"
   },
   {
    "id": "b2980",
@@ -22,7 +23,8 @@
    "a": "Ralph Waldo Emerson",
    "c": "Wisdom",
    "img": "images/batch-10/b2981.jpg",
-   "portrait": "ralph-waldo-emerson.jpg"
+   "portrait": "ralph-waldo-emerson.jpg",
+   "source": "History"
   },
   {
    "id": "b2982",
@@ -54,7 +56,8 @@
    "a": "Richard Bach",
    "c": "Wisdom",
    "img": "images/batch-10/b2985.jpg",
-   "portrait": "richard-bach.jpg"
+   "portrait": "richard-bach.jpg",
+   "source": "Illusions"
   },
   {
    "id": "b2986",
@@ -62,7 +65,8 @@
    "a": "Richard Bach",
    "c": "Friendship",
    "img": "images/batch-10/b2986.jpg",
-   "portrait": "richard-bach.jpg"
+   "portrait": "richard-bach.jpg",
+   "source": "Illusions"
   },
   {
    "id": "b2987",
@@ -70,7 +74,8 @@
    "a": "Richard Bach",
    "c": "Life",
    "img": "images/batch-10/b2987.jpg",
-   "portrait": "richard-bach.jpg"
+   "portrait": "richard-bach.jpg",
+   "source": "Jonathan Livingston Seagull"
   },
   {
    "id": "b2988",
@@ -134,7 +139,8 @@
    "a": "Napoleon Hill",
    "c": "Success",
    "img": "images/batch-10/b2995.jpg",
-   "portrait": "napoleon-hill.jpg"
+   "portrait": "napoleon-hill.jpg",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b2996",
@@ -174,7 +180,8 @@
    "a": "Epictetus",
    "c": "Wisdom",
    "img": "images/batch-10/b3000.jpg",
-   "portrait": "epictetus.jpg"
+   "portrait": "epictetus.jpg",
+   "source": "Enchiridion"
   },
   {
    "id": "b3001",
@@ -198,7 +205,8 @@
    "a": "Rumi",
    "c": "Wisdom",
    "img": "images/batch-10/b3003.jpg",
-   "portrait": "rumi.jpg"
+   "portrait": "rumi.jpg",
+   "source": "Masnavi"
   },
   {
    "id": "b3004",
@@ -222,7 +230,8 @@
    "a": "William Shakespeare",
    "c": "Courage",
    "img": "images/batch-10/b3006.jpg",
-   "portrait": "william-shakespeare.jpg"
+   "portrait": "william-shakespeare.jpg",
+   "source": "Measure for Measure"
   },
   {
    "id": "b3007",
@@ -230,7 +239,8 @@
    "a": "William Shakespeare",
    "c": "Wisdom",
    "img": "images/batch-10/b3007.jpg",
-   "portrait": "william-shakespeare.jpg"
+   "portrait": "william-shakespeare.jpg",
+   "source": "Hamlet"
   },
   {
    "id": "b3008",
@@ -238,7 +248,8 @@
    "a": "William Shakespeare",
    "c": "Wisdom",
    "img": "images/batch-10/b3008.jpg",
-   "portrait": "william-shakespeare.jpg"
+   "portrait": "william-shakespeare.jpg",
+   "source": "Hamlet"
   },
   {
    "id": "b3009",
@@ -246,7 +257,8 @@
    "a": "Marcus Aurelius",
    "c": "Wisdom",
    "img": "images/batch-10/b3009.jpg",
-   "portrait": "marcus-aurelius.jpg"
+   "portrait": "marcus-aurelius.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3010",
@@ -254,7 +266,8 @@
    "a": "Marcus Aurelius",
    "c": "Wisdom",
    "img": "images/batch-10/b3010.jpg",
-   "portrait": "marcus-aurelius.jpg"
+   "portrait": "marcus-aurelius.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3011",
@@ -262,7 +275,8 @@
    "a": "Marcus Aurelius",
    "c": "Life",
    "img": "images/batch-10/b3011.jpg",
-   "portrait": "marcus-aurelius.jpg"
+   "portrait": "marcus-aurelius.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3012",
@@ -270,7 +284,8 @@
    "a": "Kahlil Gibran",
    "c": "Happiness",
    "img": "images/batch-10/b3012.jpg",
-   "portrait": "kahlil-gibran.jpg"
+   "portrait": "kahlil-gibran.jpg",
+   "source": "The Prophet"
   },
   {
    "id": "b3013",
@@ -286,7 +301,8 @@
    "a": "Kahlil Gibran",
    "c": "Life",
    "img": "images/batch-10/b3014.jpg",
-   "portrait": "kahlil-gibran.jpg"
+   "portrait": "kahlil-gibran.jpg",
+   "source": "Sand and Foam"
   },
   {
    "id": "b3015",
@@ -366,7 +382,8 @@
    "a": "Abraham Lincoln",
    "c": "Courage",
    "img": "images/batch-10/b3024.jpg",
-   "portrait": "abraham-lincoln.jpg"
+   "portrait": "abraham-lincoln.jpg",
+   "source": "Cooper Union Address (1860)"
   },
   {
    "id": "b3025",
@@ -374,7 +391,8 @@
    "a": "Abraham Lincoln",
    "c": "Wisdom",
    "img": "images/batch-10/b3025.jpg",
-   "portrait": "abraham-lincoln.jpg"
+   "portrait": "abraham-lincoln.jpg",
+   "source": "Annual Message to Congress (1862)"
   },
   {
    "id": "b3026",
@@ -382,7 +400,8 @@
    "a": "Abraham Lincoln",
    "c": "Wisdom",
    "img": "images/batch-10/b3026.jpg",
-   "portrait": "abraham-lincoln.jpg"
+   "portrait": "abraham-lincoln.jpg",
+   "source": "Annual Message to Congress (1862)"
   },
   {
    "id": "b3027",
@@ -422,7 +441,8 @@
    "a": "Seneca",
    "c": "Life",
    "img": "images/batch-10/b3031.jpg",
-   "portrait": "seneca.jpg"
+   "portrait": "seneca.jpg",
+   "source": "On the Shortness of Life"
   },
   {
    "id": "b3032",
@@ -446,7 +466,8 @@
    "a": "Aristotle",
    "c": "Wisdom",
    "img": "images/batch-10/b3034.jpg",
-   "portrait": "aristotle.jpg"
+   "portrait": "aristotle.jpg",
+   "source": "Rhetoric"
   },
   {
    "id": "b3035",
@@ -454,7 +475,8 @@
    "a": "Aristotle",
    "c": "Wisdom",
    "img": "images/batch-10/b3035.jpg",
-   "portrait": "aristotle.jpg"
+   "portrait": "aristotle.jpg",
+   "source": "Rhetoric"
   },
   {
    "id": "b3036",
@@ -510,7 +532,8 @@
    "a": "Sun Tzu",
    "c": "Wisdom",
    "img": "images/batch-10/b3042.jpg",
-   "portrait": "sun-tzu.jpg"
+   "portrait": "sun-tzu.jpg",
+   "source": "The Art of War"
   },
   {
    "id": "b3043",
@@ -526,7 +549,8 @@
    "a": "Oscar Wilde",
    "c": "Wisdom",
    "img": "images/batch-10/b3044.jpg",
-   "portrait": "oscar-wilde.jpg"
+   "portrait": "oscar-wilde.jpg",
+   "source": "The Critic as Artist"
   },
   {
    "id": "b3045",

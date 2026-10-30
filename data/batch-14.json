@@ -5,21 +5,24 @@
    "t": "Argue for your limitations, and sure enough they're yours.",
    "a": "Richard Bach",
    "c": "Friendship",
-   "img": "images/batch-14/b3379.jpg"
+   "img": "images/batch-14/b3379.jpg",
+   "source": "Illusions"
   },
   {
    "id": "b3380",
    "t": "The mark of your ignorance is the depth of your belief in injustice and tragedy.",
    "a": "Richard Bach",
    "c": "Success",
-   "img": "images/batch-14/b3380.jpg"
+   "img": "images/batch-14/b3380.jpg",
+   "source": "Illusions"
   },
   {
    "id": "b3381",
    "t": "The best way to avoid responsibility is to say, 'I've got responsibilities.'",
    "a": "Richard Bach",
    "c": "Life",
-   "img": "images/batch-14/b3381.jpg"
+   "img": "images/batch-14/b3381.jpg",
+   "source": "Illusions"
   },
   {
    "id": "b3382",
@@ -68,7 +71,8 @@
    "t": "A quitter never wins and a winner never quits.",
    "a": "Napoleon Hill",
    "c": "Success",
-   "img": "images/batch-14/b3388.jpg"
+   "img": "images/batch-14/b3388.jpg",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b3389",
@@ -152,49 +156,56 @@
    "t": "Love is not love which alters when it alteration finds.",
    "a": "William Shakespeare",
    "c": "Life",
-   "img": "images/batch-14/b3400.jpg"
+   "img": "images/batch-14/b3400.jpg",
+   "source": "Sonnet 116"
   },
   {
    "id": "b3401",
    "t": "Give every man thy ear, but few thy voice.",
    "a": "William Shakespeare",
    "c": "Life",
-   "img": "images/batch-14/b3401.jpg"
+   "img": "images/batch-14/b3401.jpg",
+   "source": "Hamlet"
   },
   {
    "id": "b3402",
    "t": "The better part of valour is discretion.",
    "a": "William Shakespeare",
    "c": "Love",
-   "img": "images/batch-14/b3402.jpg"
+   "img": "images/batch-14/b3402.jpg",
+   "source": "Henry IV, Part 1"
   },
   {
    "id": "b3403",
    "t": "When you arise in the morning, think of what a precious privilege it is to be alive.",
    "a": "Marcus Aurelius",
    "c": "Calm",
-   "img": "images/batch-14/b3403.jpg"
+   "img": "images/batch-14/b3403.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3404",
    "t": "How much time he gains who does not look to see what his neighbour says or does or thinks.",
    "a": "Marcus Aurelius",
    "c": "Wisdom",
-   "img": "images/batch-14/b3404.jpg"
+   "img": "images/batch-14/b3404.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3405",
    "t": "Waste no more time arguing what a good man should be. Be one.",
    "a": "Marcus Aurelius",
    "c": "Action",
-   "img": "images/batch-14/b3405.jpg"
+   "img": "images/batch-14/b3405.jpg",
+   "source": "Meditations"
   },
   {
    "id": "b3406",
    "t": "Generosity is giving more than you can, and pride is taking less than you need.",
    "a": "Kahlil Gibran",
    "c": "Life",
-   "img": "images/batch-14/b3406.jpg"
+   "img": "images/batch-14/b3406.jpg",
+   "source": "The Prophet"
   },
   {
    "id": "b3407",
@@ -208,7 +219,8 @@
    "t": "Love knows not its own depth until the hour of separation.",
    "a": "Kahlil Gibran",
    "c": "Wisdom",
-   "img": "images/batch-14/b3408.jpg"
+   "img": "images/batch-14/b3408.jpg",
+   "source": "The Prophet"
   },
   {
    "id": "b3409",
@@ -271,7 +283,8 @@
    "t": "Where the mind is without fear and the head is held high, where knowledge is free.",
    "a": "Rabindranath Tagore",
    "c": "Wisdom",
-   "img": "images/batch-14/b3417.jpg"
+   "img": "images/batch-14/b3417.jpg",
+   "source": "Gitanjali"
   },
   {
    "id": "b3418",
@@ -334,7 +347,8 @@
    "t": "While we are postponing, life speeds by.",
    "a": "Seneca",
    "c": "Life",
-   "img": "images/batch-14/b3426.jpg"
+   "img": "images/batch-14/b3426.jpg",
+   "source": "On the Shortness of Life"
   },
   {
    "id": "b3427",
@@ -432,7 +446,8 @@
    "t": "He who knows when he can fight and when he cannot will be victorious.",
    "a": "Sun Tzu",
    "c": "Wisdom",
-   "img": "images/batch-14/b3440.jpg"
+   "img": "images/batch-14/b3440.jpg",
+   "source": "The Art of War"
   },
   {
    "id": "b3441",
@@ -446,7 +461,8 @@
    "t": "Experience is merely the name men gave to their mistakes.",
    "a": "Oscar Wilde",
    "c": "Life",
-   "img": "images/batch-14/b3442.jpg"
+   "img": "images/batch-14/b3442.jpg",
+   "source": "Lady Windermere's Fan"
   },
   {
    "id": "b3443",

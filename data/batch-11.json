@@ -6,7 +6,8 @@
    "a": "Richard Bach",
    "c": "Happiness",
    "img": "images/batch-11/b3079.jpg",
-   "style": "cream"
+   "style": "cream",
+   "source": "Illusions"
   },
   {
    "id": "b3080",
@@ -14,7 +15,8 @@
    "a": "Richard Bach",
    "c": "Life",
    "img": "images/batch-11/b3080.jpg",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Illusions"
   },
   {
    "id": "b3081",
@@ -22,7 +24,8 @@
    "a": "Richard Bach",
    "c": "Action",
    "img": "images/batch-11/b3081.jpg",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Illusions"
   },
   {
    "id": "b3082",
@@ -78,7 +81,8 @@
    "a": "Napoleon Hill",
    "c": "Success",
    "img": "images/batch-11/b3088.jpg",
-   "style": "sage"
+   "style": "sage",
+   "source": "Think and Grow Rich"
   },
   {
    "id": "b3089",
@@ -134,7 +138,8 @@
    "a": "Epictetus",
    "c": "Calm",
    "img": "images/batch-11/b3095.jpg",
-   "style": "blush"
+   "style": "blush",
+   "source": "Enchiridion"
   },
   {
    "id": "b3096",
@@ -142,7 +147,8 @@
    "a": "Epictetus",
    "c": "Wisdom",
    "img": "images/batch-11/b3096.jpg",
-   "style": "navy"
+   "style": "navy",
+   "source": "Enchiridion"
   },
   {
    "id": "b3097",
@@ -150,7 +156,8 @@
    "a": "Marcus Aurelius",
    "c": "Calm",
    "img": "images/batch-11/b3097.jpg",
-   "style": "cream"
+   "style": "cream",
+   "source": "Meditations"
   },
   {
    "id": "b3098",
@@ -158,7 +165,8 @@
    "a": "Marcus Aurelius",
    "c": "Wisdom",
    "img": "images/batch-11/b3098.jpg",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Meditations"
   },
   {
    "id": "b3099",
@@ -166,7 +174,8 @@
    "a": "Marcus Aurelius",
    "c": "Courage",
    "img": "images/batch-11/b3099.jpg",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Meditations"
   },
   {
    "id": "b3100",
@@ -174,7 +183,8 @@
    "a": "Rumi",
    "c": "Wisdom",
    "img": "images/batch-11/b3100.jpg",
-   "style": "sage"
+   "style": "sage",
+   "source": "Masnavi"
   },
   {
    "id": "b3101",
@@ -198,7 +208,8 @@
    "a": "William Shakespeare",
    "c": "Love",
    "img": "images/batch-11/b3103.jpg",
-   "style": "cream"
+   "style": "cream",
+   "source": "As You Like It"
   },
   {
    "id": "b3104",
@@ -206,7 +217,8 @@
    "a": "William Shakespeare",
    "c": "Life",
    "img": "images/batch-11/b3104.jpg",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "King Lear"
   },
   {
    "id": "b3105",
@@ -214,7 +226,8 @@
    "a": "William Shakespeare",
    "c": "Wisdom",
    "img": "images/batch-11/b3105.jpg",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Twelfth Night"
   },
   {
    "id": "b3106",
@@ -222,7 +235,8 @@
    "a": "Kahlil Gibran",
    "c": "Love",
    "img": "images/batch-11/b3106.jpg",
-   "style": "sage"
+   "style": "sage",
+   "source": "The Prophet"
   },
   {
    "id": "b3107",
@@ -230,7 +244,8 @@
    "a": "Kahlil Gibran",
    "c": "Life",
    "img": "images/batch-11/b3107.jpg",
-   "style": "blush"
+   "style": "blush",
+   "source": "The Prophet"
   },
   {
    "id": "b3108",
@@ -238,7 +253,8 @@
    "a": "Kahlil Gibran",
    "c": "Wisdom",
    "img": "images/batch-11/b3108.jpg",
-   "style": "navy"
+   "style": "navy",
+   "source": "The Prophet"
   },
   {
    "id": "b3109",
@@ -366,7 +382,8 @@
    "a": "Seneca",
    "c": "Courage",
    "img": "images/batch-11/b3124.jpg",
-   "style": "sage"
+   "style": "sage",
+   "source": "Letters to Lucilius"
   },
   {
    "id": "b3125",
@@ -374,7 +391,8 @@
    "a": "Seneca",
    "c": "Wisdom",
    "img": "images/batch-11/b3125.jpg",
-   "style": "blush"
+   "style": "blush",
+   "source": "Letters to Lucilius"
   },
   {
    "id": "b3126",
@@ -382,7 +400,8 @@
    "a": "Seneca",
    "c": "Life",
    "img": "images/batch-11/b3126.jpg",
-   "style": "navy"
+   "style": "navy",
+   "source": "Letters to Lucilius"
   },
   {
    "id": "b3127",
@@ -390,7 +409,8 @@
    "a": "Aristotle",
    "c": "Wisdom",
    "img": "images/batch-11/b3127.jpg",
-   "style": "cream"
+   "style": "cream",
+   "source": "Politics"
   },
   {
    "id": "b3128",
@@ -414,7 +434,8 @@
    "a": "Mark Twain",
    "c": "Wisdom",
    "img": "images/batch-11/b3130.jpg",
-   "style": "sage"
+   "style": "sage",
+   "source": "The Innocents Abroad"
   },
   {
    "id": "b3131",
@@ -518,7 +539,8 @@
    "a": "Oscar Wilde",
    "c": "Wisdom",
    "img": "images/batch-11/b3143.jpg",
-   "style": "blush"
+   "style": "blush",
+   "source": "The Critic as Artist"
   },
   {
    "id": "b3144",
@@ -526,7 +548,8 @@
    "a": "Sun Tzu",
    "c": "Wisdom",
    "img": "images/batch-11/b3144.jpg",
-   "style": "navy"
+   "style": "navy",
+   "source": "The Art of War"
   },
   {
    "id": "b3145",

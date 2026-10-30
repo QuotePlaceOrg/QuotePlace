@@ -6,7 +6,8 @@
    "a": "Rabindranath Tagore",
    "c": "Courage",
    "img": "images/batch-4/b502.jpg",
-   "style": "cream"
+   "style": "cream",
+   "source": "Fireflies"
   },
   {
    "id": "b503",
@@ -78,7 +79,8 @@
    "a": "Marcus Aurelius",
    "c": "Calm",
    "img": "images/batch-4/b511.jpg",
-   "style": "sage"
+   "style": "sage",
+   "source": "Meditations"
   },
   {
    "id": "b512",
@@ -174,7 +176,8 @@
    "a": "Rumi",
    "c": "Love",
    "img": "images/batch-4/b523.jpg",
-   "style": "sage"
+   "style": "sage",
+   "source": "Masnavi"
   },
   {
    "id": "b524",
@@ -238,7 +241,8 @@
    "a": "Confucius",
    "c": "Wisdom",
    "img": "images/batch-4/b531.jpg",
-   "style": "navy"
+   "style": "navy",
+   "source": "The Analects"
   },
   {
    "id": "b532",
@@ -294,7 +298,8 @@
    "a": "Confucius",
    "c": "Wisdom",
    "img": "images/batch-4/b538.jpg",
-   "style": "cream"
+   "style": "cream",
+   "source": "The Analects"
   },
   {
    "id": "b539",
@@ -350,7 +355,8 @@
    "a": "Lao Tzu",
    "c": "Action",
    "img": "images/batch-4/b545.jpg",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b546",
@@ -398,7 +404,8 @@
    "a": "Rumi",
    "c": "Wisdom",
    "img": "images/batch-4/b551.jpg",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Masnavi"
   },
   {
    "id": "b552",
@@ -406,7 +413,8 @@
    "a": "Lao Tzu",
    "c": "Calm",
    "img": "images/batch-4/b552.jpg",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b553",
@@ -454,7 +462,8 @@
    "a": "Kahlil Gibran",
    "c": "Life",
    "img": "images/batch-4/b558.jpg",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "The Prophet"
   },
   {
    "id": "b559",
@@ -462,7 +471,8 @@
    "a": "Lao Tzu",
    "c": "Calm",
    "img": "images/batch-4/b559.jpg",
-   "style": "sage"
+   "style": "sage",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b560",
@@ -526,7 +536,8 @@
    "a": "Marcus Aurelius",
    "c": "Wisdom",
    "img": "images/batch-4/b567.jpg",
-   "style": "navy"
+   "style": "navy",
+   "source": "Meditations"
   },
   {
    "id": "b568",
@@ -566,7 +577,8 @@
    "a": "Kahlil Gibran",
    "c": "Action",
    "img": "images/batch-4/b572.jpg",
-   "style": "blush"
+   "style": "blush",
+   "source": "The Prophet"
   },
   {
    "id": "b573",
@@ -574,7 +586,8 @@
    "a": "Lao Tzu",
    "c": "Calm",
    "img": "images/batch-4/b573.jpg",
-   "style": "navy"
+   "style": "navy",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b574",
@@ -622,7 +635,8 @@
    "a": "Kahlil Gibran",
    "c": "Wisdom",
    "img": "images/batch-4/b579.jpg",
-   "style": "navy"
+   "style": "navy",
+   "source": "The Prophet"
   },
   {
    "id": "b580",
@@ -630,7 +644,8 @@
    "a": "Lao Tzu",
    "c": "Wisdom",
    "img": "images/batch-4/b580.jpg",
-   "style": "cream"
+   "style": "cream",
+   "source": "Tao Te Ching"
   },
   {
    "id": "b581",
@@ -862,7 +877,8 @@
    "a": "Jane Austen",
    "c": "Happiness",
    "img": "images/batch-4/b609.jpg",
-   "style": "navy"
+   "style": "navy",
+   "source": "Pride and Prejudice"
   },
   {
    "id": "b610",
@@ -1086,7 +1102,8 @@
    "a": "Marcus Aurelius",
    "c": "Wisdom",
    "img": "images/batch-4/b637.jpg",
-   "style": "sage"
+   "style": "sage",
+   "source": "Meditations"
   },
   {
    "id": "b638",
@@ -1326,7 +1343,8 @@
    "a": "Ralph Waldo Emerson",
    "c": "Calm",
    "img": "images/batch-4/b667.jpg",
-   "style": "sage"
+   "style": "sage",
+   "source": "Self-Reliance"
   },
   {
    "id": "b668",
@@ -1382,7 +1400,8 @@
    "a": "Ralph Waldo Emerson",
    "c": "Friendship",
    "img": "images/batch-4/b674.jpg",
-   "style": "blush"
+   "style": "blush",
+   "source": "Friendship"
   },
   {
    "id": "b675",
@@ -1838,7 +1857,8 @@
    "a": "Seneca",
    "c": "Wisdom",
    "img": "images/batch-4/b731.jpg",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Letters to Lucilius"
   },
   {
    "id": "b732",
@@ -1982,7 +2002,8 @@
    "a": "Oscar Wilde",
    "c": "Happiness",
    "img": "images/batch-4/b749.jpg",
-   "style": "charcoal"
+   "style": "charcoal",
+   "source": "Lady Windermere's Fan"
   },
   {
    "id": "b750",
@@ -1990,7 +2011,8 @@
    "a": "Gautama Buddha",
    "c": "Wisdom",
    "img": "images/batch-4/b750.jpg",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Dhammapada"
   },
   {
    "id": "b751",
@@ -2014,7 +2036,8 @@
    "a": "Gautama Buddha",
    "c": "Wisdom",
    "img": "images/batch-4/b753.jpg",
-   "style": "navy"
+   "style": "navy",
+   "source": "Dhammapada"
   },
   {
    "id": "b754",
@@ -2038,7 +2061,8 @@
    "a": "Gautama Buddha",
    "c": "Habits",
    "img": "images/batch-4/b756.jpg",
-   "style": "sunset"
+   "style": "sunset",
+   "source": "Dhammapada"
   },
   {
    "id": "b757",
