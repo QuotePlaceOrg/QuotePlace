@@ -1,0 +1,64 @@
+# Batch 29 — portrait credits
+
+All portraits from Wikimedia Commons. 48 portraits were reused from earlier verified batches (credits carried forward from batch-27-credits.md for 39 authors, and from batch-25 / batch-19 / batch-17 / batch-15 / batch-13 / batch-3 credits files for the rest). 10 portraits were freshly fetched from Commons for this batch, licences verified via the Commons API at fetch time (all Public domain).
+
+- **A.P.J. Abdul Kalam** — M. Prasanna Kumar, CC BY-SA 2.0 (CC BY-SA 2.0) [a-p-j-abdul-kalam.jpg]
+- **Albert Camus** — Studio Harcourt, Public domain (Public domain) [albert-camus.jpg]
+- **Albert Schweitzer** — Unknown author, Public domain (Public domain) [albert-schweitzer.jpg]
+- **Anais Nin** — Barbara (WVS), CC BY-SA 4.0 (File: Anaïs Nin.png)
+- **Anne Frank** — Anonymous, Public domain (Public domain) [anne-frank.jpg]
+- **B.R. Ambedkar** — Rajasekharan Parameswaran, CC BY-SA 4.0
+- **Benjamin Disraeli** — Cornelius Jabez Hughes, Public domain (File:Benjamin Disraeli, Earl of Beaconsfield.jpg) [benjamin-disraeli.jpg]
+- **Benjamin Franklin** — Joseph-Siffred Duplessis, Public domain (Public domain) [benjamin-franklin.jpg]
+- **Blaise Pascal** — unknown; a copy of the painting of François II Quesnel, which was made for Gérard Edelinck en 1691, Public domain (Public domain) [blaise-pascal.jpg]
+- **Charles Dickens** — Jeremiah Gurney, Public domain (Public domain) [charles-dickens.jpg]
+- **Desmond Tutu** — Benny Gool, Public domain [desmond-tutu.jpg]
+- **Dogen** — Unknown author, Public domain (Public domain) [dogen.jpg]
+- **Elbert Hubbard** — Aalejandro1995, Public domain (File: Elbert Hubbard.jpg)
+- **Eleanor Roosevelt** — Unknown author, Public domain (File: Eleanor Roosevelt portrait 1933.jpg) [eleanor-roosevelt.jpg]
+- **Emily Dickinson** — Miscellaneous Items in High Demand, PPOC, Library of Congress, Public domain (Public domain) [emily-dickinson.jpg]
+- **Frederick Douglass** — George Kendall Warren, Public domain (File: Frederick Douglass (circa 1879).jpg) [frederick-douglass.jpg] — freshly fetched for batch 29
+- **Friedrich Nietzsche** — Gustav-Adolf Schultze (d. 1897), Public domain (Public domain) [friedrich-nietzsche.jpg]
+- **Fyodor Dostoevsky** — Unknown author, Public domain [fyodor-dostoevsky.jpg]
+- **Geoffrey Chaucer** — Unknown author, Public domain (File: Portrait of Geoffrey Chaucer (4671380).jpg) [geoffrey-chaucer.jpg] — freshly fetched for batch 29
+- **George Bernard Shaw** — Sussman, Public domain (File: George Bernard Shaw, playwright (SAYRE 9001).jpg) [george-bernard-shaw.jpg]
+- **Harriet Beecher Stowe** — Jeremiah D. Wells, Public domain (File: Harriet Beecher Stowe.jpg) [harriet-beecher-stowe.jpg] — freshly fetched for batch 29
+- **Henry David Thoreau** — Unknown author, Public domain (Public domain) [henry-david-thoreau.jpg]
+- **Henry Wadsworth Longfellow** — Southworth & Hawes, CC0 (CC0) [henry-wadsworth-longfellow.jpg]
+- **Immanuel Kant** — J. L. Raab, after a painting by Döbler, Public domain
+- **Jane Austen** — Engraving by William Home Lizars after James Andrews, Public domain [jane-austen.jpg]
+- **Jawaharlal Nehru** — Keystone View Company/FPG, Public domain (Public domain) [jawaharlal-nehru.jpg]
+- **Jiddu Krishnamurti** — Albert Witzel, Public domain
+- **John Keats** — Joseph Severn, Public domain (Public domain) [john-keats.jpg]
+- **John Lennon** — Eric Koch for Anefo, CC0 (CC0) [john-lennon.jpg]
+- **John Stuart Mill** — George Frederic Watts, Public domain (Public domain) [john-stuart-mill.jpg]
+- **Jonathan Swift** — Charles Jervas, Public domain (File: Jonathan Swift by Charles Jervas.jpg) [jonathan-swift.jpg] — freshly fetched for batch 29
+- **Leo Tolstoy** — Sergei Prokudin-Gorskii, Public domain (Public domain) [leo-tolstoy.jpg]
+- **Leonardo da Vinci** — Leonardo da Vinci, Public domain (File: Leonardo da Vinci - presumed self-portrait - WGA12798.jpg)
+- **Martin Luther King Jr.** — Marion S. Trikosko, Public domain (Public domain) [martin-luther-king-jr.jpg]
+- **Mary Shelley** — Richard Rothwell, Public domain (Public domain) [mary-shelley.jpg]
+- **Mother Teresa** — John Mathew Smith & www.celebrity-photos.com from Laurel  Maryland, USA, CC BY-SA 2.0 [mother-teresa.jpg]
+- **Napoleon Bonaparte** — Didier Descouens, Public domain (File: (Venice) Portrait de Napoléon en tenue de colonel de la Garde Nationale par Philippoteaux Musée Correr.jpg)
+- **Nathaniel Hawthorne** — Charles Osgood, Public domain (File: Nathaniel Hawthorne.jpg) [nathaniel-hawthorne.jpg] — freshly fetched for batch 29
+- **Nelson Mandela** — Kingkongphoto & www.celebrity-photos.com, CC BY-SA 2.0 (CC BY-SA 2.0) [nelson-mandela.jpg]
+- **Oliver Wendell Holmes Sr.** — Armstrong & Co. (Boston, Mass.), Public domain (File: Oliver Wendell Holmes Sr c1879.jpg) [oliver-wendell-holmes-sr.jpg] — freshly fetched for batch 29
+- **Oprah Winfrey** — US Embassy South Africa, Public domain (Public domain) [oprah-winfrey.jpg]
+- **Pablo Picasso** — Didier Descouens, Public domain (File:(Barcelona) Retrat de Picasso - Pablo Gargallo - Museu Nacional d'Art de Catalunya.jpg) [pablo-picasso.jpg]
+- **Pema Chodron** — Flickr user 64954998@N00, CC BY-SA 2.0 (File: Pema chodron 2007 cropped.jpg)
+- **Plato** — Copy of Silanion (?), Public domain (Public domain) [plato.jpg]
+- **Samuel Johnson** — Joshua Reynolds, Public domain (File: Samuel Johnson by Joshua Reynolds.jpg) [samuel-johnson.jpg] — freshly fetched for batch 29
+- **Socrates** — Livioandronico2013 (bust photo), CC BY-SA 4.0 (CC BY-SA 4.0) [socrates.jpg]
+- **Sophocles** — Tilemachos Efthimiadis, CC BY-SA 2.0 (File: Sophoclesathens.jpg)
+- **Steve Jobs** — Bernard Gotfryd, Public domain (File: Steve Jobs January 1984.jpg) [steve-jobs.jpg] — freshly fetched for batch 29
+- **Swami Vivekananda** — Unknown author, Public domain (File: Swami Vivekananda at Parliament of Religions.jpg) [swami-vivekananda.jpg]
+- **Thomas Carlyle** — Jules Maurice Gaspard, Public domain (File: Thomas Carlyle.jpg)
+- **Thomas Jefferson** — Rembrandt Peale, Public domain (Public domain) [thomas-jefferson.jpg]
+- **Thomas Paine** — Laurent Dabos, Public domain (Public domain) [thomas-paine.jpg]
+- **Victor Hugo** — Étienne Carjat, Public domain (File: Victor Hugo by Étienne Carjat 1876 - full.jpg) [victor-hugo.jpg]
+- **Virginia Woolf** — George Charles Beresford, Public domain (Public domain) [virginia-woolf.jpg]
+- **Voltaire** — After Maurice Quentin de La Tour, Public domain (Public domain) [voltaire.jpg]
+- **Walt Whitman** — Samuel Murray, Public domain (Public domain) [walt-whitman.jpg]
+- **Washington Irving** — Unknown author, Public domain (File: Washington Irving.jpg) [washington-irving.jpg] — freshly fetched for batch 29
+- **William Hazlitt** — John Hazlitt, Public domain (File: John Hazlitt Portrait of William Hazlitt.jpg) [william-hazlitt.jpg] — freshly fetched for batch 29
+
+Portraits were used for 58 of the 67 authors in this batch (96 face cards). The following authors had no portrait and were rendered as aesthetic text-tile cards: Chinese proverb (3 quotes, b4936–b4938 — no person, always a tile) and Publilius Syrus (1 quote, b4955 — 1st-century BC Roman writer; no genuine portrait survives on Commons, only manuscript pages and a quote cartouche).
