@@ -1,0 +1,1168 @@
+{
+ "quotes": [
+  {
+   "id": "b6379",
+   "t": "I need to have something besides a husband and children to devote myself to!",
+   "a": "Anne Frank",
+   "c": "Action",
+   "img": "images/batch-44/b6379.jpg",
+   "source": "The Diary of a Young Girl, 5 April 1944"
+  },
+  {
+   "id": "b6380",
+   "t": "I soothe my conscience now with the thought that it is better for hard words to be on paper than that Mummy should carry them in her heart.",
+   "a": "Anne Frank",
+   "c": "Calm",
+   "img": "images/batch-44/b6380.jpg",
+   "source": "The Diary of a Young Girl, 2 January 1944"
+  },
+  {
+   "id": "b6381",
+   "t": "You can always — always — give something, even if it's a simple act of kindness!",
+   "a": "Anne Frank",
+   "c": "Love",
+   "img": "images/batch-44/b6381.jpg",
+   "source": "Tales from the Secret Annex, \"Give!\", 26 March 1944"
+  },
+  {
+   "id": "b6382",
+   "t": "Children are a wonderful gift. They have an extraordinary capacity to see into the heart of things and to expose sham and humbug for what they are.",
+   "a": "Desmond Tutu",
+   "c": "Life",
+   "img": "images/batch-44/b6382.jpg",
+   "source": "The Words of Desmond Tutu, 1984"
+  },
+  {
+   "id": "b6383",
+   "t": "History, like beauty, depends largely on the beholder, so when you read that, for example, David Livingstone discovered the Victoria Falls, you might be forgiven for thinking that there was nobody around the Falls until Livingstone arrived on the scene.",
+   "a": "Desmond Tutu",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6383.jpg",
+   "source": "Hope and Suffering: Sermons and Speeches, 1984"
+  },
+  {
+   "id": "b6384",
+   "t": "Forgiveness is an absolute necessity for continued human existence.",
+   "a": "Desmond Tutu",
+   "c": "Calm",
+   "img": "images/batch-44/b6384.jpg",
+   "source": "Foreword to Exploring Forgiveness, 1998"
+  },
+  {
+   "id": "b6385",
+   "t": "The past, present, and future mingle and pull us backward, forward, or fix us in the present.",
+   "a": "Anais Nin",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6385.jpg",
+   "source": "The Diary of Anais Nin, Vol. 4 (1944-1947)"
+  },
+  {
+   "id": "b6386",
+   "t": "We are made of layers, cells, constellations.",
+   "a": "Anais Nin",
+   "c": "Life",
+   "img": "images/batch-44/b6386.jpg",
+   "source": "The Diary of Anais Nin, Vol. 4 (1944-1947)"
+  },
+  {
+   "id": "b6387",
+   "t": "When others asked the truth of me, I was convinced it was not the truth they wanted, but an illusion they could bear to live with.",
+   "a": "Anais Nin",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6387.jpg",
+   "source": "The Diary of Anais Nin, Vol. 1 (1931-1934), November 1933"
+  },
+  {
+   "id": "b6388",
+   "t": "If your parent is just, revere him; if not, bear with him.",
+   "a": "Publilius Syrus",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6388.jpg",
+   "source": "Sententiae, Maxim 27"
+  },
+  {
+   "id": "b6389",
+   "t": "Too much straightforwardness is foolish against a shameless person.",
+   "a": "Publilius Syrus",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6389.jpg",
+   "source": "Sententiae, Maxim 123"
+  },
+  {
+   "id": "b6390",
+   "t": "It is more easy to get a favor from Fortune than to keep it.",
+   "a": "Publilius Syrus",
+   "c": "Success",
+   "img": "images/batch-44/b6390.jpg",
+   "source": "Sententiae, Maxim 282"
+  },
+  {
+   "id": "b6391",
+   "t": "It is now almost my sole rule of life to clear myself of cants and formulas, as of poisonous Nessus shirts.",
+   "a": "Thomas Carlyle",
+   "c": "Life",
+   "img": "images/batch-44/b6391.jpg",
+   "source": "Letter to His Wife, 1835"
+  },
+  {
+   "id": "b6392",
+   "t": "The great law of culture is: Let each become all that he was created capable of being.",
+   "a": "Thomas Carlyle",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6392.jpg",
+   "source": "Critical and Miscellaneous Essays: Richter, 1827"
+  },
+  {
+   "id": "b6393",
+   "t": "Happy the people whose annals are blank in history books!",
+   "a": "Thomas Carlyle",
+   "c": "Happiness",
+   "img": "images/batch-44/b6393.jpg",
+   "source": "Life of Frederick the Great, Bk. XVI, ch. 1"
+  },
+  {
+   "id": "b6394",
+   "t": "It was enemies one wanted, not friends.",
+   "a": "Virginia Woolf",
+   "c": "Friendship",
+   "img": "images/batch-44/b6394.jpg",
+   "source": "Mrs Dalloway, 1925"
+  },
+  {
+   "id": "b6395",
+   "t": "Rigid, the skeleton of habit alone upholds the human frame.",
+   "a": "Virginia Woolf",
+   "c": "Habits",
+   "img": "images/batch-44/b6395.jpg",
+   "source": "Mrs Dalloway, 1925"
+  },
+  {
+   "id": "b6396",
+   "t": "Let us record the atoms as they fall upon the mind in the order in which they fall, let us trace the pattern, however disconnected and incoherent in appearance, which each sight or incident scores upon the consciousness.",
+   "a": "Virginia Woolf",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6396.jpg",
+   "source": "The Common Reader: Modern Fiction, 1925"
+  },
+  {
+   "id": "b6397",
+   "t": "The different accidents of life are not so changeable as the feelings of human nature.",
+   "a": "Mary Shelley",
+   "c": "Life",
+   "img": "images/batch-44/b6397.jpg",
+   "source": "Frankenstein, Ch. 5, 1818"
+  },
+  {
+   "id": "b6398",
+   "t": "All judges had rather that ten innocent should suffer than that one guilty should escape.",
+   "a": "Mary Shelley",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6398.jpg",
+   "source": "Frankenstein, Ch. 8, 1818"
+  },
+  {
+   "id": "b6399",
+   "t": "Seek happiness in tranquility and avoid ambition even if it be only the apparently innocent one of distinguishing yourself in science and discoveries.",
+   "a": "Mary Shelley",
+   "c": "Calm",
+   "img": "images/batch-44/b6399.jpg",
+   "source": "Frankenstein, 1818"
+  },
+  {
+   "id": "b6400",
+   "t": "Thou wast not born for death, immortal Bird!",
+   "a": "John Keats",
+   "c": "Life",
+   "img": "images/batch-44/b6400.jpg",
+   "source": "Ode to a Nightingale, 1819"
+  },
+  {
+   "id": "b6401",
+   "t": "Darkling I listen; and, for many a time, I have been half in love with easeful Death.",
+   "a": "John Keats",
+   "c": "Calm",
+   "img": "images/batch-44/b6401.jpg",
+   "source": "Ode to a Nightingale, 1819"
+  },
+  {
+   "id": "b6402",
+   "t": "Or like stout Cortez when with eagle eyes he stared at the Pacific — and all his men looked at each other with a wild surmise — silent, upon a peak in Darien.",
+   "a": "John Keats",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6402.jpg",
+   "source": "On First Looking into Chapman's Homer, 1816"
+  },
+  {
+   "id": "b6403",
+   "t": "The people who are crazy enough to think they can change the world are the ones who do.",
+   "a": "Steve Jobs",
+   "c": "Courage",
+   "img": "images/batch-44/b6403.jpg",
+   "source": "Apple 'Think Different' internal meeting, 23 September 1997"
+  },
+  {
+   "id": "b6404",
+   "t": "It's more fun to be a pirate than to join the Navy.",
+   "a": "Steve Jobs",
+   "c": "Action",
+   "img": "images/batch-44/b6404.jpg",
+   "source": "Apple retreat, September 1982"
+  },
+  {
+   "id": "b6405",
+   "t": "Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations.",
+   "a": "Steve Jobs",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6405.jpg",
+   "source": "Quoted in Steve Jobs: The Journey Is the Reward, 1988"
+  },
+  {
+   "id": "b6406",
+   "t": "To know how to read is to light a lamp in the mind, to release the soul from prison, to open a gate to the universe.",
+   "a": "Pearl Buck",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6406.jpg",
+   "source": "To My Daughters, With Love, 1967"
+  },
+  {
+   "id": "b6407",
+   "t": "The person who has lived the most is not the one who has lived the longest, but the one with the richest experiences.",
+   "a": "Pearl Buck",
+   "c": "Life",
+   "img": "images/batch-44/b6407.jpg",
+   "source": "The New York Times, 15 December 1946"
+  },
+  {
+   "id": "b6408",
+   "t": "Men and women should own the world as a mutual possession.",
+   "a": "Pearl Buck",
+   "c": "Love",
+   "img": "images/batch-44/b6408.jpg",
+   "source": "Of Men and Women, 1941"
+  },
+  {
+   "id": "b6409",
+   "t": "Religion is for man and not man for religion.",
+   "a": "B.R. Ambedkar",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6409.jpg",
+   "source": "Speech to the Bombay Presidency Mahar Conference, 1936"
+  },
+  {
+   "id": "b6410",
+   "t": "Slavery does not merely mean a legalized form of subjection. It means a state of society in which some men are forced to accept from others the purposes which control their conduct.",
+   "a": "B.R. Ambedkar",
+   "c": "Life",
+   "img": "images/batch-44/b6410.jpg",
+   "source": "Annihilation of Caste (1936)"
+  },
+  {
+   "id": "b6411",
+   "t": "The freedom of mind is the real freedom. A person whose mind is not free, though he is not in chains, is a slave.",
+   "a": "B.R. Ambedkar",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6411.jpg",
+   "source": "Speech to the Bombay Presidency Mahar Conference, 31 May 1936"
+  },
+  {
+   "id": "b6412",
+   "t": "Intelligence is the capacity to perceive the essential, the what is; and to awaken this capacity, in oneself and in others, is education.",
+   "a": "Jiddu Krishnamurti",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6412.jpg",
+   "source": "Education and the Significance of Life (1953)"
+  },
+  {
+   "id": "b6413",
+   "t": "A mind that has merely been trained is the continuation of the past, and such a mind can never discover the new.",
+   "a": "Jiddu Krishnamurti",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6413.jpg",
+   "source": "Education and the Significance of Life (1953)"
+  },
+  {
+   "id": "b6414",
+   "t": "What lies beyond cannot be put into words because the word is not the thing.",
+   "a": "Jiddu Krishnamurti",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6414.jpg",
+   "source": "Freedom from the Known (1969)"
+  },
+  {
+   "id": "b6415",
+   "t": "We work to become, not to acquire.",
+   "a": "Elbert Hubbard",
+   "c": "Success",
+   "img": "images/batch-44/b6415.jpg",
+   "source": "101 Epigrams According to Elbert Hubbard (Roycroft Press)"
+  },
+  {
+   "id": "b6416",
+   "t": "Happiness is a habit — cultivate it.",
+   "a": "Elbert Hubbard",
+   "c": "Happiness",
+   "img": "images/batch-44/b6416.jpg",
+   "source": "101 Epigrams According to Elbert Hubbard (Roycroft Press)"
+  },
+  {
+   "id": "b6417",
+   "t": "Folks who never do any more than they get paid for, never get paid for anything more than they do.",
+   "a": "Elbert Hubbard",
+   "c": "Success",
+   "img": "images/batch-44/b6417.jpg",
+   "source": "Little Journeys to the Homes of Great Businessmen (H. H. Rogers)"
+  },
+  {
+   "id": "b6418",
+   "t": "The care of human life and happiness, and not their destruction, is the first and only legitimate object of good government.",
+   "a": "Thomas Jefferson",
+   "c": "Life",
+   "img": "images/batch-44/b6418.jpg",
+   "source": "Letter to the Republican Citizens of Washington County, Maryland, 31 March 1809"
+  },
+  {
+   "id": "b6419",
+   "t": "I have no ambition to govern men. It is a painful and thankless office.",
+   "a": "Thomas Jefferson",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6419.jpg",
+   "source": "Letter to John Adams, 28 December 1796"
+  },
+  {
+   "id": "b6420",
+   "t": "Blest is that nation whose silent course of happiness furnishes nothing for history to say.",
+   "a": "Thomas Jefferson",
+   "c": "Happiness",
+   "img": "images/batch-44/b6420.jpg",
+   "source": "Letter to Count Diodati, 29 March 1807"
+  },
+  {
+   "id": "b6421",
+   "t": "It is convenient that there be gods, and, as it is convenient, let us believe that there are.",
+   "a": "Ovid",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6421.jpg",
+   "source": "Ars Amatoria, Book I, line 637"
+  },
+  {
+   "id": "b6422",
+   "t": "Jupiter from above laughs at lovers' perjuries.",
+   "a": "Ovid",
+   "c": "Love",
+   "img": "images/batch-44/b6422.jpg",
+   "source": "Ars Amatoria, Book I, line 633"
+  },
+  {
+   "id": "b6423",
+   "t": "Fortune and Venus befriend the daring.",
+   "a": "Ovid",
+   "c": "Courage",
+   "img": "images/batch-44/b6423.jpg",
+   "source": "Ars Amatoria, Book I, line 608"
+  },
+  {
+   "id": "b6424",
+   "t": "By health I mean the power to live a full, adult, living, breathing life in close contact with what I love — the earth and the wonders thereof — the sea — the sun.",
+   "a": "Katherine Mansfield",
+   "c": "Life",
+   "img": "images/batch-44/b6424.jpg",
+   "source": "Journal entry, 10 October 1922"
+  },
+  {
+   "id": "b6425",
+   "t": "I want, by understanding myself, to understand others.",
+   "a": "Katherine Mansfield",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6425.jpg",
+   "source": "Journal entry, October 1922"
+  },
+  {
+   "id": "b6426",
+   "t": "I feel happy — deep down. All is well.",
+   "a": "Katherine Mansfield",
+   "c": "Happiness",
+   "img": "images/batch-44/b6426.jpg",
+   "source": "Journal entry, 10 October 1922"
+  },
+  {
+   "id": "b6427",
+   "t": "I believe in some blending of hope and sunshine sweetening the worst lots. I believe that this life is not all; neither the beginning nor the end. I believe while I tremble; I trust while I weep.",
+   "a": "Charlotte Brontë",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6427.jpg",
+   "source": "Villette (1853), ch. 31"
+  },
+  {
+   "id": "b6428",
+   "t": "I have for the first time found what I can truly love — I have found you. You are my sympathy — my better self — my good angel.",
+   "a": "Charlotte Brontë",
+   "c": "Love",
+   "img": "images/batch-44/b6428.jpg",
+   "source": "Jane Eyre (1847)"
+  },
+  {
+   "id": "b6429",
+   "t": "I ask you to pass through life at my side — to be my second self, and best earthly companion.",
+   "a": "Charlotte Brontë",
+   "c": "Love",
+   "img": "images/batch-44/b6429.jpg",
+   "source": "Jane Eyre (1847), ch. 23"
+  },
+  {
+   "id": "b6430",
+   "t": "Let your soul stand cool and composed before a million universes.",
+   "a": "Walt Whitman",
+   "c": "Calm",
+   "img": "images/batch-44/b6430.jpg",
+   "source": "Song of Myself, §48, Leaves of Grass (1855)"
+  },
+  {
+   "id": "b6431",
+   "t": "I may be as bad as the worst, but, thank God, I am as good as the best.",
+   "a": "Walt Whitman",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6431.jpg",
+   "source": "Song of Myself, §20, Leaves of Grass (1855)"
+  },
+  {
+   "id": "b6432",
+   "t": "The art of art, the glory of expression and the sunshine of the light of letters is simplicity.",
+   "a": "Walt Whitman",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6432.jpg",
+   "source": "Preface to Leaves of Grass (1855)"
+  },
+  {
+   "id": "b6433",
+   "t": "It is not by muscle, speed, or physical dexterity that great things are achieved, but by reflection, force of character, and judgement.",
+   "a": "Cicero",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6433.jpg",
+   "source": "De Senectute (On Old Age), §17, 44 BCE"
+  },
+  {
+   "id": "b6434",
+   "t": "Natural ability without education has more often raised a man to glory and virtue than education without natural ability.",
+   "a": "Cicero",
+   "c": "Success",
+   "img": "images/batch-44/b6434.jpg"
+  },
+  {
+   "id": "b6435",
+   "t": "A friend is, as it were, a second self.",
+   "a": "Cicero",
+   "c": "Friendship",
+   "img": "images/batch-44/b6435.jpg",
+   "source": "De Amicitia (On Friendship), XXI, 80, 44 BCE"
+  },
+  {
+   "id": "b6436",
+   "t": "I prayed for freedom for twenty years, but received no answer until I prayed with my legs.",
+   "a": "Frederick Douglass",
+   "c": "Action",
+   "img": "images/batch-44/b6436.jpg"
+  },
+  {
+   "id": "b6437",
+   "t": "A little learning, indeed, may be a dangerous thing, but the want of learning is a calamity to any people.",
+   "a": "Frederick Douglass",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6437.jpg",
+   "source": "Speech, 1894"
+  },
+  {
+   "id": "b6438",
+   "t": "We have to do with the past only as we can make it useful to the present and to the future.",
+   "a": "Frederick Douglass",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6438.jpg",
+   "source": "What to the Slave Is the Fourth of July?, Rochester, 5 July 1852"
+  },
+  {
+   "id": "b6439",
+   "t": "Awareness is the greatest agent for change.",
+   "a": "Eckhart Tolle",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6439.jpg",
+   "source": "The Power of Now (1997)"
+  },
+  {
+   "id": "b6440",
+   "t": "People should be beautiful in every way—in their faces, in the way they dress, in their thoughts and in their innermost selves.",
+   "a": "Anton Chekhov",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6440.jpg",
+   "source": "Uncle Vanya, Act I (1897)"
+  },
+  {
+   "id": "b6441",
+   "t": "Where there is hope, there is peace.",
+   "a": "Daisaku Ikeda",
+   "c": "Calm",
+   "img": "images/batch-44/b6441.jpg",
+   "source": "\"Our Power for Peace\" (2003)"
+  },
+  {
+   "id": "b6442",
+   "t": "It's not bragging if you can back it up.",
+   "a": "Muhammad Ali",
+   "c": "Success",
+   "img": "images/batch-44/b6442.jpg",
+   "source": "Los Angeles Times (1973)"
+  },
+  {
+   "id": "b6443",
+   "t": "The most important persuasion tool you have in your entire arsenal is integrity.",
+   "a": "Zig Ziglar",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6443.jpg",
+   "source": "As quoted in Refining Your Style (2004)"
+  },
+  {
+   "id": "b6444",
+   "t": "I never did anything worth doing entirely by accident and none of my inventions came about totally by accident. They came about by hard work.",
+   "a": "Thomas Edison",
+   "c": "Success",
+   "img": "images/batch-44/b6444.jpg",
+   "source": "Interview, The American Magazine (1921)"
+  },
+  {
+   "id": "b6445",
+   "t": "Let knowledge grow from more to more, but more of reverence in us dwell; that mind and soul, according well, may make one music as before, but vaster.",
+   "a": "Alfred Tennyson",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6445.jpg",
+   "source": "In Memoriam A.H.H., Prologue (1850)"
+  },
+  {
+   "id": "b6446",
+   "t": "The major key to your better future is you.",
+   "a": "Jim Rohn",
+   "c": "Success",
+   "img": "images/batch-44/b6446.jpg",
+   "source": "\"The Major Key to Your Better Future Is You\" (Jim Rohn International)"
+  },
+  {
+   "id": "b6447",
+   "t": "I was taught that the way of progress is neither swift nor easy.",
+   "a": "Marie Curie",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6447.jpg",
+   "source": "Autobiographical Notes, in Pierre Curie (1923)"
+  },
+  {
+   "id": "b6448",
+   "t": "The most important quality for an investor is temperament, not intellect. You need a temperament that neither derives great pleasure from being with the crowd or against the crowd.",
+   "a": "Warren Buffett",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6448.jpg",
+   "source": "Berkshire Hathaway shareholder letter (2008)"
+  },
+  {
+   "id": "b6449",
+   "t": "I never thought I'd land in pictures with a face like mine.",
+   "a": "Audrey Hepburn",
+   "c": "Life",
+   "img": "images/batch-44/b6449.jpg",
+   "source": "Photoplay magazine interview (1954)"
+  },
+  {
+   "id": "b6450",
+   "t": "Life is a beautiful, magnificent thing, even to a jellyfish.",
+   "a": "Charlie Chaplin",
+   "c": "Life",
+   "img": "images/batch-44/b6450.jpg",
+   "source": "Limelight (1952)"
+  },
+  {
+   "id": "b6451",
+   "t": "Remember that a person's name is to that person the sweetest and most important sound in any language.",
+   "a": "Dale Carnegie",
+   "c": "Friendship",
+   "img": "images/batch-44/b6451.jpg",
+   "source": "How to Win Friends and Influence People (1936)"
+  },
+  {
+   "id": "b6452",
+   "t": "The heights by great men reached and kept were not attained by sudden flight, but they, while their companions slept, were toiling upwards in the night.",
+   "a": "Henry Wadsworth Longfellow",
+   "c": "Success",
+   "img": "images/batch-44/b6452.jpg",
+   "source": "The Ladder of St. Augustine (1850)"
+  },
+  {
+   "id": "b6453",
+   "t": "Charms strike the sight, but merit wins the soul.",
+   "a": "Alexander Pope",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6453.jpg",
+   "source": "The Rape of the Lock, Canto V (1714)"
+  },
+  {
+   "id": "b6454",
+   "t": "A man that is young in years may be old in hours, if he have lost no time.",
+   "a": "Francis Bacon",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6454.jpg",
+   "source": "Essays, \"Of Youth and Age\" (1625)"
+  },
+  {
+   "id": "b6455",
+   "t": "He who waits to do a great deal of good at once will never do anything.",
+   "a": "Samuel Johnson",
+   "c": "Action",
+   "img": "images/batch-44/b6455.jpg"
+  },
+  {
+   "id": "b6456",
+   "t": "The point is that you can't be too greedy.",
+   "a": "Donald Trump",
+   "c": "Success",
+   "img": "images/batch-44/b6456.jpg",
+   "source": "Trump: The Art of the Deal (1987)"
+  },
+  {
+   "id": "b6457",
+   "t": "It is not contrary to reason to prefer the destruction of the whole world to the scratching of my finger.",
+   "a": "David Hume",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6457.jpg",
+   "source": "A Treatise of Human Nature (1739)"
+  },
+  {
+   "id": "b6458",
+   "t": "One is loved because one is loved. No reason is needed for loving.",
+   "a": "Paulo Coelho",
+   "c": "Love",
+   "img": "images/batch-44/b6458.jpg",
+   "source": "The Alchemist (1988)"
+  },
+  {
+   "id": "b6459",
+   "t": "Fear of a name increases fear of the thing itself.",
+   "a": "J.K. Rowling",
+   "c": "Courage",
+   "img": "images/batch-44/b6459.jpg",
+   "source": "Harry Potter and the Philosopher's Stone (1997)"
+  },
+  {
+   "id": "b6460",
+   "t": "Change is never easy, but always possible.",
+   "a": "Barack Obama",
+   "c": "Action",
+   "img": "images/batch-44/b6460.jpg",
+   "source": "NAACP Fight for Freedom Fund Dinner, Detroit, 1 May 2005"
+  },
+  {
+   "id": "b6461",
+   "t": "You have to believe in yourself when no one else does.",
+   "a": "Serena Williams",
+   "c": "Courage",
+   "img": "images/batch-44/b6461.jpg",
+   "source": "Fortune essay, \"Black women: Be fearless\" (2017)"
+  },
+  {
+   "id": "b6462",
+   "t": "There are many things that, if I have to relive, maybe I will do it another way. But I would not like to look back and think what I have not been able to.",
+   "a": "Ratan Tata",
+   "c": "Life",
+   "img": "images/batch-44/b6462.jpg",
+   "source": "Interview with PTI (2012)"
+  },
+  {
+   "id": "b6463",
+   "t": "On this battlefield man has no better weapon than his intelligence, no other force but his heart.",
+   "a": "Jose Rizal",
+   "c": "Courage",
+   "img": "images/batch-44/b6463.jpg"
+  },
+  {
+   "id": "b6464",
+   "t": "A man provided with paper, pencil, and rubber, and subject to strict discipline, is in effect a universal machine.",
+   "a": "Alan Turing",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6464.jpg",
+   "source": "\"Intelligent Machinery\" (1948)"
+  },
+  {
+   "id": "b6465",
+   "t": "Courage is the price that life exacts for granting peace.",
+   "a": "Amelia Earhart",
+   "c": "Courage",
+   "img": "images/batch-44/b6465.jpg",
+   "source": "Poem \"Courage\" (1927)"
+  },
+  {
+   "id": "b6466",
+   "t": "We forfeit three-fourths of ourselves in order to be like other people.",
+   "a": "Arthur Schopenhauer",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6466.jpg",
+   "source": "As attributed in Dictionary of Quotations from Ancient and Modern English and Foreign Sources (1899)"
+  },
+  {
+   "id": "b6467",
+   "t": "Believe those who are seeking the truth; doubt those who find it.",
+   "a": "André Gide",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6467.jpg",
+   "source": "Ainsi soit-il (1952)"
+  },
+  {
+   "id": "b6468",
+   "t": "How many theorems in geometry which have seemed at first impracticable are in time successfully worked out!",
+   "a": "Archimedes",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6468.jpg",
+   "source": "The Works of Archimedes (trans. T. L. Heath, 1897)"
+  },
+  {
+   "id": "b6469",
+   "t": "The world is full of obvious things which nobody by any chance ever observes.",
+   "a": "Arthur Conan Doyle",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6469.jpg",
+   "source": "The Hound of the Baskervilles (1902)"
+  },
+  {
+   "id": "b6470",
+   "t": "I like living. I have sometimes been wildly despairing, acutely miserable, racked with sorrow, but through it all I still know quite certainly that just to be alive is a grand thing.",
+   "a": "Agatha Christie",
+   "c": "Life",
+   "img": "images/batch-44/b6470.jpg",
+   "source": "An Autobiography (1977)"
+  },
+  {
+   "id": "b6471",
+   "t": "If you can't give me poetry, can't you give me poetical science?",
+   "a": "Ada Lovelace",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6471.jpg"
+  },
+  {
+   "id": "b6472",
+   "t": "What a man can be, he must be. This need we may call self-actualization.",
+   "a": "Abraham Maslow",
+   "c": "Success",
+   "img": "images/batch-44/b6472.jpg",
+   "source": "Motivation and Personality (1954)"
+  },
+  {
+   "id": "b6473",
+   "t": "Authority without wisdom is like a heavy axe without an edge, fitter to bruise than polish.",
+   "a": "Anne Bradstreet",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6473.jpg",
+   "source": "Meditations Divine and Moral (1664)"
+  },
+  {
+   "id": "b6474",
+   "t": "The good life is one inspired by love and guided by knowledge.",
+   "a": "Bertrand Russell",
+   "c": "Life",
+   "img": "images/batch-44/b6474.jpg",
+   "source": "What I Believe (1925)"
+  },
+  {
+   "id": "b6475",
+   "t": "It is the lone worker who makes the first advance in a subject: the details may be worked out by a team, but the prime idea is due to the enterprise, thought, and perception of an individual.",
+   "a": "Alexander Fleming",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6475.jpg",
+   "source": "Speech at Edinburgh University (1951)"
+  },
+  {
+   "id": "b6476",
+   "t": "After silence that which comes nearest to expressing the inexpressible is music.",
+   "a": "Aldous Huxley",
+   "c": "Calm",
+   "img": "images/batch-44/b6476.jpg",
+   "source": "\"The Rest Is Silence\", Music at Night (1931)"
+  },
+  {
+   "id": "b6477",
+   "t": "If we revert to history, we shall find that the women who have distinguished themselves have neither been the most beautiful nor the most gentle of their sex.",
+   "a": "Mary Wollstonecraft",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6477.jpg",
+   "source": "A Vindication of the Rights of Woman (1792)"
+  },
+  {
+   "id": "b6478",
+   "t": "The only way in which a human being can make some approach to knowing the whole of a subject, is by hearing what can be said about it by persons of every variety of opinion, and studying all modes in which it can be looked at by every character of mind.",
+   "a": "John Stuart Mill",
+   "c": "Wisdom",
+   "img": "images/batch-44/b6478.jpg",
+   "source": "On Liberty (1859)"
+  }
+ ],
+ "authors": {
+  "Abraham Maslow": {
+   "born": "1908",
+   "died": "1970",
+   "role": "Psychologist",
+   "bio": "American psychologist who founded humanistic psychology. He is best known for his hierarchy of needs, set out in Motivation and Personality (1954), and for popularising the concept of self-actualisation."
+  },
+  "Ada Lovelace": {
+   "bio": "English mathematician (1815–1852), who wrote the first algorithm intended to be processed by a machine."
+  },
+  "Agatha Christie": {
+   "born": "1890",
+   "died": "1976",
+   "role": "Novelist",
+   "bio": "English crime writer and the best-selling fiction author of all time. She created the detectives Hercule Poirot and Miss Marple, and wrote The Mousetrap, the world's longest-running play."
+  },
+  "Alan Turing": {
+   "born": "1912",
+   "died": "1954",
+   "role": "Mathematician",
+   "bio": "English mathematician and father of computer science; cracked the Enigma code in WWII.",
+   "credit": "Elliott & Fry, Public domain"
+  },
+  "Aldous Huxley": {
+   "born": "1894",
+   "died": "1963",
+   "role": "Novelist & Essayist",
+   "bio": "English writer best known for the dystopian novel Brave New World (1932). He later explored mysticism and psychedelics in works such as The Doors of Perception (1954)."
+  },
+  "Alexander Fleming": {
+   "born": "1881",
+   "died": "1955",
+   "role": "Bacteriologist who discovered penicillin",
+   "bio": "Sir Alexander Fleming was a Scottish bacteriologist whose accidental discovery of penicillin in 1928, from a mould contaminating his culture plates at St Mary's Hospital, London, ushered in the antibiotic era. Developed into a drug by Florey and Chain, penicillin transformed medicine and saved hundreds of millions of lives. Fleming shared the 1945 Nobel Prize in Physiology or Medicine for the discovery."
+  },
+  "Alexander Pope": {
+   "born": "1688",
+   "died": "1744",
+   "role": "Poet",
+   "bio": "English poet and master of the heroic couplet. His works include An Essay on Criticism, The Rape of the Lock and An Essay on Man, along with celebrated translations of Homer."
+  },
+  "Alfred Tennyson": {
+   "born": "1809",
+   "died": "1892",
+   "role": "Poet",
+   "bio": "English Poet Laureate; author of In Memoriam and Ulysses.",
+   "credit": "Francis Job Short, Public domain"
+  },
+  "Amelia Earhart": {
+   "born": "1897",
+   "died": "1937",
+   "role": "Aviator",
+   "bio": "American aviation pioneer and the first woman to fly solo nonstop across the Atlantic Ocean, in 1932. She disappeared over the Pacific in 1937 while attempting to circumnavigate the globe."
+  },
+  "Anais Nin": {
+   "born": "1903",
+   "died": "1977",
+   "role": "Writer",
+   "bio": "Anaïs Nin, French-born American diarist and novelist. She is celebrated for her multi-volume Diary, begun when she was eleven, and for works such as Delta of Venus."
+  },
+  "André Gide": {
+   "born": "1869",
+   "died": "1951",
+   "role": "Novelist",
+   "bio": "André Gide was a French novelist and critic whose works, including The Immoralist and The Counterfeiters, explored freedom, desire and self-deception. He won the Nobel Prize in Literature in 1947 and influenced generations of European writers."
+  },
+  "Anne Bradstreet": {
+   "born": "1612",
+   "died": "1672",
+   "role": "Poet",
+   "bio": "English-born colonial American poet and the first writer from Britain's North American colonies to be published. Her collection The Tenth Muse Lately Sprung Up in America appeared in 1650."
+  },
+  "Anne Frank": {
+   "born": "1929",
+   "died": "1945",
+   "role": "Diarist",
+   "bio": "German-born Jewish diarist whose diary documents life in hiding during the Holocaust.",
+   "credit": "Anonymous, Public domain"
+  },
+  "Anton Chekhov": {
+   "born": "1860",
+   "died": "1904",
+   "role": "Playwright and story writer",
+   "bio": "Anton Chekhov was a Russian playwright and master of the short story, a practising doctor who wrote The Cherry Orchard, Uncle Vanya and hundreds of stories. His restrained, humane art reshaped both the theatre and short fiction of the 20th century."
+  },
+  "Archimedes": {
+   "born": "287 BC",
+   "died": "212 BC",
+   "role": "Mathematician and inventor",
+   "bio": "Archimedes of Syracuse was a Greek mathematician, physicist and inventor regarded as one of the greatest mathematicians of antiquity. He calculated an accurate approximation of pi, formulated the principle of buoyancy, and designed machines such as the screw pump and compound pulleys."
+  },
+  "Arthur Conan Doyle": {
+   "born": "1859",
+   "died": "1930",
+   "role": "Writer",
+   "bio": "Scottish writer, creator of Sherlock Holmes.",
+   "credit": "The Library of Congress, Public domain"
+  },
+  "Arthur Schopenhauer": {
+   "born": "1788",
+   "died": "1860",
+   "role": "Philosopher",
+   "bio": "Arthur Schopenhauer was a German philosopher whose major work, The World as Will and Representation, portrayed life as driven by blind striving. Long neglected, his pessimistic yet lucid philosophy later influenced Tolstoy, Wagner, Nietzsche and many artists."
+  },
+  "Audrey Hepburn": {
+   "born": "1929",
+   "died": "1993",
+   "role": "Actress and humanitarian",
+   "bio": "Audrey Hepburn was a British actress and humanitarian celebrated for films such as Roman Holiday, Breakfast at Tiffany's and My Fair Lady. In later life she devoted herself to UNICEF, serving as a Goodwill Ambassador in some of the world's poorest regions."
+  },
+  "B.R. Ambedkar": {
+   "born": "1891",
+   "died": "1956",
+   "role": "Social reformer",
+   "bio": "Indian jurist and social reformer who chaired the drafting of India's Constitution and campaigned against caste discrimination.",
+   "credit": "Rajasekharan Parameswaran, CC BY-SA 4.0"
+  },
+  "Barack Obama": {
+   "born": "1961",
+   "role": "U.S. President",
+   "bio": "44th president of the United States (2009-2017), the first African American to hold the office; Nobel Peace Prize 2009.",
+   "credit": "Pete Souza, Public domain"
+  },
+  "Bertrand Russell": {
+   "born": "1872",
+   "died": "1970",
+   "role": "Philosopher & Mathematician",
+   "bio": "British philosopher, logician and social critic, co-author of Principia Mathematica. He won the Nobel Prize in Literature in 1950 and wrote the popular History of Western Philosophy."
+  },
+  "Charlie Chaplin": {
+   "born": "1889",
+   "died": "1977",
+   "role": "Comic actor and filmmaker",
+   "bio": "Charlie Chaplin was an English comic actor and filmmaker whose Little Tramp became a global icon of silent cinema. He co-founded United Artists and wrote, directed and starred in classics including City Lights, Modern Times and The Great Dictator."
+  },
+  "Charlotte Brontë": {
+   "born": "1816",
+   "died": "1855",
+   "role": "Novelist",
+   "bio": "English novelist, author of Jane Eyre.",
+   "credit": "Alonzo Chappel, Public domain (File: File:Charlotte Bronte by Alonzo Chappel.jpg)"
+  },
+  "Cicero": {
+   "born": "106 BC",
+   "died": "43 BC",
+   "role": "Statesman and orator",
+   "bio": "Marcus Tullius Cicero was a Roman statesman, lawyer and orator considered the master of Latin prose. His speeches, letters and philosophical works, including On Friendship, transmitted Greek philosophy to the Roman world.",
+   "credit": "José Luiz, CC BY-SA 4.0"
+  },
+  "Daisaku Ikeda": {
+   "bio": "Daisaku Ikeda was a Japanese Buddhist philosopher, educator and peace activist who led the Soka Gakkai lay Buddhist movement and founded Soka University. He wrote extensively on Buddhism, dialogue and peace.",
+   "born": "1928",
+   "died": "2023",
+   "role": "Japanese Buddhist philosopher"
+  },
+  "Dale Carnegie": {
+   "bio": "Dale Carnegie was an American writer and lecturer on self-improvement and public speaking. His book How to Win Friends and Influence People (1936) became one of the best-selling books of all time.",
+   "born": "1888",
+   "died": "1955",
+   "role": "American author and lecturer"
+  },
+  "David Hume": {
+   "born": "1711",
+   "died": "1776",
+   "role": "Philosopher",
+   "bio": "David Hume was a Scottish Enlightenment philosopher, historian and economist, best known for A Treatise of Human Nature and An Enquiry Concerning Human Understanding. His scepticism about causation, miracles and the self profoundly influenced Western philosophy."
+  },
+  "Desmond Tutu": {
+   "born": "1931",
+   "died": "2021",
+   "role": "Archbishop, anti-apartheid activist",
+   "bio": "South African Anglican archbishop and Nobel Peace Prize laureate (1984) who campaigned against apartheid.",
+   "credit": "Benny Gool, Public domain"
+  },
+  "Donald Trump": {
+   "bio": "Donald Trump is an American businessman and television personality who served as the 45th President of the United States (2017–2021) and was elected again as the 47th President in 2024. Before politics he built a real-estate business and hosted the reality show The Apprentice.",
+   "born": "1946",
+   "role": "American president and businessman"
+  },
+  "Eckhart Tolle": {
+   "bio": "Eckhart Tolle is a German-born spiritual teacher living in Canada, author of The Power of Now (1997) and A New Earth (2005), books on presence and the ego that became international bestsellers.",
+   "born": "1948",
+   "role": "Spiritual teacher and author"
+  },
+  "Elbert Hubbard": {
+   "bio": "Elbert Hubbard was an American writer, publisher and philosopher who founded the Roycroft arts-and-crafts community. His essay \"A Message to Garcia\" (1899) was one of the most widely reprinted works of its era; he died in the sinking of the Lusitania.",
+   "born": "1856",
+   "died": "1915",
+   "role": "American writer and publisher"
+  },
+  "Francis Bacon": {
+   "born": "1561",
+   "died": "1626",
+   "role": "Philosopher and statesman",
+   "bio": "Francis Bacon was an English philosopher, statesman and essayist who championed the empirical method of inquiry. His Essays and his plan for the reform of learning in the Novum Organum helped lay the groundwork of modern science."
+  },
+  "Frederick Douglass": {
+   "born": "1818",
+   "died": "1895",
+   "role": "Abolitionist, writer",
+   "bio": "American abolitionist and writer who escaped slavery and became a leading voice against it.",
+   "credit": "unattributed, Public domain"
+  },
+  "Henry Wadsworth Longfellow": {
+   "bio": "Henry Wadsworth Longfellow was an American poet and educator, among the most popular poets of his century. He wrote Paul Revere's Ride, The Song of Hiawatha and Evangeline, and produced the first American translation of Dante's Divine Comedy.",
+   "born": "1807",
+   "died": "1882",
+   "role": "Poet"
+  },
+  "J.K. Rowling": {
+   "born": "1965",
+   "role": "Author",
+   "bio": "British author (1965– ), creator of Harry Potter.",
+   "credit": "Daniel Ogren, CC BY 2.0"
+  },
+  "Jiddu Krishnamurti": {
+   "born": "1895",
+   "died": "1986",
+   "role": "Philosopher",
+   "bio": "Indian philosopher and speaker on the nature of mind, meditation, and human freedom; rejected all guru roles.",
+   "credit": "Albert Witzel, Public domain"
+  },
+  "Jim Rohn": {
+   "bio": "Emanuel James Rohn, known as Jim Rohn, was an American entrepreneur and motivational speaker whose seminars and books on personal development influenced a generation of speakers, including Tony Robbins.",
+   "born": "1930",
+   "died": "2009",
+   "role": "Motivational speaker and author"
+  },
+  "John Keats": {
+   "born": "1795",
+   "died": "1821",
+   "role": "Poet",
+   "bio": "English Romantic poet of the great Odes, including Ode to a Nightingale.",
+   "credit": "William Hilton, Public domain"
+  },
+  "John Stuart Mill": {
+   "born": "1806",
+   "died": "1873",
+   "role": "Philosopher and economist",
+   "bio": "John Stuart Mill was an English philosopher and political economist, the most influential liberal thinker of the 19th century. On Liberty defended individual freedom against social coercion, and his Autobiography candidly records his extraordinary education and mental crisis."
+  },
+  "Jose Rizal": {
+   "born": "1861",
+   "died": "1896",
+   "role": "Writer and national hero",
+   "bio": "Jose Rizal was a Filipino writer, physician, and polymath whose novels Noli Me Tangere and El Filibusterismo exposed the abuses of Spanish colonial rule. Executed by firing squad in 1896, he became the national hero of the Philippines."
+  },
+  "Katherine Mansfield": {
+   "born": "1888",
+   "died": "1923",
+   "role": "Writer",
+   "bio": "New Zealand modernist short-story writer, a leading figure of early 20th-century literature alongside Joyce and Woolf.",
+   "credit": "Archives New Zealand from New Zealand, CC BY-SA 2.0"
+  },
+  "Marie Curie": {
+   "born": "1867",
+   "died": "1934",
+   "role": "Physicist and chemist",
+   "bio": "Marie Curie was a Polish-born physicist and chemist who pioneered the study of radioactivity, a term she coined. She remains the only person to win Nobel Prizes in two different sciences — Physics in 1903 and Chemistry in 1911 — and died of illness caused by her long exposure to radiation."
+  },
+  "Mary Shelley": {
+   "born": "1797",
+   "died": "1851",
+   "role": "Writer",
+   "bio": "English novelist, author of Frankenstein, a founding work of science fiction.",
+   "credit": "Richard Rothwell, Public domain"
+  },
+  "Mary Wollstonecraft": {
+   "bio": "Mary Wollstonecraft was an English writer and advocate of women's rights, best known for A Vindication of the Rights of Woman (1792). She argued that women are not naturally inferior to men but appear so because of a lack of education. She was the mother of Frankenstein author Mary Shelley.",
+   "born": "1759",
+   "died": "1797",
+   "role": "Writer and women's rights advocate"
+  },
+  "Muhammad Ali": {
+   "born": "1942",
+   "died": "2016",
+   "role": "Boxer",
+   "bio": "American heavyweight boxing champion and cultural icon known as much for his activism as his titles.",
+   "credit": "Ira Rosenberg, Public domain"
+  },
+  "Ovid": {
+   "born": "43 BC",
+   "died": "17",
+   "role": "Poet",
+   "bio": "Ovid was a Roman poet celebrated for the Metamorphoses, a vast narrative poem of mythological transformations. Exiled by the emperor Augustus to the Black Sea coast, he spent his last decade writing poems of lament and endurance."
+  },
+  "Paulo Coelho": {
+   "born": "1947",
+   "role": "Novelist",
+   "bio": "Brazilian lyricist and novelist whose novel The Alchemist became one of the best-selling books in history, translated into dozens of languages. His fables about following one's dreams have inspired readers on every continent."
+  },
+  "Pearl Buck": {
+   "bio": "Pearl S. Buck was an American writer who spent much of her early life in China, where her parents were missionaries. Her novel The Good Earth won the Pulitzer Prize, and she received the Nobel Prize in Literature in 1938.",
+   "born": "1892",
+   "died": "1973",
+   "role": "Writer"
+  },
+  "Publilius Syrus": {
+   "bio": "Publilius Syrus was a Latin writer of the 1st century BC who was brought to Italy as a slave from Syria and later freed. He is known for his Sententiae, a collection of moral maxims drawn from his mimes.",
+   "born": "85 BC",
+   "died": "43 BC",
+   "role": "Latin writer of maxims"
+  },
+  "Ratan Tata": {
+   "born": "1937",
+   "died": "2024",
+   "role": "Industrialist, chairman emeritus of Tata Sons",
+   "bio": "Chairman of Tata Sons for more than two decades, Ratan Tata transformed the Tata group into a global conglomerate with acquisitions such as Tetley, Corus and Jaguar Land Rover. Revered in India for his integrity and philanthropy, he also championed the Tata Nano, the world's cheapest car."
+  },
+  "Samuel Johnson": {
+   "born": "1709",
+   "died": "1784",
+   "role": "Writer and lexicographer",
+   "bio": "Samuel Johnson was an English writer who compiled the first great Dictionary of the English Language in 1755. Poet, essayist and the most quoted conversationalist of his age, his life was immortalised in Boswell's famous biography."
+  },
+  "Serena Williams": {
+   "born": "1981",
+   "role": "Tennis champion",
+   "bio": "American tennis legend who won 23 Grand Slam singles titles, the most in the Open Era, along with four Olympic gold medals. Born in Saginaw, Michigan, and raised in Compton, California, she dominated women's tennis for over two decades and became a successful businesswoman and advocate for women."
+  },
+  "Steve Jobs": {
+   "born": "1955",
+   "died": "2011",
+   "role": "Co-founder of Apple",
+   "bio": "Co-founder of Apple, Steve Jobs helped launch the personal computer era and later reinvented music, phones and tablets with the iPod, iPhone and iPad. Forced out of Apple in 1985, he founded NeXT and built Pixar into a major studio before returning in 1997 to rescue the company he had started."
+  },
+  "Thomas Carlyle": {
+   "born": "1795",
+   "died": "1881",
+   "role": "Scottish historian and essayist",
+   "bio": "Thomas Carlyle was a Scottish historian, philosopher and essayist whose works, including Sartor Resartus and On Heroes, Hero-Worship, and the Heroic in History, shaped Victorian thought. His history of the French Revolution is regarded as a classic of the genre."
+  },
+  "Thomas Edison": {
+   "born": "1847",
+   "died": "1931",
+   "role": "American inventor and businessman",
+   "bio": "Thomas Edison was an American inventor who developed the phonograph, the motion picture camera and the first practical electric light bulb. He held over a thousand US patents and founded the first industrial research laboratory at Menlo Park, New Jersey."
+  },
+  "Thomas Jefferson": {
+   "born": "1743",
+   "died": "1826",
+   "role": "Third US President",
+   "bio": "Thomas Jefferson was an American statesman and Founding Father who wrote the Declaration of Independence and served as the third President of the United States (1801–1809). He founded the University of Virginia and doubled the nation's size with the Louisiana Purchase."
+  },
+  "Virginia Woolf": {
+   "born": "1882",
+   "died": "1941",
+   "role": "Novelist and essayist",
+   "bio": "Virginia Woolf was an English writer and a central figure of literary modernism, famous for stream-of-consciousness novels such as Mrs Dalloway (1925) and To the Lighthouse (1927). Her essay A Room of One's Own (1929) became a foundational feminist text on women and writing. With her husband Leonard she founded the Hogarth Press, which published her own work and that of T. S. Eliot and others."
+  },
+  "Walt Whitman": {
+   "born": "1819",
+   "died": "1892",
+   "role": "Poet",
+   "bio": "American poet best known for the collection Leaves of Grass (1855).",
+   "credit": "Samuel Murray, Public domain"
+  },
+  "Warren Buffett": {
+   "born": "1930",
+   "role": "Investor, CEO of Berkshire Hathaway",
+   "bio": "Investor Warren Buffett, the 'Oracle of Omaha', turned Berkshire Hathaway into one of the world's largest conglomerates through patient, disciplined value investing. Famous for his annual shareholder letters and frugal personal habits, he has pledged to give away the great majority of his fortune."
+  },
+  "Zig Ziglar": {
+   "born": "1926",
+   "died": "2012",
+   "role": "American motivational speaker and author",
+   "bio": "Zig Ziglar was an American author and motivational speaker who became one of the most influential sales and personal-development trainers of the twentieth century. His book See You at the Top and his famous line 'Your attitude, not your aptitude, will determine your altitude' reached millions."
+  }
+ }
+}
